@@ -1,3 +1,8 @@
 @import 'variables';
 @import 'base/normalize';
 @import 'base/typography';
+
+.container {
+	max-width: 800px;
+	margin: auto;
+}
