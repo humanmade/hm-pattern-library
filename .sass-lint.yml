@@ -3,7 +3,7 @@ options:
 files:
   ignore:
     - 'dist/**/*'
-    - 'src/styles/vendor/_normalize.scss'
+    - 'src/styles/vendor/**/*'
 rules:
   no-ids: 2
   no-important: 2
