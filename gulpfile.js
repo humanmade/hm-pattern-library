@@ -4,6 +4,7 @@ const watch         = require( 'gulp-watch' );
 const postcss       = require( 'gulp-postcss' );
 const autoprefixer  = require( 'autoprefixer' );
 const sass          = require( 'gulp-sass' );
+const sassLint      = require( 'gulp-sass-lint' );
 
 // Compile and minify CSS.
 gulp.task( 'styles', () => {
@@ -19,6 +20,14 @@ gulp.task( 'styles', () => {
 // Watch for changes in JS/CSS.
 gulp.task( 'watch', function() {
 	gulp.watch( 'src/styles/**/*.scss', ['styles'] );
+});
+
+
+gulp.task( 'lint-sass', function () {
+  return gulp.src( './src/styles/**/*.s+(a|c)ss')
+	.pipe( sassLint( { configFile: '.sass-lint.yml' } ) )
+	.pipe( sassLint.format() )
+	.pipe( sassLint.failOnError() )
 });
 
 // Tasks

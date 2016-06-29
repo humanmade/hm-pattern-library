@@ -1,6 +1,6 @@
-@import 'variables';
-@import 'base/normalize';
-@import 'base/typography';
+@import "variables";
+@import "vendor/normalize";
+@import "base/typography";
 
 .container {
 	max-width: 800px;
