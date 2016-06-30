@@ -1,10 +1,4 @@
 // Pattern Library Swatches
-.Swatch\~Wrap:after {
-	clear: both;
-	display: table;
-	content: " ";
-}
-
 .Swatch {
 	@media ( min-width : 600px ) {
 		float: left;
