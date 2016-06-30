@@ -1,0 +1,11 @@
+before_script:
+  - |
+    if [[ "$WP_TRAVISCI" == "travis:lint" ]] ; then
+        npm install -g grunt-cli
+        npm install
+    fi
+script:
+  - |
+    if [[ "$WP_TRAVISCI" == "travis:phpunit" ]] ; then
+      gulp lint-sass
+    fi
