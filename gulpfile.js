@@ -14,7 +14,7 @@ gulp.task( 'styles', () => {
 		.on( 'error', sass.logError ) )
 		.pipe( postcss( [ autoprefixer( { browsers: ['last 3 versions'] } ) ] ) )
 		.pipe( sourcemaps.write('.') )
-		.pipe( gulp.dest( './src/styles' ) );
+		.pipe( gulp.dest( './dist/styles' ) );
 });
 
 // Watch for changes in JS/CSS.
