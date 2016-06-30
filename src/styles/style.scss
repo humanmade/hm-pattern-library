@@ -1,6 +1,9 @@
 @import "variables";
 @import "vendor/normalize";
 @import "base/typography";
+@import "base/border-box";
+@import "components/Swatch";
+@import "utilities/clearfix";
 
 .container {
 	max-width: 800px;

@@ -1,0 +1,73 @@
+// Pattern Library Swatches
+.Swatch {
+	@media ( min-width : 600px ) {
+		float: left;
+		width : 25%;
+		padding-left: 1em;
+		padding-right: 1em;
+		display: inline-block;
+
+		&:nth-child( #{"4n + 1"} ) {
+			clear: left;
+		}
+	}
+}
+
+.Swatch_Background {
+	border: 1px solid $hm-dark-grey;
+	width: 50%;
+	height: 1em;
+	margin-top: -1px; // Negative border.
+	margin-bottom: -1px; // Negative border.
+	display: inline-block;
+
+	@media ( min-width : 600px ) {
+		display: block;
+		width: auto;
+		height: 100px;
+	}
+}
+
+.Swatch_Description {
+	display: inline-block;
+	line-height: 1;
+	margin-top: 0;
+	margin-bottom: 0;
+	@media ( min-width : 600px ) {
+		display: block;
+		line-height: 1.5;
+		margin-bottom: 1em;
+	}
+}
+
+.Swatch_Background-Primary {
+	background-color: $hm-primary;
+}
+
+.Swatch_Background-Accent {
+	background-color: $hm-accent;
+}
+
+.Swatch_Background-WarmGrey {
+	background-color: $hm-warm-grey;
+}
+
+.Swatch_Background-LightGrey {
+	background-color: $hm-light-grey;
+}
+
+.Swatch_Background-DarkGrey {
+	background-color: $hm-dark-grey;
+}
+
+.Swatch_Background-LightBeige {
+	background-color: $hm-light-beige;
+}
+
+.Swatch_Background-MediumGrey {
+	background-color: $hm-medium-grey;
+}
+
+.Swatch_Background-Brown {
+	background-color: $hm-brown;
+}
