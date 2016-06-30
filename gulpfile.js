@@ -5,6 +5,7 @@ const postcss       = require( 'gulp-postcss' );
 const autoprefixer  = require( 'autoprefixer' );
 const sass          = require( 'gulp-sass' );
 const sassLint      = require( 'gulp-sass-lint' );
+const fileinclude   = require( 'gulp-file-include' );
 
 // Compile and minify CSS.
 gulp.task( 'styles', () => {
@@ -30,5 +31,15 @@ gulp.task( 'lint-sass', function () {
 	.pipe( sassLint.failOnError() )
 });
 
+// HTML file include
+gulp.task( 'fileinclude', function() {
+	gulp.src( ['./src/index.html'] )
+		.pipe( fileinclude( {
+			prefix:   '@',
+			basepath: '@file'
+		} ) )
+		.pipe( gulp.dest( './' ) );
+} );
+
 // Tasks
-gulp.task( 'default', [ 'styles' ] );
+gulp.task( 'default', [ 'styles', 'fileinclude' ] );
