@@ -7,10 +7,46 @@
 		border: 1px solid $hm-dark-grey;
 		width: 50%;
 		height: 1em;
+		margin-top: -1px; // Negative border.
+		margin-bottom: -1px; // Negative border.
 		display: inline-block;
 	}
 
 	.Swatch_Description {
 		display: inline-block;
-		width: 50%;
+		line-height: 1;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.Swatch_Background-Primary {
+		background-color: $hm-primary;
+	}
+
+	.Swatch_Background-Accent {
+		background-color: $hm-accent;
+	}
+
+	.Swatch_Background-WarmGrey {
+		background-color: $hm-warm-grey;
+	}
+
+	.Swatch_Background-LightGrey {
+		background-color: $hm-light-grey;
+	}
+
+	.Swatch_Background-DarkGrey {
+		background-color: $hm-dark-grey;
+	}
+
+	.Swatch_Background-LightBeige {
+		background-color: $hm-light-beige;
+	}
+
+	.Swatch_Background-MediumGrey {
+		background-color: $hm-medium-grey;
+	}
+
+	.Swatch_Background-Brown {
+		background-color: $hm-brown;
 	}
