@@ -24,7 +24,7 @@ gulp.task( 'watch', function() {
 });
 
 
-gulp.task( 'lint-sass', function () {
+gulp.task( 'lint', function () {
   return gulp.src( './src/styles/**/*.s+(a|c)ss')
 	.pipe( sassLint( { configFile: '.sass-lint.yml' } ) )
 	.pipe( sassLint.format() )
@@ -33,13 +33,13 @@ gulp.task( 'lint-sass', function () {
 
 // HTML file include
 gulp.task( 'fileinclude', function() {
-	gulp.src( ['./src/index.html'] )
+	gulp.src( ['./src/html/index.html'] )
 		.pipe( fileinclude( {
 			prefix:   '@',
 			basepath: '@file'
 		} ) )
-		.pipe( gulp.dest( './' ) );
+		.pipe( gulp.dest( './dist/' ) );
 } );
 
 // Tasks
-gulp.task( 'default', [ 'styles', 'fileinclude' ] );
+gulp.task( 'default', [ 'styles', 'fileinclude', 'lint' ] );
