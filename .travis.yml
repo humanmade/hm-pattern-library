@@ -1,2 +1,5 @@
-before_script: npm install -g grunt-cli && npm install
-script: gulp lint-sass
+language: node_js
+node_js:
+  - '4'
+before_script: npm install -g grunt-cli && npm install;
+script: gulp lint-sass;
