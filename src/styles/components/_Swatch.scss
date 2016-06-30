@@ -1,0 +1,16 @@
+// Pattern Library Swatches
+.Swatch {
+
+}
+
+	.Swatch_Background {
+		border: 1px solid $hm-dark-grey;
+		width: 50%;
+		height: 1em;
+		display: inline-block;
+	}
+
+	.Swatch_Description {
+		display: inline-block;
+		width: 50%;
+	}
