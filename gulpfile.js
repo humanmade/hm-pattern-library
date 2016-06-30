@@ -24,7 +24,7 @@ gulp.task( 'watch', function() {
 });
 
 
-gulp.task( 'lint', function () {
+gulp.task( 'lint-gulp', function () {
   return gulp.src( './src/styles/**/*.s+(a|c)ss')
 	.pipe( sassLint( { configFile: '.sass-lint.yml' } ) )
 	.pipe( sassLint.format() )
@@ -42,4 +42,4 @@ gulp.task( 'fileinclude', function() {
 } );
 
 // Tasks
-gulp.task( 'default', [ 'styles', 'fileinclude', 'lint' ] );
+gulp.task( 'default', [ 'styles', 'fileinclude' ] );
