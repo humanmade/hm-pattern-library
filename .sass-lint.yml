@@ -21,6 +21,9 @@ rules:
     - 1
     - include: true
   trailing-semicolon: 2
+  space-before-colon:
+    - 1
+    - include: false
   space-after-colon: 2
   space-after-comma: 2
   space-around-operator: 2
