@@ -22,16 +22,16 @@
 
 	&.Logo-small {
 		background-image: url( "../images/logo-small-black.svg" );
-		width: 91px;
-		height: 54px;
+		width: 69px;
+		height: 40px;
 		&.Logo-red { background-image: url( "../images/logo-small-red.svg" ); }
 		&.Logo-white { background-image: url( "../images/logo-small-white.svg" ); }
 	}
 
 	&.Logo-tiny {
 		background-image: url( "../images/logo-tiny-black.svg" );
-		width: 30px;
-		height: 30px;
+		width: 20px;
+		height: 20px;
 		&.Logo-red { background-image: url( "../images/logo-tiny-red.svg" ); }
 		&.Logo-white { background-image: url( "../images/logo-tiny-white.svg" ); }
 	}
