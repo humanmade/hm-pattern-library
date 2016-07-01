@@ -6,6 +6,8 @@ const autoprefixer  = require( 'autoprefixer' );
 const sass          = require( 'gulp-sass' );
 const sassLint      = require( 'gulp-sass-lint' );
 const fileinclude   = require( 'gulp-file-include' );
+const newer         = require( 'gulp-newer' );
+const imagemin      = require( 'gulp-imagemin' );
 const uglify        = require( 'gulp-uglify' );
 const concat        = require( 'gulp-concat' );
 const rename        = require( 'gulp-rename' );
@@ -28,14 +30,6 @@ gulp.task( 'watch', function() {
 	gulp.watch( 'src/html/**/*.html', ['fileinclude'] );
 });
 
-
-gulp.task( 'lint-sass', function () {
-  return gulp.src( './src/styles/**/*.s+(a|c)ss')
-	.pipe( sassLint( { configFile: '.sass-lint.yml' } ) )
-	.pipe( sassLint.format() )
-	.pipe( sassLint.failOnError() )
-});
-
 // JavaScript concatination and compression.
 gulp.task( 'js', function() {
 	return gulp.src( './src/js/**/*.js' )
@@ -56,5 +50,42 @@ gulp.task( 'fileinclude', function() {
 		.pipe( gulp.dest( './dist/' ) );
 } );
 
+
+// Minify images.
+gulp.task( 'images', () => {
+	return gulp.src( './src/images/**/*.{jpg,jpeg,png}')
+		.pipe( newer( 'dist/images' ) )
+		.pipe( imagemin( {
+			progressive: true,
+			svgoPlugins: [
+				{ removeViewBox: false },
+				{ cleanupIDs: false }
+			],
+		} ) )
+		.pipe( gulp.dest( 'dist/images' ) );
+} );
+
+// Minify SVG and write to dest.
+gulp.task( 'svg', () => {
+	return gulp.src( './src/images/**/*.svg')
+		.pipe( newer( 'dist/images' ) )
+		.pipe( imagemin( {
+			progressive: true,
+			svgoPlugins: [
+				{ removeViewBox: false },
+				{ cleanupIDs: false }
+			],
+		} ) )
+		.pipe( gulp.dest( './dist/images' ) )
+} );
+
+gulp.task( 'lint-sass', function () {
+  return gulp.src( './src/styles/**/*.s+(a|c)ss')
+	.pipe( sassLint( { configFile: '.sass-lint.yml' } ) )
+	.pipe( sassLint.format() )
+	.pipe( sassLint.failOnError() )
+});
+
 // Tasks
-gulp.task( 'default', [ 'styles', 'js', 'fileinclude' ] );
+gulp.task( 'default', [ 'styles', 'js', 'svg', 'images', 'fileinclude', 'lint' ] );
+gulp.task( 'lint', [ 'lint-sass' ] );

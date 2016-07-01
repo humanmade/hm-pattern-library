@@ -1,0 +1,64 @@
+.Logo {
+
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	display: inline-block;
+
+	background: url( "../images/logo-black.svg" ) no-repeat center center;
+
+	background-size: 100%;
+	width: 292px;
+	height: 56px;
+
+	&.Logo-red { background-image: url( "../images/logo-red.svg" ); }
+	&.Logo-white { background-image: url( "../images/logo-white.svg" ); }
+
+	&.Logo-alt {
+		background-image: url( "../images/logo-alt-black.svg" );
+		width: 173px;
+		height: 97px;
+
+		&.Logo-red { background-image: url( "../images/logo-alt-red.svg" ); }
+		&.Logo-white { background-image: url( "../images/logo-alt-white.svg" ); }
+	}
+
+	&.Logo-small {
+		background-image: url( "../images/logo-small-black.svg" );
+		width: 69px;
+		height: 40px;
+		&.Logo-red { background-image: url( "../images/logo-small-red.svg" ); }
+		&.Logo-white { background-image: url( "../images/logo-small-white.svg" ); }
+	}
+
+	&.Logo-tiny {
+		background-image: url( "../images/logo-tiny-black.svg" );
+		width: 20px;
+		height: 20px;
+		&.Logo-red { background-image: url( "../images/logo-tiny-red.svg" ); }
+		&.Logo-white { background-image: url( "../images/logo-tiny-white.svg" ); }
+	}
+
+}
+
+/**
+ * For previewing a list/grid of logos.
+ * This is used in the pattern library.
+ */
+.Logos {
+
+	display: flex;
+	flex-wrap: wrap;
+
+	.Logo-container {
+		width: auto;
+		&:nth-child( n ) { background-color: white; }
+		&:nth-child( 2n ) { background-color: $hm-light-beige; }
+		&:nth-child( 3n ) { background-color: $hm-primary; }
+
+		.Logo {
+			margin: .5em;
+		}
+	}
+
+}
