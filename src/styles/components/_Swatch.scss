@@ -1,11 +1,13 @@
 // Pattern Library Swatches
 .Swatch {
+
+	float: left;
+	width: 50%;
+	display: block;
+
 	@media ( min-width: 600px ) {
-		float: left;
+
 		width: 25%;
-		padding-left: 1em;
-		padding-right: 1em;
-		display: inline-block;
 
 		&:nth-child( #{"4n + 1"} ) {
 			clear: left;
@@ -14,30 +16,22 @@
 }
 
 .Swatch_Background {
-	border: 1px solid $hm-dark-grey;
-	width: 50%;
-	height: 1em;
-	margin-top: -1px; // Negative border.
-	margin-bottom: -1px; // Negative border.
-	display: inline-block;
+
+	height: $base-line-height;
+	display: block;
 
 	@media ( min-width: 600px ) {
 		display: block;
 		width: auto;
-		height: 100px;
+		height: $base-line-height * 4;
 	}
 }
 
 .Swatch_Description {
-	display: inline-block;
-	line-height: 1;
-	margin-top: 0;
-	margin-bottom: 0;
-	@media ( min-width: 600px ) {
-		display: block;
-		line-height: 1.5;
-		margin-bottom: 1em;
-	}
+	@include text-sm;
+	display: block;
+	text-align: center;
+	margin:  #{ $base-line-height * .375 } 0;
 }
 
 .Swatch_Background-Primary {

@@ -1,4 +1,4 @@
-.Logo {
+.HMLogo {
 
 	overflow: hidden;
 	text-indent: 100%;
@@ -11,32 +11,32 @@
 	width: 292px;
 	height: 56px;
 
-	&.Logo-red { background-image: url( "../images/logo-red.svg" ); }
-	&.Logo-white { background-image: url( "../images/logo-white.svg" ); }
+	&.HMLogo-red { background-image: url( "../images/logo-red.svg" ); }
+	&.HMLogo-white { background-image: url( "../images/logo-white.svg" ); }
 
-	&.Logo-alt {
+	&.HMLogo-alt {
 		background-image: url( "../images/logo-alt-black.svg" );
 		width: 173px;
 		height: 97px;
 
-		&.Logo-red { background-image: url( "../images/logo-alt-red.svg" ); }
-		&.Logo-white { background-image: url( "../images/logo-alt-white.svg" ); }
+		&.HMLogo-red { background-image: url( "../images/logo-alt-red.svg" ); }
+		&.HMLogo-white { background-image: url( "../images/logo-alt-white.svg" ); }
 	}
 
-	&.Logo-small {
+	&.HMLogo-small {
 		background-image: url( "../images/logo-small-black.svg" );
 		width: 69px;
 		height: 40px;
-		&.Logo-red { background-image: url( "../images/logo-small-red.svg" ); }
-		&.Logo-white { background-image: url( "../images/logo-small-white.svg" ); }
+		&.HMLogo-red { background-image: url( "../images/logo-small-red.svg" ); }
+		&.HMLogo-white { background-image: url( "../images/logo-small-white.svg" ); }
 	}
 
-	&.Logo-tiny {
+	&.HMLogo-tiny {
 		background-image: url( "../images/logo-tiny-black.svg" );
 		width: 20px;
 		height: 20px;
-		&.Logo-red { background-image: url( "../images/logo-tiny-red.svg" ); }
-		&.Logo-white { background-image: url( "../images/logo-tiny-white.svg" ); }
+		&.HMLogo-red { background-image: url( "../images/logo-tiny-red.svg" ); }
+		&.HMLogo-white { background-image: url( "../images/logo-tiny-white.svg" ); }
 	}
 
 }
@@ -45,19 +45,20 @@
  * For previewing a list/grid of logos.
  * This is used in the pattern library.
  */
-.Logos {
+.HMLogos {
 
 	display: flex;
 	flex-wrap: wrap;
 
-	.Logo-container {
+	.HMLogo-container {
 		width: auto;
 		&:nth-child( n ) { background-color: white; }
 		&:nth-child( 2n ) { background-color: $hm-light-beige; }
 		&:nth-child( 3n ) { background-color: $hm-primary; }
 
-		.Logo {
+		.HMLogo {
 			margin: .5em;
+			vertical-align: top;
 		}
 	}
 
