@@ -1,6 +1,6 @@
-@import "variables";
-@import "base/typography";
+@import "style";
 @import "components/Swatch";
+
 
 /**
  * For previewing a list/grid of logos.
@@ -22,4 +22,28 @@
 		margin: .5em;
 		vertical-align: top;
 	}
+}
+
+.pattern-library-title {
+
+	position: relative;
+
+	&:before {
+		content: " ";
+		display: block;
+		@extend .HMLogo;
+		@extend .HMLogo-Small;
+		@extend .HMLogo-Red;
+
+		position: absolute;
+		left: -130px;
+		transform: scale(1.75);
+		top: 34px;
+	}
+}
+
+.pattern-library-subtitle {
+	@include text-md;
+	margin-top: -1.94375rem;
+	font-style: italic;
 }
