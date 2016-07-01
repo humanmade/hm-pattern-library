@@ -20,7 +20,7 @@ gulp.task( 'styles', () => {
 		.on( 'error', sass.logError ) )
 		.pipe( postcss( [ autoprefixer( { browsers: ['last 3 versions'] } ) ] ) )
 		.pipe( sourcemaps.write('.') )
-		.pipe( gulp.dest( './dist/styles' ) );
+		.pipe( gulp.dest( './dist/assets/styles' ) );
 });
 
 // Watch for changes in JS/CSS.
@@ -34,10 +34,10 @@ gulp.task( 'watch', function() {
 gulp.task( 'js', function() {
 	return gulp.src( './src/js/**/*.js' )
 		.pipe( concat( 'app.js' ) )
-		.pipe( gulp.dest( 'dist/js' ) )
+		.pipe( gulp.dest( 'dist/assets/js' ) )
 		.pipe( rename( 'app.min.js' ) )
 		.pipe( uglify() )
-		.pipe( gulp.dest( 'dist/js' ) );
+		.pipe( gulp.dest( 'dist/assets/js' ) );
 } );
 
 // HTML file include
@@ -54,7 +54,7 @@ gulp.task( 'fileinclude', function() {
 // Minify images.
 gulp.task( 'images', () => {
 	return gulp.src( './src/images/**/*.{jpg,jpeg,png}')
-		.pipe( newer( 'dist/images' ) )
+		.pipe( newer( 'dist/assets/images' ) )
 		.pipe( imagemin( {
 			progressive: true,
 			svgoPlugins: [
@@ -62,13 +62,13 @@ gulp.task( 'images', () => {
 				{ cleanupIDs: false }
 			],
 		} ) )
-		.pipe( gulp.dest( 'dist/images' ) );
+		.pipe( gulp.dest( 'dist/assets/images' ) );
 } );
 
 // Minify SVG and write to dest.
 gulp.task( 'svg', () => {
 	return gulp.src( './src/images/**/*.svg')
-		.pipe( newer( 'dist/images' ) )
+		.pipe( newer( 'dist/assets/images' ) )
 		.pipe( imagemin( {
 			progressive: true,
 			svgoPlugins: [
@@ -76,7 +76,7 @@ gulp.task( 'svg', () => {
 				{ cleanupIDs: false }
 			],
 		} ) )
-		.pipe( gulp.dest( './dist/images' ) )
+		.pipe( gulp.dest( './dist/assets/images' ) )
 } );
 
 gulp.task( 'lint-sass', function () {
