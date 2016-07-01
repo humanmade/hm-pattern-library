@@ -9,10 +9,13 @@
     "autoprefixer": "^6.3.6",
     "gulp": "^3.9.1",
     "gulp-file-include": "^0.13.7",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-newer": "^1.2.0",
     "gulp-postcss": "^6.1.1",
     "gulp-sass": "^2.3.2",
     "gulp-sass-lint": "^1.2.0",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg2png": "^2.0.0",
     "gulp-watch": "^4.3.8"
   }
 }
