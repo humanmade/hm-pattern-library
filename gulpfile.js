@@ -21,6 +21,7 @@ gulp.task( 'styles', () => {
 // Watch for changes in JS/CSS.
 gulp.task( 'watch', function() {
 	gulp.watch( 'src/styles/**/*.scss', ['styles'] );
+	gulp.watch( 'src/html/**/*.html', ['fileinclude'] );
 });
 
 
@@ -33,12 +34,12 @@ gulp.task( 'lint-sass', function () {
 
 // HTML file include
 gulp.task( 'fileinclude', function() {
-	gulp.src( ['./src/index.html'] )
+	gulp.src( ['./src/html/index.html'] )
 		.pipe( fileinclude( {
 			prefix:   '@',
 			basepath: '@file'
 		} ) )
-		.pipe( gulp.dest( './' ) );
+		.pipe( gulp.dest( './dist/' ) );
 } );
 
 // Tasks
