@@ -1,0 +1,99 @@
+.Btn {
+	@include font-heading;
+	@include text-std;
+	border: 1px solid $hm-primary;
+	padding: #{ $base-line-height / 2 } 10px;
+	background: $hm-primary;
+	color: #FFF;
+	margin-bottom: $base-line-height / 2;
+	margin-right: $base-line-height / 2;
+	display: inline-block;
+	text-align: center;
+
+	&:hover,
+	&:focus {
+		color: #FFF;
+		background: lighten( $hm-primary, 10% );
+		border-color: lighten( $hm-primary, 10% );
+		text-decoration: none;
+	}
+
+	&:link,
+	&:visited {
+		color: #FFF;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+
+	}
+
+}
+
+.Btn-Secondary {
+	border-color: $hm-accent;
+	background-color: $hm-accent;
+
+	&:hover,
+	&:focus {
+		background: lighten( $hm-accent, 10% );
+		border-color: lighten( $hm-accent, 10% );
+	}
+}
+
+.Btn-Tertiary {
+	border-color: $hm-warm-grey;
+	background-color: $hm-warm-grey;
+
+	&:hover,
+	&:focus {
+		background: lighten( $hm-warm-grey, 10% );
+		border-color: lighten( $hm-warm-grey, 10% );
+	}
+}
+
+.Btn-Transparent {
+	border-color: transparent;
+	background-color: transparent;
+
+	&:hover,
+	&:focus {
+		background: transparent;
+		border-color: transparent;
+	}
+}
+
+.Btn-Link {
+	@extend a:link;
+	@include text-std;
+	font-family: inherit;
+	text-transform: none;
+	border: none;
+	background: none;
+	padding: 0;
+	margin: 0;
+	color: $hm-primary;
+	font-weight: normal;
+	letter-spacing: 0;
+
+	&:link,
+	&:visited {
+		color: $hm-primary;
+		background: transparent;
+	}
+
+	&:hover,
+	&:focus {
+		color: $hm-primary;
+		text-decoration: underline;
+		background: transparent;
+	}
+
+}
+
+.Btn-Small {
+	@include text-sm;
+	padding: #{ $base-line-height / 4 } 8px;
+}
