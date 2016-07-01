@@ -8,7 +8,6 @@ const sassLint      = require( 'gulp-sass-lint' );
 const fileinclude   = require( 'gulp-file-include' );
 const newer         = require( 'gulp-newer' );
 const imagemin      = require( 'gulp-imagemin' );
-const svg2png       = require( 'gulp-svg2png' );
 
 // Compile and minify CSS.
 gulp.task( 'styles', () => {
