@@ -21,10 +21,11 @@ gulp.task( 'styles', () => {
 // Watch for changes in JS/CSS.
 gulp.task( 'watch', function() {
 	gulp.watch( 'src/styles/**/*.scss', ['styles'] );
+	gulp.watch( 'src/html/**/*.html', ['fileinclude'] );
 });
 
 
-gulp.task( 'lint-gulp', function () {
+gulp.task( 'lint-sass', function () {
   return gulp.src( './src/styles/**/*.s+(a|c)ss')
 	.pipe( sassLint( { configFile: '.sass-lint.yml' } ) )
 	.pipe( sassLint.format() )
