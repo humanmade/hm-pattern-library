@@ -7,9 +7,9 @@ table {
 	th,
 	td {
 		@include text-sm;
-		padding: #{ $base-line-height / 3 } $base-line-height/2;
-		border-bottom: 1px solid $hm-light-grey;
-		border-right: 1px solid $hm-light-grey;
+		padding: #{ $base-line-height / 3 } $base-line-height / 2;
+		border-bottom: 1px solid $border-color;
+		border-right: 1px solid $border-color;
 
 		&:last-child {
 			border-right: none;
@@ -18,7 +18,7 @@ table {
 
 	tr:last-child td,
 	tr:last-child th {
-		border-bottom: none
+		border-bottom: none;
 	}
 
 	th {

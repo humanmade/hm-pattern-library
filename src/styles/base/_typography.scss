@@ -115,7 +115,13 @@ blockquote {
 	margin: #{ $base-line-height * .75 } 0;
 	margin-left: 20px;
 	padding-left: 20px;
-	border-left: 1px solid $hm-medium-grey;
+	border-left: 1px solid $border-color;
+}
+
+hr {
+	border: 1px solid $border-color;
+	border-width: 1px 0 0 0;
+	margin: #{ $base-line-height * .75 } 0;
 }
 
 a:link {
@@ -131,8 +137,20 @@ a:link {
 code,
 pre {
 	color: $hm-warm-grey;
-	background: $hm-light-grey;
+	background: $hm-light-beige;
 	padding: 0px 5px;
 	display: inline-block;
+	border-radius: 2px;
+}
+
+pre {
+	display: block;
+	margin: #{ $base-line-height * .75 } 0;
+}
+
+// Override the background from prism.js.
+:not( pre ) > code[ class*="language-" ],
+pre[ class*="language-" ] {
+	background: $hm-light-beige;
 	border-radius: 2px;
 }

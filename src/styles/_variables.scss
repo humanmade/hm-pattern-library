@@ -5,8 +5,10 @@ $hm-warm-grey:   #504C4C;
 $hm-dark-grey:   #353535;
 $hm-light-beige: #F4EFE6;
 $hm-medium-grey: #737373;
-$hm-light-grey:  #dddbdb;
+$hm-light-grey:  #EFF1EF;
 $hm-brown:       #4F4641;
+
+$border-color: lighten( $hm-medium-grey, 40% );
 
 $base-line-height: 1.555rem;
 $base-font-size:   18px;
