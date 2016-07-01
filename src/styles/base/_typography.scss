@@ -1,0 +1,156 @@
+@mixin font-heading {
+	font-family: $font-family-sans;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+@mixin font-body {
+	font-family: $font-family-serif;
+	font-weight: 500;
+}
+
+@mixin text-xxl {
+	font-size: 3.157rem;
+	line-height: $base-line-height * 2.5;
+}
+
+@mixin text-xl {
+	font-size: 2.369rem;
+	line-height: $base-line-height * 2;
+}
+
+@mixin text-lg {
+	font-size: 1.777rem;
+	line-height: $base-line-height * 1.5;
+}
+
+@mixin text-md {
+	font-size: 1.333rem;
+	line-height: $base-line-height * 1.5;
+}
+
+@mixin text-std {
+	font-size: 1rem;
+	line-height: $base-line-height;
+}
+
+@mixin text-sm {
+	font-size: .75rem;
+	line-height: $base-line-height;
+}
+
+@mixin text-tiny {
+	font-size: .563rem;
+	line-height: $base-line-height;
+}
+
+html {
+	font-size: $base-font-size;
+}
+
+body {
+	@include text-std;
+	@include font-body;
+	color: $hm-warm-grey;
+}
+
+
+h1,
+.text-xxl {
+	@include text-xxl;
+	@include font-heading;
+	margin: #{ $base-line-height * 1.75 } 0 #{ $base-line-height * 1.25 } 0;
+	color: $hm-dark-grey;
+}
+
+h2,
+.text-xl {
+	@include text-xl;
+	@include font-heading;
+	margin: #{ $base-line-height * 1.5 } 0 #{ $base-line-height * 1 } 0;
+	color: $hm-dark-grey;
+}
+
+h3,
+.text-lg {
+	@include text-lg;
+	@include font-heading;
+	margin: #{ $base-line-height * 1 } 0 #{ $base-line-height * .75 } 0;
+	color: $hm-dark-grey;
+}
+
+h4,
+.text-md {
+	@include text-md;
+	@include font-heading;
+	margin: #{ $base-line-height * 1 } 0 #{ $base-line-height * .75 } 0;
+	color: $hm-dark-grey;
+}
+
+h5,
+h6 {
+	@include text-std;
+	@include font-heading;
+	margin: #{ $base-line-height * .75 } 0;
+	color: $hm-dark-grey;
+}
+
+p,
+ul,
+ol,
+.text-std {
+	@include text-std;
+	margin: #{ $base-line-height * .75 } 0;
+}
+
+ul,
+ol {
+	list-style-position: inside;
+	padding: 0;
+}
+
+blockquote {
+	@include text-md;
+	margin: #{ $base-line-height * .75 } 0;
+	margin-left: 20px;
+	padding-left: 20px;
+	border-left: 1px solid $border-color;
+}
+
+hr {
+	border: 1px solid $border-color;
+	border-width: 1px 0 0 0;
+	margin: #{ $base-line-height * .75 } 0;
+}
+
+a:link {
+	color: $hm-primary;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+code,
+pre {
+	color: $hm-warm-grey;
+	background: $hm-light-beige;
+	padding: 0px 5px;
+	display: inline-block;
+	border-radius: 2px;
+}
+
+pre {
+	display: block;
+	margin: #{ $base-line-height * .75 } 0;
+}
+
+// Override the background from prism.js.
+:not( pre ) > code[ class*="language-" ],
+pre[ class*="language-" ] {
+	background: $hm-light-beige;
+	border-radius: 2px;
+}

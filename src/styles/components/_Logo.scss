@@ -1,4 +1,4 @@
-.Logo {
+.HMLogo {
 
 	overflow: hidden;
 	text-indent: 100%;
@@ -11,54 +11,58 @@
 	width: 292px;
 	height: 56px;
 
-	&.Logo-red { background-image: url( "../images/logo-red.svg" ); }
-	&.Logo-white { background-image: url( "../images/logo-white.svg" ); }
+}
 
-	&.Logo-alt {
-		background-image: url( "../images/logo-alt-black.svg" );
-		width: 173px;
-		height: 97px;
+.HMLogo-Red {
+	background-image: url( "../images/logo-Red.svg" );
+}
 
-		&.Logo-red { background-image: url( "../images/logo-alt-red.svg" ); }
-		&.Logo-white { background-image: url( "../images/logo-alt-white.svg" ); }
+.HMLogo-White {
+	background-image: url( "../images/logo-White.svg" );
+}
+
+.HMLogo-Alt {
+
+	background-image: url( "../images/logo-alt-black.svg" );
+	width: 173px;
+	height: 97px;
+
+	&.HMLogo-Red {
+		background-image: url( "../images/logo-alt-Red.svg" );
 	}
 
-	&.Logo-small {
-		background-image: url( "../images/logo-small-black.svg" );
-		width: 69px;
-		height: 40px;
-		&.Logo-red { background-image: url( "../images/logo-small-red.svg" ); }
-		&.Logo-white { background-image: url( "../images/logo-small-white.svg" ); }
-	}
-
-	&.Logo-tiny {
-		background-image: url( "../images/logo-tiny-black.svg" );
-		width: 20px;
-		height: 20px;
-		&.Logo-red { background-image: url( "../images/logo-tiny-red.svg" ); }
-		&.Logo-white { background-image: url( "../images/logo-tiny-white.svg" ); }
+	&.HMLogo-White {
+		background-image: url( "../images/logo-alt-White.svg" );
 	}
 
 }
 
-/**
- * For previewing a list/grid of logos.
- * This is used in the pattern library.
- */
-.Logos {
+.HMLogo-Small {
 
-	display: flex;
-	flex-wrap: wrap;
+	background-image: url( "../images/logo-Small-black.svg" );
+	width: 69px;
+	height: 40px;
 
-	.Logo-container {
-		width: auto;
-		&:nth-child( n ) { background-color: white; }
-		&:nth-child( 2n ) { background-color: $hm-light-beige; }
-		&:nth-child( 3n ) { background-color: $hm-primary; }
-
-		.Logo {
-			margin: .5em;
-		}
+	&.HMLogo-Red {
+		background-image: url( "../images/logo-Small-Red.svg" );
 	}
 
+	&.HMLogo-White {
+		background-image: url( "../images/logo-Small-White.svg" );
+	}
+}
+
+.HMLogo-Tiny {
+
+	background-image: url( "../images/logo-Tiny-black.svg" );
+	width: 20px;
+	height: 20px;
+
+	&.HMLogo-Red {
+		background-image: url( "../images/logo-Tiny-Red.svg" );
+	}
+
+	&.HMLogo-White {
+		background-image: url( "../images/logo-Tiny-White.svg" );
+	}
 }
