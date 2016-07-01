@@ -76,7 +76,7 @@ h3,
 .text-lg {
 	@include text-lg;
 	@include font-heading;
-	margin: #{ $base-line-height * 1.5 } 0 #{ $base-line-height * .75 } 0;
+	margin: #{ $base-line-height * 1 } 0 #{ $base-line-height * .75 } 0;
 	color: $hm-dark-grey;
 }
 
@@ -84,7 +84,7 @@ h4,
 .text-md {
 	@include text-md;
 	@include font-heading;
-	margin: #{ $base-line-height * 1.5 } 0 #{ $base-line-height * .75 } 0;
+	margin: #{ $base-line-height * 1 } 0 #{ $base-line-height * .75 } 0;
 	color: $hm-dark-grey;
 }
 
@@ -153,4 +153,10 @@ pre {
 pre[ class*="language-" ] {
 	background: $hm-light-beige;
 	border-radius: 2px;
+}
+
+
+.subtitle {
+	@include text-md;
+	margin-top: -1.94375rem;
 }
