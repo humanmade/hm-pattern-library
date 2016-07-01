@@ -52,7 +52,6 @@ gulp.task( 'images', () => {
 } );
 
 // Minify SVG and write to dest.
-// Then convert SVG to PNG and write to dest.
 gulp.task( 'svg', () => {
 	return gulp.src( './src/images/**/*.svg')
 		.pipe( newer( 'dist/images' ) )
@@ -64,8 +63,6 @@ gulp.task( 'svg', () => {
 			],
 		} ) )
 		.pipe( gulp.dest( './dist/images' ) )
-		.pipe( svg2png( 2.0, false, 2 ) )
-		.pipe( gulp.dest( './dist/images' ) );
 } );
 
 gulp.task( 'lint-sass', function () {

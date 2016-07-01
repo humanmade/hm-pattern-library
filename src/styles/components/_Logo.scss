@@ -5,6 +5,7 @@
 	white-space: nowrap;
 
 	background: url( "../images/logo-black.svg" ) no-repeat center center;
+
 	background-size: 100%;
 	width: 292px;
 	height: 56px;
@@ -16,6 +17,7 @@
 		background-image: url( "../images/logo-alt-black.svg" );
 		width: 173px;
 		height: 97px;
+
 		&.Logo-red { background-image: url( "../images/logo-alt-red.svg" ); }
 		&.Logo-white { background-image: url( "../images/logo-alt-white.svg" ); }
 	}
