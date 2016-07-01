@@ -8,6 +8,9 @@ const sassLint      = require( 'gulp-sass-lint' );
 const fileinclude   = require( 'gulp-file-include' );
 const newer         = require( 'gulp-newer' );
 const imagemin      = require( 'gulp-imagemin' );
+const uglify        = require( 'gulp-uglify' );
+const concat        = require( 'gulp-concat' );
+const rename        = require( 'gulp-rename' );
 
 // Compile and minify CSS.
 gulp.task( 'styles', () => {
@@ -23,8 +26,19 @@ gulp.task( 'styles', () => {
 // Watch for changes in JS/CSS.
 gulp.task( 'watch', function() {
 	gulp.watch( 'src/styles/**/*.scss', ['styles'] );
+	gulp.watch( 'src/js/**/*.js', ['js'] );
 	gulp.watch( 'src/html/**/*.html', ['fileinclude'] );
 });
+
+// JavaScript concatination and compression.
+gulp.task( 'js', function() {
+	return gulp.src( './src/js/**/*.js' )
+		.pipe( concat( 'app.js' ) )
+		.pipe( gulp.dest( 'dist/js' ) )
+		.pipe( rename( 'app.min.js' ) )
+		.pipe( uglify() )
+		.pipe( gulp.dest( 'dist/js' ) );
+} );
 
 // HTML file include
 gulp.task( 'fileinclude', function() {
@@ -35,6 +49,7 @@ gulp.task( 'fileinclude', function() {
 		} ) )
 		.pipe( gulp.dest( './dist/' ) );
 } );
+
 
 // Minify images.
 gulp.task( 'images', () => {
@@ -72,5 +87,5 @@ gulp.task( 'lint-sass', function () {
 });
 
 // Tasks
-gulp.task( 'default', [ 'styles', 'svg', 'images', 'fileinclude', 'lint' ] );
+gulp.task( 'default', [ 'styles', 'js', 'svg', 'images', 'fileinclude', 'lint' ] );
 gulp.task( 'lint', [ 'lint-sass' ] );

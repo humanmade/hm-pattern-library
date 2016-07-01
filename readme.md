@@ -28,6 +28,28 @@ The Human Made pattern library generates flat HTML and does not require a web se
 
 You can fork the repository should you wish to contribute any code.
 
+#### CSS Naming convention
+
+This repository uses a modified version of the SUIT CSS naming convention. Class names make use of `PascalCase`.
+
+##### Components
+
+Sub-components are indicated with an underscore, variants with a hyphen. For example:
+
+* `SomeComponent`
+* `SomeComponent_SubComponent`
+* `SomeComponent-CompenentVarient`
+
+In the styles/components directory, components should be placed in a file named for the component, `_SomeComponent.scss`.
+
+##### Utilities
+
+Utilities are prefixed with `util-`, for example `util-Clearfix`. A utility should be placed in the styles/utilities directory in a file named for the utility, `_Clearfix.scss`.
+
+##### Vendor files
+
+Class names in vendor files should not be changed, the files should be placed in the styles/vendor directory and included as any other file would be included. These files do not need to meet our linting standards.
+
 #### Creating a branch
 
 All contributions should relate to an issues. If the issue does not exist, open an issue in the original repository, this will give your issue a number.
