@@ -6,6 +6,9 @@ const autoprefixer  = require( 'autoprefixer' );
 const sass          = require( 'gulp-sass' );
 const sassLint      = require( 'gulp-sass-lint' );
 const fileinclude   = require( 'gulp-file-include' );
+const uglify        = require( 'gulp-uglify' );
+const concat        = require( 'gulp-concat' );
+const rename        = require( 'gulp-rename' );
 
 // Compile and minify CSS.
 gulp.task( 'styles', () => {
