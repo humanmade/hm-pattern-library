@@ -1,4 +1,4 @@
-.Form-Field,
+.Form_Field,
 input[type="text"],
 input[type="search"],
 input[type="password"],
@@ -23,31 +23,32 @@ input[type="email"] {
 		outline: none;
 	}
 
-	&.Form-Field-Lg {
+	&.Form_Field-Lg {
 		width: 100%;
 	}
 
-	&.Form-Field-Md {
+	&.Form_Field-Md {
 		width: 540px;
 	}
 
-	&.Form-Field-Sm {
+	&.Form_Field-Sm {
 		width: 150px;
 	}
 
-	&.Form-Field-Code {
+	&.Form_Field-Code {
 		font-family: $font-family-code;
 	}
 
 }
 
+.Form_Textarea,
 textarea {
 	@extend .Form-Field;
 	width: 100%;
 	clear: both;
 }
 
-.Form-Label,
+.Form_Label,
 .Form label {
 	@include font-heading;
 	@include text-sm;
