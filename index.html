@@ -5,7 +5,9 @@
 
     <meta charset="utf-8">
 	<title>Juniper - HM Pattern Library</title>
-	<link rel="stylesheet" href="./styles/style-guide.css" />
+	<link rel="stylesheet" href="/dist/assets/styles/style-guide.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<script src="https://use.typekit.net/mwe8dvt.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -19,12 +21,12 @@
 	<h1 class="pattern-library-title">Juniper.</h1>
 	<p class="pattern-library-subtitle">The Human Made Pattern Library.</p>
 
-	<h2>Body Text</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est.</p>
+	<h2 id="style-guide-body-text" class="style-guide-title">Body Text</h2>
+<p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est.</p>
 <p>Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque.</p>
 <p>Primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.</p>
   
-	<h2>Headings</h2>
+	<h2 id="style-guide-headings" class="style-guide-title">Headings</h2>
 <h1>H1: Sed nec diam eu diam mattis viverra.</h1>
 <h2>H2: Vivamus luctus urna sed urna ultricies.</h2>
 <h3>H3: In libero.</h3>
@@ -32,10 +34,10 @@
 <h5>H5: Morbi euismod magna ac lorem rutrum elementum.</h5>
 <h6>H6: Donec viverra auctor lobortis.</h6>
   
-	<h2>Blockquote</h2>
+	<h2 id="style-guide-blockquote" class="style-guide-title">Blockquote</h2>
 <blockquote>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa <strong>strong</strong>. Cum sociis natoque penatibus et magnis dis parturient montes, In <em>em</em> justo. Nullam <a href="#">link</a> dictum felis eu pede mollis pretium.</blockquote>
   
-	<h2>Lists</h2>
+	<h2 id="style-guide-lists" class="style-guide-title">Lists</h2>
 
 <ul>
 	<li>Pellentesque eu est a nulla placerat dignissim.</li>
@@ -49,7 +51,7 @@
 	<li>Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit.</li>
 </ol>
   
-	<h2>Tables</h2>
+	<h2 id="style-guide-title" class="style-guide-title">Tables</h2>
 
 <table class="data">
 	<tr>
@@ -78,7 +80,7 @@
 	</tr>
 </table>
   
-	<h2>Colour swatches</h2>
+	<h2 id="style-guide-colors" class="style-guide-title">Colour swatches</h2>
 
 <div class="util-Clearfix">
 	<div class="Swatch">
@@ -136,7 +138,7 @@
 
 </div>
   
-	<h2>HMLogos</h2>
+	<h2 id="style-guide-logos" class="style-guide-title">HMLogos</h2>
 
 <h4>Primary HMLogo</h4>
 
@@ -210,20 +212,95 @@
 
 </div>
   
-	<h2>Code blocks</h2>
+	<h2 id="style-guide-code" class="style-guide-title">Code blocks</h2>
 
-<pre><code class="language-php">&lt;?php
-
-	if ( 'pens' === pencils ) {
-		return false;
-	}</code></pre>
+<pre><code class="language-php">if ( 'pens' === pencils ) {
+	return false;
+}</code></pre>
 
 
 <p>This is some inline code demonstrating how to open a php file <code class="language-php">&lt;?php</code></p>
 
+	<h2 id="style-guide-buttons" class="style-guide-title">Buttons</h2>
+
+<input type="submit" class="Btn" value="Primary" />
+<button class="Btn Btn-Secondary">Secondary</button>
+<a class="Btn Btn-Tertiary" href="#">Tertiary</a>
+<a class="Btn Btn-Transparent" href="#">Transparent</a>
+
+<br/>
+
+<a class="Btn Btn-Small" href="#">Primary</a>
+<a class="Btn Btn-Secondary Btn-Small" href="#">Secondary</a>
+<a class="Btn Btn-Tertiary Btn-Small" href="#">Tertiary</a>
+
+<br/>
+
+<button class="Btn Btn-Link" href="#">Plain button</button>
+
+
+	<h2 id="style-guide-form" class="style-guide-title">Form Fields</h2>
+
+<form class="Form">
+
+	<label for="form-field-text">Text Field</label>
+	<input id="form-field-text" type="text" />
+
+	<label for="form-field-search">Standard Search Field</label>
+	<input id="form-field-search" type="search" />
+
+	<label for="form-field-email">Email Form Field</label>
+	<input id="form-field-email" type="email" />
+
+	<label for="form-field-password">Password Field</label>
+	<input id="form-field-password" type="password" />
+
+	<label for="form-field-code">Large Code Field</label>
+	<input id="form-field-code" class="Form_Field-Code Form_Field-Lg" type="text" />
+
+	<label for="form-field-text-large">Large Form Field</label>
+	<input id="form-field-text-large" type="text" class="Form_Field Form_Field-Lg" placeholder="Placeholder" />
+
+	<label for="form-field-text-md">Medium Form Field</label>
+	<input id="form-field-text-md" type="text" class="Form_Field Form_Field-Md" placeholder="Placeholder"/>
+
+	<label for="form-field-text-sm">Small Form Field</label>
+	<input id="form-field-text-sm" type="text" class="Form_Field Form_Field-Sm" placeholder="Plchldr"/>
+
+	<label for="form-field-textarea">Textarea</label>
+	<textarea id="form-field-textarea"></textarea>
+
+	<label for="form-field-textarea-code">Code</label>
+	<textarea id="form-field-textarea-code" class="Form_Field-Code"></textarea>
+
+</form>
+
+	<h2>WordPress Images</h2>
+
+<p><img class="alignnone wp-image-1" src="assets/images/150x150.png" /></p>
+
+<p><img class="aligncenter wp-image-1" src="assets/images/150x150.png" /></p>
+
+<p><img class="alignleft wp-image-1" src="assets/images/150x150.png" /> The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is left aligned.</p>
+
+<p><img class="alignright wp-image-1" src="assets/images/150x150.png" /> As you can see the should be some space above, below, and to the right of the image. The text should not be creeping on the image. Creeping is just not right. Images need breathing room too. Let them speak like you words. Let them do their jobs without any hassle from the text. In about one more sentence here, we’ll see that the text moves from the right of the image down below the image in seamless transition. Again, letting the do it’s thang. Mission accomplished!</p>
+
+	<h2>WordPress Captions</h2>
+
+<figure id="attachment_1" class="wp-caption alignnone" style="width:150px"><img class="wp-image-1" src="assets/images/150x150.png" /><figcaption class="wp-caption-text">This is an unaligned caption</figcaption></figure>
+
+<figure id="attachment_2" class="wp-caption aligncenter" style="width:150px"><img class="wp-image-1" src="assets/images/150x150.png" /><figcaption class="wp-caption-text">This is a center aligned caption</figcaption></figure>
+
+<figure id="attachment_2" class="wp-caption alignleft" style="width:150px"><img class="wp-image-1" src="assets/images/150x150.png" /><figcaption class="wp-caption-text">This is a left aligned caption</figcaption></figure>
+<p>The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is left aligned.</p>
+
+<figure id="attachment_2" class="wp-caption alignright" style="width:150px"><img class="wp-image-1" src="assets/images/150x150.png" /><figcaption class="wp-caption-text">This is a right aligned caption</figcaption></figure>
+<p>As you can see the should be some space above, below, and to the right of the image. The text should not be creeping on the image. Creeping is just not right. Images need breathing room too. Let them speak like you words. Let them do their jobs without any hassle from the text. In about one more sentence here, we’ll see that the text moves from the right of the image down below the image in seamless transition. Again, letting the do it’s thang. Mission accomplished!</p>
+
+
 </div>
 
-<script src="./js/app.min.js"></script>
+<script src="./assets/js/app.min.js"></script>
 
 </body>
 
