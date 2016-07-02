@@ -93,12 +93,6 @@
 	&:visited {
 		color: $hm-primary;
 		background: transparent;
-
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-		}
-
 	}
 
 	&:hover,
