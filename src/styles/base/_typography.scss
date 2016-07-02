@@ -144,6 +144,7 @@ pre {
 }
 
 pre {
+	padding: #{ $base-line-height * .5 } 15px;
 	display: block;
 	margin: #{ $base-line-height * .75 } 0;
 }
@@ -153,4 +154,8 @@ pre {
 pre[ class*="language-" ] {
 	background: $hm-light-beige;
 	border-radius: 2px;
+}
+
+::selection {
+	background: lighten( $hm-accent, 20% );
 }

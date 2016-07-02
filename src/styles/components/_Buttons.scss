@@ -12,6 +12,7 @@
 	cursor: pointer;
 	border-radius: 2px;
 	vertical-align: middle;
+	width: 100%;
 
 	&:link,
 	&:visited {
@@ -24,6 +25,10 @@
 		color: #FFF;
 		background: lighten( $hm-primary, 10% );
 		text-decoration: none;
+	}
+
+	@media #{ $mq_sm-up } {
+		width: auto;
 	}
 
 }

@@ -15,6 +15,13 @@ $base-font-size:   18px;
 
 $font-family-serif: "ff-meta-serif-web-pro", serif;
 $font-family-sans: "proxima-nova", sans-serif;
+$font-family-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
 // Image Path.
 $hm-images: "../images" !default;
+
+$mq-sm-up:   "screen and ( min-width: 30rem )";
+$mq-sm-down: "screen and ( max-width: 30rem )";
+$mq-md-up:   "screen and ( min-width: 55rem )";
+$mq-md-down: "screen and ( max-width: 55rem )";
+$mq-print:   "print";
