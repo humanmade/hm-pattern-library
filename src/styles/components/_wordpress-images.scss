@@ -1,0 +1,47 @@
+/*
+ * These classes use WordPress default alignment classes and do not follow the naming convention.
+ */
+.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.alignleft {
+	float: left;
+	margin-right: .7775rem;
+	margin-bottom: .7775rem;
+}
+
+.alignright {
+	float: right;
+	margin-left: .7775rem;
+	margin-bottom: .7775rem;
+}
+
+.wp-caption {
+	background-color: $hm-light-beige;
+}
+
+.wp-caption.alignleft,
+.wp-caption.alignright {
+	margin-top: .66625rem;
+}
+
+.wp-caption-text {
+	font-size: .75rem;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.aligncenter > .wp-caption-text {
+	text-align: center;
+}
+
+.alignleft > .wp-caption-text {
+	text-align: left;
+}
+
+.alignright > .wp-caption-text {
+	text-align: right;
+}
