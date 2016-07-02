@@ -50,6 +50,8 @@ textarea {
 .Form-Label,
 .Form label {
 	@include font-heading;
+	@include text-sm;
 	display: block;
-	margin-bottom: $base-line-height / 2;
+	margin-top: $base-line-height / 2;
+	margin-bottom: 0;
 }
