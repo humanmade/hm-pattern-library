@@ -2,24 +2,20 @@
 	@include font-heading;
 	@include text-std;
 	border: 1px solid $hm-primary;
-	padding: #{ $base-line-height / 2 } 10px;
+	padding: #{ $base-line-height / 2 } 30px;
 	background: $hm-primary;
 	color: #FFF;
 	margin-bottom: $base-line-height / 2;
 	margin-right: $base-line-height / 2;
 	display: inline-block;
 	text-align: center;
-
-	&:hover,
-	&:focus {
-		color: #FFF;
-		background: lighten( $hm-primary, 10% );
-		border-color: lighten( $hm-primary, 10% );
-		text-decoration: none;
-	}
+	cursor: pointer;
+	border-radius: 2px;
+	vertical-align: middle;
 
 	&:link,
 	&:visited {
+
 		color: #FFF;
 		text-decoration: none;
 
@@ -28,6 +24,14 @@
 			text-decoration: none;
 		}
 
+	}
+
+	&:hover,
+	&:focus {
+		color: #FFF;
+		background: lighten( $hm-primary, 10% );
+		border-color: lighten( $hm-primary, 10% );
+		text-decoration: none;
 	}
 
 }
@@ -57,11 +61,18 @@
 .Btn-Transparent {
 	border-color: transparent;
 	background-color: transparent;
+	color: $hm-primary;
+
+	&:link,
+	&:visited {
+		color: $hm-primary;
+	}
 
 	&:hover,
 	&:focus {
-		background: transparent;
-		border-color: transparent;
+		color: white;
+		background: $hm-primary;
+		border-color: $hm-primary;
 	}
 }
 
@@ -82,6 +93,12 @@
 	&:visited {
 		color: $hm-primary;
 		background: transparent;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+
 	}
 
 	&:hover,
@@ -95,5 +112,5 @@
 
 .Btn-Small {
 	@include text-sm;
-	padding: #{ $base-line-height / 4 } 8px;
+	padding: #{ $base-line-height / 4 } 20px;
 }
