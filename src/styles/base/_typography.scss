@@ -144,6 +144,7 @@ pre {
 }
 
 pre {
+	padding: #{ $base-line-height * .5 } 15px;
 	display: block;
 	margin: #{ $base-line-height * .75 } 0;
 }
