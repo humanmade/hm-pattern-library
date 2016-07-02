@@ -39,11 +39,15 @@ input[type="email"] {
 		font-family: $font-family-code;
 	}
 
+	&::placeholder {
+		font-style: italic;
+	}
+
 }
 
 .Form_Textarea,
 textarea {
-	@extend .Form-Field;
+	@extend .Form_Field;
 	width: 100%;
 	clear: both;
 }
