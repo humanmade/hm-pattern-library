@@ -28,7 +28,7 @@
 	height: 97px;
 
 	&.HMLogo-Red {
-		background-image: url( "#{ $hm-images }/logo-alt-Red.svg" );
+		background-image: url( "#{ $hm-images }/logo-alt-red.svg" );
 	}
 
 	&.HMLogo-White {
@@ -39,30 +39,30 @@
 
 .HMLogo-Small {
 
-	background-image: url( "#{ $hm-images }/logo-Small-black.svg" );
+	background-image: url( "#{ $hm-images }/logo-small-black.svg" );
 	width: 69px;
 	height: 40px;
 
 	&.HMLogo-Red {
-		background-image: url( "#{ $hm-images }/logo-Small-Red.svg" );
+		background-image: url( "#{ $hm-images }/logo-small-red.svg" );
 	}
 
 	&.HMLogo-White {
-		background-image: url( "#{ $hm-images }/logo-Small-White.svg" );
+		background-image: url( "#{ $hm-images }/logo-small-white.svg" );
 	}
 }
 
 .HMLogo-Tiny {
 
-	background-image: url( "#{ $hm-images }/logo-Tiny-black.svg" );
+	background-image: url( "#{ $hm-images }/logo-tiny-black.svg" );
 	width: 20px;
 	height: 20px;
 
 	&.HMLogo-Red {
-		background-image: url( "#{ $hm-images }/logo-Tiny-Red.svg" );
+		background-image: url( "#{ $hm-images }/logo-tiny-red.svg" );
 	}
 
 	&.HMLogo-White {
-		background-image: url( "#{ $hm-images }/logo-Tiny-White.svg" );
+		background-image: url( "#{ $hm-images }/logo-tiny-white.svg" );
 	}
 }
