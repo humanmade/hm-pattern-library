@@ -156,6 +156,6 @@ pre[ class*="language-" ] {
 	border-radius: 2px;
 }
 
-p::selection {
+::selection {
 	background: lighten( $hm-accent, 20% );
 }
