@@ -15,24 +15,35 @@ input[type="email"] {
 	text-align: left;
 	border-radius: 2px;
 	vertical-align: middle;
-	width: 300px;
+	width: 100%;
 	max-width: 100%;
+
+	&:hover {
+		border-color: darken( $border-color, 15% );
+		outline: none;
+	}
 
 	&:focus {
 		border-color: darken( $border-color, 30% );
 		outline: none;
 	}
 
-	&.Form_Field-Lg {
-		width: 100%;
-	}
+	@media #{ $mq_sm-up } {
 
-	&.Form_Field-Md {
-		width: 540px;
-	}
+		width: 50%;
 
-	&.Form_Field-Sm {
-		width: 150px;
+		&.Form_Field-Lg {
+			width: 100%;
+		}
+
+		&.Form_Field-Md {
+			width: 33%;
+		}
+
+		&.Form_Field-Sm {
+			width: 15%;
+		}
+
 	}
 
 	&.Form_Field-Code {
