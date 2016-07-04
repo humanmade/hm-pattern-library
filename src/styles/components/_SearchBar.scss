@@ -55,12 +55,10 @@
 	overflow: hidden;
 	opacity: .75;
 
-	// TODO - replace with icon.
 	&:after {
-		content: "S";
+		content: url( "#{ $hm-images }/icons/icon-search-white.svg" );
 		display: block;
 		position: absolute;
-		font-family: $font-family-code;
 		width: 100%;
 		line-height: $base-line-height * 2;
 		vertical-align: middle;
