@@ -2,11 +2,11 @@
 	@include font-heading;
 	@include text-std;
 	border: none;
-	padding: #{ $base-line-height / 2 } 30px;
+	padding: #{ $base-line-height / 2 } $gutter-width;
 	background: $hm-primary;
 	color: #FFF;
 	margin-bottom: $base-line-height / 2;
-	margin-right: $base-line-height / 2;
+	margin-right: $gutter-width / 2;
 	display: inline-block;
 	text-align: center;
 	cursor: pointer;
@@ -25,6 +25,7 @@
 		color: #FFF;
 		background: lighten( $hm-primary, 10% );
 		text-decoration: none;
+		outline: none;
 	}
 
 	@media #{ $mq_sm-up } {
@@ -98,5 +99,5 @@
 
 .Btn-Small {
 	@include text-sm;
-	padding: #{ $base-line-height / 4 } 20px;
+	padding: #{ $base-line-height / 4 } #{ $gutter-width / 2 };
 }

@@ -1,0 +1,141 @@
+.StyleGuide_SearchContainer {
+	background: $hm-primary;
+	width: 100%;
+	clear: both;
+	padding: $base-line-height $gutter-width;
+}
+
+.SearchBar {
+	@extend .util-Clearfix;
+	clear: both;
+	position: relative;
+}
+
+.SearchBar_Container {
+	@extend .util-Clearfix;
+	width: 50%;
+	float: right;
+	position: relative;
+	transition: width ease-in-out .1s;
+}
+
+.SearchBar_Label {
+	position: absolute;
+	clip: rect( 1px, 1px, 1px, 1px );
+}
+
+.SearchBar .SearchBar_Field {
+	border: none;
+	background: #bf4634;
+	color: #FFF;
+	float: right;
+	margin: 0;
+	padding-right: 0;
+	width: 100%;
+
+	::placeholder {
+		opacity: .75;
+	}
+
+}
+
+// TODO - remove in JS, replace with 'clear'?
+.SearchBar_Submit {
+	@extend .Btn;
+	background: rgba( #bf4634, .8 );
+	border: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	text-indent: 100%;
+	padding: 0;
+	height: $base-line-height * 2;
+	width: $base-line-height * 2;
+	overflow: hidden;
+	opacity: .75;
+
+	// TODO - replace with icon.
+	&:after {
+		content: "S";
+		display: block;
+		position: absolute;
+		font-family: $font-family-code;
+		width: 100%;
+		line-height: $base-line-height * 2;
+		vertical-align: middle;
+		text-align: center;
+		top: 0;
+		left: 0;
+		text-indent: 0;
+	}
+
+	&:hover,
+	&:focus {
+		background: rgba( #bf4634, .8 );
+	}
+
+}
+
+.SearchBar_Results {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background: #bf4634;
+	padding: 0 #{ $gutter-width / 2 };
+	border-radius: 0 0 2px 2px;
+}
+
+.SearchBar_Results_Title {
+	@include font-heading;
+	@include text-std;
+	color: #FFF;
+	margin: 0;
+}
+
+.SearchBar_Result {
+
+	@include text-sm;
+
+	a:link,
+	a:visited,
+	a:hover,
+	a:focus {
+		color: #FFF;
+		text-decoration: none;
+	}
+
+}
+
+.SearchBar_Results {
+	color: #FFF;
+	margin: 0;
+	list-style: none;
+}
+
+.SearchBar_Result {
+	padding: #{ $base-line-height / 2 } 0;
+	margin: 0;
+	border-top: 1px solid #c9786c;
+}
+
+.SearchBar_Result_Title,
+.SearchBar_Result_Text {
+	@include text-sm;
+	color: #FFF;
+	margin: 0;
+}
+
+.SearchBar-Focused {
+	.SearchBar_Container {
+		width: 100%;
+		transition: width ease-in-out .1s;
+	}
+
+	&.SearchBar-HasResults .SearchBar_Results {
+		display: block;
+	}
+
+}

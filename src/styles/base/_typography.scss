@@ -113,9 +113,10 @@ ol {
 blockquote {
 	@include text-md;
 	margin: #{ $base-line-height * .75 } 0;
-	margin-left: 20px;
-	padding-left: 20px;
+	margin-left: $gutter-width;
+	padding-left: $gutter-width;
 	border-left: 1px solid $border-color;
+	font-style: italic;
 }
 
 hr {
@@ -126,6 +127,11 @@ hr {
 
 a:link {
 	color: $hm-primary;
+	text-decoration: none;
+}
+
+a:visited {
+	color: darken( $hm-primary, 10% );
 	text-decoration: none;
 }
 
