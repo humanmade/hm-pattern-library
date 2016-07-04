@@ -14,7 +14,6 @@
 .HMLogo-Container {
 
 	width: auto;
-	padding: #{ $base-line-height } $gutter-width;
 	&:nth-child( n ) { background-color: white; }
 	&:nth-child( 2n ) { background-color: $hm-light-beige; }
 	&:nth-child( 3n ) { background-color: $hm-primary; }

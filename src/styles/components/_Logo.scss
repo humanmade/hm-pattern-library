@@ -10,7 +10,7 @@
 	background-size: 100%;
 	width: 292px;
 	height: 56px;
-	margin: 0;
+	margin: #{ $base-line-height } $gutter-width;
 
 }
 
