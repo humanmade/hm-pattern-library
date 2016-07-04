@@ -39,6 +39,15 @@
 		left: -130px;
 		transform: scale( 1.75 );
 		top: 34px;
+
+		@media #{ $mq-md-down } {
+			position: relative;
+			top: 0;
+			left: 0;
+			transform: scale( 1 );
+			margin-bottom:  $base-line-height;
+		}
+
 	}
 }
 
