@@ -2,19 +2,16 @@
 
 	var navAccordion = function( el ) {
 
-		var children = el.children;
-
-
-		for ( var i = 0; i < children.length; i++ ) {
-
-			var navAccordion_Item = children[i];
+		Array.prototype.forEach.call( el.children, function( navAccordion_Item ) {
 
 			var subNav = Array.prototype.filter.call( navAccordion_Item.children, function( el ) {
 				return el.tagName === 'UL';
 			} );
 
 			if ( subNav.length < 1 ) {
-				continue;
+				return;
+			} else {
+				subNav = subNav[0];
 			}
 
 			var openHeight = subNav.offsetHeight;
@@ -23,47 +20,45 @@
 			openHeight += parseInt( style.marginTop ) + parseInt( style.marginBottom );
 
 			var navAccordion_Toggle = document.createElement( 'BUTTON' );
-			navAccordion_Toggle.appendChild( document.createTextNode( "Toggle" ) );, {
-			navAccordion_Toggle.classList.add( 'Btn NavAccordion_Toggle' );
+			navAccordion_Toggle.appendChild( document.createTextNode( "Toggle" ) );
+			navAccordion_Toggle.classList.add( 'Btn' );
+			navAccordion_Toggle.classList.add( 'NavAccordion_Toggle' );
 
-		}
-		// 	if ( $subNav.length > 0 ) {
+			var anchor = Array.prototype.filter.call( navAccordion_Item.children, function( el ) {
+				return el.tagName === 'A';
+			} );
 
-		// 		var openHeight           = $subNav.outerHeight();
-		// 		var $NavAccordion_Toggle = $( '<button/>', {
-		// 			text: 'Toggle',
-		// 			class: 'Btn NavAccordion_Toggle'
-		// 		} );
+			if ( anchor.length ) {
+				anchor[0].appendChild( navAccordion_Toggle );
+			}
 
-		// 		var toggleSubNav = function( show ) {
+			var toggleSubNav = function( show ) {
 
-		// 			if ( 'undefined' === typeof( show ) ) {
-		// 				show = $NavAccordion_Item.hasClass( 'NavAccordion_Item-Closed' );
-		// 			}
+				if ( 'undefined' === typeof( show ) ) {
+					show = navAccordion_Item.classList.contains( 'NavAccordion_Item-Closed' );
+				}
 
-		// 			if ( show ) {
-		// 				$NavAccordion_Item.removeClass( 'NavAccordion_Item-Closed' );
-		// 				$NavAccordion_Item.addClass( 'NavAccordion_Item-Open' );
-		// 				$subNav.css( 'max-height', openHeight );
-		// 			} else {
-		// 				$NavAccordion_Item.addClass( 'NavAccordion_Item-Closed' );
-		// 				$NavAccordion_Item.removeClass( 'NavAccordion_Item-Open' );
-		// 				$subNav.css( 'max-height', 0 );
-		// 			}
+				if ( show ) {
+					navAccordion_Item.classList.remove( 'NavAccordion_Item-Closed' );
+					navAccordion_Item.classList.add( 'NavAccordion_Item-Open' );
+					subNav.style['max-height'] = openHeight + 'px';
+				} else {
+					navAccordion_Item.classList.add( 'NavAccordion_Item-Closed' );
+					navAccordion_Item.classList.remove( 'NavAccordion_Item-Open' );
+					subNav.style['max-height'] = 0;
+				}
 
-		// 		}
+			}
 
-		// 		$NavAccordion_Toggle.appendTo( $NavAccordion_Item.children('.NavAccordion_Anchor') );
-		// 		toggleSubNav( false );
+			toggleSubNav( false );
 
-		// 		$NavAccordion_Toggle.click( function( e ) {
-		// 			e.preventDefault();
-		// 			$(this).blur();
-		// 			toggleSubNav();
-		// 		});
-		// 	}
+			navAccordion_Toggle.addEventListener( 'click', function( event ) {
+				event.preventDefault();
+				navAccordion_Toggle.blur();
+				toggleSubNav();
+			});
 
-		// } );
+		} );
 
 	}
 
