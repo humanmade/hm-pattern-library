@@ -38,7 +38,7 @@ Sub-components are indicated with an underscore, variants with a hyphen. For exa
 
 * `SomeComponent`
 * `SomeComponent_SubComponent`
-* `SomeComponent-CompenentVarient`
+* `SomeComponent-ComponentVariant`
 
 In the styles/components directory, components should be placed in a file named for the component, `_SomeComponent.scss`.
 
