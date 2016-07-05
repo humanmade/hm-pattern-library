@@ -15,11 +15,11 @@
 }
 
 .HMLogo-Red {
-	background-image: url( "#{ $hm-images }/logo-Red.svg" );
+	background-image: url( "#{ $hm-images }/logo-red.svg" );
 }
 
 .HMLogo-White {
-	background-image: url( "#{ $hm-images }/logo-White.svg" );
+	background-image: url( "#{ $hm-images }/logo-white.svg" );
 }
 
 .HMLogo-Alt {
@@ -33,7 +33,7 @@
 	}
 
 	&.HMLogo-White {
-		background-image: url( "#{ $hm-images }/logo-alt-White.svg" );
+		background-image: url( "#{ $hm-images }/logo-alt-white.svg" );
 	}
 
 }
