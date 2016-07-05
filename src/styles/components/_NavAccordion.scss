@@ -77,53 +77,63 @@
 
 .NavAccordion_Toggle {
 
+	@extend .Btn-Small;
 	display: block;
 	position: absolute;
 	right: 0;
-	top: 50%;
-	content: " ";
-	width: 19px;
-	height: 19px;
-	border-radius: 100%;
-	border: 1px solid darken( $border-color, 20% );
-	color: darken( $border-color, 20% );
+	top: 0;
+	margin: 0;
 	padding: 0;
-	text-indent: 150%;
+	height: $base-line-height * 1.5;
+	width: $base-line-height * 1.5;
+	text-indent: 100%;
 	overflow: hidden;
-	background: none;
-	margin: -10px 0 0 0;
+	background: transparent;
 
-	&:hover,
-	&:focus {
-		background: none;
-		border-color: darken( $border-color, 40% );
-		color: darken( $border-color, 60% );
-		outline: none;
+	&:before {
+		position: absolute;
+		content: " ";
+		background: rgba( $hm-warm-grey, .75 );
+		border-radius: 100%;
+		top: 50%;
+		left: 50%;
+		width: 18px;
+		height: 18px;
+		margin-left: -9px;
+		margin-top: -9px;
+		text-indent: 0;
 	}
 
 	&:after {
-		content: "-";
 		position: absolute;
-		top: 1px;
-		left: 1px;
-		width: 17px;
-		line-height: 17px;
-		font-size: 16px;
-		color: inherit;
-		font-weight: 300;
+		content: " ";
+		background: url( "#{ $hm-images }/icons/icon-plus-white.svg" ) no-repeat center center;
+		background-size: 100% 100%;
+		top: 50%;
+		left: 50%;
+		width: 8px;
+		height: 8px;
+		margin-left: -4px;
+		margin-top: -4px;
 		text-indent: 0;
-		text-align: center;
-		vertical-align: middle;
 	}
 
-}
+	&:hover,
+	&:focus {
 
-.NavAccordion_Item-Open > .NavAccordion_Anchor .NavAccordion_Toggle:after {
-	top: 0px;
-}
+		background: none;
+		outline: none;
 
-.NavAccordion_Item-Closed > .NavAccordion_Anchor .NavAccordion_Toggle:after {
-	content: "+";
+		&:before {
+			background: darken( $hm-warm-grey, 40% );
+		}
+	}
+
+	.NavAccordion_Item-Open & {
+		&:after {
+			background-image: url( "#{ $hm-images }/icons/icon-minus-white.svg" );
+		}
+	}
 }
 
 @mixin NavAccordion_Coloured( $bg, $border-color, $text-color: $hm-warm-grey ) {
@@ -173,8 +183,43 @@
 
 .NavAccordion-Red {
 	@include NavAccordion_Coloured( $hm-primary, $border-color-red, #FFF );
+
+	.NavAccordion_Toggle {
+
+		&:before {
+			background: rgba( 255, 255, 255, .85 );
+		}
+
+		&:after {
+			background-image: url( "#{ $hm-images }/icons/icon-plus-red.svg" );
+		}
+
+		&:hover:before,
+		&:focus:before {
+			background-color: white;
+		}
+
+		.NavAccordion_Item-Open & {
+			&:after {
+				background-image: url( "#{ $hm-images }/icons/icon-minus-red.svg" );
+			}
+		}
+	}
 }
 
 .NavAccordion-Beige {
 	@include NavAccordion_Coloured( $hm-light-beige, $border-color-beige, $hm-warm-grey );
+
+	.NavAccordion_Toggle {
+
+		&:after {
+			background-image: url( "#{ $hm-images }/icons/icon-plus-beige.svg" );
+		}
+
+		.NavAccordion_Item-Open & {
+			&:after {
+				background-image: url( "#{ $hm-images }/icons/icon-minus-beige.svg" );
+			}
+		}
+	}
 }
