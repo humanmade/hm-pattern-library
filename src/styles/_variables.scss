@@ -8,8 +8,9 @@ $hm-medium-grey: #737373;
 $hm-light-grey:  #EFF1EF;
 $hm-brown:       #4F4641;
 
-$border-color: lighten( $hm-medium-grey, 40% );
-$border-color-red: lighten( $hm-primary, 20% );
+$border-color:       lighten( $hm-medium-grey, 40% );
+$border-color-red:   lighten( $hm-primary, 15% );
+$border-color-beige: desaturate( darken( $hm-light-beige, 15% ), 20 );
 
 $base-line-height: 1.555rem;
 $base-font-size:   18px;

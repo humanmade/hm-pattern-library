@@ -14,10 +14,8 @@
 		list-style: none;
 		font-size: inherit;
 		margin: 0;
-	}
-
-	> li > ul {
-		margin-left: $gutter-width;
+		position: relative;
+		transition: max-height ease-in-out 0.1s;
 	}
 
 }
@@ -27,7 +25,6 @@
 	font-size: inherit;
 	display: block;
 	border-bottom: 1px solid $border-color;
-	overflow: hidden;
 
 	&:last-child {
 		border-bottom: none;
@@ -39,55 +36,43 @@
 		position: relative;
 	}
 
-}
-
-// Nested nav menu.
-.NavAccordion_Item .NavAccordion_Item {
-
-	padding-left: 0;
-	border-left: 1px solid $border-color;
-	border-bottom: none;
-
-	.NavAccordion_Anchor {
-		padding-left: $gutter-width;
+	> ul {
+		overflow: hidden;
+		margin-left: $gutter-width / 2;
 	}
 
 }
 
-// Double nested nav menu.
-.NavAccordion_Item .NavAccordion_Item .NavAccordion_Item {
+.NavAccordion_Item > ul:after {
+	content: " ";
+	border-left: 1px solid $border-color;
+	top: -.333333333rem;
+	bottom: 1.111111rem;
+	left: 0;
+	position: absolute;
+}
 
+.NavAccordion_Item .NavAccordion_Item {
+
+	margin-left: 0;
 	padding-left: $gutter-width;
 	border-left: none;
 	border-bottom: none;
 
 	.NavAccordion_Anchor:after {
 		content: " ";
-		width: $gutter-width;
+		width: $gutter-width / 2;
 		border-bottom: 1px solid $border-color;
 		position: absolute;
 		top: 1.1rem;
-		left: -1 * $gutter-width;
+		left: $gutter-width * -1;
 	}
 
-	ul {
-		margin-left: $gutter-width * -1;
+	> ul {
+		overflow: visible;
+		margin-left: 0;
 	}
 
-	.NavAccordion_Item {
-		padding-left: $gutter-width * 2;
-	}
-
-	.NavAccordion_Item .NavAccordion_Anchor:after {
-		width: $gutter-width * 2;
-		left: -2 * $gutter-width;
-	}
-
-}
-
-.NavAccordion_Item-Open > ul,
-.NavAccordion_Item-Closed > ul {
-	transition: max-height ease-in-out .1s;
 }
 
 .NavAccordion_Toggle {
@@ -103,7 +88,7 @@
 	border: 1px solid darken( $border-color, 20% );
 	color: darken( $border-color, 20% );
 	padding: 0;
-	text-indent: 100%;
+	text-indent: 150%;
 	overflow: hidden;
 	background: none;
 	margin: -10px 0 0 0;
@@ -141,41 +126,55 @@
 	content: "+";
 }
 
-.NavAccordion-Red {
+@mixin NavAccordion_Coloured( $bg, $border-color, $text-color: $hm-warm-grey ) {
 
-	padding: 20px;
-	background: $hm-primary;
-	color: #fff;
+	background: $bg;
+	color: $text-color;
 
 	.NavAccordion_Item {
-		border-bottom-color: $border-color-red;
+		border-color: $border-color;
+	}
 
-		.NavAccordion_Item {
+	.NavAccordion_Item > ul:after {
+		border-color: $border-color;
+	}
 
-			border-left-color: $border-color-red;
-
-			.NavAccordion_Item {
-				border-left: none;
-			}
-
-			.NavAccordion_Item .NavAccordion_Anchor:after {
-				border-bottom-color: $border-color-red;
-			}
-
+	.NavAccordion_Item .NavAccordion_Item {
+		.NavAccordion_Anchor:after {
+			border-color: $border-color;
 		}
+	}
+
+	$border-color-toggle: $border-color;
+	$border-color-toggle-hover: $border-color;
+
+	@if ( lightness( $bg ) > 60 ) {
+		$border-color-toggle: darken( $border-color, 20% );
+		$border-color-toggle-hover: darken( $border-color, 40% );
+	} @else {
+		$border-color-hover: lighten( $border-color, 30% );
+		$border-color-toggle-hover: lighten( $border-color, 60% );
 	}
 
 	.NavAccordion_Toggle {
 
-		border-color: lighten( $border-color-red, 20% );
-		color: lighten( $border-color-red, 20% );
+		border-color: $border-color-toggle;
+		color: $border-color-toggle;
 
 		&:hover,
 		&:focus {
-			border-color: lighten( $border-color-red, 40% );
-			color: lighten( $border-color-red, 40% );
+			border-color: $border-color-toggle-hover;
+			color: $border-color-toggle-hover;
 		}
 
 	}
 
+}
+
+.NavAccordion-Red {
+	@include NavAccordion_Coloured( $hm-primary, $border-color-red, #FFF );
+}
+
+.NavAccordion-Beige {
+	@include NavAccordion_Coloured( $hm-light-beige, $border-color-beige, $hm-warm-grey );
 }
