@@ -34,11 +34,16 @@
 		@extend .HMLogo-Small;
 		@extend .HMLogo-Red;
 
-		position: absolute;
-		left: -130px;
-		transform: scale( 1.75 );
-		top: 34px;
-		margin: 0;
+		margin: 0 0 $base-line-height;
+
+		@media #{ $mq-md-up } {
+			position: absolute;
+			left: -130px;
+			transform: scale( 1.75 );
+			top: 34px;
+			margin: 0;
+		}
+
 	}
 }
 

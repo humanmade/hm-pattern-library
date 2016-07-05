@@ -98,5 +98,5 @@
 
 .Btn-Small {
 	@include text-sm;
-	padding: #{ $base-line-height / 4 } 20px;
+	padding: #{ $base-line-height / 4 } #{ $gutter-width / 2 };
 }
