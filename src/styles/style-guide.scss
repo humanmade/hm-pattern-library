@@ -19,7 +19,6 @@
 	&:nth-child( 3n ) { background-color: $hm-primary; }
 
 	.HMLogo {
-		margin: .5em;
 		vertical-align: top;
 	}
 }
@@ -39,6 +38,7 @@
 		left: -130px;
 		transform: scale( 1.75 );
 		top: 34px;
+		margin: 0;
 	}
 }
 
