@@ -72,3 +72,15 @@ textarea {
 	margin-top: $base-line-height / 2;
 	margin-bottom: 0;
 }
+
+.Form_Checkbox_Group {
+	label {
+		@include font-body;
+		display: inline-block;
+	}
+
+	input[type="radio"],
+	input[type="checkbox"] {
+		margin-right: $gutter-width / 3;
+	}
+}
