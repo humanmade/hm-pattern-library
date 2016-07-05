@@ -106,7 +106,8 @@ ol,
 
 ul,
 ol {
-	list-style-position: outside;
+	list-style-position: inside;
+	padding: 0;
 	padding: 0 0 0 $gutter-width;
 }
 

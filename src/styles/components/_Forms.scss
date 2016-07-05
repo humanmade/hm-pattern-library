@@ -8,6 +8,7 @@ input[type="email"] {
 	border: 1px solid $border-color;
 	padding: #{ $base-line-height / 2 } 1em #{ $base-line-height / 2 };
 	background: transparent;
+	box-shadow: none;
 	color: $hm-warm-grey;
 	margin-bottom: $base-line-height / 2;
 	margin-right: $base-line-height / 2;
