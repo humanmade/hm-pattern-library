@@ -8,6 +8,10 @@ $hm-medium-grey: #737373;
 $hm-light-grey:  #EFF1EF;
 $hm-brown:       #4F4641;
 
+// Alternate versions of main colors. Used for borders, backgrounds etc.
+$hm-primary-light: desaturate( lighten( $hm-primary, 5% ), 10 );
+$hm-primary-dark:  desaturate( darken( $hm-primary, 5% ), 10 );
+
 $border-color: lighten( $hm-medium-grey, 40% );
 
 $base-line-height: 1.5rem;

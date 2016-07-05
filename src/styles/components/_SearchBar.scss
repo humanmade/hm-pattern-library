@@ -29,7 +29,7 @@
 
 .SearchBar .SearchBar_Field {
 	border: none;
-	background: #bf4634;
+	background: $hm-primary-dark;
 	color: #FFF;
 	float: right;
 	margin: 0;
@@ -45,7 +45,7 @@
 // TODO - remove in JS, replace with 'clear'?
 .SearchBar_Submit {
 	@extend .Btn;
-	background: rgba( #bf4634, .8 );
+	background: rgba( $hm-primary-dark, .8 );
 	border: none;
 	position: absolute;
 	top: 0;
@@ -73,7 +73,7 @@
 
 	&:hover,
 	&:focus {
-		background: rgba( #bf4634, .8 );
+		background: rgba( $hm-primary-dark, .8 );
 	}
 
 }
@@ -84,7 +84,7 @@
 	top: 100%;
 	left: 0;
 	right: 0;
-	background: #bf4634;
+	background: $hm-primary-dark;
 	padding: 0 #{ $gutter-width / 2 };
 	border-radius: 0 0 2px 2px;
 }
@@ -119,7 +119,7 @@
 .SearchBar_Result {
 	padding: #{ $base-line-height / 2 } 0;
 	margin: 0;
-	border-top: 1px solid #c9786c;
+	border-top: 1px solid $hm-primary-light;
 }
 
 .SearchBar_Result_Title,
