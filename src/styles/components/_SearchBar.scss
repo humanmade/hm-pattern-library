@@ -13,10 +13,13 @@
 
 .SearchBar_Container {
 	@extend .util-Clearfix;
-	width: 50%;
-	float: right;
 	position: relative;
-	transition: width ease-in-out .1s;
+
+	@media #{ $mq-md-up } {
+		width: 50%;
+		float: right;
+		transition: width ease-in-out .1s;
+	}
 }
 
 .SearchBar_Label {
@@ -127,9 +130,12 @@
 }
 
 .SearchBar-Focused {
-	.SearchBar_Container {
-		width: 100%;
-		transition: width ease-in-out .1s;
+
+	@media #{ $mq-md-up } {
+		.SearchBar_Container {
+			width: 100%;
+			transition: width ease-in-out .1s;
+		}
 	}
 
 	&.SearchBar-HasResults .SearchBar_Results {
