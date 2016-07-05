@@ -110,13 +110,19 @@ ul,
 ol {
 	list-style-position: inside;
 	padding: 0;
+
+	ul,
+	ol {
+		margin: 0 0 0 $gutter-width;
+
+	}
 }
 
 blockquote {
 	@include text-md;
 	margin: #{ $base-line-height * .75 } 0;
-	margin-left: 20px;
-	padding-left: 20px;
+	margin-left: $gutter-width;
+	padding-left: $gutter-width;
 	border-left: 1px solid $border-color;
 }
 
