@@ -1,3 +1,51 @@
+/**
+ * Helper mixin for generating color variations.
+ */
+@mixin NavAccordion_Coloured( $bg, $border-color, $text-color: $hm-warm-grey ) {
+
+	background: $bg;
+	color: $text-color;
+
+	.NavAccordion_Item {
+		border-color: $border-color;
+	}
+
+	.NavAccordion_Item > ul:after {
+		border-color: $border-color;
+	}
+
+	.NavAccordion_Item .NavAccordion_Item {
+		.NavAccordion_Anchor:after {
+			border-color: $border-color;
+		}
+	}
+
+	$border-color-toggle: $border-color;
+	$border-color-toggle-hover: $border-color;
+
+	@if ( lightness( $bg ) > 60 ) {
+		$border-color-toggle: darken( $border-color, 20% );
+		$border-color-toggle-hover: darken( $border-color, 40% );
+	} @else {
+		$border-color-hover: lighten( $border-color, 30% );
+		$border-color-toggle-hover: lighten( $border-color, 60% );
+	}
+
+	.NavAccordion_Toggle {
+
+		border-color: $border-color-toggle;
+		color: $border-color-toggle;
+
+		&:hover,
+		&:focus {
+			border-color: $border-color-toggle-hover;
+			color: $border-color-toggle-hover;
+		}
+
+	}
+
+}
+
 .NavAccordion {
 
 	@include font-heading;
@@ -14,6 +62,7 @@
 		list-style: none;
 		font-size: inherit;
 		margin: 0;
+		padding: 0;
 		position: relative;
 		transition: max-height ease-in-out 0.1s;
 	}
@@ -58,7 +107,6 @@
 	padding-left: $gutter-width;
 	border-left: none;
 	border-bottom: none;
-
 
 	.NavAccordion_Anchor:after {
 		content: " ";
@@ -140,51 +188,6 @@
 	background-image: url( "#{ $hm-images }/icons/icon-minus-white.svg" );
 }
 
-@mixin NavAccordion_Coloured( $bg, $border-color, $text-color: $hm-warm-grey ) {
-
-	background: $bg;
-	color: $text-color;
-
-	.NavAccordion_Item {
-		border-color: $border-color;
-	}
-
-	.NavAccordion_Item > ul:after {
-		border-color: $border-color;
-	}
-
-	.NavAccordion_Item .NavAccordion_Item {
-		.NavAccordion_Anchor:after {
-			border-color: $border-color;
-		}
-	}
-
-	$border-color-toggle: $border-color;
-	$border-color-toggle-hover: $border-color;
-
-	@if ( lightness( $bg ) > 60 ) {
-		$border-color-toggle: darken( $border-color, 20% );
-		$border-color-toggle-hover: darken( $border-color, 40% );
-	} @else {
-		$border-color-hover: lighten( $border-color, 30% );
-		$border-color-toggle-hover: lighten( $border-color, 60% );
-	}
-
-	.NavAccordion_Toggle {
-
-		border-color: $border-color-toggle;
-		color: $border-color-toggle;
-
-		&:hover,
-		&:focus {
-			border-color: $border-color-toggle-hover;
-			color: $border-color-toggle-hover;
-		}
-
-	}
-
-}
-
 .NavAccordion-Red {
 	@include NavAccordion_Coloured( $hm-primary, $border-color-red, #FFF );
 
@@ -223,7 +226,6 @@
 .NavAccordion-Beige .NavAccordion_Item-Open .NavAccordion_Toggle:after {
 	background-image: url( "#{ $hm-images }/icons/icon-minus-beige.svg" );
 }
-
 
 .NavAccordion_Item-Active .NavAccordion_Anchor {
 	text-decoration: underline;
