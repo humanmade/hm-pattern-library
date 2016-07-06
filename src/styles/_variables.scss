@@ -10,10 +10,9 @@ $hm-brown:       #4F4641;
 
 // Alternate versions of main colors. Used for borders, backgrounds etc.
 $hm-primary-light: saturate( lighten( $hm-primary, 10% ), 5 );
-$hm-primary-dark:  desaturate( darken( $hm-primary, 8% ), 10 );
+$hm-primary-dark:  desaturate( darken( $hm-primary, 6% ), 8 );
 
 $border-color:       lighten( $hm-medium-grey, 40% );
-$border-color-red:   lighten( $hm-primary, 15% );
 $border-color-red:   $hm-primary-light;
 $border-color-beige: desaturate( darken( $hm-beige, 15% ), 20 );
 
