@@ -1,10 +1,19 @@
-(function() {
+(function( window ) {
+
+	// Graceful faliure if the browser does NOT support ALL of these.
+	if ( ! (
+		'getElementsByClassName' in document &&
+		'addEventListener' in document &&
+		'classList' in document.documentElement
+	) ) {
+		return;
+	}
 
 	var navAccordion = function( el ) {
 
-		Array.prototype.forEach.call( el.children, function( navAccordion_Item ) {
+		Array.prototype.forEach.call( el.children, function( navAccordionItem ) {
 
-			var subNav = Array.prototype.filter.call( navAccordion_Item.children, function( el ) {
+			var subNav = Array.prototype.filter.call( navAccordionItem.children, function( el ) {
 				return el.tagName === 'UL';
 			} );
 
@@ -19,42 +28,42 @@
 
 			openHeight += parseInt( style.marginTop ) + parseInt( style.marginBottom );
 
-			var navAccordion_Toggle = document.createElement( 'BUTTON' );
-			navAccordion_Toggle.appendChild( document.createTextNode( "Toggle" ) );
-			navAccordion_Toggle.classList.add( 'Btn' );
-			navAccordion_Toggle.classList.add( 'NavAccordion_Toggle' );
+			var navAccordionToggle = document.createElement( 'BUTTON' );
+			navAccordionToggle.appendChild( document.createTextNode( "Toggle" ) );
+			navAccordionToggle.classList.add( 'Btn' );
+			navAccordionToggle.classList.add( 'NavAccordion_Toggle' );
 
-			var anchor = Array.prototype.filter.call( navAccordion_Item.children, function( el ) {
+			var anchor = Array.prototype.filter.call( navAccordionItem.children, function( el ) {
 				return el.tagName === 'A';
 			} );
 
 			if ( anchor.length ) {
-				anchor[0].appendChild( navAccordion_Toggle );
+				anchor[0].appendChild( navAccordionToggle );
 			}
 
 			var toggleSubNav = function( show ) {
 
-				if ( 'undefined' === typeof( show ) ) {
-					show = navAccordion_Item.classList.contains( 'NavAccordion_Item-Closed' );
+				if ( 'undefined' === typeof show ) {
+					show = navAccordionItem.classList.contains( 'NavAccordion_Item-Closed' );
 				}
 
 				if ( show ) {
-					navAccordion_Item.classList.remove( 'NavAccordion_Item-Closed' );
-					navAccordion_Item.classList.add( 'NavAccordion_Item-Open' );
-					subNav.style['max-height'] = openHeight + 'px';
+					navAccordionItem.classList.remove( 'NavAccordion_Item-Closed' );
+					navAccordionItem.classList.add( 'NavAccordion_Item-Open' );
+					subNav.style.maxHeight = openHeight + 'px';
 				} else {
-					navAccordion_Item.classList.add( 'NavAccordion_Item-Closed' );
-					navAccordion_Item.classList.remove( 'NavAccordion_Item-Open' );
-					subNav.style['max-height'] = 0;
+					navAccordionItem.classList.add( 'NavAccordion_Item-Closed' );
+					navAccordionItem.classList.remove( 'NavAccordion_Item-Open' );
+					subNav.style.maxHeight = 0;
 				}
 
 			}
 
 			toggleSubNav( false );
 
-			navAccordion_Toggle.addEventListener( 'click', function( event ) {
+			navAccordionToggle.addEventListener( 'click', function( event ) {
 				event.preventDefault();
-				navAccordion_Toggle.blur();
+				navAccordionToggle.blur();
 				toggleSubNav();
 			});
 
@@ -68,4 +77,4 @@
 		navAccordion( els[ i ] );
 	}
 
-} )();
+} )( window );
