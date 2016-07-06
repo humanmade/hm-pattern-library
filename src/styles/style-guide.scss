@@ -52,3 +52,19 @@
 	margin-top: -1.94375rem;
 	font-style: italic;
 }
+
+.NavAccordions {
+
+	@extend .util-Clearfix;
+	clear: both;
+
+	.NavAccordion {
+		padding: $base-line-height / 2 $gutter-width / 2;
+		width: 100%;
+
+		@media #{ $mq-sm-up } {
+			width: 33.333%;
+			float: left;
+		}
+	}
+}
