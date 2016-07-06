@@ -59,6 +59,7 @@
 	border-left: none;
 	border-bottom: none;
 
+
 	.NavAccordion_Anchor:after {
 		content: " ";
 		width: $gutter-width / 2;
@@ -73,6 +74,10 @@
 		margin-left: 0;
 	}
 
+}
+
+.NavAccordion_Item .NavAccordion_Item .NavAccordion_Item {
+	@include font-body;
 }
 
 .NavAccordion_Toggle {
