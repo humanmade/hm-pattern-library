@@ -26,14 +26,6 @@
 <p>Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque.</p>
 <p>Primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.</p>
   
-	<h2>Headings</h2>
-<h1>H1: Sed nec diam eu diam mattis viverra.</h1>
-<h2>H2: Vivamus luctus urna sed urna ultricies.</h2>
-<h3>H3: In libero.</h3>
-<h4>H4: Vestibulum mollis mauris enim.</h4>
-<h5>H5: Morbi euismod magna ac lorem rutrum elementum.</h5>
-<h6>H6: Donec viverra auctor lobortis.</h6>
-  
 	<h2>Blockquote</h2>
 <blockquote>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa <strong>strong</strong>. Cum sociis natoque penatibus et magnis dis parturient montes, In <em>em</em> justo. Nullam <a href="#">link</a> dictum felis eu pede mollis pretium.</blockquote>
   
@@ -80,6 +72,14 @@
 	</tr>
 </table>
   
+	<h2>Headings</h2>
+<h1>H1: Sed nec diam eu diam mattis viverra.</h1>
+<h2>H2: Vivamus luctus urna sed urna ultricies.</h2>
+<h3>H3: In libero.</h3>
+<h4>H4: Vestibulum mollis mauris enim.</h4>
+<h5>H5: Morbi euismod magna ac lorem rutrum elementum.</h5>
+<h6>H6: Donec viverra auctor lobortis.</h6>
+  
 	<h2>Colour swatches</h2>
 
 <div class="util-Clearfix">
@@ -114,9 +114,9 @@
 	</div>
 
 	<div class="Swatch">
-		<div class="Swatch_Background Swatch_Background-LightBeige">
+		<div class="Swatch_Background Swatch_Background-Beige">
 		</div>
-		<p class="Swatch_Description">Light beige <code>#F4EFE6</code></p>
+		<p class="Swatch_Description">Beige <code>#F4EFE6</code></p>
 	</div>
 
 	<div class="Swatch">
@@ -163,15 +163,15 @@
 <div class="HMLogos HMLogos-alternate">
 
 	<div class="HMLogo-Container">
-		<h1 class="HMLogo HMLogo-alt">Human Made Limited</h1>
+		<h1 class="HMLogo HMLogo-Alt">Human Made Limited</h1>
 	</div>
 
 	<div class="HMLogo-Container">
-		<h1 class="HMLogo HMLogo-alt HMLogo-Red">Human Made Limited</h1>
+		<h1 class="HMLogo HMLogo-Alt HMLogo-Red">Human Made Limited</h1>
 	</div>
 
 	<div class="HMLogo-Container">
-		<h1 class="HMLogo HMLogo-alt HMLogo-White">Human Made Limited</h1>
+		<h1 class="HMLogo HMLogo-Alt HMLogo-White">Human Made Limited</h1>
 	</div>
 
 </div>
@@ -277,6 +277,38 @@
 
 </form>
 
+	<h2 id="section-search-bar">Search Bar</h2>
+
+<div class="StyleGuide_SearchContainer">
+	<form class="SearchBar">
+
+		<label class="SearchBar_Label" for="searchBar_Field">Search</label>
+
+		<div class="SearchBar_Container">
+			<input class="SearchBar_Field" type="search" id="searchBar_Field" placeholder="Search the site&hellip;" />
+			<div class="SearchBar_Results">
+				<ul class="SearchBar_Results">
+					<li class="SearchBar_Result">
+						<a href="#">
+							<h3 class="SearchBar_Result_Title">Test Search Result</h3>
+							<p class="SearchBar_Result_Text">Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue.</p>
+						</a>
+					</li>
+					<li class="SearchBar_Result">
+						<a href="#">
+							<h3 class="SearchBar_Result_Title">Test Search Result</h3>
+							<p class="SearchBar_Result_Text">Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui.</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<button class="SearchBar_Submit">Submit</button>
+
+		</div>
+	</form>
+</div>
+  
 	<h2>WordPress Images</h2>
 
 <p><img class="alignnone wp-image-1" src="assets/images/150x150.png" /></p>
@@ -298,6 +330,93 @@
 
 <figure id="attachment_2" class="wp-caption alignright" style="width:150px"><img class="wp-image-1" src="assets/images/150x150.png" /><figcaption class="wp-caption-text">This is a right aligned caption</figcaption></figure>
 <p>As you can see the should be some space above, below, and to the right of the image. The text should not be creeping on the image. Creeping is just not right. Images need breathing room too. Let them speak like you words. Let them do their jobs without any hassle from the text. In about one more sentence here, we’ll see that the text moves from the right of the image down below the image in seamless transition. Again, letting the do it’s thang. Mission accomplished!</p>
+
+	<h2 id="section-nav-accordion">Navigation - Accordion</h2>
+
+<div class="NavAccordions">
+
+	<ul class="NavAccordion">
+		<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 1</a></li>
+		<li class="NavAccordion_Item">
+			<a class="NavAccordion_Anchor"href="#">Test item 2</a>
+			<ul>
+				<li class="NavAccordion_Item NavAccordion_Item-Active"><a class="NavAccordion_Anchor" href="#">Test item 1</a></li>
+				<li class="NavAccordion_Item">
+					<a class="NavAccordion_Anchor"href="#">Test item 3</a>
+					<ul>
+						<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 1</a></li>
+						<li class="NavAccordion_Item">
+							<a class="NavAccordion_Anchor"href="#">Test item 3</a>
+							<ul>
+								<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 1</a></li>
+								<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Working On WordPress VIP Go.</a></li>
+								<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 3</a></li>
+							</ul>
+						</li>
+						<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 3</a></li>
+					</ul>
+				</li>
+				<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 3</a></li>
+			</ul>
+		</li>
+		<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 3</a></li>
+	</ul>
+
+	<ul class="NavAccordion NavAccordion-Red">
+		<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 1</a></li>
+		<li class="NavAccordion_Item">
+			<a class="NavAccordion_Anchor"href="#">Test item 2</a>
+			<ul>
+				<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 1</a></li>
+				<li class="NavAccordion_Item">
+					<a class="NavAccordion_Anchor"href="#">Test item 3</a>
+					<ul>
+						<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 1</a></li>
+						<li class="NavAccordion_Item">
+							<a class="NavAccordion_Anchor"href="#">Test item 3</a>
+							<ul>
+								<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 1</a></li>
+								<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Working On WordPress VIP Go.</a></li>
+								<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 3</a></li>
+							</ul>
+						</li>
+						<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 3</a></li>
+					</ul>
+				</li>
+				<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 3</a></li>
+			</ul>
+		</li>
+		<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 3</a></li>
+	</ul>
+
+	<ul class="NavAccordion NavAccordion-Beige">
+		<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 1</a></li>
+		<li class="NavAccordion_Item">
+			<a class="NavAccordion_Anchor"href="#">Test item 2</a>
+			<ul>
+				<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 1</a></li>
+				<li class="NavAccordion_Item">
+					<a class="NavAccordion_Anchor"href="#">Test item 3</a>
+					<ul>
+						<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 1</a></li>
+						<li class="NavAccordion_Item">
+							<a class="NavAccordion_Anchor"href="#">Test item 3</a>
+							<ul>
+								<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 1</a></li>
+								<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Working On WordPress VIP Go.</a></li>
+								<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 3</a></li>
+							</ul>
+						</li>
+						<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 3</a></li>
+					</ul>
+				</li>
+				<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 3</a></li>
+			</ul>
+		</li>
+		<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 3</a></li>
+	</ul>
+
+</div>
 
 
 </div>
