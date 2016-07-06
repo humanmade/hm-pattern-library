@@ -145,7 +145,7 @@ a:focus {
 code,
 pre {
 	color: $hm-warm-grey;
-	background: $hm-light-beige;
+	background: $hm-beige;
 	padding: 0px 5px;
 	display: inline-block;
 	border-radius: 2px;
@@ -160,7 +160,7 @@ pre {
 // Override the background from prism.js.
 :not( pre ) > code[ class*="language-" ],
 pre[ class*="language-" ] {
-	background: $hm-light-beige;
+	background: $hm-beige;
 	border-radius: 2px;
 }
 
