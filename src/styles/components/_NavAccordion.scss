@@ -207,7 +207,7 @@
 }
 
 .NavAccordion-Beige {
-	@include NavAccordion_Coloured( $hm-light-beige, $border-color-beige, $hm-warm-grey );
+	@include NavAccordion_Coloured( $hm-beige, $border-color-beige, $hm-warm-grey );
 
 	.NavAccordion_Toggle {
 		&:after {
