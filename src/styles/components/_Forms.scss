@@ -71,12 +71,19 @@ textarea {
 }
 
 .Form_Label,
-.Form label {
+.Form label,
+.Form legend {
 	@include font-heading;
 	@include text-sm;
 	display: block;
 	margin-top: $base-line-height / 2;
 	margin-bottom: 0;
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
 }
 
 .Form_Checkbox_Group {
@@ -96,5 +103,7 @@ textarea {
 .Form_Radio_Group {
 	@extend .Form_Checkbox_Group;
 	margin-right: $gutter-width;
+	margin-bottom: $base-line-height / 2;
 	display: inline-block;
+
 }
