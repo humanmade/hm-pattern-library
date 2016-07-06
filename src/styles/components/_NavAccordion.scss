@@ -80,6 +80,8 @@
 	@include font-body;
 }
 
+ .NavAccordion_Item
+
 .NavAccordion_Toggle {
 
 	@extend .Btn-Small;
@@ -134,11 +136,10 @@
 		}
 	}
 
-	.NavAccordion_Item-Open & {
-		&:after {
-			background-image: url( "#{ $hm-images }/icons/icon-minus-white.svg" );
-		}
-	}
+}
+
+.NavAccordion_Item-Open .NavAccordion_Toggle:after {
+	background-image: url( "#{ $hm-images }/icons/icon-minus-white.svg" );
 }
 
 @mixin NavAccordion_Coloured( $bg, $border-color, $text-color: $hm-warm-grey ) {
@@ -225,3 +226,7 @@
 	background-image: url( "#{ $hm-images }/icons/icon-minus-beige.svg" );
 }
 
+
+.NavAccordion_Item-Active .NavAccordion_Anchor {
+	text-decoration: underline;
+}

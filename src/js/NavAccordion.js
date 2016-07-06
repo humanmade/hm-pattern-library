@@ -59,7 +59,11 @@
 
 			}
 
-			toggleSubNav( false );
+			if ( subNav.getElementsByClassName( 'NavAccordion_Item-Active' ).length > 0 ) {
+				toggleSubNav( true );
+			} else {
+				toggleSubNav( false );
+			}
 
 			navAccordionToggle.addEventListener( 'click', function( event ) {
 				event.preventDefault();
