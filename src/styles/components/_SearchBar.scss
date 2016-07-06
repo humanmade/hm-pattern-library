@@ -27,6 +27,7 @@
 	clip: rect( 1px, 1px, 1px, 1px );
 }
 
+// Note need for extra specificity to override input[type="text"].
 .SearchBar .SearchBar_Field {
 	border: none;
 	background: $hm-primary-dark;
