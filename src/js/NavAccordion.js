@@ -1,54 +1,80 @@
-(function($) {
+(function( window ) {
 
-	var navAccordion = function( $el ) {
+	// Graceful faliure if the browser does NOT support ALL of these.
+	if ( ! (
+		'getElementsByClassName' in document &&
+		'addEventListener' in document &&
+		'classList' in document.documentElement
+	) ) {
+		return;
+	}
 
-		$el.children().each( function() {
+	var navAccordion = function( el ) {
 
-			var $NavAccordion_Item = $(this);
-			var $subNav = $NavAccordion_Item.children( 'ul' );
+		Array.prototype.forEach.call( el.children, function( navAccordionItem ) {
 
-			if ( $subNav.length > 0 ) {
+			var subNav = Array.prototype.filter.call( navAccordionItem.children, function( el ) {
+				return el.tagName === 'UL';
+			} );
 
-				var openHeight           = $subNav.outerHeight();
-				var $NavAccordion_Toggle = $( '<button/>', {
-					text: 'Toggle',
-					class: 'Btn NavAccordion_Toggle'
-				} );
+			if ( subNav.length < 1 ) {
+				return;
+			} else {
+				subNav = subNav[0];
+			}
 
-				var toggleSubNav = function( show ) {
+			var openHeight = subNav.offsetHeight;
+			var style      = getComputedStyle( subNav );
 
-					if ( 'undefined' === typeof( show ) ) {
-						show = $NavAccordion_Item.hasClass( 'NavAccordion_Item-Closed' );
-					}
+			openHeight += parseInt( style.marginTop ) + parseInt( style.marginBottom );
 
-					if ( show ) {
-						$NavAccordion_Item.removeClass( 'NavAccordion_Item-Closed' );
-						$NavAccordion_Item.addClass( 'NavAccordion_Item-Open' );
-						$subNav.css( 'max-height', openHeight );
-					} else {
-						$NavAccordion_Item.addClass( 'NavAccordion_Item-Closed' );
-						$NavAccordion_Item.removeClass( 'NavAccordion_Item-Open' );
-						$subNav.css( 'max-height', 0 );
-					}
+			var navAccordionToggle = document.createElement( 'BUTTON' );
+			navAccordionToggle.appendChild( document.createTextNode( "Toggle" ) );
+			navAccordionToggle.classList.add( 'Btn' );
+			navAccordionToggle.classList.add( 'NavAccordion_Toggle' );
 
+			var anchor = Array.prototype.filter.call( navAccordionItem.children, function( el ) {
+				return el.tagName === 'A';
+			} );
+
+			if ( anchor.length ) {
+				anchor[0].appendChild( navAccordionToggle );
+			}
+
+			var toggleSubNav = function( show ) {
+
+				if ( 'undefined' === typeof show ) {
+					show = navAccordionItem.classList.contains( 'NavAccordion_Item-Closed' );
 				}
 
-				$NavAccordion_Toggle.appendTo( $NavAccordion_Item.children('.NavAccordion_Anchor') );
-				toggleSubNav( false );
+				if ( show ) {
+					navAccordionItem.classList.remove( 'NavAccordion_Item-Closed' );
+					navAccordionItem.classList.add( 'NavAccordion_Item-Open' );
+					subNav.style.maxHeight = openHeight + 'px';
+				} else {
+					navAccordionItem.classList.add( 'NavAccordion_Item-Closed' );
+					navAccordionItem.classList.remove( 'NavAccordion_Item-Open' );
+					subNav.style.maxHeight = 0;
+				}
 
-				$NavAccordion_Toggle.click( function( e ) {
-					e.preventDefault();
-					$(this).blur();
-					toggleSubNav();
-				});
 			}
+
+			toggleSubNav( false );
+
+			navAccordionToggle.addEventListener( 'click', function( event ) {
+				event.preventDefault();
+				navAccordionToggle.blur();
+				toggleSubNav();
+			});
 
 		} );
 
 	}
 
-	$('.NavAccordion').each( function() {
-		navAccordion( $(this) );
-	} );
+	var els = document.getElementsByClassName('NavAccordion');
 
-} )(jQuery);
+	for ( var i = 0; i < els.length; i++ ) {
+		navAccordion( els[ i ] );
+	}
+
+} )( window );
