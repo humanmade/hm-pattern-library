@@ -8,9 +8,15 @@ $hm-medium-grey: #737373;
 $hm-light-grey:  #EFF1EF;
 $hm-brown:       #4F4641;
 
-$border-color: lighten( $hm-medium-grey, 40% );
+// Alternate versions of main colors. Used for borders, backgrounds etc.
+$hm-primary-light: saturate( lighten( $hm-primary, 10% ), 5 );
+$hm-primary-dark:  desaturate( darken( $hm-primary, 6% ), 8 );
 
-$base-line-height: 1.555rem;
+$border-color:       lighten( $hm-medium-grey, 40% );
+$border-color-red:   $hm-primary-light;
+$border-color-beige: desaturate( darken( $hm-beige, 15% ), 20 );
+
+$base-line-height: 1.5rem;
 $base-font-size:   18px;
 
 $gutter-width: 30px;

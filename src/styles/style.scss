@@ -1,6 +1,7 @@
 @import "variables";
 @import "vendor/normalize";
 @import "vendor/prismjs";
+@import "utilities/clearfix";
 @import "base/typography";
 @import "base/tables";
 @import "base/border-box";
@@ -8,10 +9,20 @@
 @import "components/Buttons";
 @import "components/Logo";
 @import "components/wordpress-images";
-@import "utilities/clearfix";
+@import "components/SearchBar";
+@import "components/NavAccordion";
 
 .container {
-	max-width: 800px;
-	padding: 0 $gutter-width;
+
+	max-width: 45rem;
 	margin: auto;
+
+	@media #{ $mq-md-down } {
+		max-width: calc( 100% - #{ $gutter-width * 4 } );
+	}
+
+	@media #{ $mq-sm-down } {
+		max-width: calc( 100% - #{ $gutter-width * 2 } );
+	}
+
 }
