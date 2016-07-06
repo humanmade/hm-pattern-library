@@ -3,3 +3,8 @@ node_js:
   - '4'
 before_script: npm install --global gulp-cli && npm install
 script: gulp lint-sass
+branches:
+  only:
+    - "master"
+notifications:
+  email: false
