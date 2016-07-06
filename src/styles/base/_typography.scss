@@ -108,12 +108,7 @@ ul,
 ol {
 	list-style-position: inside;
 	padding: 0;
-
-	ul,
-	ol {
-		margin: 0 0 0 $gutter-width;
-
-	}
+	padding: 0 0 0 $gutter-width;
 }
 
 blockquote {
@@ -122,6 +117,7 @@ blockquote {
 	margin-left: $gutter-width;
 	padding-left: $gutter-width;
 	border-left: 1px solid $border-color;
+	font-style: italic;
 }
 
 hr {
@@ -132,6 +128,11 @@ hr {
 
 a:link {
 	color: $hm-primary;
+	text-decoration: none;
+}
+
+a:visited {
+	color: darken( $hm-primary, 10% );
 	text-decoration: none;
 }
 

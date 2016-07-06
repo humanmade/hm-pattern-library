@@ -6,7 +6,7 @@ input[type="email"] {
 	@include font-body;
 	@include text-std;
 	border: 1px solid $border-color;
-	padding: #{ ( $base-line-height / 2 ) + 0.1 } 1em #{ ( $base-line-height / 2 ) - 0.1 };
+	padding: #{ $base-line-height / 2 } 1em #{ $base-line-height / 2 };
 	background: transparent;
 	box-shadow: none;
 	color: $hm-warm-grey;
@@ -53,6 +53,8 @@ input[type="email"] {
 
 	&::placeholder {
 		font-style: italic;
+		color: inherit;
+		opacity: 0.5;
 	}
 
 }
