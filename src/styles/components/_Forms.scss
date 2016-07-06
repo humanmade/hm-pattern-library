@@ -49,10 +49,16 @@ input[type="email"] {
 
 	&.Form_Field-Code {
 		font-family: $font-family-code;
+
+		&::placeholder {
+			font-style: normal;
+		}
 	}
 
 	&::placeholder {
 		font-style: italic;
+		color: inherit;
+		opacity: 0.5;
 	}
 
 }
@@ -74,13 +80,21 @@ textarea {
 }
 
 .Form_Checkbox_Group {
+
 	label {
 		@include font-body;
 		display: inline-block;
+		margin-top: 0;
 	}
 
 	input[type="radio"],
 	input[type="checkbox"] {
-		margin-right: $gutter-width / 3;
+		margin-right: $gutter-width / 4;
 	}
+}
+
+.Form_Radio_Group {
+	@extend .Form_Checkbox_Group;
+	margin-right: $gutter-width;
+	display: inline-block;
 }
