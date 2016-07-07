@@ -156,6 +156,9 @@ pre {
 	padding: #{ $base-line-height * .5 } 15px;
 	display: block;
 	margin: #{ $base-line-height * .75 } 0;
+	max-width: 100%;
+	overflow: scroll;
+	white-space: pre-wrap;
 }
 
 // Override the background from prism.js.
