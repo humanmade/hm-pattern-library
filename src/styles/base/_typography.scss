@@ -102,7 +102,6 @@ p,
 ul,
 ol,
 .text-std {
-	@include text-std;
 	margin: #{ $base-line-height * .75 } 0;
 }
 
