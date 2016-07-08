@@ -11,7 +11,7 @@ const imagemin      = require( 'gulp-imagemin' );
 const uglify        = require( 'gulp-uglify' );
 const concat        = require( 'gulp-concat' );
 const rename        = require( 'gulp-rename' );
-const gulpCopy      = require('gulp-copy');
+const gulpCopy      = require( 'gulp-copy' );
 
 // Compile and minify CSS.
 gulp.task( 'styles', () => {
