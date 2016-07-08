@@ -1,6 +1,11 @@
 /*
  * These classes use WordPress default alignment classes and do not follow the naming convention.
  */
+.alignnone {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 .aligncenter {
 	margin-left: auto;
 	margin-right: auto;
@@ -9,29 +14,32 @@
 
 .alignleft {
 	float: left;
-	margin-right: .7775rem;
-	margin-bottom: .7775rem;
+	margin-right: $gutter-width;
+	margin-left: 0;
+	margin-bottom: $base-line-height / 2;
 }
 
 .alignright {
 	float: right;
-	margin-left: .7775rem;
-	margin-bottom: .7775rem;
+	margin-left: $gutter-width;
+	margin-right: 0;
+	margin-bottom: $base-line-height / 2;
 }
 
 .wp-caption {
-	background-color: $hm-light-beige;
-}
 
-.wp-caption.alignleft,
-.wp-caption.alignright {
-	margin-top: .66625rem;
+	margin-top: 0;
+	background-color: $hm-beige;
+
+	img {
+		vertical-align: top;
+	}
+
 }
 
 .wp-caption-text {
-	font-size: .75rem;
-	margin-left: 1em;
-	margin-right: 1em;
+	@include text-sm;
+	padding: #{ $base-line-height / 4 } #{ $gutter-width / 2 };
 }
 
 .aligncenter > .wp-caption-text {

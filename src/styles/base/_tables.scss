@@ -7,7 +7,7 @@ table {
 th,
 td {
 	@include text-sm;
-	padding: #{ $base-line-height / 3 } $base-line-height / 2;
+	padding: #{ $base-line-height / 3 } #{ $gutter-width / 2 };
 	border-bottom: 1px solid $border-color;
 	border-right: 1px solid $border-color;
 
