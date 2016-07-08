@@ -156,7 +156,7 @@ pre {
 	display: block;
 	margin: #{ $base-line-height * .75 } 0;
 	max-width: 100%;
-	overflow: scroll;
+	overflow: auto;
 	white-space: pre-wrap;
 }
 
@@ -167,7 +167,6 @@ pre[ class*="language-" ] {
 	border-radius: 2px;
 }
 
-::selection,
-pre::selection {
+::selection {
 	background: lighten( $hm-accent, 20% );
 }
