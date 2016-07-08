@@ -51,6 +51,8 @@
 	@include font-heading;
 	@include text-sm;
 	list-style: none;
+	margin: 0;
+	padding: 0;
 
 	a:link,
 	a:visited {
