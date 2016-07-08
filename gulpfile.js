@@ -25,7 +25,7 @@ gulp.task( 'styles', () => {
 		.pipe( sourcemaps.write('.') )
 		.pipe( gulp.dest( './dist/assets/styles' ) );
 
-	// Compile SASS to dist for use in other projects.
+	// Copy SASS to dist for use in other projects.
 	gulp.src( './src/styles/**/*.scss' )
 		.pipe( gulpCopy( './dist/assets/sass', { prefix: 2 } ) );
 });
