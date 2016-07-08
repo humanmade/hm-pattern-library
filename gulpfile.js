@@ -11,6 +11,7 @@ const imagemin      = require( 'gulp-imagemin' );
 const uglify        = require( 'gulp-uglify' );
 const concat        = require( 'gulp-concat' );
 const rename        = require( 'gulp-rename' );
+const gulpCopy      = require('gulp-copy');
 
 // Compile and minify CSS.
 gulp.task( 'styles', () => {
@@ -21,6 +22,9 @@ gulp.task( 'styles', () => {
 		.pipe( postcss( [ autoprefixer( { browsers: ['last 3 versions'] } ) ] ) )
 		.pipe( sourcemaps.write('.') )
 		.pipe( gulp.dest( './dist/assets/styles' ) );
+
+	gulp.src( './src/styles/**/*.scss' )
+		.pipe( gulpCopy( './dist/assets/sass', { prefix: 2 } ) );
 });
 
 // Watch for changes in JS/CSS.
