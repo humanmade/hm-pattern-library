@@ -120,7 +120,6 @@
 	}
 
 	> ul {
-		overflow: visible;
 		margin-left: 0;
 	}
 
@@ -186,7 +185,7 @@
 
 }
 
-.NavAccordion_Item-Open .NavAccordion_Toggle:after {
+.NavAccordion_Toggle-Open:after {
 	background-image: url( "#{ $hm-images }/icons/icon-minus-white.svg" );
 }
 
@@ -211,7 +210,7 @@
 	}
 }
 
-.NavAccordion-Red .NavAccordion_Item-Open .NavAccordion_Toggle:after {
+.NavAccordion_Toggle-Open:after {
 	background-image: url( "#{ $hm-images }/icons/icon-minus-red.svg" );
 }
 
@@ -225,7 +224,7 @@
 	}
 }
 
-.NavAccordion-Beige .NavAccordion_Item-Open .NavAccordion_Toggle:after {
+.NavAccordion_Toggle-Open:after {
 	background-image: url( "#{ $hm-images }/icons/icon-minus-beige.svg" );
 }
 
