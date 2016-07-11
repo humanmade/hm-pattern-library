@@ -18,6 +18,7 @@ input[type="email"] {
 	vertical-align: middle;
 	width: 100%;
 	max-width: 100%;
+	appearance: none;
 
 	&:hover {
 		border-color: darken( $border-color, 15% );
@@ -49,6 +50,10 @@ input[type="email"] {
 
 	&.Form_Field-Code {
 		font-family: $font-family-code;
+
+		&::placeholder {
+			font-style: normal;
+		}
 	}
 
 	&::placeholder {
@@ -67,10 +72,39 @@ textarea {
 }
 
 .Form_Label,
-.Form label {
+.Form label,
+.Form legend {
 	@include font-heading;
 	@include text-sm;
 	display: block;
 	margin-top: $base-line-height / 2;
 	margin-bottom: 0;
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.Form_Checkbox_Group {
+
+	label {
+		@include font-body;
+		display: inline-block;
+		margin-top: 0;
+	}
+
+	input[type="radio"],
+	input[type="checkbox"] {
+		margin-right: $gutter-width / 4;
+	}
+}
+
+.Form_Radio_Group {
+	@extend .Form_Checkbox_Group;
+	margin-right: $gutter-width;
+	margin-bottom: $base-line-height / 2;
+	display: inline-block;
+
 }
