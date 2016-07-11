@@ -5,31 +5,66 @@
 	<label for="form-field-text">Text Field</label>
 	<input id="form-field-text" type="text" />
 
-	<label for="form-field-search">Standard Search Field</label>
-	<input id="form-field-search" type="search" />
+	<label for="form-field-text-large">Large Code Field</label>
+	<input id="form-field-text-large" type="text" class="Form_Field Form_Field-Lg Form_Field-Code" placeholder="Placeholder" />
 
-	<label for="form-field-email">Email Form Field</label>
-	<input id="form-field-email" type="email" />
+	<label for="form-field-text-md">Medium Password Field</label>
+	<input id="form-field-text-md" type="password" class="Form_Field Form_Field-Md" placeholder="Placeholder"/>
 
-	<label for="form-field-password">Password Field</label>
-	<input id="form-field-password" type="password" />
-
-	<label for="form-field-code">Large Code Field</label>
-	<input id="form-field-code" class="Form_Field-Code Form_Field-Lg" type="text" />
-
-	<label for="form-field-text-large">Large Form Field</label>
-	<input id="form-field-text-large" type="text" class="Form_Field Form_Field-Lg" placeholder="Placeholder" />
-
-	<label for="form-field-text-md">Medium Form Field</label>
-	<input id="form-field-text-md" type="text" class="Form_Field Form_Field-Md" placeholder="Placeholder"/>
-
-	<label for="form-field-text-sm">Small Form Field</label>
-	<input id="form-field-text-sm" type="text" class="Form_Field Form_Field-Sm" placeholder="Plchldr"/>
+	<label for="form-field-text-sm">Small Search Field</label>
+	<input id="form-field-text-sm" type="search" class="Form_Field Form_Field-Sm" placeholder="Plchldr"/>
 
 	<label for="form-field-textarea">Textarea</label>
 	<textarea id="form-field-textarea"></textarea>
 
-	<label for="form-field-textarea-code">Code</label>
-	<textarea id="form-field-textarea-code" class="Form_Field-Code"></textarea>
+	<fieldset>
+
+		<legend>Radio</legend>
+
+		<div class="Form_Radio_Group">
+			<input id="form-field-radio-1" type="radio" name="choice" class="Radio" value="1" />
+			<label for="form-field-radio-1">Choice 1</label>
+		</div>
+
+		<div class="Form_Radio_Group">
+			<input id="form-field-radio-2" type="radio" name="choice" class="Radio" value="2" checked/>
+			<label for="form-field-radio-2">Choice 2</label>
+		</div>
+
+		<div class="Form_Radio_Group">
+			<input id="form-field-radio-3" type="radio" name="choice" class="Radio" value="3" />
+			<label for="form-field-radio-3">Choice 3</label>
+		</div>
+
+	</fieldset>
+
+	<fieldset>
+
+		<legend>Checkbox</legend>
+
+		<div class="Form_Checkbox_Group">
+			<input id="checkbox_1" type="checkbox" name="item_1" class="Checkbox" value="1" />
+			<label for="checkbox_1">This is the first checkbox</label>
+		</div>
+
+		<div class="Form_Checkbox_Group">
+			<input id="checkbox_2" type="checkbox" name="item_3" class="Checkbox" value="2" checked />
+			<label for="checkbox_2">This is the second checkbox</label>
+		</div>
+
+		<div class="Form_Checkbox_Group">
+			<input id="checkbox_3" type="checkbox" name="item_3" class="Checkbox" value="3" />
+			<label for="checkbox_3">This is the third checkbox</label>
+		</div>
+
+	</fieldset>
+
+	<label for="select_1">Select</label>
+
+	<select id="select_1" class="Select">
+		<option value="select-option-one">Option one</option>
+		<option value="select-option-two" selected>Option two</option>
+		<option value="select-option-three">Option three</option>
+	</select>
 
 </form>
