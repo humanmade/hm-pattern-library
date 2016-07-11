@@ -208,13 +208,15 @@
 		}
 
 	}
-}
 
-.NavAccordion_Toggle-Open:after {
-	background-image: url( "#{ $hm-images }/icons/icon-minus-red.svg" );
+	.NavAccordion_Toggle-Open:after {
+		background-image: url( "#{ $hm-images }/icons/icon-minus-red.svg" );
+	}
+
 }
 
 .NavAccordion-Beige {
+
 	@include NavAccordion_Coloured( $hm-beige, $border-color-beige, $hm-warm-grey );
 
 	.NavAccordion_Toggle {
@@ -222,10 +224,12 @@
 			background-image: url( "#{ $hm-images }/icons/icon-plus-beige.svg" );
 		}
 	}
-}
 
-.NavAccordion_Toggle-Open:after {
-	background-image: url( "#{ $hm-images }/icons/icon-minus-beige.svg" );
+
+	.NavAccordion_Toggle-Open:after {
+		background-image: url( "#{ $hm-images }/icons/icon-minus-beige.svg" );
+	}
+
 }
 
 .NavAccordion_Item-Active .NavAccordion_Anchor {
