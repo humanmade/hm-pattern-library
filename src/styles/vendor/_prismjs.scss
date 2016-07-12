@@ -30,7 +30,6 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
 	padding: #{ $base-line-height / 2 } #{ $gutter-width / 2 };
-	padding: #{ $base-line-height / 2 } 0;
 	overflow: auto;
 }
 
