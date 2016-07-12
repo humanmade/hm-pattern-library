@@ -107,7 +107,7 @@ ol,
 
 ul,
 ol {
-	list-style-position: inside;
+	list-style-position: outside;
 	padding: 0;
 	padding: 0 0 0 $gutter-width;
 }
@@ -152,7 +152,7 @@ pre {
 }
 
 pre {
-	padding: #{ $base-line-height * .5 } 15px;
+	padding: #{ $base-line-height * .5 } #{ $gutter-width / 2 };
 	display: block;
 	margin: #{ $base-line-height * .75 } 0;
 	max-width: 100%;

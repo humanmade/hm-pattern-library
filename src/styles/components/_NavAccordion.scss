@@ -133,10 +133,9 @@
 
 	@extend .Btn-Small;
 	display: block;
-	position: absolute;
-	right: 0;
-	top: 0;
-	margin: 0;
+	position: relative;
+	float: right;
+	margin: #{ $base-line-height / -4 } 0;
 	padding: 0;
 	height: $base-line-height * 1.5;
 	width: $base-line-height * 1.5;
