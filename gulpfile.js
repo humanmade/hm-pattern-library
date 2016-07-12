@@ -49,7 +49,7 @@ gulp.task( 'js', function() {
 
 // HTML file include
 gulp.task( 'fileinclude', function() {
-	gulp.src( ['./src/html/index.html'] )
+	gulp.src( ['./src/html/*.html'] )
 		.pipe( fileinclude( {
 			prefix:   '@',
 			basepath: '@file'
