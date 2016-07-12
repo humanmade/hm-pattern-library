@@ -36,7 +36,7 @@
 		} );
 
 		if ( anchor.length ) {
-			anchor[0].appendChild( navAccordionToggle );
+			anchor[0].insertBefore( navAccordionToggle, anchor[0].childNodes[0] );
 		}
 
 		var toggleSubNav = function( show ) {
