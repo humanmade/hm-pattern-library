@@ -1,4 +1,4 @@
-## Juniper, the Human Made pattern library
+## Juniper, the Human Made Web Style Guide and Pattern Library
 
 ### Personnel
 
