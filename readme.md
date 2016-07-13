@@ -1,8 +1,8 @@
-## Juniper, the Human Made Web Style Guide and Pattern Library
+# Juniper 
 
-### Personnel
+The Human Made Web Style Guide and Pattern Library
 
-#### Developers
+#### Maintained by:
 
 * Matthew Haines-Young, @mattheu
 * Samantha Miller, @sambulance
