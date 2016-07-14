@@ -108,6 +108,10 @@
 	font-weight: normal;
 	letter-spacing: 0;
 
+	&.Btn-Small {
+		padding: 0;
+	}
+
 	&:link,
 	&:visited {
 		color: $hm-primary;
@@ -126,4 +130,13 @@
 .Btn-Small {
 	@include text-sm;
 	padding: #{ $base-line-height / 4 } #{ $gutter-width / 2 };
+}
+
+.Btn {
+	.Loading-Active {
+		@extend .Loading-White;
+		margin-right: $gutter-width * .666666667;
+		margin-left: $gutter-width * -.166666667;
+		top: 2px;
+	}
 }

@@ -68,3 +68,15 @@
 		}
 	}
 }
+
+.StyleGuide_LoadingIndicators {
+
+	.StyleGuide_LoadingIndicator_Container {
+		display: inline-block;
+		padding: #{ $base-line-height / 2 } $gutter-width;
+	}
+
+	.Btn {
+		margin: 0;
+	}
+}
