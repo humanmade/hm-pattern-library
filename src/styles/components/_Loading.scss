@@ -3,18 +3,19 @@
 }
 
 .Loading-Active {
-	width: 1rem;
-	height: 1rem;
+	width: $base-line-height;
+	height: $base-line-height;
 	background: url( "#{ $hm-images }/icons/icon-spinner-black.svg" ) no-repeat center center;
-	background-size: 100% 100%;
+	background-size: 1 / 1.5 * 100%;
 	animation-name: spin;
-	animation-duration: 1500ms;
+	animation-duration: 1000ms;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 	display: inline-block;
+	vertical-align: middle;
 	margin-right: $gutter-width / 2;
 	position: relative;
-	top: 4px;
+	top: -1px;
 }
 
 .Loading-White {
