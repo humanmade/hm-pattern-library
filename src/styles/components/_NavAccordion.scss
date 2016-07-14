@@ -231,6 +231,6 @@
 
 }
 
-.NavAccordion_Item-Active .NavAccordion_Anchor {
+.NavAccordion_Item-Active > .NavAccordion_Anchor {
 	text-decoration: underline;
 }

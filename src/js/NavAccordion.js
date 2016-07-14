@@ -59,7 +59,9 @@
 
 		}
 
-		if ( subNav.getElementsByClassName( 'NavAccordion_Item-Active' ).length > 0 ) {
+		if ( navAccordionItem.classList.contains( 'NavAccordion_Item-Active' ) ) {
+			toggleSubNav( true );
+		} else if ( subNav.getElementsByClassName( 'NavAccordion_Item-Active' ).length > 0 ) {
 			toggleSubNav( true );
 		} else {
 			toggleSubNav( false );
