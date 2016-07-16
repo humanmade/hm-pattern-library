@@ -2,9 +2,11 @@
 @import "vendor/normalize";
 @import "vendor/prismjs";
 @import "utilities/clearfix";
+@import "base/animations";
 @import "base/typography";
 @import "base/tables";
 @import "base/border-box";
+@import "components/Loading";
 @import "components/Forms";
 @import "components/Buttons";
 @import "components/Logo";
