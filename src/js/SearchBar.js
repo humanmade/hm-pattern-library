@@ -21,13 +21,6 @@
 			searchBar.classList.remove( 'SearchBar-Focused' );
 		} );
 
-		field.addEventListener( "keyup", function() {
-			if ( field.value.length > 0 ) {
-				searchBar.classList.add( 'SearchBar-HasResults' );
-			} else {
-				searchBar.classList.remove( 'SearchBar-HasResults' );
-			}
-		} );
 	}
 
 })();
