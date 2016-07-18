@@ -12,9 +12,13 @@ const uglify        = require( 'gulp-uglify' );
 const concat        = require( 'gulp-concat' );
 const rename        = require( 'gulp-rename' );
 const gulpCopy      = require( 'gulp-copy' );
+const del           = require( 'del' );
 
 // Compile and minify CSS.
 gulp.task( 'styles', () => {
+gulp.task( 'clean-dist', ( cb ) => {
+    return del( ['./dist/**/*', '!./dist/.git' ], cb );
+});
 
 	// Compile SASS to CSS.
 	gulp.src( './src/styles/*.scss' )
