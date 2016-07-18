@@ -1,48 +1,58 @@
-const gulp          = require( 'gulp' );
-const sourcemaps    = require( 'gulp-sourcemaps' );
-const watch         = require( 'gulp-watch' );
-const postcss       = require( 'gulp-postcss' );
-const autoprefixer  = require( 'autoprefixer' );
-const sass          = require( 'gulp-sass' );
-const sassLint      = require( 'gulp-sass-lint' );
-const fileinclude   = require( 'gulp-file-include' );
-const newer         = require( 'gulp-newer' );
-const imagemin      = require( 'gulp-imagemin' );
-const uglify        = require( 'gulp-uglify' );
-const concat        = require( 'gulp-concat' );
-const rename        = require( 'gulp-rename' );
-const gulpCopy      = require( 'gulp-copy' );
-const del           = require( 'del' );
+const gulp         = require( 'gulp' );
+const sourcemaps   = require( 'gulp-sourcemaps' );
+const watch        = require( 'gulp-watch' );
+const postcss      = require( 'gulp-postcss' );
+const autoprefixer = require( 'autoprefixer' );
+const sass         = require( 'gulp-sass' );
+const sassLint     = require( 'gulp-sass-lint' );
+const fileinclude  = require( 'gulp-file-include' );
+const newer        = require( 'gulp-newer' );
+const imagemin     = require( 'gulp-imagemin' );
+const uglify       = require( 'gulp-uglify' );
+const concat       = require( 'gulp-concat' );
+const rename       = require( 'gulp-rename' );
+const gulpCopy     = require( 'gulp-copy' );
+const del          = require( 'del' );
 
-// Compile and minify CSS.
-gulp.task( 'styles', () => {
 gulp.task( 'clean-dist', ( cb ) => {
     return del( ['./dist/**/*', '!./dist/.git' ], cb );
 });
 
-	// Compile SASS to CSS.
-	gulp.src( './src/styles/*.scss' )
+// Compile SASS/SCSS to CSS
+gulp.task( 'sass-compile', () => {
+	return gulp.src( './src/styles/*.scss' )
 		.pipe( sourcemaps.init() )
 		.pipe( sass( { outputStyle: 'compressed' } )
 		.on( 'error', sass.logError ) )
 		.pipe( postcss( [ autoprefixer( { browsers: ['last 3 versions'] } ) ] ) )
 		.pipe( sourcemaps.write('.') )
 		.pipe( gulp.dest( './dist/assets/styles' ) );
-
-	// Copy SASS to dist for use in other projects.
-	gulp.src( './src/styles/**/*.scss' )
-		.pipe( gulpCopy( './dist/assets/sass', { prefix: 2 } ) );
 });
 
+// Copy SASS to dist for use in other projects.
+gulp.task( 'sass-copy', () => {
+
+	var copy = [
+		'./src/styles/**/*.scss',
+	];
+
+	var ignore = [
+		'!./src/styles/style-guide.scss'
+	];
+
+	return gulp.src( copy.concat( ignore ) )
+		.pipe( gulpCopy( './dist/assets/sass', { prefix: 2 } ) );
+} );
+
 // Watch for changes in JS/CSS.
-gulp.task( 'watch', function() {
+gulp.task( 'watch', () => {
 	gulp.watch( 'src/styles/**/*.scss', ['styles'] );
 	gulp.watch( 'src/js/**/*.js', ['js'] );
 	gulp.watch( 'src/html/**/*.html', ['fileinclude'] );
 });
 
 // JavaScript concatination and compression.
-gulp.task( 'js', function() {
+gulp.task( 'js', () => {
 	return gulp.src( './src/js/**/*.js' )
 		.pipe( concat( 'app.js' ) )
 		.pipe( gulp.dest( 'dist/assets/js' ) )
@@ -52,8 +62,8 @@ gulp.task( 'js', function() {
 } );
 
 // HTML file include
-gulp.task( 'fileinclude', function() {
-	gulp.src( ['./src/html/index.html'] )
+gulp.task( 'fileinclude', () => {
+	return gulp.src( ['./src/html/index.html'] )
 		.pipe( fileinclude( {
 			prefix:   '@',
 			basepath: '@file'
@@ -90,7 +100,7 @@ gulp.task( 'svg', () => {
 		.pipe( gulp.dest( './dist/assets/images' ) )
 } );
 
-gulp.task( 'lint-sass', function () {
+gulp.task( 'lint-sass', () => {
   return gulp.src( './src/styles/**/*.s+(a|c)ss')
 	.pipe( sassLint( { configFile: '.sass-lint.yml' } ) )
 	.pipe( sassLint.format() )
@@ -98,5 +108,6 @@ gulp.task( 'lint-sass', function () {
 });
 
 // Tasks
+gulp.task( 'styles', [ 'sass-compile', 'sass-copy' ] );
 gulp.task( 'default', [ 'styles', 'js', 'svg', 'images', 'fileinclude', 'lint' ] );
 gulp.task( 'lint', [ 'lint-sass' ] );
