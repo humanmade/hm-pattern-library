@@ -18,7 +18,9 @@
 		} );
 
 		field.addEventListener( "blur", function() {
-			searchBar.classList.remove( 'SearchBar-Focused' );
+			window.setTimeout( function() {
+				searchBar.classList.remove( 'SearchBar-Focused' );
+			}, 500 )
 		} );
 
 	}
