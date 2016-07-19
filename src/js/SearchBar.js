@@ -18,16 +18,11 @@
 		} );
 
 		field.addEventListener( "blur", function() {
-			searchBar.classList.remove( 'SearchBar-Focused' );
+			window.setTimeout( function() {
+				searchBar.classList.remove( 'SearchBar-Focused' );
+			}, 500 )
 		} );
 
-		field.addEventListener( "keyup", function() {
-			if ( field.value.length > 0 ) {
-				searchBar.classList.add( 'SearchBar-HasResults' );
-			} else {
-				searchBar.classList.remove( 'SearchBar-HasResults' );
-			}
-		} );
 	}
 
 })();
