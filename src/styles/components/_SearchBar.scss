@@ -86,7 +86,7 @@
 	left: 0;
 	right: 0;
 	background: rgba( $hm-primary-dark, 0.95 );
-	padding: 0 #{ $gutter-width / 2 };
+	padding: 0;
 	border-radius: 0 0 2px 2px;
 	color: #FFF;
 	margin: 0;
@@ -100,7 +100,7 @@
 	@include text-sm;
 
 	padding: 0;
-	margin: 0 #{ $gutter-width / -2 };
+	margin: 0;
 
 	a:link,
 	a:visited,
