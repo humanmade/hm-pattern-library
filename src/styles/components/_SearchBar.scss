@@ -85,21 +85,22 @@
 	top: 100%;
 	left: 0;
 	right: 0;
-	background: $hm-primary-dark;
-	padding: 0 #{ $gutter-width / 2 };
+	background: rgba( $hm-primary-dark, 0.95 );
+	padding: 0;
 	border-radius: 0 0 2px 2px;
 	color: #FFF;
 	margin: 0;
 	list-style: none;
 	z-index: 50;
+	overflow: auto;
 }
 
 .SearchBar_Result {
 
 	@include text-sm;
-	padding: #{ $base-line-height / 2 } 0;
+
+	padding: 0;
 	margin: 0;
-	border-top: 1px solid lighten( $hm-primary-dark, 8% );
 
 	a:link,
 	a:visited,
@@ -108,7 +109,25 @@
 		color: #FFF;
 		text-decoration: none;
 	}
+
+	a {
+
+		padding: #{ $base-line-height / 2 } 0;
+		margin: 0 #{ $gutter-width / 2 };
+		border-top: 1px solid #d25c4c;
+		display: block;
+
+		&:hover {
+			background: rgba( 255, 255, 255, 0.1 );
+			padding: #{ $base-line-height / 2 } #{ $gutter-width / 2 };
+			border-bottom: 1px solid #d25c4c;
+			margin: 0 0 -1px 0;
+		}
+	}
 }
+
+
+
 
 .SearchBar_Result_Title,
 .SearchBar_Result_Text {
