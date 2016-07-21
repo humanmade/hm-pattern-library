@@ -50,6 +50,7 @@
 
 	@include font-heading;
 	@include text-sm;
+	line-height: $base-line-height * .75;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -83,6 +84,7 @@
 
 	.NavAccordion_Anchor {
 		display: block;
+		overflow: hidden;
 		padding: #{ $base-line-height / 4 } 0;
 		position: relative;
 	}
@@ -137,8 +139,8 @@
 	float: right;
 	margin: #{ $base-line-height / -4 } 0;
 	padding: 0;
-	height: $base-line-height * 1.5;
-	width: $base-line-height * 1.5;
+	height: $base-line-height * 1.25;
+	width: $base-line-height * 1.25;
 	text-indent: 100%;
 	overflow: hidden;
 	background: transparent;
@@ -231,6 +233,6 @@
 
 }
 
-.NavAccordion_Item-Active .NavAccordion_Anchor {
+.NavAccordion_Item-Active > .NavAccordion_Anchor {
 	text-decoration: underline;
 }

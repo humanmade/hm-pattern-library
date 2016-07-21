@@ -1,8 +1,10 @@
-## Juniper, the Human Made pattern library
+# Juniper 
 
-### Personnel
+The Human Made Web Style Guide and Pattern Library.
 
-#### Developers
+Take a look here: [https://humanmade.github.io/hm-pattern-library/](https://humanmade.github.io/hm-pattern-library/)
+
+#### Maintained by:
 
 * Matthew Haines-Young, @mattheu
 * Samantha Miller, @sambulance

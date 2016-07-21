@@ -31,6 +31,7 @@
 	@include( './components/code-block.html' )
 	@include( './components/buttons.html' )
 	@include( './components/forms.html' )
+	@include( './components/loading-indicators.html' )
 	@include( './components/search.html' )  
 	@include( './components/wordpress-images.html' )
 	@include( './components/nav-accordion.html' )
@@ -38,6 +39,33 @@
 </div>
 
 <script src="./assets/js/app.min.js"></script>
+
+
+	<script>
+
+		(function() {
+
+			// Fake some search results for search bar demo.
+			Array.prototype.forEach.call( document.getElementsByClassName( 'SearchBar' ), function( searchBar ) {
+
+				var fields = searchBar.getElementsByClassName( 'SearchBar_Field' );
+
+				if ( fields.length > 0 ) {
+					fields[0].addEventListener( "keyup", function() {
+						if ( fields[0].value.length > 0 ) {
+							searchBar.classList.add( 'SearchBar-HasResults' );
+						} else {
+							searchBar.classList.remove( 'SearchBar-HasResults' );
+						}
+					} );
+				}
+
+			} );
+
+		} )();
+
+	</script>
+
 
 </body>
 

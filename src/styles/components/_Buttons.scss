@@ -32,6 +32,13 @@
 		width: auto;
 	}
 
+	&[disabled] {
+		background: lighten( $hm-primary, 25% );
+		color: lighten( $hm-primary, 35% );
+		cursor: default;
+		opacity: 0.75;
+	}
+
 }
 
 .Btn-Secondary {
@@ -41,6 +48,13 @@
 	&:focus {
 		background: lighten( $hm-accent, 10% );
 	}
+
+
+	&[disabled] {
+		background: lighten( $hm-accent, 15% );
+		color: lighten( $hm-accent, 25% );
+	}
+
 }
 
 .Btn-Tertiary {
@@ -50,6 +64,12 @@
 	&:focus {
 		background: lighten( $hm-warm-grey, 10% );
 	}
+
+	&[disabled] {
+		background: lighten( $hm-warm-grey, 50% );
+		color: lighten( $hm-warm-grey, 60% );
+	}
+
 }
 
 .Btn-Transparent {
@@ -67,6 +87,12 @@
 		color: #FFF;
 		background: $hm-primary;
 	}
+
+	&[disabled] {
+		background: transparent;
+		color: lighten( $hm-primary, 35% );
+	}
+
 }
 
 .Btn-Link {
@@ -81,6 +107,10 @@
 	color: $hm-primary;
 	font-weight: normal;
 	letter-spacing: 0;
+
+	&.Btn-Small {
+		padding: 0;
+	}
 
 	&:link,
 	&:visited {
@@ -100,4 +130,12 @@
 .Btn-Small {
 	@include text-sm;
 	padding: #{ $base-line-height / 4 } #{ $gutter-width / 2 };
+}
+
+.Btn {
+	.Loading-Active {
+		@extend .Loading-White;
+		margin-right: $gutter-width * .666666667;
+		margin-left: $gutter-width * -.166666667;
+	}
 }
