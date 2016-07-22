@@ -1,6 +1,10 @@
+/**
+ * This is only used for the documentation pages,
+ * and you do not need to include this file in your project.
+ */
+
 @import "style";
 @import "components/Swatch";
-
 
 /**
  * For previewing a list/grid of logos.
@@ -25,6 +29,7 @@
 
 .pattern-library-title {
 
+	@extend .text-xxl;
 	position: relative;
 
 	&:before {

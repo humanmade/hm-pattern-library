@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+	<title>Juniper - HM Pattern Library</title>
+	<link rel="stylesheet" href="./../assets/styles/style-guide.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://use.typekit.net/mwe8dvt.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h1 class="pattern-library-title">Juniper.</h1>
+		<p class="pattern-library-subtitle">The Human Made Pattern Library.</p>
+
+		<a href="./../index.html">&#8592; Back to main page.</a>
+
+		<h2>Typography &amp; Standard HTML elements</h2>
+
+		@include( './../components/body-text.html' )  
+		@include( './../components/blockquote.html' )  
+		@include( './../components/lists.html' )  
+		@include( './../components/table.html' )  
+		@include( './../components/headings.html' )  
+
+		<div class="Footer">
+			<p><span class="HMLogo HMLogo-Tiny"></span><a href="http://hmn.md">Made by Humans</a></p>
+		</div>
+
+	</div>
+
+	<script src="./../assets/js/app.min.js"></script>
+
+	<script>
+
+		(function() {
+
+			// Fake some search results for search bar demo.
+			Array.prototype.forEach.call( document.getElementsByClassName( 'SearchBar' ), function( searchBar ) {
+
+				var fields = searchBar.getElementsByClassName( 'SearchBar_Field' );
+
+				if ( fields.length > 0 ) {
+					fields[0].addEventListener( "keyup", function() {
+						if ( fields[0].value.length > 0 ) {
+							searchBar.classList.add( 'SearchBar-HasResults' );
+						} else {
+							searchBar.classList.remove( 'SearchBar-HasResults' );
+						}
+					} );
+				}
+
+			} );
+
+		} )();
+
+	</script>
+
+</body>
+
+</html>

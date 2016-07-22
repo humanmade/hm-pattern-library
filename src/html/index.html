@@ -16,56 +16,47 @@
 
 <body>
 
-<div class="container">
+	<div class="container">
 
-	<h1 class="pattern-library-title">Juniper.</h1>
-	<p class="pattern-library-subtitle">The Human Made Pattern Library.</p>
+		<h1 class="pattern-library-title">Juniper.</h1>
+		<p class="pattern-library-subtitle">The Human Made Pattern Library.</p>
 
-	@include( './components/body-text.html' )  
-	@include( './components/blockquote.html' )  
-	@include( './components/lists.html' )  
-	@include( './components/table.html' )  
-	@include( './components/headings.html' )  
-	@include( './components/colour-swatches.html' )  
-	@include( './components/logos.html' )  
-	@include( './components/code-block.html' )
-	@include( './components/buttons.html' )
-	@include( './components/forms.html' )
-	@include( './components/loading-indicators.html' )
-	@include( './components/search.html' )  
-	@include( './components/wordpress-images.html' )
-	@include( './components/nav-accordion.html' )
+		<p>Juniper is a content focused web style guide and component library for use on projects under the Human Made brand. It can be used as a reference, or you can include the files in your project and hit the ground running, allowing you to focus on building the exciting stuff.</p>
 
-</div>
+		<h2>Features</h2>
 
-<script src="./assets/js/app.min.js"></script>
+		<ul>
+			<li><a href="./pages/base.html">Base styles for typography and standard HTML elements.</a></li>
+			<li><a href="./pages/brand.html">Brand elements such as logos &amp; colour swatches.</a></li>
+			<li><a href="./pages/components.html">Commonly used components such as navigation.</a></li>
+			<li><a href="./pages/forms.html">Form and button styles.</a></li>
+			<li><a href="./pages/wordpress.html">WordPress styles.</a></li>
+		</ul>
 
+		<h2>Usage Instructions</h2>
 
-	<script>
+		<p>To get started, just download and include the production files in your project. <a href="./pages/instructions.html">See detailed usage&nbsp;instructions</a></p>
 
-		(function() {
+		<h2>Contributing</h2>
 
-			// Fake some search results for search bar demo.
-			Array.prototype.forEach.call( document.getElementsByClassName( 'SearchBar' ), function( searchBar ) {
+		<p>We are always looking to improve the Juniper project. New components will be added and we are keen to improve the codebase over time. We will not be committed to backwards compatability between major releases.</p>
+		<p>If you build something with Juniper, and create a component that may be useful to others, we'd love to include it! <a href="https://github.com/humanmade/hm-pattern-library/issues/new">Open an issue on Github</a></p>
 
-				var fields = searchBar.getElementsByClassName( 'SearchBar_Field' );
+		<h2>Examples</h2>
 
-				if ( fields.length > 0 ) {
-					fields[0].addEventListener( "keyup", function() {
-						if ( fields[0].value.length > 0 ) {
-							searchBar.classList.add( 'SearchBar-HasResults' );
-						} else {
-							searchBar.classList.remove( 'SearchBar-HasResults' );
-						}
-					} );
-				}
+		<p>Projects built using Juniper</p>
 
-			} );
+		<ul>
+			<li><a href="http://hb.hmn.md">Employee Handbook.</a></li>
+		</ul>
 
-		} )();
+		<div class="Footer">
+			<p><span class="HMLogo HMLogo-Tiny"></span><a href="http://hmn.md">Made by Humans</a></p>
+		</div>
 
-	</script>
+	</div>
 
+	<script src="./assets/js/app.min.js"></script>
 
 </body>
 
