@@ -14,6 +14,10 @@ Take a look here: [https://humanmade.github.io/hm-pattern-library/](https://huma
 
 Human made handbook team
 
+### Usage Instructions
+
+[Refer to the documentation for full usage instructions.](https://humanmade.github.io/hm-pattern-library/pages/instructions.html)
+
 ### Development setup
 
 Run these commands to get set up locally
