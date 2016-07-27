@@ -16,7 +16,7 @@ const replace      = require( 'gulp-replace' );
 const del          = require( 'del' );
 
 gulp.task( 'clean-dist', ( cb ) => {
-    return del( ['./dist/**/*', '!./dist/.git' ], cb );
+	return del( ['./dist/**/*', '!./dist/.git' ], cb );
 });
 
 // Compile SASS/SCSS to CSS
@@ -44,7 +44,6 @@ gulp.task( 'sass-copy', () => {
 	return gulp.src( copy.concat( ignore ) )
 		.pipe( gulpCopy( './dist/assets/sass', { prefix: 2 } ) );
 } );
-
 
 // Watch for changes in JS/CSS.
 gulp.task( 'watch', () => {
@@ -74,7 +73,6 @@ gulp.task( 'fileinclude', () => {
 		.pipe( replace( '\n\u2028\u2028\n', '\n' ) )
 		.pipe( gulp.dest( './dist/' ) );
 } );
-
 
 // Minify images.
 gulp.task( 'images', () => {
@@ -113,5 +111,5 @@ gulp.task( 'lint-sass', () => {
 
 // Tasks
 gulp.task( 'default', [ 'styles', 'js', 'svg', 'images', 'fileinclude', 'lint' ] );
-gulp.task( 'styles', [ 'sass-compile', 'sass-copy' ] );
-gulp.task( 'lint', [ 'lint-sass' ] );
+gulp.task( 'styles',  [ 'sass-compile', 'sass-copy' ] );
+gulp.task( 'lint',    [ 'lint-sass' ] );
