@@ -1,17 +1,18 @@
-const gulp          = require( 'gulp' );
-const sourcemaps    = require( 'gulp-sourcemaps' );
-const watch         = require( 'gulp-watch' );
-const postcss       = require( 'gulp-postcss' );
-const autoprefixer  = require( 'autoprefixer' );
-const sass          = require( 'gulp-sass' );
-const sassLint      = require( 'gulp-sass-lint' );
-const fileinclude   = require( 'gulp-file-include' );
-const newer         = require( 'gulp-newer' );
-const imagemin      = require( 'gulp-imagemin' );
-const uglify        = require( 'gulp-uglify' );
-const concat        = require( 'gulp-concat' );
-const rename        = require( 'gulp-rename' );
-const gulpCopy      = require( 'gulp-copy' );
+const gulp         = require( 'gulp' );
+const sourcemaps   = require( 'gulp-sourcemaps' );
+const watch        = require( 'gulp-watch' );
+const postcss      = require( 'gulp-postcss' );
+const autoprefixer = require( 'autoprefixer' );
+const sass         = require( 'gulp-sass' );
+const sassLint     = require( 'gulp-sass-lint' );
+const fileinclude  = require( 'gulp-file-include' );
+const newer        = require( 'gulp-newer' );
+const imagemin     = require( 'gulp-imagemin' );
+const uglify       = require( 'gulp-uglify' );
+const concat       = require( 'gulp-concat' );
+const rename       = require( 'gulp-rename' );
+const gulpCopy     = require( 'gulp-copy' );
+const replace      = require( 'gulp-replace' );
 
 // Compile and minify CSS.
 gulp.task( 'styles', () => {
@@ -49,11 +50,13 @@ gulp.task( 'js', function() {
 
 // HTML file include
 gulp.task( 'fileinclude', function() {
-	gulp.src( ['./src/html/index.html'] )
+	return gulp.src( [ './src/html/**/*.html', '!./src/html/components/*', '!./src/html/parts/*' ] )
 		.pipe( fileinclude( {
 			prefix:   '@',
-			basepath: '@file'
+			basepath: '@file',
 		} ) )
+		// Stip gap inserted between included files.
+		.pipe( replace( '\n\u2028\u2028\n', '\n' ) )
 		.pipe( gulp.dest( './dist/' ) );
 } );
 
@@ -87,10 +90,10 @@ gulp.task( 'svg', () => {
 } );
 
 gulp.task( 'lint-sass', function () {
-  return gulp.src( './src/styles/**/*.s+(a|c)ss')
-	.pipe( sassLint( { configFile: '.sass-lint.yml' } ) )
-	.pipe( sassLint.format() )
-	.pipe( sassLint.failOnError() )
+	return gulp.src( './src/styles/**/*.s+(a|c)ss')
+		.pipe( sassLint( { configFile: '.sass-lint.yml' } ) )
+		.pipe( sassLint.format() )
+		.pipe( sassLint.failOnError() )
 });
 
 // Tasks
