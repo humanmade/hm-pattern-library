@@ -16,8 +16,13 @@ td {
 	}
 }
 
-tr:last-child td,
-tr:last-child th {
+tbody:last-child > tr:last-child td {
+	border-bottom: none;
+}
+
+tfoot > tr:last-child td,
+tfoot > tr:last-child th {
+	border-top: 1px solid $border-color;
 	border-bottom: none;
 }
 
@@ -25,4 +30,9 @@ th {
 	color: $hm-dark-grey;
 	text-align: left;
 	@include font-heading;
+}
+
+table caption {
+	margin-bottom: $base-line-height / 2;
+	font-style: italic;
 }
