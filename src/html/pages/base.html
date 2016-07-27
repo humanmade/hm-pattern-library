@@ -1,44 +1,13 @@
-<!DOCTYPE html>
-<html>
+@include( './../parts/header.html', { "css_file": "./../assets/styles/style-guide.css" } )  
 
-<head>
+<a href="./../index.html">&#8592; Back to main page.</a>
 
-    <meta charset="utf-8">
-	<title>Juniper - HM Pattern Library</title>
-	<link rel="stylesheet" href="./../assets/styles/style-guide.css" />
+<h2>Typography &amp; Standard HTML elements</h2>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@include( './../components/body-text.html' )  
+@include( './../components/blockquote.html' )  
+@include( './../components/lists.html' )  
+@include( './../components/table.html' )  
+@include( './../components/headings.html' )  
 
-	<script src="https://use.typekit.net/mwe8dvt.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-</head>
-
-<body>
-
-	<div class="container">
-
-		<h1 class="pattern-library-title">Juniper.</h1>
-		<p class="pattern-library-subtitle">The Human Made Pattern Library.</p>
-
-		<a href="./../index.html">&#8592; Back to main page.</a>
-
-		<h2>Typography &amp; Standard HTML elements</h2>
-
-		@include( './../components/body-text.html' )  
-		@include( './../components/blockquote.html' )  
-		@include( './../components/lists.html' )  
-		@include( './../components/table.html' )  
-		@include( './../components/headings.html' )  
-
-		<div class="Footer">
-			<p><span class="HMLogo HMLogo-Tiny"></span><a href="http://hmn.md">Made by Humans</a></p>
-		</div>
-
-	</div>
-
-	<script src="./../assets/js/app.min.js"></script>
-
-</body>
-
-</html>
+@include( './../parts/footer.html', { "js_file": "./../assets/js/app.min.js" } )  ;
