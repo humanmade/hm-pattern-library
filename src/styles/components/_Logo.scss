@@ -11,6 +11,8 @@
 	width: 292px;
 	height: 56px;
 	margin: #{ $base-line-height } $gutter-width;
+	display: inline-block;
+	vertical-align: top;
 
 }
 
@@ -56,8 +58,9 @@
 .HMLogo-Tiny {
 
 	background-image: url( "#{ $hm-images }/logo-tiny-black.svg" );
-	width: 20px;
-	height: 20px;
+	background-size: 75%;
+	width: 1.5rem;
+	height: 1.5rem;
 
 	&.HMLogo-Red {
 		background-image: url( "#{ $hm-images }/logo-tiny-red.svg" );

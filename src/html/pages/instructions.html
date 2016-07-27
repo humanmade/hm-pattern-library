@@ -1,0 +1,32 @@
+@include( './../parts/header.html', { "css_file": "./../assets/styles/style-guide.css" } )  
+
+<a href="./../index.html">&#8592; Back to main page.</a>
+
+<h2>How to use juniper in your&nbsp;project</h2>
+
+<h3>Include Juniper.</h3>
+<p>Include the production files from the <code><a href="https://github.com/humanmade/hm-pattern-library/tree/gh-pages">gh-pages</a></code> branch. We reccommend either downloading the releases or using a submodule.</p>
+
+<h3>Juniper CSS.</h3>
+<p>For simple projects, you can just load the compiled CSS files directly in your page.</p>
+
+<h3>Juniper SASS.</h3>
+<p>For more complex projects, you can include the SCSS files at the top of your SCSS file. You will need to define the project path so that images load correctly. See the example SCSS file below.</p>
+<pre class="language-scss">// Define image path, relative to your project's main SASS file.
+$hm-images: "./../vendor/hm-pattern-library/assets/images";
+
+// Include the Juniper SASS file.
+@import "./../vendor/hm-pattern-library/assets/sass/style";
+
+// Your custom styles here.</pre>
+
+<h3>JavaScript.</h3>
+<p>Juniper aims to have minimal JavaScript, and it is completely optional. The small ammount there is should be as lightweight as possible, without any dependencies. You can include the <code>app.min.js</code> file in your project for a few nice little extra features (e.g. code syntax highlighting and collapsable navigaton).</p>
+
+<h3>Fonts.</h3>
+<p>The primary fonts used by Juniper are Proxima Nova for headings and FF Meta for body copy. These are provided by Typekit and if you wish to use them you will need to add the Typekit JS to your page, and either create a new Kit, or add your domain to the Juniper kit settings.</p>
+
+<h3>Updates.</h3>
+<p>You don't have to keep up to date, but we do aim to maintain full compatability between minor releases. Major releases however may include breaking changes.</p>
+
+@include( './../parts/footer.html', { "js_file": "./../assets/js/app.min.js" } )  ;

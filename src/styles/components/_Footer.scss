@@ -1,0 +1,22 @@
+.Footer {
+
+	@include font-heading;
+	@include text-sm;
+	color: $hm-medium-grey;
+	border-top: 1px solid $border-color;
+	padding-top: $base-line-height / 2;
+	margin: #{ $base-line-height * 2 } 0;
+
+	.HMLogo-Tiny {
+		margin: 0 $base-line-height / 2 0 0;
+		opacity: 0.6;
+		position: relative;
+		top: -1px;
+	}
+
+	a:link,
+	a:visited {
+		color: inherit;
+	}
+
+}

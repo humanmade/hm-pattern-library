@@ -12,6 +12,7 @@ const uglify       = require( 'gulp-uglify' );
 const concat       = require( 'gulp-concat' );
 const rename       = require( 'gulp-rename' );
 const gulpCopy     = require( 'gulp-copy' );
+const replace      = require( 'gulp-replace' );
 const del          = require( 'del' );
 
 gulp.task( 'clean-dist', ( cb ) => {
@@ -44,6 +45,7 @@ gulp.task( 'sass-copy', () => {
 		.pipe( gulpCopy( './dist/assets/sass', { prefix: 2 } ) );
 } );
 
+
 // Watch for changes in JS/CSS.
 gulp.task( 'watch', () => {
 	gulp.watch( 'src/styles/**/*.scss', ['styles'] );
@@ -63,11 +65,13 @@ gulp.task( 'js', () => {
 
 // HTML file include
 gulp.task( 'fileinclude', () => {
-	return gulp.src( ['./src/html/index.html'] )
+	return gulp.src( [ './src/html/**/*.html', '!./src/html/components/*', '!./src/html/parts/*' ] )
 		.pipe( fileinclude( {
 			prefix:   '@',
-			basepath: '@file'
+			basepath: '@file',
 		} ) )
+		// Stip gap inserted between included files.
+		.pipe( replace( '\n\u2028\u2028\n', '\n' ) )
 		.pipe( gulp.dest( './dist/' ) );
 } );
 
@@ -101,13 +105,13 @@ gulp.task( 'svg', () => {
 } );
 
 gulp.task( 'lint-sass', () => {
-  return gulp.src( './src/styles/**/*.s+(a|c)ss')
-	.pipe( sassLint( { configFile: '.sass-lint.yml' } ) )
-	.pipe( sassLint.format() )
-	.pipe( sassLint.failOnError() )
+	return gulp.src( './src/styles/**/*.s+(a|c)ss')
+		.pipe( sassLint( { configFile: '.sass-lint.yml' } ) )
+		.pipe( sassLint.format() )
+		.pipe( sassLint.failOnError() )
 });
 
 // Tasks
-gulp.task( 'styles', [ 'sass-compile', 'sass-copy' ] );
 gulp.task( 'default', [ 'styles', 'js', 'svg', 'images', 'fileinclude', 'lint' ] );
+gulp.task( 'styles', [ 'sass-compile', 'sass-copy' ] );
 gulp.task( 'lint', [ 'lint-sass' ] );
