@@ -15,18 +15,3 @@
 @import "components/wordpress-images";
 @import "components/SearchBar";
 @import "components/NavAccordion";
-
-.container {
-
-	max-width: 40rem;
-	margin: auto;
-
-	@media #{ $mq-md-down } {
-		max-width: calc( 100% - #{ $gutter-width * 4 } );
-	}
-
-	@media #{ $mq-sm-down } {
-		max-width: calc( 100% - #{ $gutter-width * 2 } );
-	}
-
-}
