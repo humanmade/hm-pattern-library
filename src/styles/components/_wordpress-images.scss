@@ -1,6 +1,12 @@
 /*
  * These classes use WordPress default alignment classes and do not follow the naming convention.
  */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 .alignnone {
 	margin-left: 0;
 	margin-right: 0;
