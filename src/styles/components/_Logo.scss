@@ -5,7 +5,7 @@
 	white-space: nowrap;
 	display: inline-block;
 
-	background: url( "#{ $hm-images }/logo-black.svg" ) no-repeat center center;
+	background: url( "#{ $hm-images }/logos/logo-black.svg" ) no-repeat center center;
 
 	background-size: 100%;
 	width: 292px;
@@ -17,56 +17,56 @@
 }
 
 .HMLogo-Red {
-	background-image: url( "#{ $hm-images }/logo-red.svg" );
+	background-image: url( "#{ $hm-images }/logos/logo-red.svg" );
 }
 
 .HMLogo-White {
-	background-image: url( "#{ $hm-images }/logo-white.svg" );
+	background-image: url( "#{ $hm-images }/logos/logo-white.svg" );
 }
 
 .HMLogo-Alt {
 
-	background-image: url( "#{ $hm-images }/logo-alt-black.svg" );
+	background-image: url( "#{ $hm-images }/logos/logo-alt-black.svg" );
 	width: 173px;
 	height: 97px;
 
 	&.HMLogo-Red {
-		background-image: url( "#{ $hm-images }/logo-alt-red.svg" );
+		background-image: url( "#{ $hm-images }/logos/logo-alt-red.svg" );
 	}
 
 	&.HMLogo-White {
-		background-image: url( "#{ $hm-images }/logo-alt-white.svg" );
+		background-image: url( "#{ $hm-images }/logos/logo-alt-white.svg" );
 	}
 
 }
 
 .HMLogo-Small {
 
-	background-image: url( "#{ $hm-images }/logo-small-black.svg" );
+	background-image: url( "#{ $hm-images }/logos/logo-small-black.svg" );
 	width: 69px;
 	height: 40px;
 
 	&.HMLogo-Red {
-		background-image: url( "#{ $hm-images }/logo-small-red.svg" );
+		background-image: url( "#{ $hm-images }/logos/logo-small-red.svg" );
 	}
 
 	&.HMLogo-White {
-		background-image: url( "#{ $hm-images }/logo-small-white.svg" );
+		background-image: url( "#{ $hm-images }/logos/logo-small-white.svg" );
 	}
 }
 
 .HMLogo-Tiny {
 
-	background-image: url( "#{ $hm-images }/logo-tiny-black.svg" );
+	background-image: url( "#{ $hm-images }/logos/logo-tiny-black.svg" );
 	background-size: 75%;
 	width: 1.5rem;
 	height: 1.5rem;
 
 	&.HMLogo-Red {
-		background-image: url( "#{ $hm-images }/logo-tiny-red.svg" );
+		background-image: url( "#{ $hm-images }/logos/logo-tiny-red.svg" );
 	}
 
 	&.HMLogo-White {
-		background-image: url( "#{ $hm-images }/logo-tiny-white.svg" );
+		background-image: url( "#{ $hm-images }/logos/logo-tiny-white.svg" );
 	}
 }
