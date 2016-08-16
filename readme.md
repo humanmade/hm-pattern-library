@@ -69,3 +69,18 @@ Before submitting a pull request, you will need to confirm your sass meets our c
 When you push your branch, you will be able to submit a pull request. Travis CI runs on the repository and will need to pass on all pull requests.
 
 If Travis CI fails, you can push further commits to the branch to fix the build.
+
+## Changelog
+
+**1.0.2**
+
+* Add styles for WordPress galleries
+* Make variables defaults
+
+**1.0.1**
+
+* Prevent images breaking out of container.
+
+**1.0.0**
+
+* First stable release
