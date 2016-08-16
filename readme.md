@@ -72,6 +72,10 @@ If Travis CI fails, you can push further commits to the branch to fix the build.
 
 ## Changelog
 
+**1.0.3**
+
+* Better gulp tasks for icons and logos. Note if you are referencing logo file directly, you will need to update your paths.
+
 **1.0.2**
 
 * Add styles for WordPress galleries
