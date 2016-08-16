@@ -1,35 +1,35 @@
 // Brand Colours.
-$hm-primary:     #D94E3A; // Red.
-$hm-accent:      #7DC9DA; // Blue.
-$hm-warm-grey:   #504C4C;
-$hm-dark-grey:   #353535;
-$hm-beige:       #F4EFE6;
-$hm-medium-grey: #737373;
-$hm-light-grey:  #EFF1EF;
-$hm-brown:       #4F4641;
+$hm-primary:     #D94E3A !default; // Red.
+$hm-accent:      #7DC9DA !default; // Blue.
+$hm-warm-grey:   #504C4C !default;
+$hm-dark-grey:   #353535 !default;
+$hm-beige:       #F4EFE6 !default;
+$hm-medium-grey: #737373 !default;
+$hm-light-grey:  #EFF1EF !default;
+$hm-brown:       #4F4641 !default;
 
 // Alternate versions of main colors. Used for borders, backgrounds etc.
-$hm-primary-light: saturate( lighten( $hm-primary, 10% ), 5 );
-$hm-primary-dark:  desaturate( darken( $hm-primary, 6% ), 8 );
+$hm-primary-light: saturate( lighten( $hm-primary, 10% ), 5 ) !default;
+$hm-primary-dark:  desaturate( darken( $hm-primary, 6% ), 8 ) !default;
 
-$border-color:       lighten( $hm-medium-grey, 40% );
-$border-color-red:   $hm-primary-light;
-$border-color-beige: desaturate( darken( $hm-beige, 15% ), 20 );
+$border-color:       lighten( $hm-medium-grey, 40% ) !default;
+$border-color-red:   $hm-primary-light !default;
+$border-color-beige: desaturate( darken( $hm-beige, 15% ), 20 ) !default;
 
-$base-line-height: 1.5rem;
-$base-font-size:   18px;
+$base-line-height: 1.5rem !default;
+$base-font-size:   18px !default;
 
-$gutter-width: 30px;
+$gutter-width: 30px !default;
 
-$font-family-serif: "ff-meta-serif-web-pro", serif;
-$font-family-sans: "proxima-nova", sans-serif;
-$font-family-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+$font-family-serif: "ff-meta-serif-web-pro", serif !default;
+$font-family-sans: "proxima-nova", sans-serif !default;
+$font-family-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !default;
 
 // Image Path.
 $hm-images: "../images" !default;
 
-$mq-sm-up:   "screen and ( min-width: 30rem )";
-$mq-sm-down: "screen and ( max-width: 30rem )";
-$mq-md-up:   "screen and ( min-width: 55rem )";
-$mq-md-down: "screen and ( max-width: 55rem )";
-$mq-print:   "print";
+$mq-sm-up:   "screen and ( min-width: 30rem )" !default;
+$mq-sm-down: "screen and ( max-width: 30rem )" !default;
+$mq-md-up:   "screen and ( min-width: 55rem )" !default;
+$mq-md-down: "screen and ( max-width: 55rem )" !default;
+$mq-print:   "print" !default;
