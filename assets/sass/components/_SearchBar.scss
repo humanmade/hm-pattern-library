@@ -1,5 +1,5 @@
 .StyleGuide_SearchContainer {
-	background: $hm-primary;
+	background: $color-primary;
 	width: 100%;
 	clear: both;
 	padding: $base-line-height $gutter-width;
@@ -30,7 +30,7 @@
 // Note need for extra specificity to override input[type="text"].
 .SearchBar .SearchBar_Field {
 	border: none;
-	background: $hm-primary-dark;
+	background: $color-primary-dark;
 	color: #FFF;
 	float: right;
 	margin: 0;
@@ -46,7 +46,7 @@
 // TODO - remove in JS, replace with 'clear'?
 .SearchBar_Submit {
 	@extend .Btn;
-	background: rgba( $hm-primary-dark, .8 );
+	background: rgba( $color-primary-dark, .8 );
 	border: none;
 	position: absolute;
 	top: 0;
@@ -74,7 +74,7 @@
 
 	&:hover,
 	&:focus {
-		background: rgba( $hm-primary-dark, .8 );
+		background: rgba( $color-primary-dark, .8 );
 	}
 
 }
@@ -85,7 +85,7 @@
 	top: 100%;
 	left: 0;
 	right: 0;
-	background: rgba( $hm-primary-dark, 0.95 );
+	background: rgba( $color-primary-dark, 0.95 );
 	padding: 0;
 	border-radius: 0 0 2px 2px;
 	color: #FFF;
