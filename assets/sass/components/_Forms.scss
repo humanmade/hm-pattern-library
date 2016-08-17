@@ -9,7 +9,7 @@ input[type="email"] {
 	padding: #{ $base-line-height / 2 } 1em #{ $base-line-height / 2 };
 	background: transparent;
 	box-shadow: none;
-	color: $hm-warm-grey;
+	color: $color-input-text;
 	margin-bottom: $base-line-height / 2;
 	margin-right: $base-line-height / 2;
 	display: block;

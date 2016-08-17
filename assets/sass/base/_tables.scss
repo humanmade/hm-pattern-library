@@ -27,7 +27,7 @@ tfoot > tr:last-child th {
 }
 
 th {
-	color: $hm-dark-grey;
+	color: $color-text-heading;
 	text-align: left;
 	@include font-heading;
 }
