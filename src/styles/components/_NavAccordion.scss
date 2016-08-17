@@ -1,7 +1,7 @@
 /**
  * Helper mixin for generating color variations.
  */
-@mixin NavAccordion_Coloured( $bg, $border-color, $text-color: $hm-warm-grey ) {
+@mixin NavAccordion_Coloured( $bg, $border-color, $text-color: $color-text-default ) {
 
 	background: $bg;
 	color: $text-color;
@@ -148,7 +148,7 @@
 	&:before {
 		position: absolute;
 		content: " ";
-		background: rgba( $hm-warm-grey, .75 );
+		background: rgba( $color-nav-toggle-background, .75 );
 		border-radius: 100%;
 		top: 50%;
 		left: 50%;
@@ -162,7 +162,7 @@
 	&:after {
 		position: absolute;
 		content: " ";
-		background: url( "#{ $hm-images }/icons/icon-plus-white.svg" ) no-repeat center center;
+		background: url( "#{ $images-path }/icons/icon-plus-white.svg" ) no-repeat center center;
 		background-size: 100% 100%;
 		top: 50%;
 		left: 50%;
@@ -180,18 +180,18 @@
 		outline: none;
 
 		&:before {
-			background: darken( $hm-warm-grey, 40% );
+			background: darken( $color-nav-toggle-background, 40% );
 		}
 	}
 
 }
 
 .NavAccordion_Toggle-Open:after {
-	background-image: url( "#{ $hm-images }/icons/icon-minus-white.svg" );
+	background-image: url( "#{ $images-path }/icons/icon-minus-white.svg" );
 }
 
 .NavAccordion-Red {
-	@include NavAccordion_Coloured( $hm-primary, $border-color-red, #FFF );
+	@include NavAccordion_Coloured( $color-primary, $border-color-primary, $color-nav-accordion-primary-text );
 
 	.NavAccordion_Toggle {
 
@@ -200,35 +200,35 @@
 		}
 
 		&:after {
-			background-image: url( "#{ $hm-images }/icons/icon-plus-red.svg" );
+			background-image: url( "#{ $images-path }/icons/icon-plus-red.svg" );
 		}
 
 		&:hover:before,
 		&:focus:before {
-			background-color: white;
+			background-color: $color-nav-accordion-primary-focus-background;
 		}
 
 	}
 
 	.NavAccordion_Toggle-Open:after {
-		background-image: url( "#{ $hm-images }/icons/icon-minus-red.svg" );
+		background-image: url( "#{ $images-path }/icons/icon-minus-red.svg" );
 	}
 
 }
 
 .NavAccordion-Beige {
 
-	@include NavAccordion_Coloured( $hm-beige, $border-color-beige, $hm-warm-grey );
+	@include NavAccordion_Coloured( $color-nav-accordion-beige-focus-background, $border-color-light, $color-nav-accordion-biege-text );
 
 	.NavAccordion_Toggle {
 		&:after {
-			background-image: url( "#{ $hm-images }/icons/icon-plus-beige.svg" );
+			background-image: url( "#{ $images-path }/icons/icon-plus-beige.svg" );
 		}
 	}
 
 
 	.NavAccordion_Toggle-Open:after {
-		background-image: url( "#{ $hm-images }/icons/icon-minus-beige.svg" );
+		background-image: url( "#{ $images-path }/icons/icon-minus-beige.svg" );
 	}
 
 }

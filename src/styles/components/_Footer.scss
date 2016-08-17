@@ -2,7 +2,7 @@
 
 	@include font-heading;
 	@include text-sm;
-	color: $hm-medium-grey;
+	color: $color-footer-text;
 	border-top: 1px solid $border-color;
 	padding-top: $base-line-height / 2;
 	margin: #{ $base-line-height * 2 } 0;
