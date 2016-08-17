@@ -20,7 +20,7 @@ All local development should be done against master. `dist` which contains the c
 
 **Workflow.** Create a branch from `master`, make your changes, and open a pull request against the `master` branch.
 
-The Human Made pattern library generates flat HTML and does not require a web server to be loaded. Once compiled, the HTML can be opened in your browser via the file system.
+The Human Made pattern library generates flat HTML and does not require a web server to be loaded. Once compiled, the HTML can be opened in your browser via the file system. You can simply access the compiled index file directly at &hellip;`/dist/index.html`
 
 Run these commands to get set up locally
 
