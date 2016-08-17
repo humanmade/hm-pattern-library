@@ -20,7 +20,7 @@ All local development should be done against master. `dist` which contains the c
 
 The Human Made pattern library generates flat HTML and does not require a web server to be loaded. Once compiled, the HTML can be opened in your browser via the file system. You can simply access the compiled index file directly at `…/dist/index.html`
 
-**Workflow.** Create a branch from `master`, make your changes, and open a pull request against the `master` branch.
+**Workflow.** Create a branch from `master`, make your changes, and open a pull request against the `master` branch. You can fork the repository should you wish to contribute any code.
 
 **Set up.** Run these commands to get it running locally
 
@@ -29,8 +29,6 @@ The Human Made pattern library generates flat HTML and does not require a web se
 1. If you do not have gulp installed on your machine, install it globally by running `npm install gulp-cli -g`
 1. `npm install`
 1. The sass and html can be compiled by running the command `gulp`.
-
-You can fork the repository should you wish to contribute any code.
 
 #### CSS Naming convention
 
