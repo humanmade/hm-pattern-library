@@ -4,7 +4,7 @@
 
 $color-primary: $hm-red !default;
 $color-accent:  $hm-blue !default;
-$white : #FFF;
+$white : #FFF !default;
 
 // Alternate versions of main colors. Used for borders, backgrounds etc.
 $color-primary-light: $hm-red-light !default;
