@@ -76,7 +76,7 @@ Class names in vendor files should not be changed, the files should be placed in
 
 **1.0.4**
 
-** Use component colour variables with brand variables as defaults for easier customizing. Props @missjwo
+* Use component colour variables with brand variables as defaults for easier customizing. Props @missjwo
 
 **1.0.3**
 
