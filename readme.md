@@ -68,6 +68,10 @@ If Travis CI fails, you can push further commits to the branch to fix the build.
 
 ## Changelog
 
+**1.0.4**
+
+** Use component colour variables with brand variables as defaults for easier customizing. Props @missjwo
+
 **1.0.3**
 
 * Better gulp tasks for icons and logos. Note if you are referencing logo file directly, you will need to update your paths.
