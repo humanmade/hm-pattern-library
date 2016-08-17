@@ -54,7 +54,7 @@ html {
 body {
 	@include text-std;
 	@include font-body;
-	color: $hm-warm-grey;
+	color: $color-text-default;
 }
 
 
@@ -63,7 +63,7 @@ h1,
 	@include text-xxl;
 	@include font-heading;
 	margin: #{ $base-line-height * 1.75 } 0 #{ $base-line-height * 1.25 } 0;
-	color: $hm-dark-grey;
+	color: $color-text-heading;
 }
 
 h2,
@@ -71,7 +71,7 @@ h2,
 	@include text-xl;
 	@include font-heading;
 	margin: #{ $base-line-height * 1.5 } 0 #{ $base-line-height * 1 } 0;
-	color: $hm-dark-grey;
+	color: $color-text-heading;
 }
 
 h3,
@@ -79,7 +79,7 @@ h3,
 	@include text-lg;
 	@include font-heading;
 	margin: #{ $base-line-height * 1 } 0 #{ $base-line-height * .75 } 0;
-	color: $hm-dark-grey;
+	color: $color-text-heading;
 }
 
 h4,
@@ -87,7 +87,7 @@ h4,
 	@include text-md;
 	@include font-heading;
 	margin: #{ $base-line-height * 1 } 0 #{ $base-line-height * .75 } 0;
-	color: $hm-dark-grey;
+	color: $color-text-heading;
 }
 
 h5,
@@ -95,7 +95,7 @@ h6 {
 	@include text-std;
 	@include font-heading;
 	margin: #{ $base-line-height * .75 } 0;
-	color: $hm-dark-grey;
+	color: $color-text-heading;
 }
 
 p,
@@ -128,12 +128,12 @@ hr {
 }
 
 a:link {
-	color: $hm-primary;
+	color: $color-primary;
 	text-decoration: none;
 }
 
 a:visited {
-	color: darken( $hm-primary, 10% );
+	color: darken( $color-primary, 10% );
 	text-decoration: none;
 }
 
@@ -144,8 +144,8 @@ a:focus {
 
 code,
 pre {
-	color: $hm-warm-grey;
-	background: $hm-beige;
+	color: $color-text-pre;
+	background: $color-background-pre;
 	padding: 0px 5px;
 	display: inline-block;
 	border-radius: 2px;
@@ -163,10 +163,10 @@ pre {
 // Override the background from prism.js.
 :not( pre ) > code[ class*="language-" ],
 pre[ class*="language-" ] {
-	background: $hm-beige;
+	background: $color-background-pre;
 	border-radius: 2px;
 }
 
 ::selection {
-	background: lighten( $hm-accent, 20% );
+	background: lighten( $color-accent, 20% );
 }
