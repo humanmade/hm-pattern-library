@@ -70,7 +70,7 @@ If Travis CI fails, you can push further commits to the branch to fix the build.
 
 **1.0.4**
 
-** Use component colour variables with brand variables as defaults for easier customizing. Props @missjwo
+* Use component colour variables with brand variables as defaults for easier customizing. Props @missjwo
 
 **1.0.3**
 
