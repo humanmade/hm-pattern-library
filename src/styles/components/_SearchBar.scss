@@ -1,0 +1,152 @@
+.StyleGuide_SearchContainer {
+	background: $hm-primary;
+	width: 100%;
+	clear: both;
+	padding: $base-line-height $gutter-width;
+}
+
+.SearchBar {
+	@extend .util-Clearfix;
+	clear: both;
+	position: relative;
+}
+
+.SearchBar_Container {
+	@extend .util-Clearfix;
+	position: relative;
+
+	@media #{ $mq-md-up } {
+		width: 50%;
+		float: right;
+		transition: width ease-in-out .1s;
+	}
+}
+
+.SearchBar_Label {
+	position: absolute;
+	clip: rect( 1px, 1px, 1px, 1px );
+}
+
+// Note need for extra specificity to override input[type="text"].
+.SearchBar .SearchBar_Field {
+	border: none;
+	background: $hm-primary-dark;
+	color: #FFF;
+	float: right;
+	margin: 0;
+	padding-right: 0;
+	width: 100%;
+
+	::placeholder {
+		opacity: .75;
+	}
+
+}
+
+// TODO - remove in JS, replace with 'clear'?
+.SearchBar_Submit {
+	@extend .Btn;
+	background: rgba( $hm-primary-dark, .8 );
+	border: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	text-indent: 150%;
+	padding: 0;
+	height: $base-line-height * 2;
+	width: $base-line-height * 2;
+	overflow: hidden;
+	opacity: .75;
+
+	&:after {
+		content: url( "#{ $hm-images }/icons/icon-search-white.svg" );
+		display: block;
+		position: absolute;
+		width: 100%;
+		line-height: $base-line-height * 2;
+		vertical-align: middle;
+		text-align: center;
+		top: 0;
+		left: 0;
+		text-indent: 0;
+	}
+
+	&:hover,
+	&:focus {
+		background: rgba( $hm-primary-dark, .8 );
+	}
+
+}
+
+.SearchBar_Results {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background: rgba( $hm-primary-dark, 0.95 );
+	padding: 0;
+	border-radius: 0 0 2px 2px;
+	color: #FFF;
+	margin: 0;
+	list-style: none;
+	z-index: 50;
+	overflow: auto;
+}
+
+.SearchBar_Result {
+
+	@include text-sm;
+
+	padding: 0;
+	margin: 0;
+
+	a:link,
+	a:visited,
+	a:hover,
+	a:focus {
+		color: #FFF;
+		text-decoration: none;
+	}
+
+	a {
+
+		padding: #{ $base-line-height / 2 } 0;
+		margin: 0 #{ $gutter-width / 2 };
+		border-top: 1px solid #d25c4c;
+		display: block;
+
+		&:hover {
+			background: rgba( 255, 255, 255, 0.1 );
+			padding: #{ $base-line-height / 2 } #{ $gutter-width / 2 };
+			border-bottom: 1px solid #d25c4c;
+			margin: 0 0 -1px 0;
+		}
+	}
+}
+
+
+
+
+.SearchBar_Result_Title,
+.SearchBar_Result_Text {
+	@include text-sm;
+	color: #FFF;
+	margin: 0;
+}
+
+.SearchBar-Focused {
+
+	@media #{ $mq-md-up } {
+		.SearchBar_Container {
+			width: 100%;
+			transition: width ease-in-out .1s;
+		}
+	}
+
+	&.SearchBar-HasResults .SearchBar_Results {
+		display: block;
+	}
+
+}

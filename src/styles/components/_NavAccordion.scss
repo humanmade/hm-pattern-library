@@ -1,0 +1,238 @@
+/**
+ * Helper mixin for generating color variations.
+ */
+@mixin NavAccordion_Coloured( $bg, $border-color, $text-color: $hm-warm-grey ) {
+
+	background: $bg;
+	color: $text-color;
+
+	.NavAccordion_Item {
+		border-color: $border-color;
+	}
+
+	.NavAccordion_Item > ul:after {
+		border-color: $border-color;
+	}
+
+	.NavAccordion_Item .NavAccordion_Item {
+		.NavAccordion_Anchor:after {
+			border-color: $border-color;
+		}
+	}
+
+	$border-color-toggle: $border-color;
+	$border-color-toggle-hover: $border-color;
+
+	@if ( lightness( $bg ) > 60 ) {
+		$border-color-toggle: darken( $border-color, 20% );
+		$border-color-toggle-hover: darken( $border-color, 40% );
+	} @else {
+		$border-color-hover: lighten( $border-color, 30% );
+		$border-color-toggle-hover: lighten( $border-color, 60% );
+	}
+
+	.NavAccordion_Toggle {
+
+		border-color: $border-color-toggle;
+		color: $border-color-toggle;
+
+		&:hover,
+		&:focus {
+			border-color: $border-color-toggle-hover;
+			color: $border-color-toggle-hover;
+		}
+
+	}
+
+}
+
+.NavAccordion {
+
+	@include font-heading;
+	@include text-sm;
+	line-height: $base-line-height * .75;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	a:link,
+	a:visited {
+		color: inherit;
+	}
+
+	ul,
+	ol {
+		list-style: none;
+		font-size: inherit;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		transition: max-height ease-in-out 0.1s;
+	}
+
+}
+
+.NavAccordion_Item {
+
+	font-size: inherit;
+	display: block;
+	border-bottom: 1px solid $border-color;
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	.NavAccordion_Anchor {
+		display: block;
+		overflow: hidden;
+		padding: #{ $base-line-height / 4 } 0;
+		position: relative;
+	}
+
+	> ul {
+		overflow: hidden;
+		margin-left: $gutter-width / 2;
+	}
+
+}
+
+.NavAccordion_Item > ul:after {
+	content: " ";
+	border-left: 1px solid $border-color;
+	top: -.333333333rem;
+	bottom: 1.111111rem;
+	left: 0;
+	position: absolute;
+}
+
+.NavAccordion_Item .NavAccordion_Item {
+
+	margin-left: 0;
+	padding-left: $gutter-width;
+	border-left: none;
+	border-bottom: none;
+
+	.NavAccordion_Anchor:after {
+		content: " ";
+		width: $gutter-width / 2;
+		border-bottom: 1px solid $border-color;
+		position: absolute;
+		top: 1.1rem;
+		left: $gutter-width * -1;
+	}
+
+	> ul {
+		margin-left: 0;
+	}
+
+}
+
+.NavAccordion_Item .NavAccordion_Item .NavAccordion_Item {
+	@include font-body;
+}
+
+.NavAccordion_Toggle {
+
+	@extend .Btn-Small;
+	display: block;
+	position: relative;
+	float: right;
+	margin: #{ $base-line-height / -4 } 0;
+	padding: 0;
+	height: $base-line-height * 1.25;
+	width: $base-line-height * 1.25;
+	text-indent: 100%;
+	overflow: hidden;
+	background: transparent;
+
+	&:before {
+		position: absolute;
+		content: " ";
+		background: rgba( $hm-warm-grey, .75 );
+		border-radius: 100%;
+		top: 50%;
+		left: 50%;
+		width: 18px;
+		height: 18px;
+		margin-left: -9px;
+		margin-top: -9px;
+		text-indent: 0;
+	}
+
+	&:after {
+		position: absolute;
+		content: " ";
+		background: url( "#{ $hm-images }/icons/icon-plus-white.svg" ) no-repeat center center;
+		background-size: 100% 100%;
+		top: 50%;
+		left: 50%;
+		width: 8px;
+		height: 8px;
+		margin-left: -4px;
+		margin-top: -4px;
+		text-indent: 0;
+	}
+
+	&:hover,
+	&:focus {
+
+		background: none;
+		outline: none;
+
+		&:before {
+			background: darken( $hm-warm-grey, 40% );
+		}
+	}
+
+}
+
+.NavAccordion_Toggle-Open:after {
+	background-image: url( "#{ $hm-images }/icons/icon-minus-white.svg" );
+}
+
+.NavAccordion-Red {
+	@include NavAccordion_Coloured( $hm-primary, $border-color-red, #FFF );
+
+	.NavAccordion_Toggle {
+
+		&:before {
+			background: rgba( 255, 255, 255, .85 );
+		}
+
+		&:after {
+			background-image: url( "#{ $hm-images }/icons/icon-plus-red.svg" );
+		}
+
+		&:hover:before,
+		&:focus:before {
+			background-color: white;
+		}
+
+	}
+
+	.NavAccordion_Toggle-Open:after {
+		background-image: url( "#{ $hm-images }/icons/icon-minus-red.svg" );
+	}
+
+}
+
+.NavAccordion-Beige {
+
+	@include NavAccordion_Coloured( $hm-beige, $border-color-beige, $hm-warm-grey );
+
+	.NavAccordion_Toggle {
+		&:after {
+			background-image: url( "#{ $hm-images }/icons/icon-plus-beige.svg" );
+		}
+	}
+
+
+	.NavAccordion_Toggle-Open:after {
+		background-image: url( "#{ $hm-images }/icons/icon-minus-beige.svg" );
+	}
+
+}
+
+.NavAccordion_Item-Active > .NavAccordion_Anchor {
+	text-decoration: underline;
+}

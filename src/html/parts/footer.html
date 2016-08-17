@@ -1,0 +1,35 @@
+		<div class="Footer">
+			<p><span class="HMLogo HMLogo-Tiny"></span><a href="http://hmn.md">Made by Humans</a></p>
+		</div>
+
+	</div>
+
+	<script src="@js_file"></script>
+
+	<script>
+
+		(function() {
+
+			// Fake some search results for search bar demo.
+			Array.prototype.forEach.call( document.getElementsByClassName( 'SearchBar' ), function( searchBar ) {
+
+				var fields = searchBar.getElementsByClassName( 'SearchBar_Field' );
+
+				if ( fields.length > 0 ) {
+					fields[0].addEventListener( "keyup", function() {
+						if ( fields[0].value.length > 0 ) {
+							searchBar.classList.add( 'SearchBar-HasResults' );
+						} else {
+							searchBar.classList.remove( 'SearchBar-HasResults' );
+						}
+					} );
+				}
+
+			} );
+
+		} )();
+
+	</script>
+</body>
+
+</html>

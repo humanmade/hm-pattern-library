@@ -1,0 +1,102 @@
+/**
+ * This is only used for the documentation pages,
+ * and you do not need to include this file in your project.
+ */
+
+@import "style";
+@import "components/Swatch";
+
+.container {
+
+	max-width: 40rem;
+	margin: auto;
+
+	@media #{ $mq-md-down } {
+		max-width: calc( 100% - #{ $gutter-width * 4 } );
+	}
+
+	@media #{ $mq-sm-down } {
+		max-width: calc( 100% - #{ $gutter-width * 2 } );
+	}
+
+}
+
+/**
+ * For previewing a list/grid of logos.
+ * This is used in the pattern library.
+ */
+.HMLogos {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.HMLogo-Container {
+
+	width: auto;
+	&:nth-child( n ) { background-color: white; }
+	&:nth-child( 2n ) { background-color: $hm-beige; }
+	&:nth-child( 3n ) { background-color: $hm-primary; }
+
+	.HMLogo {
+		vertical-align: top;
+	}
+}
+
+.pattern-library-title {
+
+	@extend .text-xxl;
+	position: relative;
+
+	&:before {
+		content: " ";
+		display: block;
+		@extend .HMLogo;
+		@extend .HMLogo-Small;
+		@extend .HMLogo-Red;
+
+		margin: 0 0 $base-line-height;
+
+		@media #{ $mq-md-up } {
+			position: absolute;
+			left: -130px;
+			transform: scale( 1.75 );
+			top: 34px;
+			margin: 0;
+		}
+
+	}
+}
+
+.pattern-library-subtitle {
+	@include text-md;
+	margin-top: -1.94375rem;
+	font-style: italic;
+}
+
+.NavAccordions {
+
+	@extend .util-Clearfix;
+	clear: both;
+
+	.NavAccordion {
+		padding: $base-line-height / 2 $gutter-width / 2;
+		width: 100%;
+
+		@media #{ $mq-sm-up } {
+			width: 33.333%;
+			float: left;
+		}
+	}
+}
+
+.StyleGuide_LoadingIndicators {
+
+	.StyleGuide_LoadingIndicator_Container {
+		display: inline-block;
+		padding: #{ $base-line-height / 2 } $gutter-width;
+	}
+
+	.Btn {
+		margin: 0;
+	}
+}
