@@ -18,7 +18,7 @@ Take a look here: [https://humanmade.github.io/hm-pattern-library/](https://huma
 
 All local development should be done against master. `dist` which contains the compiled files is ignored from version control and must be created using the `gulp` task. Releases are just the content of `dist` and nothing else. 
 
-**Workflow.** Create a branch from master, make your changes, and open a pull request against the master branch.
+**Workflow.** Create a branch from `master`, make your changes, and open a pull request against the `master` branch.
 
 The Human Made pattern library generates flat HTML and does not require a web server to be loaded. Once compiled, the HTML can be opened in your browser via the file system.
 
