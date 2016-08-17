@@ -7,8 +7,9 @@ $color-accent:  $hm-blue !default;
 $white:        #FFF !default;
 
 // Alternate versions of main colors. Used for borders, backgrounds etc.
-$color-primary-light: $hm-red-light !default;
-$color-primary-dark:  $hm-red-dark !default;
+$color-primary-light: saturate( lighten( $color-primary, 10% ), 5 ) !default;
+$color-primary-dark:  desaturate( darken( $color-primary, 6% ), 8 ) !default;
+
 
 /*
  * Base Color Mapping
@@ -20,6 +21,7 @@ $color-text-heading: $hm-dark-grey !default;
 $color-text-pre:     $hm-warm-grey !default;
 
 $color-background-pre: $hm-beige !default;
+
 
 /*
  * Component Color Mapping
