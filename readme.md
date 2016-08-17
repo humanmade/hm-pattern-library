@@ -1,8 +1,6 @@
 # Juniper 
 
-The Human Made Web Style Guide and Pattern Library.
-
-Take a look here: [https://humanmade.github.io/hm-pattern-library/](https://humanmade.github.io/hm-pattern-library/)
+The Human Made Web Style Guide and Pattern Library. [Head over to the site to see it in action!](https://humanmade.github.io/hm-pattern-library/)
 
 #### Maintained by:
 
