@@ -10,15 +10,17 @@ Take a look here: [https://humanmade.github.io/hm-pattern-library/](https://huma
 * Samantha Miller, @sambulance
 * Peter Wilson, @peterwilsoncc
 
-#### Internal clients
-
-Human made handbook team
-
 ### Usage Instructions
 
 [Refer to the documentation for full usage instructions.](https://humanmade.github.io/hm-pattern-library/pages/instructions.html)
 
-### Development setup
+### Contributing and Development
+
+All local development should be done against master. `dist` which contains the compiled files is ignored from version control and must be created using the `gulp` task. Releases are just the content of `dist` and nothing else. 
+
+**Workflow.** Create a branch from master, make your changes, and open a pull request against the master branch.
+
+The Human Made pattern library generates flat HTML and does not require a web server to be loaded. Once compiled, the HTML can be opened in your browser via the file system.
 
 Run these commands to get set up locally
 
@@ -27,10 +29,6 @@ Run these commands to get set up locally
 1. If you do not have gulp installed on your machine, install it globally by running `npm install gulp-cli -g`
 1. `npm install`
 1. The sass and html can be compiled by running the command `gulp`.
-
-The Human Made pattern library generates flat HTML and does not require a web server to be loaded. Once compiled, the HTML can be opened in your browser via the file system.
-
-### Contributing
 
 You can fork the repository should you wish to contribute any code.
 
