@@ -16,10 +16,6 @@ Take a look here: [https://humanmade.github.io/hm-pattern-library/](https://huma
 
 ### Contributing and Development
 
-#### Workflow
-
-Create a branch from `master`, make your changes, and open a pull request against the `master` branch. You can fork the repository should you wish to contribute any code.
-
 #### Set up
 
 Run these commands to get it running locally
