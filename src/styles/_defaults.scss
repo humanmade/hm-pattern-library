@@ -8,6 +8,10 @@ $hm-medium-grey: #737373;
 $hm-light-grey:  #EFF1EF;
 $hm-brown:       #4F4641;
 
+// Legacy variables
+$hm-primary: $hm-red;
+$hm-accent: $hm-blue;
+
 // Alternate versions of main colors. Used for borders, backgrounds etc.
 $hm-red-light: saturate( lighten( $hm-red, 10% ), 5 );
 $hm-red-dark:  desaturate( darken( $hm-red, 6% ), 8 );
@@ -26,7 +30,7 @@ $hm-font-family-sans: "proxima-nova", sans-serif;
 $hm-font-family-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
 // Image Path.
-$hm-images: "../images";
+$hm-images: "../images" !default; // defaulted for legacy useage.
 
 $hm-mq-sm-up:   "screen and ( min-width: 30rem )";
 $hm-mq-sm-down: "screen and ( max-width: 30rem )";
