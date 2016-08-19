@@ -145,11 +145,12 @@
 	overflow: hidden;
 	background: transparent;
 
-	&:before {
+	&:after {
+		$iconSrc: iconSrc( "plus-alt" );
 		position: absolute;
 		content: " ";
-		background: rgba( $color-nav-toggle-background, .75 );
-		border-radius: 100%;
+		background: url( $iconSrc ) no-repeat center center;
+		background-size: 100% 100%;
 		top: 50%;
 		left: 50%;
 		width: 18px;
@@ -157,37 +158,24 @@
 		margin-left: -9px;
 		margin-top: -9px;
 		text-indent: 0;
-	}
-
-	&:after {
-		position: absolute;
-		content: " ";
-		background: url( "#{ $images-path }/icons/icon-plus-white.svg" ) no-repeat center center;
-		background-size: 100% 100%;
-		top: 50%;
-		left: 50%;
-		width: 8px;
-		height: 8px;
-		margin-left: -4px;
-		margin-top: -4px;
-		text-indent: 0;
+		opacity: 0.75;
 	}
 
 	&:hover,
 	&:focus {
-
 		background: none;
 		outline: none;
 
-		&:before {
-			background: darken( $color-nav-toggle-background, 40% );
+		&:after {
+			opacity: 1;
 		}
 	}
 
 }
 
 .NavAccordion_Toggle-Open:after {
-	background-image: url( "#{ $images-path }/icons/icon-minus-white.svg" );
+	$iconSrc: iconSrc( "minus-alt" );
+	background-image: url( $iconSrc );
 }
 
 .NavAccordion-Red {
@@ -200,7 +188,8 @@
 		}
 
 		&:after {
-			background-image: url( "#{ $images-path }/icons/icon-plus-red.svg" );
+			$iconSrc: iconSrc( "plus-alt", "white" );
+			background-image: url( $iconSrc );
 		}
 
 		&:hover:before,
@@ -211,26 +200,14 @@
 	}
 
 	.NavAccordion_Toggle-Open:after {
-		background-image: url( "#{ $images-path }/icons/icon-minus-red.svg" );
+		$iconSrc: iconSrc( "minus-alt", "white" );
+		background-image: url( $iconSrc );
 	}
 
 }
 
 .NavAccordion-Beige {
-
 	@include NavAccordion_Coloured( $color-nav-accordion-beige-focus-background, $border-color-light, $color-nav-accordion-biege-text );
-
-	.NavAccordion_Toggle {
-		&:after {
-			background-image: url( "#{ $images-path }/icons/icon-plus-beige.svg" );
-		}
-	}
-
-
-	.NavAccordion_Toggle-Open:after {
-		background-image: url( "#{ $images-path }/icons/icon-minus-beige.svg" );
-	}
-
 }
 
 .NavAccordion_Item-Active > .NavAccordion_Anchor {

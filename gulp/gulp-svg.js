@@ -54,7 +54,6 @@ var iconColors = [
 	{ name: 'black', fill: '#353535' },
 	{ name: 'white', fill: '#FFFFFF' },
 	{ name: 'red',   fill: '#D94E3A' },
-	{ name: 'beige', fill: '#F4EFE6' },
 ];
 
 var logoColors = [
