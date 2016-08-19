@@ -21,11 +21,6 @@
 			subNav = subNav[0];
 		}
 
-		var openHeight = subNav.offsetHeight;
-		var style      = getComputedStyle( subNav );
-
-		openHeight += parseInt( style.marginTop ) + parseInt( style.marginBottom );
-
 		var navAccordionToggle = document.createElement( 'BUTTON' );
 		navAccordionToggle.appendChild( document.createTextNode( "Toggle" ) );
 		navAccordionToggle.classList.add( 'Btn' );
