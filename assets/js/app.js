@@ -49,12 +49,12 @@
 				navAccordionItem.classList.remove( 'NavAccordion_Item-Closed' );
 				navAccordionItem.classList.add( 'NavAccordion_Item-Open' );
 				navAccordionToggle.classList.add( 'NavAccordion_Toggle-Open' );
-				subNav.style.maxHeight = openHeight + 'px';
+				subNav.style.height = 'auto';
 			} else {
 				navAccordionItem.classList.add( 'NavAccordion_Item-Closed' );
 				navAccordionItem.classList.remove( 'NavAccordion_Item-Open' );
 				navAccordionToggle.classList.remove( 'NavAccordion_Toggle-Open' );
-				subNav.style.maxHeight = 0;
+				subNav.style.height = 0;
 			}
 
 		}
