@@ -72,7 +72,9 @@ Class names in vendor files should not be changed, the files should be placed in
 
 * New alternate variant plus/minus icons. Removes need for 'beige' variations. 
 * New iconSrc helper function.
-
+* Remove animations from nav to fix overflow hidden bug.
+* New lock icon.
+ 
 **1.0.4**
 
 * Use component colour variables with brand variables as defaults for easier customizing. Props @missjwo
