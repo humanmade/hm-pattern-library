@@ -72,6 +72,7 @@ Class names in vendor files should not be changed, the files should be placed in
 
 * New alternate variant plus/minus icons. Removes need for 'beige' variations. 
 * New iconSrc helper function.
+* Remove animations from nav to fix overflow hidden bug.
 
 **1.0.4**
 
