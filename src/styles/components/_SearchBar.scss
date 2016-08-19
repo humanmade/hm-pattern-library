@@ -60,7 +60,7 @@
 	opacity: .75;
 
 	&:after {
-		content: url( "#{ $images-path }/icons/icon-search-white.svg" );
+		content: url( iconSrc( 'search', 'white' ) );
 		display: block;
 		position: absolute;
 		width: 100%;
