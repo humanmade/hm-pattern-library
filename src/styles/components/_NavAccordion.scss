@@ -82,8 +82,8 @@
 	}
 
 	.NavAccordion_Anchor {
+		@extend .util-Clearfix;
 		display: block;
-		overflow: hidden;
 		padding: #{ $base-line-height / 4 } 0;
 		position: relative;
 	}
@@ -99,7 +99,7 @@
 	content: " ";
 	border-left: 1px solid $border-color;
 	top: -.333333333rem;
-	bottom: 1.111111rem;
+	bottom: calc( 0.9rem - 1px );
 	left: 0;
 	position: absolute;
 }
@@ -116,7 +116,7 @@
 		width: $gutter-width / 2;
 		border-bottom: 1px solid $border-color;
 		position: absolute;
-		top: 1.1rem;
+		top: 1rem;
 		left: $gutter-width * -1;
 	}
 
