@@ -60,7 +60,8 @@
 	opacity: .75;
 
 	&:after {
-		content: url( iconSrc( 'search', 'white' ) );
+		$iconSrc: iconSrc( "search", "white" );
+		content: url( $iconSrc );
 		display: block;
 		position: absolute;
 		width: 100%;

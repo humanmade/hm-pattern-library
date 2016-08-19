@@ -146,9 +146,10 @@
 	background: transparent;
 
 	&:after {
+		$iconSrc: iconSrc( "plus-alt" );
 		position: absolute;
 		content: " ";
-		background: url( iconSrc( 'plus-alt' ) ) no-repeat center center;
+		background: url( $iconSrc ) no-repeat center center;
 		background-size: 100% 100%;
 		top: 50%;
 		left: 50%;
@@ -173,7 +174,8 @@
 }
 
 .NavAccordion_Toggle-Open:after {
-	background-image: url( iconSrc( 'minus-alt' ) );
+	$iconSrc: iconSrc( "minus-alt" );
+	background-image: url( $iconSrc );
 }
 
 .NavAccordion-Red {
@@ -186,7 +188,8 @@
 		}
 
 		&:after {
-			background-image: url( iconSrc( 'plus-alt', 'white' ) );
+			$iconSrc: iconSrc( "plus-alt", "white" );
+			background-image: url( $iconSrc );
 		}
 
 		&:hover:before,
@@ -197,7 +200,8 @@
 	}
 
 	.NavAccordion_Toggle-Open:after {
-		background-image: url( iconSrc( 'minus-alt', 'white' ) );
+		$iconSrc: iconSrc( "minus-alt", "white" );
+		background-image: url( $iconSrc );
 	}
 
 }
