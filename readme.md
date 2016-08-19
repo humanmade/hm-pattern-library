@@ -68,6 +68,11 @@ Class names in vendor files should not be changed, the files should be placed in
 
 ## Changelog
 
+**1.0.5**
+
+* New alternate variant plus/minus icons. Removes need for 'beige' variations. 
+* New iconSrc helper function.
+
 **1.0.4**
 
 * Use component colour variables with brand variables as defaults for easier customizing. Props @missjwo
