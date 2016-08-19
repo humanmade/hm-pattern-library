@@ -82,7 +82,6 @@
 	}
 
 	.NavAccordion_Anchor {
-		@extend .util-Clearfix;
 		display: block;
 		padding: #{ $base-line-height / 4 } 0;
 		position: relative;
