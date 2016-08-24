@@ -116,19 +116,17 @@
 		padding: #{ $base-line-height / 2 } 0;
 		margin: 0 #{ $gutter-width / 2 };
 		border-top: 1px solid #d25c4c;
+		border-top: 1px solid desaturate( $color-primary, 5% );
 		display: block;
 
 		&:hover {
 			background: rgba( 255, 255, 255, 0.1 );
 			padding: #{ $base-line-height / 2 } #{ $gutter-width / 2 };
-			border-bottom: 1px solid #d25c4c;
+			border-bottom: 1px solid desaturate( $color-primary, 5% );
 			margin: 0 0 -1px 0;
 		}
 	}
 }
-
-
-
 
 .SearchBar_Result_Title,
 .SearchBar_Result_Text {
