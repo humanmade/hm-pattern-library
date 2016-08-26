@@ -74,6 +74,7 @@ Class names in vendor files should not be changed, the files should be placed in
 * New iconSrc helper function.
 * Remove animations from nav to fix overflow hidden bug.
 * New lock icon.
+* Fix some bugs in tables
  
 **1.0.4**
 
