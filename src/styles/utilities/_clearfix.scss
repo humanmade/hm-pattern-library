@@ -1,4 +1,4 @@
-.util-Clearfix {
+@mixin clearfix {
 	&:before,
 	&:after {
 		display: table;
@@ -8,4 +8,8 @@
 	&:after {
 		clear: both;
 	}
+}
+
+.util-Clearfix {
+	@include clearfix;
 }
