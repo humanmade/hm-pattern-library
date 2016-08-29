@@ -5,11 +5,9 @@
 	a {
 
 		@extend .Label;
-
-		line-height: 1.2em;
-		padding-left: #{ $gutter-width / 4 };
-		margin-right: #{ $gutter-width / 4 };
-		margin-left: 0;
+		line-height: 1em;
+		padding-top: .333 * $base-line-height;
+		padding-bottom: .167 * $base-line-height;
 
 		&:before,
 		&:after {
