@@ -1,6 +1,6 @@
 {
   "name": "hm-pattern-library",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Juniper - Human Made Pattern Library",
   "main": "index.html",
   "author": "Human Made Limited",
@@ -21,7 +21,8 @@
     "gulp-sass-lint": "^1.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.4",
-    "gulp-watch": "^4.3.8"
+    "gulp-watch": "^4.3.8",
+    "require-dir": "^0.3.0"
   },
   "dependencies": {}
 }

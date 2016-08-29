@@ -3,8 +3,8 @@
 	@include text-std;
 	border: none;
 	padding: #{ $base-line-height / 2 } $gutter-width;
-	background: $hm-primary;
-	color: #FFF;
+	background: $color-primary;
+	color: $color-btn-text;
 	margin-bottom: $base-line-height / 2;
 	margin-right: $gutter-width / 2;
 	display: inline-block;
@@ -16,14 +16,14 @@
 
 	&:link,
 	&:visited {
-		color: #FFF;
+		color: $color-btn-text;
 		text-decoration: none;
 	}
 
 	&:hover,
 	&:focus {
-		color: #FFF;
-		background: lighten( $hm-primary, 10% );
+		color: $color-btn-text;
+		background: lighten( $color-primary, 10% );
 		text-decoration: none;
 		outline: none;
 	}
@@ -33,8 +33,8 @@
 	}
 
 	&[disabled] {
-		background: lighten( $hm-primary, 25% );
-		color: lighten( $hm-primary, 35% );
+		background: lighten( $color-primary, 25% );
+		color: lighten( $color-primary, 35% );
 		cursor: default;
 		opacity: 0.75;
 	}
@@ -42,32 +42,32 @@
 }
 
 .Btn-Secondary {
-	background-color: $hm-accent;
+	background-color: $color-accent;
 
 	&:hover,
 	&:focus {
-		background: lighten( $hm-accent, 10% );
+		background: lighten( $color-accent, 10% );
 	}
 
 
 	&[disabled] {
-		background: lighten( $hm-accent, 15% );
-		color: lighten( $hm-accent, 25% );
+		background: lighten( $color-accent, 15% );
+		color: lighten( $color-accent, 25% );
 	}
 
 }
 
 .Btn-Tertiary {
-	background-color: $hm-medium-grey;
+	background-color: $color-btn-tertiary-background;
 
 	&:hover,
 	&:focus {
-		background: lighten( $hm-warm-grey, 10% );
+		background: lighten( $color-btn-tertiary-focus-background, 10% );
 	}
 
 	&[disabled] {
-		background: lighten( $hm-warm-grey, 50% );
-		color: lighten( $hm-warm-grey, 60% );
+		background: lighten( $color-btn-tertiary-disbaled, 50% );
+		color: lighten( $color-btn-tertiary-disbaled, 60% );
 	}
 
 }
@@ -75,22 +75,22 @@
 .Btn-Transparent {
 
 	background-color: transparent;
-	color: $hm-primary;
+	color: $color-primary;
 
 	&:link,
 	&:visited {
-		color: $hm-primary;
+		color: $color-primary;
 	}
 
 	&:hover,
 	&:focus {
-		color: #FFF;
-		background: $hm-primary;
+		color: $color-btn-text;
+		background: $color-primary;
 	}
 
 	&[disabled] {
 		background: transparent;
-		color: lighten( $hm-primary, 35% );
+		color: lighten( $color-primary, 35% );
 	}
 
 }
@@ -104,7 +104,7 @@
 	background: none;
 	padding: 0;
 	margin: 0;
-	color: $hm-primary;
+	color: $color-primary;
 	font-weight: normal;
 	letter-spacing: 0;
 
@@ -114,13 +114,13 @@
 
 	&:link,
 	&:visited {
-		color: $hm-primary;
+		color: $color-primary;
 		background: transparent;
 	}
 
 	&:hover,
 	&:focus {
-		color: $hm-primary;
+		color: $color-primary;
 		text-decoration: underline;
 		background: transparent;
 	}

@@ -1,5 +1,5 @@
 .StyleGuide_SearchContainer {
-	background: $hm-primary;
+	background: $color-primary;
 	width: 100%;
 	clear: both;
 	padding: $base-line-height $gutter-width;
@@ -30,7 +30,7 @@
 // Note need for extra specificity to override input[type="text"].
 .SearchBar .SearchBar_Field {
 	border: none;
-	background: $hm-primary-dark;
+	background: $color-primary-dark;
 	color: #FFF;
 	float: right;
 	margin: 0;
@@ -46,7 +46,7 @@
 // TODO - remove in JS, replace with 'clear'?
 .SearchBar_Submit {
 	@extend .Btn;
-	background: rgba( $hm-primary-dark, .8 );
+	background: rgba( $color-primary-dark, .8 );
 	border: none;
 	position: absolute;
 	top: 0;
@@ -60,7 +60,8 @@
 	opacity: .75;
 
 	&:after {
-		content: url( "#{ $hm-images }/icons/icon-search-white.svg" );
+		$iconSrc: iconSrc( "search", "white" );
+		content: url( $iconSrc );
 		display: block;
 		position: absolute;
 		width: 100%;
@@ -74,7 +75,7 @@
 
 	&:hover,
 	&:focus {
-		background: rgba( $hm-primary-dark, .8 );
+		background: rgba( $color-primary-dark, .8 );
 	}
 
 }
@@ -85,7 +86,7 @@
 	top: 100%;
 	left: 0;
 	right: 0;
-	background: rgba( $hm-primary-dark, 0.95 );
+	background: rgba( $color-primary-dark, 0.95 );
 	padding: 0;
 	border-radius: 0 0 2px 2px;
 	color: #FFF;
@@ -114,20 +115,17 @@
 
 		padding: #{ $base-line-height / 2 } 0;
 		margin: 0 #{ $gutter-width / 2 };
-		border-top: 1px solid #d25c4c;
+		border-top: 1px solid desaturate( $color-primary, 5% );
 		display: block;
 
 		&:hover {
 			background: rgba( 255, 255, 255, 0.1 );
 			padding: #{ $base-line-height / 2 } #{ $gutter-width / 2 };
-			border-bottom: 1px solid #d25c4c;
+			border-bottom: 1px solid desaturate( $color-primary, 5% );
 			margin: 0 0 -1px 0;
 		}
 	}
 }
-
-
-
 
 .SearchBar_Result_Title,
 .SearchBar_Result_Text {

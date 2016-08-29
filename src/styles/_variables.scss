@@ -1,35 +1,79 @@
-// Brand Colours.
-$hm-primary:     #D94E3A; // Red.
-$hm-accent:      #7DC9DA; // Blue.
-$hm-warm-grey:   #504C4C;
-$hm-dark-grey:   #353535;
-$hm-beige:       #F4EFE6;
-$hm-medium-grey: #737373;
-$hm-light-grey:  #EFF1EF;
-$hm-brown:       #4F4641;
+/*
+ * Color Mapping
+ */
+
+$color-primary: $hm-red !default;
+$color-accent:  $hm-blue !default;
+$white:        #FFF !default;
 
 // Alternate versions of main colors. Used for borders, backgrounds etc.
-$hm-primary-light: saturate( lighten( $hm-primary, 10% ), 5 );
-$hm-primary-dark:  desaturate( darken( $hm-primary, 6% ), 8 );
+$color-primary-light: saturate( lighten( $color-primary, 10% ), 5 ) !default;
+$color-primary-dark:  desaturate( darken( $color-primary, 6% ), 8 ) !default;
 
-$border-color:       lighten( $hm-medium-grey, 40% );
-$border-color-red:   $hm-primary-light;
-$border-color-beige: desaturate( darken( $hm-beige, 15% ), 20 );
 
-$base-line-height: 1.5rem;
-$base-font-size:   18px;
+/*
+ * Base Color Mapping
+ */
 
-$gutter-width: 30px;
+$color-text-default: $hm-warm-grey !default;
+$color-text-dark:    $hm-dark-grey !default;
+$color-text-heading: $hm-dark-grey !default;
+$color-text-pre:     $hm-warm-grey !default;
 
-$font-family-serif: "ff-meta-serif-web-pro", serif;
-$font-family-sans: "proxima-nova", sans-serif;
-$font-family-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+$color-background-pre: $hm-beige !default;
+
+
+/*
+ * Component Color Mapping
+ */
+
+// Buttons
+$color-btn-text:                      $white !default;
+$color-btn-tertiary-background:       $hm-medium-grey !default;
+$color-btn-tertiary-disbaled:         $hm-medium-grey !default;
+$color-btn-tertiary-focus-background: $hm-warm-grey !default;
+
+// Footer
+$color-footer-text: $hm-medium-grey !default;
+
+// Forms
+$color-input-text: $hm-warm-grey !default;
+
+// NavAccordion
+$color-nav-toggle-background:                  $hm-warm-grey !default;
+$color-nav-accordion-primary-focus-background: $white !default;
+$color-nav-accordion-primary-text:             $white !default;
+$color-nav-accordion-beige-focus-background:   $hm-beige !default;
+$color-nav-accordion-biege-text:               $hm-warm-grey !default;
+
+// WordPress Galleries
+// WordPress Images
+$color-caption-background: $hm-beige !default;
+
+// Borders
+$border-color:         $hm-border-color !default;
+$border-color-primary: $hm-border-color-red !default;
+$border-color-light:   $hm-border-color-beige !default;
+
+/*
+ * Base Settings
+ */
+
+$base-line-height: $hm-base-line-height !default;
+$base-font-size:   $hm-base-font-size !default;
+
+$gutter-width:  $hm-gutter-width !default;
+
+$font-family-serif: $hm-font-family-serif !default;
+$font-family-sans:  $hm-font-family-sans !default;
+$font-family-code:  $hm-font-family-code !default;
 
 // Image Path.
-$hm-images: "../images" !default;
+$images-path: $hm_images !default;
 
-$mq-sm-up:   "screen and ( min-width: 30rem )";
-$mq-sm-down: "screen and ( max-width: 30rem )";
-$mq-md-up:   "screen and ( min-width: 55rem )";
-$mq-md-down: "screen and ( max-width: 55rem )";
-$mq-print:   "print";
+// Breakpoints
+$mq-sm-up:   $hm-mq-sm-up !default;
+$mq-sm-down: $hm-mq-sm-down !default;
+$mq-md-up:   $hm-mq-md-up !default;
+$mq-md-down: $hm-mq-md-down !default;
+$mq-print:   $hm-mq-print !default;

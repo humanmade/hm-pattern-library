@@ -1,6 +1,7 @@
 /*
  * These classes use WordPress default alignment classes and do not follow the naming convention.
  */
+
 .alignnone {
 	margin-left: 0;
 	margin-right: 0;
@@ -29,7 +30,7 @@
 .wp-caption {
 
 	margin-top: 0;
-	background-color: $hm-beige;
+	background-color: $color-caption-background;
 
 	img {
 		vertical-align: top;

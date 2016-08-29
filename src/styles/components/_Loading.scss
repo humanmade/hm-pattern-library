@@ -3,9 +3,10 @@
 }
 
 .Loading-Active {
+	$iconSrc: iconSrc( "spinner" );
 	width: $base-line-height;
 	height: $base-line-height;
-	background: url( "#{ $hm-images }/icons/icon-spinner-black.svg" ) no-repeat center center;
+	background: url( $iconSrc ) no-repeat center center;
 	background-size: 1 / 1.5 * 100%;
 	animation-name: spin;
 	animation-duration: 1000ms;
@@ -19,5 +20,6 @@
 }
 
 .Loading-White {
-	background-image: url( "#{ $hm-images }/icons/icon-spinner-white.svg" );
+	$iconSrc: iconSrc( "spinner", "white" );
+	background-image: url( $iconSrc );
 }

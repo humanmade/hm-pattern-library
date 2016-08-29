@@ -1,7 +1,7 @@
 /**
  * Helper mixin for generating color variations.
  */
-@mixin NavAccordion_Coloured( $bg, $border-color, $text-color: $hm-warm-grey ) {
+@mixin NavAccordion_Coloured( $bg, $border-color, $text-color: $color-text-default ) {
 
 	background: $bg;
 	color: $text-color;
@@ -67,7 +67,6 @@
 		margin: 0;
 		padding: 0;
 		position: relative;
-		transition: max-height ease-in-out 0.1s;
 	}
 
 }
@@ -84,7 +83,6 @@
 
 	.NavAccordion_Anchor {
 		display: block;
-		overflow: hidden;
 		padding: #{ $base-line-height / 4 } 0;
 		position: relative;
 	}
@@ -100,7 +98,7 @@
 	content: " ";
 	border-left: 1px solid $border-color;
 	top: -.333333333rem;
-	bottom: 1.111111rem;
+	bottom: calc( 0.9rem - 1px );
 	left: 0;
 	position: absolute;
 }
@@ -117,7 +115,7 @@
 		width: $gutter-width / 2;
 		border-bottom: 1px solid $border-color;
 		position: absolute;
-		top: 1.1rem;
+		top: 1rem;
 		left: $gutter-width * -1;
 	}
 
@@ -145,11 +143,12 @@
 	overflow: hidden;
 	background: transparent;
 
-	&:before {
+	&:after {
+		$iconSrc: iconSrc( "plus-alt" );
 		position: absolute;
 		content: " ";
-		background: rgba( $hm-warm-grey, .75 );
-		border-radius: 100%;
+		background: url( $iconSrc ) no-repeat center center;
+		background-size: 100% 100%;
 		top: 50%;
 		left: 50%;
 		width: 18px;
@@ -157,41 +156,28 @@
 		margin-left: -9px;
 		margin-top: -9px;
 		text-indent: 0;
-	}
-
-	&:after {
-		position: absolute;
-		content: " ";
-		background: url( "#{ $hm-images }/icons/icon-plus-white.svg" ) no-repeat center center;
-		background-size: 100% 100%;
-		top: 50%;
-		left: 50%;
-		width: 8px;
-		height: 8px;
-		margin-left: -4px;
-		margin-top: -4px;
-		text-indent: 0;
+		opacity: 0.75;
 	}
 
 	&:hover,
 	&:focus {
-
 		background: none;
 		outline: none;
 
-		&:before {
-			background: darken( $hm-warm-grey, 40% );
+		&:after {
+			opacity: 1;
 		}
 	}
 
 }
 
 .NavAccordion_Toggle-Open:after {
-	background-image: url( "#{ $hm-images }/icons/icon-minus-white.svg" );
+	$iconSrc: iconSrc( "minus-alt" );
+	background-image: url( $iconSrc );
 }
 
 .NavAccordion-Red {
-	@include NavAccordion_Coloured( $hm-primary, $border-color-red, #FFF );
+	@include NavAccordion_Coloured( $color-primary, $border-color-primary, $color-nav-accordion-primary-text );
 
 	.NavAccordion_Toggle {
 
@@ -200,37 +186,26 @@
 		}
 
 		&:after {
-			background-image: url( "#{ $hm-images }/icons/icon-plus-red.svg" );
+			$iconSrc: iconSrc( "plus-alt", "white" );
+			background-image: url( $iconSrc );
 		}
 
 		&:hover:before,
 		&:focus:before {
-			background-color: white;
+			background-color: $color-nav-accordion-primary-focus-background;
 		}
 
 	}
 
 	.NavAccordion_Toggle-Open:after {
-		background-image: url( "#{ $hm-images }/icons/icon-minus-red.svg" );
+		$iconSrc: iconSrc( "minus-alt", "white" );
+		background-image: url( $iconSrc );
 	}
 
 }
 
 .NavAccordion-Beige {
-
-	@include NavAccordion_Coloured( $hm-beige, $border-color-beige, $hm-warm-grey );
-
-	.NavAccordion_Toggle {
-		&:after {
-			background-image: url( "#{ $hm-images }/icons/icon-plus-beige.svg" );
-		}
-	}
-
-
-	.NavAccordion_Toggle-Open:after {
-		background-image: url( "#{ $hm-images }/icons/icon-minus-beige.svg" );
-	}
-
+	@include NavAccordion_Coloured( $color-nav-accordion-beige-focus-background, $border-color-light, $color-nav-accordion-biege-text );
 }
 
 .NavAccordion_Item-Active > .NavAccordion_Anchor {

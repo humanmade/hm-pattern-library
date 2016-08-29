@@ -1,0 +1,3 @@
+@function iconSrc( $name, $color: "black" ) {
+	@return "#{ $images-path }/icons/icon-#{ $name }-#{ $color }.svg";
+}
