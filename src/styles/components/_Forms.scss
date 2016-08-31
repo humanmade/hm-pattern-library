@@ -7,7 +7,7 @@ input[type="email"] {
 	@include text-std;
 	border: 1px solid $border-color;
 	padding: #{ $base-line-height / 2 } 1em #{ $base-line-height / 2 };
-	background: transparent;
+	background: white;
 	box-shadow: none;
 	color: $color-input-text;
 	margin-bottom: $base-line-height / 2;
