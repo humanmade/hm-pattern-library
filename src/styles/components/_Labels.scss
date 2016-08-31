@@ -1,10 +1,9 @@
-
 .Label {
 
 	@include text-sm;
 	border: none;
 	padding: 0 #{ $gutter-width / 4 };
-	background: $hm-beige;
+	background: $label-background;
 	color: $hm-warm-grey;
 	margin-bottom: $base-line-height / 2;
 	margin-right: $gutter-width / 4;
@@ -26,49 +25,9 @@
 	&:hover,
 	&:focus {
 		color: $hm-warm-grey;
-		background: darken( $hm-beige, 5% );
+		background: $label-background-hover;
 		text-decoration: none;
 		outline: none;
-
-		&:after {
-			border-right-color: darken( $hm-beige, 5% );
-		}
-	}
-
-}
-
-.Label-Ornament {
-
-	padding-left: 20px;
-	margin-left: ceil( strip-unit( .5 * $base-line-height ) * $base-font-size );
-
-	&:before {
-		content: " ";
-		position: absolute;
-		width: 8px;
-		height: 8px;
-		margin-top: -4px;
-		border-radius: 100%;
-		background: white;
-		top: 50%;
-		left: -2px;
-		z-index: 1;
-	}
-
-	&:after {
-
-		$triangle-width: ceil( strip-unit( .5 * $base-line-height ) * $base-font-size );
-
-		content: " ";
-		display: block;
-		position: absolute;
-		top: 0;
-		left: -1 * $triangle-width;
-		width: 0;
-		height: 0;
-		border-color: transparent $hm-beige transparent transparent;
-		border-style: solid;
-		border-width: $triangle-width $triangle-width $triangle-width 0;
 	}
 
 }
@@ -81,6 +40,6 @@
 	line-height: .6 * $base-line-height;
 	font-family: $font-family-code;
 	font-size: 11px;
-	background: rgba( 0, 0, 0, 0.1 );
+	background: rgba( 0, 0, 0, 0.15 );
 	margin-left: 0.1 * $base-line-height;
 }

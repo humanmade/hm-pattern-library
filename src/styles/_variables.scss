@@ -10,7 +10,6 @@ $white:        #FFF !default;
 $color-primary-light: saturate( lighten( $color-primary, 10% ), 5 ) !default;
 $color-primary-dark:  desaturate( darken( $color-primary, 6% ), 8 ) !default;
 
-
 /*
  * Base Color Mapping
  */
@@ -46,6 +45,10 @@ $color-nav-accordion-primary-focus-background: $white !default;
 $color-nav-accordion-primary-text:             $white !default;
 $color-nav-accordion-beige-focus-background:   $hm-beige !default;
 $color-nav-accordion-biege-text:               $hm-warm-grey !default;
+
+// Labels.
+$label-background:       $hm-beige !default;
+$label-background-hover: darken( $hm-beige, 5% ) !default;
 
 // WordPress Galleries
 // WordPress Images
