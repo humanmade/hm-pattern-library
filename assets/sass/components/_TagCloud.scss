@@ -1,0 +1,20 @@
+.TagCloud {
+
+	vertical-align: bottom;
+
+	a {
+
+		@extend .Label;
+		line-height: 1em;
+		padding-top: .333 * $base-line-height;
+		padding-bottom: .167 * $base-line-height;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+
+	}
+
+}
+
