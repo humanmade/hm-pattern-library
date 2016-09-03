@@ -144,15 +144,14 @@
 	background: transparent;
 
 	&:after {
-		$iconSrc: iconSrc( "plus-alt" );
+		@include icon( "plus-alt" );
 		position: absolute;
 		content: " ";
-		background: url( $iconSrc ) no-repeat center center;
-		background-size: 100% 100%;
 		top: 50%;
 		left: 50%;
 		width: 18px;
 		height: 18px;
+		background-size: 100% 100%;
 		margin-left: -9px;
 		margin-top: -9px;
 		text-indent: 0;

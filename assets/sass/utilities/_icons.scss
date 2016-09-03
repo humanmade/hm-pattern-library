@@ -1,3 +1,11 @@
 @function iconSrc( $name, $color: "black" ) {
 	@return "#{ $images-path }/icons/icon-#{ $name }-#{ $color }.svg";
 }
+
+@mixin icon( $name, $color: "black" ) {
+	$iconSrc: iconSrc( $name, $color );
+	background: url( $iconSrc ) no-repeat center center;
+	background-size: $base-line-height * .75;
+	width: $base-line-height;
+	height: $base-line-height;
+}
