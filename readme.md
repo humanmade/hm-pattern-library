@@ -74,9 +74,8 @@ Class names in vendor files should not be changed, the files should be placed in
 * New alternate variant plus/minus icons. Removes need for 'beige' variations. 
 * New iconSrc helper function.
 * Remove animations from nav to fix overflow hidden bug.
-* New lock icon.
+* New icon helper mixin. Also new lock and comment icons.
 * Fix some bugs in tables
-* Comment icon + icon helper mixin
  
 **1.0.4**
 
