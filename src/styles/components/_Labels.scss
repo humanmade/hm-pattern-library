@@ -1,0 +1,45 @@
+.Label {
+
+	@include text-sm;
+	border: none;
+	padding: 0 #{ $gutter-width / 4 };
+	background: $label-background;
+	color: $hm-warm-grey;
+	margin-bottom: $base-line-height / 2;
+	margin-right: $gutter-width / 4;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 2px;
+	vertical-align: middle;
+	position: relative;
+	vertical-align: bottom;
+	line-height: 2em;
+
+	&:link,
+	&:visited {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	&:hover,
+	&:focus {
+		color: $hm-warm-grey;
+		background: $label-background-hover;
+		text-decoration: none;
+		outline: none;
+	}
+
+}
+
+.Label_Count {
+	display: inline-block;
+	border-radius: 100%;
+	min-width: .6 * $base-line-height;
+	height: .6 * $base-line-height;
+	line-height: .6 * $base-line-height;
+	font-family: $font-family-code;
+	font-size: 11px;
+	background: rgba( 0, 0, 0, 0.15 );
+	margin-left: 0.1 * $base-line-height;
+}
