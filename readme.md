@@ -70,11 +70,13 @@ Class names in vendor files should not be changed, the files should be placed in
 
 **1.0.5**
 
+* Labels & Tag cloud styles
 * New alternate variant plus/minus icons. Removes need for 'beige' variations. 
 * New iconSrc helper function.
 * Remove animations from nav to fix overflow hidden bug.
 * New lock icon.
 * Fix some bugs in tables
+* Comment icon + icon helper mixin
  
 **1.0.4**
 
