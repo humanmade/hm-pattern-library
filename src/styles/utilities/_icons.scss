@@ -5,7 +5,7 @@
 @mixin icon( $name, $color: "black" ) {
 	$iconSrc: iconSrc( $name, $color );
 	background: url( $iconSrc ) no-repeat center center;
-	background-size: .75%;
+	background-size: 75%;
 	width: $base-line-height;
 	height: $base-line-height;
 }
