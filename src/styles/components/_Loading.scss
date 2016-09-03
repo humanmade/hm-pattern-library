@@ -3,10 +3,7 @@
 }
 
 .Loading-Active {
-	$iconSrc: iconSrc( "spinner" );
-	width: $base-line-height;
-	height: $base-line-height;
-	background: url( $iconSrc ) no-repeat center center;
+	@include icon( "spinner" );
 	background-size: 17px;
 	animation-name: spin;
 	animation-duration: 1000ms;
@@ -20,6 +17,6 @@
 }
 
 .Loading-White {
-	$iconSrc: iconSrc( "spinner", "white" );
-	background-image: url( $iconSrc );
+	@include icon( "spinner", "white" );
+	background-size: 17px;
 }
