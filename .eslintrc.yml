@@ -35,6 +35,10 @@ rules:
     - beforeColon: false
       afterColon: true
       align: value
+  keyword-spacing:
+  - error
+  - after: true
+    before: true
   eol-last:
   - error
   - unix
@@ -46,12 +50,15 @@ rules:
   space-in-parens:
   - warn
   - always
-  - exceptions:
-    - "{}"
-    - "[]"
+  # - exceptions:
+  #   - "{}"
+  #   - "[]"
   indent:
   - error
   - tab
+  no-mixed-spaces-and-tabs:
+  - error
+  - smart-tabs
   linebreak-style:
   - error
   - unix
@@ -63,6 +70,17 @@ rules:
   semi:
   - error
   - never
+  semi-spacing:
+  - error
+  - before: false
+    after: true
+  space-unary-ops:
+  - error
+  - words: true
+    nonwords: true
+    overrides:
+      ++: false
+      --: false
   no-multiple-empty-lines:
   - error
   - max: 1

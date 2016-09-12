@@ -20,7 +20,10 @@ gulp.task( 'lint-js', () => {
 } )
 
 gulp.task( 'lint-gulp', () => {
-	return gulp.src( './gulp/**/*.js' )
+	return gulp.src( [
+		'./gulpfile.js',
+		'./gulp/**/*.js',
+	] )
 		.pipe( eslint( {
 			configFile: './.eslintrc.yml',
 			globals:    ['require'],

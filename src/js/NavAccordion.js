@@ -9,7 +9,7 @@
 		return
 	}
 
-	var getSubNav = navAccordionItem => {
+	var initNavAccordion = navAccordionItem => {
 
 		var subNav = Array.prototype.filter.call(
 			navAccordionItem.children,
@@ -18,15 +18,13 @@
 			}
 		)
 
-		return subNav.length > 0 ? subNav[0] : null
+		if ( ! subNav.length ) {
+			return;
+		}
 
-	}
+		subNav = subNav[0]
 
-	var initNavAccordion = navAccordionItem => {
-
-		var subNav = getSubNav( navAccordionItem ),
-			navAccordionToggle = document.createElement( 'BUTTON' )
-
+		var navAccordionToggle = document.createElement( 'BUTTON' )
 		navAccordionToggle.appendChild( document.createTextNode( 'Toggle' ) )
 		navAccordionToggle.classList.add( 'Btn', 'NavAccordion_Toggle' )
 
@@ -46,16 +44,20 @@
 
 		var toggleSubNav = show => {
 
+			console.log( navAccordionItem );
+
 			if ( typeof show === 'undefined' ) {
 				show = navAccordionItem.classList.contains( 'NavAccordion_Item-Closed' )
 			}
 
 			if ( show ) {
-				navAccordionItem.classList.toggle( 'NavAccordion_Item-Closed', 'NavAccordion_Item-Open' )
+				navAccordionItem.classList.remove( 'NavAccordion_Item-Closed' )
+				navAccordionItem.classList.add( 'NavAccordion_Item-Open' )
 				navAccordionToggle.classList.add( 'NavAccordion_Toggle-Open' )
 				subNav.style.height = 'auto'
 			} else {
-				navAccordionItem.classList.toggle( 'NavAccordion_Item-Closed', 'NavAccordion_Item-Open' )
+				navAccordionItem.classList.add( 'NavAccordion_Item-Closed' )
+				navAccordionItem.classList.remove( 'NavAccordion_Item-Open' )
 				navAccordionToggle.classList.remove( 'NavAccordion_Toggle-Open' )
 				subNav.style.height = 0
 			}
