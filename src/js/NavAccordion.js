@@ -1,4 +1,4 @@
-(function( window ) {
+( document => {
 
 	// Graceful faliure if the browser does NOT support ALL of these.
 	if ( ! (
@@ -6,73 +6,76 @@
 		'addEventListener' in document &&
 		'classList' in document.documentElement
 	) ) {
-		return;
+		return
 	}
 
-	var initNavAccordion = function( navAccordionItem ) {
+	var initNavAccordion = ( navAccordionItem ) => {
 
-		var subNav = Array.prototype.filter.call( navAccordionItem.children, function( el ) {
-			return el.tagName === 'UL';
-		} );
+		var subNav = Array.prototype.filter.call(
+			navAccordionItem.children,
+			( el ) => {
+				return el.tagName === 'UL'
+			}
+		)
 
 		if ( subNav.length < 1 ) {
-			return;
-		} else {
-			subNav = subNav[0];
+			return
 		}
 
-		var navAccordionToggle = document.createElement( 'BUTTON' );
-		navAccordionToggle.appendChild( document.createTextNode( "Toggle" ) );
-		navAccordionToggle.classList.add( 'Btn' );
-		navAccordionToggle.classList.add( 'NavAccordion_Toggle' );
+		subNav = subNav[0]
 
-		var anchor = Array.prototype.filter.call( navAccordionItem.children, function( el ) {
-			return el.tagName === 'A';
-		} );
+		var navAccordionToggle = document.createElement( 'BUTTON' )
+		navAccordionToggle.appendChild( document.createTextNode( 'Toggle' ) )
+		navAccordionToggle.classList.add( 'Btn', 'NavAccordion_Toggle' )
+
+		var anchor = Array.prototype.filter.call( navAccordionItem.children, ( el ) => {
+			return el.tagName === 'A'
+		} )
 
 		if ( anchor.length ) {
-			anchor[0].insertBefore( navAccordionToggle, anchor[0].childNodes[0] );
+			anchor[0].insertBefore(
+				navAccordionToggle,
+				anchor[0].childNodes[0]
+			)
 		}
 
-		var toggleSubNav = function( show ) {
+		var toggleSubNav = ( show ) => {
 
 			if ( 'undefined' === typeof show ) {
-				show = navAccordionItem.classList.contains( 'NavAccordion_Item-Closed' );
+				show = navAccordionItem.classList.contains( 'NavAccordion_Item-Closed' )
 			}
 
 			if ( show ) {
-				navAccordionItem.classList.remove( 'NavAccordion_Item-Closed' );
-				navAccordionItem.classList.add( 'NavAccordion_Item-Open' );
-				navAccordionToggle.classList.add( 'NavAccordion_Toggle-Open' );
-				subNav.style.height = 'auto';
+				navAccordionItem.classList.toggle( 'NavAccordion_Item-Closed', 'NavAccordion_Item-Open' )
+				navAccordionToggle.classList.add( 'NavAccordion_Toggle-Open' )
+				subNav.style.height = 'auto'
 			} else {
-				navAccordionItem.classList.add( 'NavAccordion_Item-Closed' );
-				navAccordionItem.classList.remove( 'NavAccordion_Item-Open' );
-				navAccordionToggle.classList.remove( 'NavAccordion_Toggle-Open' );
-				subNav.style.height = 0;
+				navAccordionItem.classList.toggle( 'NavAccordion_Item-Closed', 'NavAccordion_Item-Open' )
+				navAccordionToggle.classList.remove( 'NavAccordion_Toggle-Open' )
+				subNav.style.height = 0
 			}
 
 		}
 
 		if ( navAccordionItem.classList.contains( 'NavAccordion_Item-Active' ) ) {
-			toggleSubNav( true );
+			toggleSubNav( true )
 		} else if ( subNav.getElementsByClassName( 'NavAccordion_Item-Active' ).length > 0 ) {
-			toggleSubNav( true );
+			toggleSubNav( true )
 		} else {
-			toggleSubNav( false );
+			toggleSubNav( false )
 		}
 
-		navAccordionToggle.addEventListener( 'click', function( event ) {
-			event.preventDefault();
-			navAccordionToggle.blur();
-			toggleSubNav();
-		});
+		navAccordionToggle.addEventListener( 'click', ( event ) => {
+			event.preventDefault()
+			navAccordionToggle.blur()
+			toggleSubNav()
+		} )
 	}
 
 	// Init Accordion Nav for all NavAccordion Items.
 	Array.prototype.forEach.call(
 		document.getElementsByClassName( 'NavAccordion_Item' ),
 		initNavAccordion
-	);
+	)
 
-} )( window );
+} )( document )
