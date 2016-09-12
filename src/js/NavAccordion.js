@@ -9,28 +9,33 @@
 		return
 	}
 
-	var initNavAccordion = ( navAccordionItem ) => {
+	var getSubNav = navAccordionItem => {
 
 		var subNav = Array.prototype.filter.call(
 			navAccordionItem.children,
-			( el ) => {
+			el => {
 				return el.tagName === 'UL'
 			}
 		)
 
-		if ( subNav.length < 1 ) {
-			return
-		}
+		return subNav.length > 0 ? subNav[0] : null
 
-		subNav = subNav[0]
+	}
 
-		var navAccordionToggle = document.createElement( 'BUTTON' )
+	var initNavAccordion = navAccordionItem => {
+
+		var subNav = getSubNav( navAccordionItem ),
+			navAccordionToggle = document.createElement( 'BUTTON' )
+
 		navAccordionToggle.appendChild( document.createTextNode( 'Toggle' ) )
 		navAccordionToggle.classList.add( 'Btn', 'NavAccordion_Toggle' )
 
-		var anchor = Array.prototype.filter.call( navAccordionItem.children, ( el ) => {
-			return el.tagName === 'A'
-		} )
+		var anchor = Array.prototype.filter.call(
+			navAccordionItem.children,
+			el => {
+				return el.tagName === 'A'
+			}
+		)
 
 		if ( anchor.length ) {
 			anchor[0].insertBefore(
@@ -39,9 +44,9 @@
 			)
 		}
 
-		var toggleSubNav = ( show ) => {
+		var toggleSubNav = show => {
 
-			if ( 'undefined' === typeof show ) {
+			if ( typeof show === 'undefined' ) {
 				show = navAccordionItem.classList.contains( 'NavAccordion_Item-Closed' )
 			}
 
@@ -65,11 +70,11 @@
 			toggleSubNav( false )
 		}
 
-		navAccordionToggle.addEventListener( 'click', ( event ) => {
+		navAccordionToggle.addEventListener( 'click', event => {
 			event.preventDefault()
 			navAccordionToggle.blur()
 			toggleSubNav()
-		} )
+		})
 	}
 
 	// Init Accordion Nav for all NavAccordion Items.
@@ -78,4 +83,4 @@
 		initNavAccordion
 	)
 
-} )( document )
+})( document )

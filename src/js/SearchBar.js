@@ -1,6 +1,6 @@
 ( document => {
 
-	var initSearchBar = ( searchBar ) => {
+	var initSearchBar = searchBar => {
 
 		let field = searchBar.getElementsByClassName( 'SearchBar_Field' )
 
@@ -10,13 +10,13 @@
 
 		field[0].addEventListener( 'focus', () => {
 			searchBar.classList.add( 'SearchBar-Focused' )
-		} )
+		})
 
 		field[0].addEventListener( 'blur', () => {
 			window.setTimeout( () => {
 				searchBar.classList.remove( 'SearchBar-Focused' )
 			}, 500 )
-		} )
+		})
 
 	}
 
@@ -25,4 +25,4 @@
 		initSearchBar
 	)
 
-} )( document )
+})( document )

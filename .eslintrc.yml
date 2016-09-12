@@ -44,7 +44,7 @@ rules:
   - error
   - never
   space-in-parens:
-  - error
+  - warn
   - always
   - exceptions:
     - "{}"
