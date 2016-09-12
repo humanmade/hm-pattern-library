@@ -15,7 +15,7 @@ gulp.task( 'clean-dist', cb => {
 // Watch for changes in HTML/JS/CSS.
 gulp.task( 'watch', () => {
 	gulp.watch( 'src/styles/**/*.scss', ['styles'] )
-	gulp.watch( 'src/js/**/*.js', ['js'] )
+	gulp.watch( 'src/js/**/*.js', [ 'js', 'lint-js' ] )
 	gulp.watch( 'src/html/**/*.html', ['fileinclude'] )
 })
 

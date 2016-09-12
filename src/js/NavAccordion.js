@@ -19,7 +19,7 @@
 		)
 
 		if ( ! subNav.length ) {
-			return;
+			return
 		}
 
 		subNav = subNav[0]
@@ -43,8 +43,6 @@
 		}
 
 		var toggleSubNav = show => {
-
-			console.log( navAccordionItem );
 
 			if ( typeof show === 'undefined' ) {
 				show = navAccordionItem.classList.contains( 'NavAccordion_Item-Closed' )
@@ -76,7 +74,7 @@
 			event.preventDefault()
 			navAccordionToggle.blur()
 			toggleSubNav()
-		})
+		} )
 	}
 
 	// Init Accordion Nav for all NavAccordion Items.
@@ -85,4 +83,4 @@
 		initNavAccordion
 	)
 
-})( document )
+} )( document )

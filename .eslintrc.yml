@@ -106,3 +106,5 @@ rules:
   yoda:
   - error
   - never
+  no-console:
+  - warn
