@@ -99,7 +99,6 @@
 }
 
 .Btn-Link {
-	@extend a:link;
 	@include text-std;
 	font-family: inherit;
 	text-transform: none;
