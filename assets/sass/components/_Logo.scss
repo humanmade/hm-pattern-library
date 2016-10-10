@@ -1,15 +1,19 @@
 .HMLogo {
+
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
 	display: inline-block;
+
 	background: url( "#{ $images-path }/logos/logo-black.svg" ) no-repeat center center;
-	background-size: contain;
+
+	background-size: 100%;
 	width: 292px;
 	height: 56px;
 	margin: #{ $base-line-height } $gutter-width;
 	display: inline-block;
 	vertical-align: top;
+
 }
 
 .HMLogo-Red {

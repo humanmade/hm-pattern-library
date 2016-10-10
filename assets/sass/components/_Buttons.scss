@@ -99,7 +99,6 @@
 }
 
 .Btn-Link {
-	@extend a:link;
 	@include text-std;
 	font-family: inherit;
 	text-transform: none;
@@ -137,7 +136,7 @@
 
 .Btn {
 	.Loading-Active {
-		@extend .Loading-White;
+		@extend .Loading-White !optional;
 		margin-right: $gutter-width * .666666667;
 		margin-left: $gutter-width * -.166666667;
 	}

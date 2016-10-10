@@ -1,0 +1,70 @@
+@mixin font-heading {
+	font-family: $font-family-sans;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+}
+
+@mixin font-body {
+	font-family: $font-family-serif;
+	font-weight: 500;
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+@mixin text-xxl {
+	font-size: 3.157rem;
+	line-height: $base-line-height * 2.5;
+}
+
+@mixin text-xl {
+	font-size: 2.369rem;
+	line-height: $base-line-height * 2;
+}
+
+@mixin text-lg {
+	font-size: 1.777rem;
+	line-height: $base-line-height * 1.5;
+}
+
+@mixin text-md {
+	font-size: 1.333rem;
+	line-height: $base-line-height * 1.25;
+}
+
+@mixin text-std {
+	font-size: 1rem;
+	line-height: $base-line-height;
+}
+
+@mixin text-sm {
+	font-size: .75rem;
+	line-height: $base-line-height;
+}
+
+@mixin text-tiny {
+	font-size: .563rem;
+	line-height: $base-line-height;
+}
+
+@mixin text-link {
+
+	color: $color-primary;
+	text-decoration: none;
+
+	&:link {
+		color: $color-primary;
+		text-decoration: none;
+	}
+
+	&:visited {
+		color: darken( $color-primary, 10% );
+		text-decoration: none;
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+
+}

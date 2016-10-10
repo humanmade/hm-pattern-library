@@ -1,0 +1,14 @@
+a:link {
+	color: $color-primary;
+	text-decoration: none;
+}
+
+a:visited {
+	color: darken( $color-primary, 10% );
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline;
+}
