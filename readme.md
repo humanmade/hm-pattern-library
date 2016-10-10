@@ -76,6 +76,7 @@ Class names in vendor files should not be changed, the files should be placed in
 * Remove animations from nav to fix overflow hidden bug.
 * New icon helper mixin. Also new lock and comment icons.
 * Fix some bugs in tables
+* Refactor links/buttons to break hard dependency.
  
 **1.0.4**
 
