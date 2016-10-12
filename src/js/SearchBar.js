@@ -1,28 +1,28 @@
-(function() {
+( document => {
 
-	var searchBars = document.getElementsByClassName( 'SearchBar' );
+	var initSearchBar = searchBar => {
 
-	for ( var i = 0; i < searchBars.length; i++ ) {
-
-		var searchBar = searchBars[ i ];
-		var field     = searchBar.getElementsByClassName( 'SearchBar_Field' );
+		let field = searchBar.getElementsByClassName( 'SearchBar_Field' )
 
 		if ( field.length < 1 ) {
-			return;
-		} else {
-			field = field[0];
+			return
 		}
 
-		field.addEventListener( "focus", function() {
-			searchBar.classList.add( 'SearchBar-Focused' );
-		} );
+		field[0].addEventListener( 'focus', () => {
+			searchBar.classList.add( 'SearchBar-Focused' )
+		} )
 
-		field.addEventListener( "blur", function() {
-			window.setTimeout( function() {
-				searchBar.classList.remove( 'SearchBar-Focused' );
+		field[0].addEventListener( 'blur', () => {
+			window.setTimeout( () => {
+				searchBar.classList.remove( 'SearchBar-Focused' )
 			}, 500 )
-		} );
+		} )
 
 	}
 
-})();
+	Array.prototype.forEach.call(
+		document.getElementsByClassName( 'SearchBar' ),
+		initSearchBar
+	)
+
+} )( document )
