@@ -58,8 +58,8 @@ input[type="email"] {
 
 	&::placeholder {
 		font-style: italic;
-		color: inherit;
-		opacity: 0.5;
+		color: rgba( $color-input-text, .5 );
+		opacity: 1; // Required for MS Edge
 	}
 
 }
