@@ -37,10 +37,9 @@
 	padding-right: 0;
 	width: 100%;
 
-	::placeholder {
-		opacity: .75;
+	&::placeholder {
+		color: rgba( #FFF, .75 );
 	}
-
 }
 
 // TODO - remove in JS, replace with 'clear'?
