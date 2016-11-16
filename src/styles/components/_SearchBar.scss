@@ -36,6 +36,7 @@
 	margin: 0;
 	padding-right: 0;
 	width: 100%;
+	height: $base-line-height * 2;
 
 	&::placeholder {
 		color: rgba( #FFF, .75 );
