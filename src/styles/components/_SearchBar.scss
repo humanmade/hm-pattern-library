@@ -116,11 +116,13 @@
 		border-top: 1px solid desaturate( $color-primary, 5% );
 		display: block;
 
+		&:focus,
 		&:hover {
 			background: rgba( 255, 255, 255, 0.1 );
 			padding: #{ $base-line-height / 2 } #{ $gutter-width / 2 };
 			border-bottom: 1px solid desaturate( $color-primary, 5% );
 			margin: 0 0 -1px 0;
+			outline: none;
 		}
 	}
 }
