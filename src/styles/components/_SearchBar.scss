@@ -36,6 +36,7 @@
 	margin: 0;
 	padding-right: 0;
 	width: 100%;
+	height: $base-line-height * 2;
 
 	&::placeholder {
 		color: rgba( #FFF, .75 );
@@ -60,16 +61,14 @@
 
 	&:after {
 		$iconSrc: iconSrc( "search", "white" );
-		content: url( $iconSrc );
+		background: url( $iconSrc ) center center no-repeat;
+		content: " ";
 		display: block;
 		position: absolute;
 		width: 100%;
-		line-height: $base-line-height * 2;
-		vertical-align: middle;
-		text-align: center;
+		height: 100%;
 		top: 0;
 		left: 0;
-		text-indent: 0;
 	}
 
 	&:hover,
