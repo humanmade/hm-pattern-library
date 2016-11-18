@@ -1,6 +1,6 @@
 (function( window ) {
 
-	// Graceful faliure if the browser does NOT support ALL of these.
+	// Graceful failure if the browser does NOT support ALL of these.
 	if ( ! (
 		'getElementsByClassName' in document &&
 		'addEventListener' in document &&
@@ -22,34 +22,44 @@
 		}
 
 		var navAccordionToggle = document.createElement( 'BUTTON' );
-		navAccordionToggle.appendChild( document.createTextNode( "Toggle" ) );
+
+		var span = document.createElement('SPAN');
+		span.appendChild( document.createTextNode( 'expand child menu' ) );
+		span.classList.add( 'screen-reader-text' );
+
+		navAccordionToggle.appendChild( span ) ;
 		navAccordionToggle.classList.add( 'Btn' );
 		navAccordionToggle.classList.add( 'NavAccordion_Toggle' );
+		navAccordionToggle.setAttribute( 'role', 'button' );
+		navAccordionToggle.setAttribute( 'aria-haspopup', 'true' );
 
 		var anchor = Array.prototype.filter.call( navAccordionItem.children, function( el ) {
 			return el.tagName === 'A';
 		} );
 
 		if ( anchor.length ) {
-			anchor[0].insertBefore( navAccordionToggle, anchor[0].childNodes[0] );
+			anchor[0].parentNode.insertBefore( navAccordionToggle,  subNav );
 		}
-
+		
 		var toggleSubNav = function( show ) {
 
 			if ( 'undefined' === typeof show ) {
 				show = navAccordionItem.classList.contains( 'NavAccordion_Item-Closed' );
+				navAccordionToggle.setAttribute( 'aria-expanded', 'false' );
 			}
 
 			if ( show ) {
 				navAccordionItem.classList.remove( 'NavAccordion_Item-Closed' );
 				navAccordionItem.classList.add( 'NavAccordion_Item-Open' );
 				navAccordionToggle.classList.add( 'NavAccordion_Toggle-Open' );
-				subNav.style.height = 'auto';
+				navAccordionToggle.setAttribute( 'aria-expanded', 'true' );
+				subNav.style.display = 'block';
 			} else {
 				navAccordionItem.classList.add( 'NavAccordion_Item-Closed' );
 				navAccordionItem.classList.remove( 'NavAccordion_Item-Open' );
 				navAccordionToggle.classList.remove( 'NavAccordion_Toggle-Open' );
-				subNav.style.height = 0;
+				navAccordionToggle.setAttribute( 'aria-expanded', 'false' );
+				subNav.style.display = 'none';
 			}
 
 		}
