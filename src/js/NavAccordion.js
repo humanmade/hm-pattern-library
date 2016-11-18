@@ -40,7 +40,7 @@
 		if ( anchor.length ) {
 			anchor[0].parentNode.insertBefore( navAccordionToggle,  subNav );
 		}
-		
+
 		var toggleSubNav = function( show ) {
 
 			if ( 'undefined' === typeof show ) {
