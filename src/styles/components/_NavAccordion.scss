@@ -74,6 +74,7 @@
 .NavAccordion_Item {
 
 	font-size: inherit;
+	position: relative;
 	display: block;
 	border-bottom: 1px solid $border-color;
 
@@ -81,17 +82,17 @@
 		border-bottom: none;
 	}
 
-	.NavAccordion_Anchor {
-		display: block;
-		padding: #{ $base-line-height / 4 } 0;
-		position: relative;
-	}
-
 	> ul {
 		overflow: hidden;
 		margin-left: $gutter-width / 2;
 	}
 
+}
+
+.NavAccordion_Anchor {
+	display: inline-block;
+	padding: #{ $base-line-height / 4 } 0;
+	position: relative;
 }
 
 .NavAccordion_Item > ul:after {
@@ -133,14 +134,11 @@
 
 	@extend .Btn-Small;
 	display: block;
-	position: relative;
-	float: right;
-	margin: #{ $base-line-height / -4 } 0;
-	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
 	height: $base-line-height * 1.25;
 	width: $base-line-height * 1.25;
-	text-indent: 100%;
-	overflow: hidden;
 	background: transparent;
 
 	&:after {
@@ -161,11 +159,14 @@
 	&:hover,
 	&:focus {
 		background: none;
-		outline: none;
 
 		&:after {
 			opacity: 1;
 		}
+	}
+
+	&:focus {
+		outline: 1px solid $hm-dark-grey;
 	}
 
 }
