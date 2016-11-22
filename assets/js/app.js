@@ -2,10 +2,10 @@
 
 	// Graceful failure if the browser does NOT support ALL of these.
 	if ( ! (
-			'getElementsByClassName' in document &&
-			'addEventListener' in document &&
-			'classList' in document.documentElement
-		) ) {
+		'getElementsByClassName' in document &&
+		'addEventListener' in document &&
+		'classList' in document.documentElement
+	) ) {
 		return;
 	}
 
@@ -40,14 +40,6 @@
 		if ( anchor.length ) {
 			anchor[0].parentNode.insertBefore( navAccordionToggle,  subNav );
 		}
-
-		//console.log (  anchor.parentElement );
-		console.log (anchor[0].parentNode );
-
-		console.log ( anchor[0] );
-
-		console.log (subNav );
-
 
 		var toggleSubNav = function( show ) {
 
