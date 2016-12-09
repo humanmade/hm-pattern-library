@@ -1,16 +1,17 @@
 .Label {
 
 	@include text-sm;
-	border: none;
+	border: 1px solid $color-primary;
+	border-radius: 4px;
 	padding: 0 #{ $gutter-width / 4 };
-	background: $label-background;
-	color: $hm-warm-grey;
+	background: $color-white;
+	color: $color-primary;
 	margin-bottom: $base-line-height / 2;
 	margin-right: $gutter-width / 4;
 	display: inline-block;
 	text-align: center;
 	cursor: pointer;
-	border-radius: 2px;
+	border-radius: 4px;
 	vertical-align: middle;
 	position: relative;
 	vertical-align: bottom;
@@ -18,14 +19,14 @@
 
 	&:link,
 	&:visited {
-		color: inherit;
+		color: $color-primary;
 		text-decoration: none;
 	}
 
 	&:hover,
 	&:focus {
-		color: $hm-warm-grey;
-		background: $label-background-hover;
+		color: $color-white;
+		background-color: $color-primary;
 		text-decoration: none;
 		outline: none;
 	}
@@ -35,11 +36,12 @@
 .Label_Count {
 	display: inline-block;
 	border-radius: 100%;
-	min-width: .6 * $base-line-height;
-	height: .6 * $base-line-height;
-	line-height: .6 * $base-line-height;
+	min-width: .75 * $base-line-height;
+	height: .75 * $base-line-height;
+	line-height: .75 * $base-line-height;
 	font-family: $font-family-code;
 	font-size: 11px;
-	background: rgba( 0, 0, 0, 0.15 );
+	background: $color-primary;
+	color: $color-white;
 	margin-left: 0.1 * $base-line-height;
 }

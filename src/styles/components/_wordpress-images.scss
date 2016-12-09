@@ -30,7 +30,6 @@
 .wp-caption {
 
 	margin-top: 0;
-	background-color: $color-caption-background;
 
 	img {
 		vertical-align: top;
@@ -40,7 +39,7 @@
 
 .wp-caption-text {
 	@include text-sm;
-	padding: #{ $base-line-height / 4 } #{ $gutter-width / 2 };
+	padding: #{ $base-line-height / 4 } 0;
 }
 
 .aligncenter > .wp-caption-text {

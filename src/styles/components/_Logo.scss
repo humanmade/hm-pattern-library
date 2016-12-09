@@ -8,8 +8,8 @@
 	background: url( "#{ $images-path }/logos/logo-black.svg" ) no-repeat center center;
 
 	background-size: 100%;
-	width: 292px;
-	height: 56px;
+	width: 156px;
+	height: 30px;
 	margin: #{ $base-line-height } $gutter-width;
 	display: inline-block;
 	vertical-align: top;
@@ -27,8 +27,8 @@
 .HMLogo-Alt {
 
 	background-image: url( "#{ $images-path }/logos/logo-alt-black.svg" );
-	width: 173px;
-	height: 97px;
+	width: 107px;
+	height: 60px;
 
 	&.HMLogo-Red {
 		background-image: url( "#{ $images-path }/logos/logo-alt-red.svg" );
@@ -43,8 +43,8 @@
 .HMLogo-Small {
 
 	background-image: url( "#{ $images-path }/logos/logo-small-black.svg" );
-	width: 69px;
-	height: 40px;
+	width: 52px;
+	height: 30px;
 
 	&.HMLogo-Red {
 		background-image: url( "#{ $images-path }/logos/logo-small-red.svg" );

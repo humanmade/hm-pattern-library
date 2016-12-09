@@ -204,8 +204,9 @@
 
 }
 
+.NavAccordion-Grey,
 .NavAccordion-Beige {
-	@include NavAccordion_Coloured( $color-nav-accordion-beige-focus-background, $border-color-light, $color-nav-accordion-biege-text );
+	@include NavAccordion_Coloured( $color-nav-accordion-grey-focus-background, $border-color-light, $color-nav-accordion-grey-text );
 }
 
 .NavAccordion_Item-Active > .NavAccordion_Anchor {
