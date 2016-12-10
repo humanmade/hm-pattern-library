@@ -1,7 +1,7 @@
 .Label {
 
 	@include text-sm;
-	border: 1px solid $color-primary;
+	border: 1px solid $color-link;
 	border-radius: 4px;
 	padding: 0 #{ $gutter-width / 4 };
 	background: $color-white;

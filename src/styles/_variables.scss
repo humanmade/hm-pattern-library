@@ -5,7 +5,7 @@
 $base-line-height: 1.5rem !default;
 $base-font-size:   16px !default;
 
-$gutter-width: 30px !default;
+$gutter-width: 15px !default;
 
 $font-family-body: "proxima-nova", serif !default;
 $font-family-heading: "proxima-nova", sans-serif !default;
@@ -52,14 +52,6 @@ $color-background-pre: $hm-light-grey !default;
 /*
  * Component Color Mapping
  */
-
-// Buttons
-$color-btn-text:                      $color-white !default;
-$color-btn-tertiary-background:       $hm-medium-grey !default;
-$color-btn-tertiary-disbaled:         $hm-medium-grey !default;
-$color-btn-tertiary-focus-background: $hm-warm-grey !default;
-
-$color-label-background: $color-background-pre !default;
 
 // Footer
 $color-footer-text: $hm-medium-grey !default;

@@ -4,17 +4,13 @@
 
 	a {
 
-		@extend .Label;
-		line-height: 1em;
-		padding-top: .333 * $base-line-height;
-		padding-bottom: .167 * $base-line-height;
+		display: inline-block;
+		margin-bottom: $base-line-height / 2;
 
-		&:before,
-		&:after {
-			display: none;
+		+ a {
+			margin-left: $gutter-width / 4;
 		}
 
 	}
 
 }
-

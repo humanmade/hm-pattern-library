@@ -79,7 +79,7 @@
 	clear: both;
 
 	.NavAccordion {
-		padding: $base-line-height / 2 $gutter-width / 2;
+		padding: $base-line-height $gutter-width * 2;
 		width: 100%;
 
 		@media #{ $mq-sm-up } {
@@ -99,4 +99,8 @@
 	.Btn {
 		margin: 0;
 	}
+}
+
+.StyleGide_LoadingIndicator_Red {
+	color: $color-primary;
 }

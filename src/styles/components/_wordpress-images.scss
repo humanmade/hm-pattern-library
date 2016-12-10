@@ -39,6 +39,7 @@
 
 .wp-caption-text {
 	@include text-sm;
+	color: $hm-medium-grey;
 	padding: #{ $base-line-height / 4 } 0;
 }
 

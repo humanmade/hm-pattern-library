@@ -3,6 +3,16 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.02em;
+
+	em,
+	i,
+	strong,
+	b {
+		font-weight: 700;
+		font-style: normal;
+		color: $color-primary;
+		text-transform: inherit;
+	}
 }
 
 @mixin font-body {
@@ -10,6 +20,11 @@
 	font-weight: 300;
 	text-transform: none;
 	letter-spacing: 0;
+
+	strong,
+	b {
+		font-weight: 700;
+	}
 }
 
 @mixin text-xxl {
