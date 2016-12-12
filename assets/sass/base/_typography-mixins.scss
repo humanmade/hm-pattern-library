@@ -1,35 +1,50 @@
 @mixin font-heading {
-	font-family: $font-family-sans;
+	font-family: $font-family-heading;
 	font-weight: 700;
 	text-transform: uppercase;
-	letter-spacing: 0.08em;
+	letter-spacing: 0.02em;
+
+	em,
+	i,
+	strong,
+	b {
+		font-weight: 700;
+		font-style: normal;
+		color: $color-primary;
+		text-transform: inherit;
+	}
 }
 
 @mixin font-body {
-	font-family: $font-family-serif;
-	font-weight: 500;
+	font-family: $font-family-body;
+	font-weight: 300;
 	text-transform: none;
 	letter-spacing: 0;
+
+	strong,
+	b {
+		font-weight: 700;
+	}
 }
 
 @mixin text-xxl {
-	font-size: 3.157rem;
+	font-size: 3.125rem;
 	line-height: $base-line-height * 2.5;
 }
 
 @mixin text-xl {
-	font-size: 2.369rem;
+	font-size: 1.875rem;
 	line-height: $base-line-height * 2;
 }
 
 @mixin text-lg {
-	font-size: 1.777rem;
+	font-size: 1.75rem;
 	line-height: $base-line-height * 1.5;
 }
 
 @mixin text-md {
-	font-size: 1.333rem;
-	line-height: $base-line-height * 1.25;
+	font-size: 1.375rem;
+	line-height: $base-line-height * 1.5;
 }
 
 @mixin text-std {
@@ -38,37 +53,38 @@
 }
 
 @mixin text-sm {
-	font-size: .75rem;
+	font-size: .875rem;
 	line-height: $base-line-height;
 }
 
+// Legacy.
 @mixin text-tiny {
-	font-size: .563rem;
-	line-height: $base-line-height;
+	@include text-sm;
 }
 
 @mixin text-link {
 
-	color: $color-primary;
+	color: $color-link;
 	text-decoration: none;
 
 	&:link {
-		color: $color-primary;
+		color: $color-link;
 		text-decoration: none;
 	}
 
 	&:visited {
-		color: darken( $color-primary, 10% );
+		color: darken( $color-link-visited, 10% );
 		text-decoration: none;
 	}
 
 	&:hover,
 	&:focus {
+		color: $color-link-hover;
 		text-decoration: underline;
 	}
 
 	&:focus {
-		outline: 1px solid $hm-dark-grey;
+		outline: 1px solid rgba( $hm-dark-grey, .4 );
 	}
 
 }

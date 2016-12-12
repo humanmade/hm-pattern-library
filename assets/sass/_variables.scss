@@ -1,10 +1,34 @@
 /*
+ * Base Settings
+ */
+
+$base-line-height: 1.5rem !default;
+$base-font-size:   16px !default;
+
+$gutter-width: 15px !default;
+
+$font-family-body: "proxima-nova", serif !default;
+$font-family-heading: "proxima-nova", sans-serif !default;
+$font-family-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !default;
+
+// Image Path.
+$images-path: "../images" !default;
+
+// Media queries.
+$mq-sm-up:   "screen and ( min-width: 30rem )" !default;
+$mq-sm-down: "screen and ( max-width: 30rem )" !default;
+$mq-md-up:   "screen and ( min-width: 55rem )" !default;
+$mq-md-down: "screen and ( max-width: 55rem )" !default;
+$mq-print:   "print" !default;
+
+/*
  * Color Mapping
  */
 
 $color-primary: $hm-red !default;
 $color-accent:  $hm-blue !default;
-$white:        #FFF !default;
+$color-white: #FFF !default;
+$color-black: $hm-dark-grey !default;
 
 // Alternate versions of main colors. Used for borders, backgrounds etc.
 $color-primary-light: saturate( lighten( $color-primary, 10% ), 5 ) !default;
@@ -19,19 +43,15 @@ $color-text-dark:    $hm-dark-grey !default;
 $color-text-heading: $hm-dark-grey !default;
 $color-text-pre:     $hm-warm-grey !default;
 
-$color-background-pre: $hm-beige !default;
+$color-link: $hm-red-accessible !default;
+$color-link-hover: $hm-red-accessible !default;
+$color-link-visited: darken( $hm-red-accessible, 3% ) !default;
+
+$color-background-pre: $hm-light-grey !default;
 
 /*
  * Component Color Mapping
  */
-
-// Buttons
-$color-btn-text:                      $white !default;
-$color-btn-tertiary-background:       $hm-medium-grey !default;
-$color-btn-tertiary-disbaled:         $hm-medium-grey !default;
-$color-btn-tertiary-focus-background: $hm-warm-grey !default;
-
-$color-label-background: $color-background-pre !default;
 
 // Footer
 $color-footer-text: $hm-medium-grey !default;
@@ -41,43 +61,16 @@ $color-input-text: $hm-warm-grey !default;
 
 // NavAccordion
 $color-nav-toggle-background:                  $hm-warm-grey !default;
-$color-nav-accordion-primary-focus-background: $white !default;
-$color-nav-accordion-primary-text:             $white !default;
-$color-nav-accordion-beige-focus-background:   $hm-beige !default;
-$color-nav-accordion-biege-text:               $hm-warm-grey !default;
+$color-nav-accordion-primary-focus-background: $color-white !default;
+$color-nav-accordion-primary-text:             $color-white !default;
+$color-nav-accordion-grey-focus-background:   $hm-light-grey !default;
+$color-nav-accordion-grey-text:               $hm-warm-grey !default;
 
 // Labels.
 $label-background:       $hm-beige !default;
 $label-background-hover: darken( $hm-beige, 5% ) !default;
 
-// WordPress Galleries
-// WordPress Images
-$color-caption-background: $hm-beige !default;
-
 // Borders
-$border-color:         $hm-border-color !default;
-$border-color-primary: $hm-border-color-red !default;
-$border-color-light:   $hm-border-color-beige !default;
-
-/*
- * Base Settings
- */
-
-$base-line-height: $hm-base-line-height !default;
-$base-font-size:   $hm-base-font-size !default;
-
-$gutter-width:  $hm-gutter-width !default;
-
-$font-family-serif: $hm-font-family-serif !default;
-$font-family-sans:  $hm-font-family-sans !default;
-$font-family-code:  $hm-font-family-code !default;
-
-// Image Path.
-$images-path: $hm_images !default;
-
-// Breakpoints
-$mq-sm-up:   $hm-mq-sm-up !default;
-$mq-sm-down: $hm-mq-sm-down !default;
-$mq-md-up:   $hm-mq-md-up !default;
-$mq-md-down: $hm-mq-md-down !default;
-$mq-print:   $hm-mq-print !default;
+$border-color:         lighten( $hm-medium-grey, 40% ) !default;
+$border-color-primary: $hm-red-light !default;
+$border-color-light:   desaturate( darken( $hm-beige, 15% ), 20 ) !default;

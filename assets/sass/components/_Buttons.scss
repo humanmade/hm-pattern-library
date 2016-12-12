@@ -1,143 +1,93 @@
 .Btn {
-	@include font-heading;
-	@include text-std;
+	@include font-body;
+	@include text-lg;
 	border: none;
-	padding: #{ $base-line-height / 2 } $gutter-width;
-	background: $color-primary;
-	color: $color-btn-text;
+	padding: 0;
+	background: none;
+	color: $color-link;
 	margin-bottom: $base-line-height / 2;
 	margin-right: $gutter-width / 2;
 	display: inline-block;
 	text-align: center;
 	cursor: pointer;
-	border-radius: 2px;
+	border-radius: 4px;
 	vertical-align: middle;
-	width: 100%;
+	width: auto;
 	box-shadow: none;
 	text-shadow: none;
 	height: auto;
 
+	&:after {
+		content: "\2192";
+		margin-left: $gutter-width / 2;
+		position: relative;
+		top: .1em;
+	}
+
 	&:link,
 	&:visited {
-		color: $color-btn-text;
+		color: $color-link;
 		text-decoration: none;
 	}
 
 	&:hover,
 	&:focus {
-		color: $color-btn-text;
-		background: lighten( $color-primary, 10% );
+		color: $color-link;
 		text-decoration: none;
 		outline: none;
 	}
 
-	@media #{ $mq_sm-up } {
-		width: auto;
-	}
-
 	&[disabled] {
-		background: lighten( $color-primary, 25% );
-		color: lighten( $color-primary, 35% );
 		cursor: default;
-		opacity: 0.75;
+		opacity: 0.3;
 	}
 
 }
 
 .Btn-Secondary {
-	background-color: $color-accent;
+
+	color: $color-accent;
+
+	&:link,
+	&:visited {
+		color: $color-accent;
+	}
 
 	&:hover,
 	&:focus {
-		background: lighten( $color-accent, 10% );
-	}
-
-
-	&[disabled] {
-		background: lighten( $color-accent, 15% );
-		color: lighten( $color-accent, 25% );
+		color: $color-accent;
 	}
 
 }
 
 .Btn-Tertiary {
-	background-color: $color-btn-tertiary-background;
-
-	&:hover,
-	&:focus {
-		background: lighten( $color-btn-tertiary-focus-background, 10% );
-	}
-
-	&[disabled] {
-		background: lighten( $color-btn-tertiary-disbaled, 50% );
-		color: lighten( $color-btn-tertiary-disbaled, 60% );
-	}
-
-}
-
-.Btn-Transparent {
-
-	background-color: transparent;
-	color: $color-primary;
+	color: $color-text-default;
 
 	&:link,
 	&:visited {
-		color: $color-primary;
+		color: $color-text-default;
 	}
 
 	&:hover,
 	&:focus {
-		color: $color-btn-text;
-		background: $color-primary;
-	}
-
-	&[disabled] {
-		background: transparent;
-		color: lighten( $color-primary, 35% );
-	}
-
-}
-
-.Btn-Link {
-	@include text-std;
-	font-family: inherit;
-	text-transform: none;
-	border: none;
-	background: none;
-	padding: 0;
-	margin: 0;
-	color: $color-primary;
-	font-weight: normal;
-	letter-spacing: 0;
-
-	&.Btn-Small {
-		padding: 0;
-	}
-
-	&:link,
-	&:visited {
-		color: $color-primary;
-		background: transparent;
-	}
-
-	&:hover,
-	&:focus {
-		color: $color-primary;
-		text-decoration: underline;
-		background: transparent;
+		color: $color-text-default;
 	}
 
 }
 
 .Btn-Small {
-	@include text-sm;
-	padding: #{ $base-line-height / 4 } #{ $gutter-width / 2 };
+	@include text-std;
 }
 
-.Btn {
-	.Loading-Active {
-		@extend .Loading-White !optional;
-		margin-right: $gutter-width * .666666667;
-		margin-left: $gutter-width * -.166666667;
+.Btn-Loading {
+
+	&:after {
+		display: none;
 	}
+
+	.Loading-Active {
+		@extend .Loading-Red;
+		margin-left: $gutter-width;
+	}
+
 }

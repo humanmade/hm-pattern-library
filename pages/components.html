@@ -9,7 +9,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<script src="https://use.typekit.net/mwe8dvt.js"></script>
+	<script src="https://use.typekit.net/qly7hgx.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 </head>
@@ -25,13 +25,13 @@
 
 <h1>Brand Elements</h1>
 
-<h2 id="style-guide-components-labels" class="style-guide-title">Labels</h2>
+<h3 id="style-guide-components-labels" class="style-guide-title">Labels</h3>
 
 <span class="Label">Lorem</span>
 <span class="Label">Cum ageremus</span>
 <span class="Label">Cognoscenda <span class="Label_Count">4</span></span>
 <span class="Label">Sin tantum modo</span>
-<h2 id="style-guide-components-search" class="style-guide-title">Search Bar</h2>
+<h3 id="style-guide-components-search" class="style-guide-title">Search Bar</h3>
 
 <div class="StyleGuide_SearchContainer">
 	<form class="SearchBar">
@@ -60,7 +60,7 @@
 		</div>
 	</form>
 </div>
-<h2 id="style-guide-components-nav-accordion" class="style-guide-title">Navigation - Accordion</h2>
+<h3 id="style-guide-components-nav-accordion" class="style-guide-title">Navigation - Accordion</h3>
 
 <div class="NavAccordions">
 
@@ -118,7 +118,7 @@
 		<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 3</a></li>
 	</ul>
 
-	<ul class="NavAccordion NavAccordion-Beige">
+	<ul class="NavAccordion NavAccordion-Grey">
 		<li class="NavAccordion_Item"><a class="NavAccordion_Anchor" href="#">Test item 1</a></li>
 		<li class="NavAccordion_Item">
 			<a class="NavAccordion_Anchor"href="#">Test item 2</a>
@@ -147,7 +147,7 @@
 
 </div>
 
-<h2 id="style-guide-components-code" class="style-guide-title">Code blocks</h2>
+<h3 id="style-guide-components-code" class="style-guide-title">Code blocks</h3>
 
 <pre><code class="language-php">&lt;?php
 
@@ -158,15 +158,22 @@
 
 <p>This is some inline code demonstrating how to open a php file <code class="language-php">&lt;?php</code></p>
 
-<h2 id="style-guide-components-loading" class="style-guide-title">Loading Indicators</h2>
+<h3 id="style-guide-components-loading" class="style-guide-title">Loading Indicators</h3>
 
 <div class="StyleGuide_LoadingIndicators">
 
 	<div class="StyleGuide_LoadingIndicator_Container"> <!-- Note container is only used for the style guide -->
-		<span class="Loading Loading-Active"></span> Loading
+		Loading <span class="Loading Loading-Active"></span>
 	</div>
 
-	<button class="Btn"><span class="Loading Loading-Active"></span>Loading</button>
+	<div class="StyleGuide_LoadingIndicator_Container StyleGide_LoadingIndicator_Red"> <!-- Note container is only used for the style guide -->
+		Loading <span class="Loading-Red Loading-Active"></span>
+	</div>
+
+	<br />
+	<div class="StyleGuide_LoadingIndicator_Container"> <!-- Note container is only used for the style guide -->
+		<button class="Btn Btn-Loading">Loading <span class="Loading Loading-Active"></span></button>
+	</div>
 </div>
 
 

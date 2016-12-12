@@ -11,12 +11,17 @@
 	animation-timing-function: linear;
 	display: inline-block;
 	vertical-align: middle;
-	margin-right: $gutter-width / 2;
+	margin-left: $gutter-width;
 	position: relative;
 	top: -1px;
 }
 
 .Loading-White {
 	@include icon( "spinner", "white" );
+	background-size: 17px;
+}
+
+.Loading-Red {
+	@include icon( "spinner", "red" );
 	background-size: 17px;
 }

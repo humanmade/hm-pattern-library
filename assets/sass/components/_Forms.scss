@@ -10,11 +10,11 @@ input[type="email"] {
 	background: white;
 	box-shadow: none;
 	color: $color-input-text;
-	margin-bottom: $base-line-height / 2;
+	margin-bottom: $base-line-height;
 	margin-right: $base-line-height / 2;
 	display: block;
 	text-align: left;
-	border-radius: 2px;
+	border-radius: 4px;
 	vertical-align: middle;
 	width: 100%;
 	max-width: 100%;
@@ -78,7 +78,7 @@ textarea {
 	@include text-sm;
 	display: block;
 	margin-top: $base-line-height / 2;
-	margin-bottom: 0;
+	margin-bottom: $base-line-height / 4;
 }
 
 fieldset {
