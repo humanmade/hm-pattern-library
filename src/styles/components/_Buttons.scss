@@ -18,7 +18,7 @@
 	height: auto;
 
 	&:after {
-		content: '\2192';
+		content: "\2192";
 		margin-left: $gutter-width / 2;
 		position: relative;
 		top: .1em;
