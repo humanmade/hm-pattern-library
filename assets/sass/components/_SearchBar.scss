@@ -2,7 +2,7 @@
 	background: $color-primary;
 	width: 100%;
 	clear: both;
-	padding: $base-line-height $gutter-width;
+	padding: $margin-vertical-sm $gutter-width;
 }
 
 .SearchBar {
@@ -36,7 +36,7 @@
 	margin: 0;
 	padding-right: 0;
 	width: 100%;
-	height: $base-line-height * 2;
+	height: $margin-vertical-sm * 2;
 
 	&::placeholder {
 		color: rgba( #FFF, .75 );
@@ -54,8 +54,8 @@
 	margin: 0;
 	text-indent: 150%;
 	padding: 0;
-	height: $base-line-height * 2;
-	width: $base-line-height * 2;
+	height: $margin-vertical-sm * 2;
+	width: $margin-vertical-sm * 2;
 	overflow: hidden;
 	opacity: .75;
 
@@ -84,7 +84,7 @@
 	top: 100%;
 	left: 0;
 	right: 0;
-	background: rgba( $color-primary-dark, 0.95 );
+	background: $color-primary-dark;
 	padding: 0;
 	border-radius: 0 0 4px 4px;
 	color: #FFF;
@@ -111,18 +111,20 @@
 
 	a {
 
-		padding: #{ $base-line-height / 2 } 0;
-		margin: 0 #{ $gutter-width / 2 };
+		padding: #{ $margin-vertical-sm / 2 } 0;
+		margin: 0 #{ $gutter-width };
 		border-top: 1px solid desaturate( $color-primary, 5% );
 		display: block;
+		transition: none;
 
 		&:focus,
 		&:hover {
 			background: rgba( 255, 255, 255, 0.1 );
-			padding: #{ $base-line-height / 2 } #{ $gutter-width / 2 };
+			padding: #{ $margin-vertical-sm / 2 } #{ $gutter-width };
 			border-bottom: 1px solid desaturate( $color-primary, 5% );
 			margin: 0 0 -1px 0;
 			outline: none;
+			transition: none;
 		}
 	}
 }
@@ -132,6 +134,10 @@
 	@include text-sm;
 	color: #FFF;
 	margin: 0;
+}
+
+.SearchBar_Result_Title {
+	@include font-heading;
 }
 
 .SearchBar-Focused {

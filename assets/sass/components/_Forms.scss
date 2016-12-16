@@ -6,12 +6,12 @@ input[type="email"] {
 	@include font-body;
 	@include text-std;
 	border: 1px solid $border-color;
-	padding: #{ $base-line-height / 2 } 1em #{ $base-line-height / 2 };
+	padding: #{ $margin-vertical-sm / 2 } 1em #{ $margin-vertical-sm / 2 };
 	background: white;
 	box-shadow: none;
 	color: $color-input-text;
-	margin-bottom: $base-line-height;
-	margin-right: $base-line-height / 2;
+	margin-bottom: $margin-vertical-sm;
+	margin-right: $gutter-width / 2;
 	display: block;
 	text-align: left;
 	border-radius: 4px;
@@ -77,8 +77,8 @@ textarea {
 	@include font-heading;
 	@include text-sm;
 	display: block;
-	margin-top: $base-line-height / 2;
-	margin-bottom: $base-line-height / 4;
+	margin-top: $margin-vertical-sm;
+	margin-bottom: $margin-vertical-sm / 4;
 }
 
 fieldset {
@@ -104,7 +104,7 @@ fieldset {
 .Form_Radio_Group {
 	@extend .Form_Checkbox_Group;
 	margin-right: $gutter-width;
-	margin-bottom: $base-line-height / 2;
+	margin-bottom: $margin-vertical-sm / 2;
 	display: inline-block;
 
 }

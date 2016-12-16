@@ -2,14 +2,17 @@
  * Base Settings
  */
 
-$base-line-height: 1.5rem !default;
-$base-font-size:   16px !default;
+$margin-vertical-sm: 1.666666667rem !default;
+$margin-vertical-lg: 5.555555556rem !default;
+
+$base-line-height:   1.555rem !default; // 28px
+$base-font-size:     18px !default;
 
 $gutter-width: 15px !default;
 
-$font-family-body: "proxima-nova", serif !default;
+$font-family-body:    "proxima-nova", sans-serif !default;
 $font-family-heading: "proxima-nova", sans-serif !default;
-$font-family-code: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !default;
+$font-family-code:    "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace !default;
 
 // Image Path.
 $images-path: "../images" !default;
@@ -27,8 +30,8 @@ $mq-print:   "print" !default;
 
 $color-primary: $hm-red !default;
 $color-accent:  $hm-blue !default;
-$color-white: #FFF !default;
-$color-black: $hm-dark-grey !default;
+$color-white:   #FFF !default;
+$color-black:   $hm-dark-grey !default;
 
 // Alternate versions of main colors. Used for borders, backgrounds etc.
 $color-primary-light: saturate( lighten( $color-primary, 10% ), 5 ) !default;
@@ -43,8 +46,8 @@ $color-text-dark:    $hm-dark-grey !default;
 $color-text-heading: $hm-dark-grey !default;
 $color-text-pre:     $hm-warm-grey !default;
 
-$color-link: $hm-red-accessible !default;
-$color-link-hover: $hm-red-accessible !default;
+$color-link:         $hm-red-accessible !default;
+$color-link-hover:   $hm-red-accessible !default;
 $color-link-visited: darken( $hm-red-accessible, 3% ) !default;
 
 $color-background-pre: $hm-light-grey !default;
