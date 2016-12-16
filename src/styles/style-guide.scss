@@ -68,9 +68,9 @@
 }
 
 .pattern-library-subtitle {
-	@extend h4;
-	margin-top: -1.875rem;
-	margin-bottom: $base-line-height * 2;
+	@extend h3;
+	margin-top: $margin-vertical-sm * -1;
+	margin-bottom: $margin-vertical-sm;
 }
 
 .NavAccordions {
@@ -79,7 +79,7 @@
 	clear: both;
 
 	.NavAccordion {
-		padding: $base-line-height $gutter-width * 2;
+		padding: $margin-vertical-sm $gutter-width * 2;
 		width: 100%;
 
 		@media #{ $mq-sm-up } {
@@ -93,7 +93,7 @@
 
 	.StyleGuide_LoadingIndicator_Container {
 		display: inline-block;
-		padding: #{ $base-line-height / 2 } $gutter-width;
+		padding: #{ $margin-vertical-sm / 2 } $gutter-width;
 	}
 
 	.Btn {

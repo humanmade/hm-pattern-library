@@ -1,4 +1,5 @@
 @mixin font-heading {
+
 	font-family: $font-family-heading;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -16,6 +17,7 @@
 }
 
 @mixin font-body {
+
 	font-family: $font-family-body;
 	font-weight: 300;
 	text-transform: none;
@@ -28,23 +30,23 @@
 }
 
 @mixin text-xxl {
-	font-size: 3.125rem;
+	font-size: 2.777777778rem;
 	line-height: $base-line-height * 2.5;
 }
 
 @mixin text-xl {
-	font-size: 1.875rem;
-	line-height: $base-line-height * 2;
+	font-size: 1.666666667rem;
+	line-height: $base-line-height * 1.5;
 }
 
 @mixin text-lg {
-	font-size: 1.75rem;
+	font-size: 1.555555556rem;
 	line-height: $base-line-height * 1.5;
 }
 
 @mixin text-md {
-	font-size: 1.375rem;
-	line-height: $base-line-height * 1.5;
+	font-size: 1.333333333rem;
+	line-height: $base-line-height * 1.25;
 }
 
 @mixin text-std {
@@ -53,7 +55,7 @@
 }
 
 @mixin text-sm {
-	font-size: .875rem;
+	font-size: .888888889rem;
 	line-height: $base-line-height;
 }
 
@@ -66,6 +68,7 @@
 
 	color: $color-link;
 	text-decoration: none;
+	transition: color .2s ease-in, background .2s ease-in;
 
 	&:link {
 		color: $color-link;
@@ -80,6 +83,7 @@
 	&:hover,
 	&:focus {
 		color: $color-link-hover;
+		transition: color .2s ease-out, background .2s ease-out;
 		text-decoration: underline;
 	}
 

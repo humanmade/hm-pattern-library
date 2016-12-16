@@ -1,31 +1,29 @@
 table {
 	border-collapse: collapse;
 	width: 100%;
-	margin: 0 0 #{ .75 * $base-line-height };
+	margin: $margin-vertical-sm 0;
 }
 
 th,
 td {
 	@include text-sm;
-	padding: #{ $base-line-height / 3 } #{ $gutter-width / 2 };
-	border-bottom: 1px solid $border-color;
-	border-right: 1px solid $border-color;
+	padding: 0.611rem #{ $gutter-width / 2 };
+	border: none;
 	vertical-align: top;
-
-	&:last-child {
-		border-right: none;
-	}
 }
 
-tbody:last-child > tr:last-child th,
-tbody:last-child > tr:last-child td {
-	border-bottom: none;
+
+thead {
+	border-bottom: 1px solid $border-color;
 }
 
-tfoot > tr:last-child td,
-tfoot > tr:last-child th {
+tfoot {
 	border-top: 1px solid $border-color;
-	border-bottom: none;
+}
+
+tbody tr:nth-child( odd ) td,
+tbody tr:nth-child( odd ) th {
+	background: $hm-light-grey;
 }
 
 th {
@@ -35,6 +33,6 @@ th {
 }
 
 table caption {
-	margin-bottom: $base-line-height / 2;
-	font-style: italic;
+	@include text-sm;
+	margin-bottom: $margin-vertical-sm / 2;
 }

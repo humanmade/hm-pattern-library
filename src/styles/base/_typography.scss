@@ -28,31 +28,31 @@ h1,
 .text-xxl {
 	@include text-xxl;
 	@include font-heading;
-	margin: #{ $base-line-height * 1.75 } 0 #{ $base-line-height * 1.25 } 0;
+	margin: $margin-vertical-sm 0;
 	color: $color-text-heading;
 }
 
 h2,
 .text-xl {
-	@include text-lg;
-	@include font-body;
-	margin: #{ $base-line-height * 1 } 0 #{ $base-line-height * .75 } 0;
+	@include text-xl;
+	@include font-heading;
+	margin: $margin-vertical-sm 0;
 	color: $color-text-heading;
 }
 
 h3,
 .text-lg {
-	@include text-xl;
-	@include font-heading;
-	margin: #{ $base-line-height * 1.5 } 0 #{ $base-line-height * 1 } 0;
+	@include text-lg;
+	@include font-body;
+	margin: $margin-vertical-sm 0;
 	color: $color-text-heading;
 }
 
 h4,
 .text-md {
 	@include text-md;
-	@include font-body;
-	margin: #{ $base-line-height * 1 } 0 #{ $base-line-height * .75 } 0;
+	@include font-heading;
+	margin: $margin-vertical-sm 0;
 	color: $color-text-default;
 }
 
@@ -60,7 +60,7 @@ h5,
 h6 {
 	@include text-std;
 	@include font-heading;
-	margin: #{ $base-line-height * .75 } 0;
+	margin: $margin-vertical-sm 0;
 	color: $color-text-heading;
 }
 
@@ -68,7 +68,7 @@ p,
 ul,
 ol,
 .text-std {
-	margin: #{ $base-line-height * .75 } 0;
+	margin: $margin-vertical-sm 0;
 }
 
 ul,
@@ -79,18 +79,14 @@ ol {
 }
 
 blockquote {
-	@include text-md;
-	margin: #{ $base-line-height * .75 } 0;
-	margin-left: $gutter-width;
-	padding-left: $gutter-width;
-	border-left: 1px solid $border-color;
-	font-style: italic;
+	@include text-lg;
+	margin: $margin-vertical-sm 0 $margin-vertical-sm;
 }
 
 hr {
 	border: 1px solid $border-color;
 	border-width: 1px 0 0 0;
-	margin: #{ $base-line-height * .75 } 0;
+	margin: $margin-vertical-lg 0;
 }
 
 code,
@@ -103,9 +99,9 @@ pre {
 }
 
 pre {
-	padding: #{ $base-line-height * .5 } #{ $gutter-width / 2 };
+	padding: #{ $margin-vertical-sm / 2 } #{ $gutter-width / 2 };
 	display: block;
-	margin: #{ $base-line-height * .75 } 0;
+	margin: $margin-vertical-sm 0;
 	max-width: 100%;
 	overflow: auto;
 	white-space: pre-wrap;

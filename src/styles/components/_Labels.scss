@@ -6,7 +6,7 @@
 	padding: 0 #{ $gutter-width / 4 };
 	background: $color-white;
 	color: $color-primary;
-	margin-bottom: $base-line-height / 2;
+	margin-bottom: $margin-vertical-sm / 2;
 	margin-right: $gutter-width / 4;
 	display: inline-block;
 	text-align: center;
@@ -16,6 +16,7 @@
 	position: relative;
 	vertical-align: bottom;
 	line-height: 2em;
+	transition: color .1s ease-in-out, background .1s ease-in-out, border-color .1s ease-in-out;
 
 	&:link,
 	&:visited {
@@ -29,6 +30,7 @@
 		background-color: $color-primary;
 		text-decoration: none;
 		outline: none;
+		transition: color .1s ease-in-out, background .1s ease-in-out, border-color .1s ease-in-out;
 	}
 
 }
@@ -36,12 +38,19 @@
 .Label_Count {
 	display: inline-block;
 	border-radius: 100%;
-	min-width: .75 * $base-line-height;
-	height: .75 * $base-line-height;
-	line-height: .75 * $base-line-height;
+	min-width: $base-font-size;
+	height: $base-font-size;
+	line-height: $base-font-size;
 	font-family: $font-family-code;
-	font-size: 11px;
+	font-size: .6 * $base-font-size;
 	background: $color-primary;
 	color: $color-white;
-	margin-left: 0.1 * $base-line-height;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+
+	.Label:hover &,
+	.Label:focus & {
+		background-color: $color-white;
+		color: $color-primary;
+	}
 }

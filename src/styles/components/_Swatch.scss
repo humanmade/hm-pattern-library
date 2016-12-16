@@ -4,6 +4,7 @@
 	float: left;
 	width: 50%;
 	display: block;
+	margin-bottom: $margin-vertical-sm;
 
 	@media ( min-width: 600px ) {
 
@@ -17,13 +18,13 @@
 
 .Swatch_Background {
 
-	height: $base-line-height;
+	height: $margin-vertical-sm;
 	display: block;
 
 	@media ( min-width: 600px ) {
 		display: block;
 		width: auto;
-		height: $base-line-height * 4;
+		height: $margin-vertical-lg;
 	}
 }
 
@@ -31,5 +32,13 @@
 	@include text-sm;
 	display: block;
 	text-align: center;
-	margin:  #{ $base-line-height * .375 } 0;
+	margin: #{ $margin-vertical-sm / 4 } 0 0;
+}
+
+.Swatch-Border {
+	height: auto;
+
+	hr {
+		margin: #{ $margin-vertical-sm / 2 } 0;
+	}
 }
