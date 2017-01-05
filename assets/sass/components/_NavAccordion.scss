@@ -33,13 +33,17 @@
 
 	.NavAccordion_Toggle {
 
-		border-color: $border-color-toggle;
+		border: none;
 		color: $border-color-toggle;
 
 		&:hover,
 		&:focus {
 			border-color: $border-color-toggle-hover;
 			color: $border-color-toggle-hover;
+		}
+
+		&:active {
+			border: none;
 		}
 
 	}
@@ -132,6 +136,7 @@
 .NavAccordion_Toggle {
 
 	@extend .Btn-Small;
+	border: none;
 	display: block;
 	position: absolute;
 	right: 0;
@@ -166,6 +171,7 @@
 
 	&:focus {
 		outline: 1px solid $hm-dark-grey;
+		border: none;
 	}
 
 }
