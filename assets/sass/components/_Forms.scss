@@ -5,7 +5,7 @@ input[type="password"],
 input[type="email"] {
 	@include font-body;
 	@include text-std;
-	border: 1px solid $border-color;
+	border: 2px solid $border-color;
 	padding: #{ $margin-vertical-sm / 2 } 1em #{ $margin-vertical-sm / 2 };
 	background: white;
 	box-shadow: none;

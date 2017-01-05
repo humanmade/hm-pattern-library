@@ -1,8 +1,10 @@
 .Btn {
+
 	@include font-body;
 	@include text-lg;
-	border: none;
-	padding: 0;
+	border: 2px solid $color-link;
+	border-radius: 4px;
+	padding: 0 $gutter-width;
 	background: none;
 	color: $color-link;
 	margin-bottom: $margin-vertical-sm / 2;
@@ -10,19 +12,11 @@
 	display: inline-block;
 	text-align: center;
 	cursor: pointer;
-	border-radius: 4px;
 	vertical-align: middle;
 	width: auto;
 	box-shadow: none;
 	text-shadow: none;
 	height: auto;
-
-	&:after {
-		content: "\2192";
-		margin-left: $gutter-width / 2;
-		position: relative;
-		top: .1em;
-	}
 
 	&:link,
 	&:visited {
@@ -47,6 +41,7 @@
 .Btn-Secondary {
 
 	color: $color-accent;
+	border-color: $color-accent;
 
 	&:link,
 	&:visited {
@@ -61,7 +56,9 @@
 }
 
 .Btn-Tertiary {
+
 	color: $color-text-default;
+	border-color: $color-text-default;
 
 	&:link,
 	&:visited {
@@ -77,6 +74,8 @@
 
 .Btn-Small {
 	@include text-std;
+	border-width: 1px;
+	padding: 0 #{ $gutter-width / 2 };
 }
 
 .Btn-Loading {
