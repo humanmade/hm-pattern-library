@@ -3,7 +3,7 @@
 	@include text-sm;
 	border: 1px solid $color-link;
 	border-radius: 4px;
-	padding: 0 #{ $gutter-width / 4 };
+	padding: 0 #{ $gutter-width / 2 };
 	background: $color-white;
 	color: $color-primary;
 	margin-bottom: $margin-vertical-sm / 2;
@@ -15,7 +15,7 @@
 	vertical-align: middle;
 	position: relative;
 	vertical-align: bottom;
-	line-height: 2em;
+	line-height: $base-line-height;
 	transition: color .1s ease-in-out, background .1s ease-in-out, border-color .1s ease-in-out;
 
 	&:link,
