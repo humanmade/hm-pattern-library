@@ -1,5 +1,5 @@
 html {
-	font-size: $base-font-size;
+	font-size: strip-unit( $base-font-size ) / 16 * 100%;
 	text-rendering: optimizeLegibility;
 }
 
