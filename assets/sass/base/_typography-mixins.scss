@@ -1,9 +1,6 @@
 @mixin font-heading {
-
 	font-family: $font-family-heading;
 	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 0.02em;
 
 	em,
 	i,
@@ -35,17 +32,17 @@
 }
 
 @mixin text-xl {
-	font-size: 1.666666667rem;
+	font-size: 1.777777778rem;
 	line-height: $base-line-height * 1.5;
 }
 
 @mixin text-lg {
-	font-size: 1.555555556rem;
+	font-size: 1.333333333rem;
 	line-height: $base-line-height * 1.5;
 }
 
 @mixin text-md {
-	font-size: 1.333333333rem;
+	font-size: 1.111111111rem;
 	line-height: $base-line-height * 1.25;
 }
 
