@@ -1,5 +1,5 @@
 html {
-	font-size: strip-unit( $base-font-size ) / 16 * 100%;
+	font-size: $base-font-size;
 	text-rendering: optimizeLegibility;
 }
 
@@ -28,6 +28,7 @@ h1,
 .text-xxl {
 	@include text-xxl;
 	@include font-heading;
+	text-transform: uppercase;
 	margin: $margin-vertical-sm 0;
 	color: $color-text-heading;
 }
@@ -38,12 +39,17 @@ h2,
 	@include font-heading;
 	margin: $margin-vertical-sm 0;
 	color: $color-text-heading;
+
+
+	@media #{ $mq-sm-down } {
+		text-transform: uppercase;
+	}
 }
 
 h3,
 .text-lg {
 	@include text-lg;
-	@include font-body;
+	@include font-heading;
 	margin: $margin-vertical-sm 0;
 	color: $color-text-heading;
 }
@@ -80,7 +86,11 @@ ol {
 
 blockquote {
 	@include text-lg;
-	margin: $margin-vertical-sm 0 $margin-vertical-sm;
+	margin: $margin-vertical-sm 0;
+
+	@media #{ $mq-sm-up } {
+		margin: $margin-vertical-lg 0;
+	}
 }
 
 hr {

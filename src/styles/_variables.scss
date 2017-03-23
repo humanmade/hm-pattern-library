@@ -2,11 +2,12 @@
  * Base Settings
  */
 
-$margin-vertical-sm: 1.666666667rem !default;
-$margin-vertical-lg: 5.555555556rem !default;
+$margin-vertical-sm:  1.666666667rem !default;
+$margin-vertical-lg:  4.666666667rem !default;
 
-$base-line-height:   1.555rem !default; // 28px
-$base-font-size:     18px !default; // Assumed to be PX.
+$base-line-height:    1.555rem !default; // 28px
+$base-line-height-sm: 1.333rem !default; // 24px
+$base-font-size:      18px !default;
 
 $gutter-width: 15px !default;
 
