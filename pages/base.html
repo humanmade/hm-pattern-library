@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Juniper - HM Pattern Library</title>
+	<link rel="stylesheet" href="./../assets/styles/style-guide.css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://use.typekit.net/mwe8dvt.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h1 class="pattern-library-title">Juniper.</h1>
+		<p class="pattern-library-subtitle">The Human Made Pattern Library.</p>
+
+<a href="./../index.html">&#8592; Back to main page.</a>
+
+<h2>Typography &amp; Standard HTML elements</h2>
+
+<h2 id="style-guide-base-text" class="style-guide-title">Body Text</h2>
+<p>Quantum Aristoxeni ingenium consumptum videmus in musicis? Obsecro, inquit, Torquate, haec dicit Epicurus? Sapientem locupletat ipsa natura, cuius divitias Epicurus parabiles esse docuit.</p>
+<p>Non enim quaero quid verum, sed quid cuique dicendum sit. Nec vero alia sunt quaerenda contra Carneadeam illam sententiam. Illi enim inter se dissentiunt. Quam ob rem tandem, inquit, non satisfacit? Virtutibus igitur rectissime mihi videris et ad consuetudinem nostrae orationis vitia posuisse contraria.</p>
+<p>Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus; Parvi enim primo ortu sic iacent, tamquam omnino sine animo sint. Ita relinquet duas, de quibus etiam atque etiam consideret. Habent enim et bene longam et satis litigiosam disputationem.</p>
+<h2 id="style-guide-base-blockquote" class="style-guide-title">Blockquote</h2>
+<blockquote>Lorem ipsum dolor sit, amet elit. Aenean massa <strong>strong</strong>.  Nullam <a href="#">link</a> dictum felis eu pede pretium.</blockquote>
+<h2 id="style-guide-base-lists" class="style-guide-title">Lists</h2>
+
+<ul>
+	<li>Pellentesque eu est a nulla placerat dignissim.</li>
+	<li>Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Morbi a enim in magna semper bibendum.</li>
+</ul>
+
+<ol>
+	<li>Aliquam erat volutpat.</li>
+	<li>Mauris vel neque sit amet nunc gravida congue sed sit amet purus.</li>
+	<li>Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit.</li>
+</ol>
+<h2 id="style-guide-base-tables" class="style-guide-title">Tables</h2>
+
+<h3>Normal Table</h3>
+
+<table class="data">
+	<tr>
+		<td>Entry Line 1</td>
+		<td>Entry Line 2</td>
+		<td>Entry Line 3</td>
+		<td>Entry Line 4</td>
+	</tr>
+	<tr>
+		<td>Entry Line 1</td>
+		<td>Entry Line 2</td>
+		<td>Entry Line 3</td>
+		<td>Entry Line 4</td>
+	</tr>
+</table>
+
+<h3>Table with header, footer &amp;&nbsp;caption.</h3>
+
+<table class="data">
+	<caption>Example Table</caption>
+	<thead>
+		<tr>
+			<th>Entry Header 1</th>
+			<th>Entry Header 2</th>
+			<th>Entry Header 3</th>
+			<th>Entry Header 4</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<th>Entry Header 1</th>
+			<th>Entry Header 2</th>
+			<th>Entry Header 3</th>
+			<th>Entry Header 4</th>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr>
+			<td>Entry First Line 1</td>
+			<td>Entry First Line 2</td>
+			<td>Entry First Line 3</td>
+			<td>Entry First Line 4</td>
+		</tr>
+		<tr>
+			<td>Entry Line 1</td>
+			<td>Entry Line 2</td>
+			<td>Entry Line 3</td>
+			<td>Entry Line 4</td>
+		</tr>
+		<tr>
+			<td>Entry Last Line 1</td>
+			<td>Entry Last Line 2</td>
+			<td>Entry Last Line 3</td>
+			<td>Entry Last Line 4</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="style-guide-base-headings" class="style-guide-title">Headings</h2>
+<h1>H1: Sed nec diam eu diam mattis viverra.</h1>
+<h2>H2: Vivamus luctus urna sed urna ultricies.</h2>
+<h3>H3: In libero.</h3>
+<h4>H4: Vestibulum mollis mauris enim.</h4>
+<h5>H5: Morbi euismod magna ac lorem rutrum elementum.</h5>
+<h6>H6: Donec viverra auctor lobortis.</h6>
+
+		<div class="Footer">
+			<p><span class="HMLogo HMLogo-Tiny"></span><a href="http://hmn.md">Made by Humans</a></p>
+		</div>
+
+	</div>
+
+	<script src="./../assets/js/app.min.js"></script>
+
+	<script>
+
+		(function() {
+
+			// Fake some search results for search bar demo.
+			Array.prototype.forEach.call( document.getElementsByClassName( 'SearchBar' ), function( searchBar ) {
+
+				var fields = searchBar.getElementsByClassName( 'SearchBar_Field' );
+
+				if ( fields.length > 0 ) {
+					fields[0].addEventListener( "keyup", function() {
+						if ( fields[0].value.length > 0 ) {
+							searchBar.classList.add( 'SearchBar-HasResults' );
+						} else {
+							searchBar.classList.remove( 'SearchBar-HasResults' );
+						}
+					} );
+				}
+
+			} );
+
+		} )();
+
+	</script>
+</body>
+
+</html>
+  ;
