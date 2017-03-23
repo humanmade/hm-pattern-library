@@ -71,6 +71,16 @@
 	line-height: $base-line-height;
 }
 
+@mixin text-xs {
+	font-size: .777777778rem;
+	line-height: $base-line-height;
+}
+
+@mixin text-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 // Legacy.
 @mixin text-tiny {
 	@include text-sm;
