@@ -1,10 +1,9 @@
 .Btn {
-
 	@include font-body;
-	@include text-lg;
-	border: 2px solid $color-link;
+	@include text-xm;
+	border: 1px solid $color-link;
 	border-radius: 4px;
-	padding: 0 $gutter-width;
+	padding: #{ $gutter-width / 4 } $gutter-width;
 	background: none;
 	color: $color-link;
 	margin-bottom: $margin-vertical-sm / 2;
@@ -36,6 +35,11 @@
 		opacity: 0.3;
 	}
 
+	&--block {
+		width: 100%;
+		margin-bottom: $margin-vertical-sm;
+		margin-right: 0;
+	}
 }
 
 .Btn-Secondary {
