@@ -51,6 +51,11 @@
 	line-height: $base-line-height * 1.5;
 }
 
+@mixin text-xm {
+	font-size: 1.222222222rem;
+	line-height: $base-line-height * 1.25;
+}
+
 @mixin text-md {
 	font-size: 1.111111111rem;
 	line-height: $base-line-height * 1.25;
