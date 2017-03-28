@@ -82,8 +82,8 @@
 }
 
 @mixin text-smoothing {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
+	-moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
 }
 
 // Legacy.
