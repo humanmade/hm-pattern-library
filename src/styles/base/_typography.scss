@@ -132,12 +132,26 @@ a {
 	@include text-link;
 }
 
-// text for screen readers only
+// Text for screen readers only.
 .screen-reader-text {
-	clip: rect( 1px, 1px, 1px, 1px );
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
 	height: 1px;
+	margin: -1px;
 	overflow: hidden;
-	position: absolute;
-	white-space: nowrap; /* added line */
+	padding: 0;
+	position: absolute !important;
 	width: 1px;
+	word-wrap: normal !important;
+}
+
+// Display text on focus (for skip links).
+.screen-reader-text:focus {
+	clip: auto !important;
+	display: block;
+	left: 0.5em;
+	top: 0.5em;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
 }
