@@ -18,17 +18,23 @@ $colors: "white", "red"; // Note black is the default.
 	width: $base-line-height;
 	height: $base-line-height;
 	vertical-align: middle;
+	background: no-repeat center center;
+	background-size: 75%;
+	width: $base-line-height;
+	height: $base-line-height;
 }
 
 @each $icon in $icons {
 
 	.icon--#{$icon} {
-		@include icon( $icon );
+		$iconSrc: iconSrc( $icon, "black" );
+		background-image: url( $iconSrc );
 	}
 
 	@each $color in $colors {
 		.icon--#{$icon}.icon--#{$color} {
-			@include icon( $icon, $color );
+			$iconSrc: iconSrc( $icon, $color );
+			background-image: url( $iconSrc );
 		}
 	}
 }

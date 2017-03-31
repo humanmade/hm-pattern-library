@@ -1,1 +1,8 @@
-<svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>67B5781D-CFCE-4855-A950-546426E0B47F</title><defs><path id="a" d="M24 12v12H0V0h24z"/></defs><g transform="translate(0 -2.986)" fill="none" fill-rule="evenodd"><mask id="b" fill="#000000"><use xlink:href="#a"/></mask><g mask="url(#b)" fill="#000000"><path d="M9.262 8.464l5.533 3.694.776-.403z"/><path d="M9.263 15.024v-6.56l6.308 3.291-6.308 3.269zm13.851-7.697s-.228-1.609-.928-2.317c-.888-.93-1.883-.935-2.34-.99-3.266-.235-8.167-.235-8.167-.235h-.01s-4.901 0-8.168.236c-.457.054-1.452.059-2.34.989-.7.708-.928 2.317-.928 2.317S0 9.217 0 11.106v1.771c0 1.89.233 3.779.233 3.779s.228 1.609.928 2.317c.888.93 2.055.9 2.575.998 1.867.18 7.938.235 7.938.235s4.906-.008 8.173-.244c.456-.054 1.451-.059 2.34-.989.7-.708.927-2.317.927-2.317s.233-1.89.233-3.779v-1.771c0-1.89-.233-3.779-.233-3.779z"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="16px" height="16px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+<path style="fill:#000000;" d="M12,3H4C2.343,3,1,4.343,1,6v4c0,1.657,1.343,3,3,3h8c1.656,0,3-1.343,3-3V6C15,4.343,13.656,3,12,3z
+	 M6,11V5l5,3L6,11z"/>
+</svg>
