@@ -45,11 +45,13 @@
 		}
 
 		icons.forEach( function( icon ) {
-			var li = document.createElement( 'li' );
-			var i  = document.createElement( 'i' );
+			var li   = document.createElement( 'li' );
+			var i    = document.createElement( 'i' );
+			var text = document.createTextNode( icon );
 			i.classList.add( 'icon' );
 			i.classList.add( 'icon--' + icon );
 			i.classList.add( 'icon--' + color.toLowerCase() );
+			i.appendChild( text );
 			li.appendChild( i );
 			container[0].appendChild( li );
 		} );
