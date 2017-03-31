@@ -135,20 +135,20 @@ a {
 // Text for screen readers only.
 .screen-reader-text {
 	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
+	clip: rect( 1px, 1px, 1px, 1px );
+	clip-path: inset( 50% );
 	height: 1px;
 	margin: -1px;
 	overflow: hidden;
 	padding: 0;
-	position: absolute !important;
+	position: absolute;
 	width: 1px;
-	word-wrap: normal !important;
+	word-wrap: normal;
 }
 
 // Display text on focus (for skip links).
 .screen-reader-text:focus {
-	clip: auto !important;
+	clip: auto;
 	display: block;
 	left: 0.5em;
 	top: 0.5em;
