@@ -1,6 +1,8 @@
 @mixin font-heading {
 	font-family: $font-family-heading;
 	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.01em;
 
 	em,
 	i,
@@ -14,7 +16,6 @@
 }
 
 @mixin font-body {
-
 	font-family: $font-family-body;
 	font-weight: 300;
 	text-transform: none;
@@ -24,6 +25,13 @@
 	b {
 		font-weight: 700;
 	}
+}
+
+@mixin font-accent {
+	font-family: $font-family-accent;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0;
 }
 
 @mixin text-xxl {

@@ -1,0 +1,63 @@
+@include( './../parts/header.html', { "css_file": "./../assets/styles/style-guide.css" } )  
+
+<a href="./../index.html">&#8592; Back to main page.</a>
+
+<h2>Icons</h2>
+
+<h3 id="style-guide-components-tag-cloud" class="style-guide-title">Default icons (black)</h3>
+
+<ul class="StyleGuide_IconList StyleGuide_IconList-Default"></ul>
+
+<h3 id="style-guide-components-tag-cloud" class="style-guide-title">Red icons</h3>
+
+<ul class="StyleGuide_IconList StyleGuide_IconList-Red"></ul>
+
+<h3 id="style-guide-components-tag-cloud" class="style-guide-title">White icons</h3>
+
+<ul class="StyleGuide_IconList StyleGuide_IconList-White"></ul>
+
+<script>
+	var colors = [ 'Default', 'Red', 'White' ];
+
+	var icons = [
+		'wordpress',
+		'server',
+		'facebook',
+		'twitter',
+		'youtube',
+		'strategy',
+		'bubble',
+		'link',
+		'lock',
+		'minus',
+		'minus-alt',
+		'plus',
+		'plus-alt',
+		'search',
+		'spinner',
+		'arrow-right',
+	];
+
+	colors.forEach( function( color ) {
+		var container = document.getElementsByClassName( 'StyleGuide_IconList-' + color );
+
+		if ( container.length < 1 ) {
+			return;
+		}
+
+		icons.forEach( function( icon ) {
+			var li   = document.createElement( 'li' );
+			var i    = document.createElement( 'i' );
+			var text = document.createTextNode( icon );
+			i.classList.add( 'icon' );
+			i.classList.add( 'icon--' + icon );
+			i.classList.add( 'icon--' + color.toLowerCase() );
+			i.appendChild( text );
+			li.appendChild( i );
+			container[0].appendChild( li );
+		} );
+	} );
+
+</script>
+
+@include( './../parts/footer.html', { "js_file": "./../assets/js/app.min.js" } )  ;
