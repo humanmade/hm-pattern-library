@@ -81,12 +81,12 @@
 
 @mixin text-sm {
 	font-size: .888888889rem;
-	line-height: $base-line-height;
+	line-height: $base-line-height-sm;
 }
 
 @mixin text-xs {
 	font-size: .777777778rem;
-	line-height: $base-line-height;
+	line-height: .714285714 * $base-line-height;
 }
 
 @mixin text-smoothing {
