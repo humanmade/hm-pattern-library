@@ -1,6 +1,6 @@
 .Btn {
 	@include font-body;
-	@include text-xm;
+	@include text-md;
 	border: 1px solid $color-link;
 	border-radius: 4px;
 	padding: #{ $gutter-width / 4 } $gutter-width;
