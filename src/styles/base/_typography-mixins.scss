@@ -86,7 +86,7 @@
 
 @mixin text-xs {
 	font-size: .777777778rem;
-	line-height: .714285714 * $base-line-height;
+	line-height: 1.4285;
 }
 
 @mixin text-smoothing {
