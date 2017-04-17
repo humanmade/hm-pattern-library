@@ -34,6 +34,7 @@
 	letter-spacing: 0;
 }
 
+// 50px (desktop)
 @mixin text-xxl {
 	font-size:  1.555555556rem;
 	line-height: $base-line-height-sm * 1.5;
@@ -44,6 +45,7 @@
 	}
 }
 
+// 32px (desktop)
 @mixin text-xl {
 	font-size:  1.333333333rem;
 	line-height: $base-line-height-sm * 1.25;
@@ -54,19 +56,17 @@
 	}
 }
 
+// 28
 @mixin text-lg {
-	font-size: 1.333333333rem;
-	line-height: $base-line-height * 1.5;
+	font-size: 1.555555556rem;
+	line-height: $base-line-height * 1.29;
 }
 
-@mixin text-xm {
-	font-size: 1.222222222rem;
-	line-height: $base-line-height * 1.25;
-}
 
+// 22
 @mixin text-md {
-	font-size: 1.111111111rem;
-	line-height: $base-line-height * 1.25;
+	font-size: 1.222222222rem;
+	line-height: $base-line-height;
 }
 
 @mixin text-std {
