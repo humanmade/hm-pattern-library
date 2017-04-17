@@ -17,12 +17,17 @@ $colors: "white", "red"; // Note black is the default.
 	display: inline-block;
 	width: $base-line-height;
 	height: $base-line-height;
+	padding: 0;
 	vertical-align: middle;
 	background: no-repeat center center;
 	background-size: 80%;
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 @each $icon in $icons {
