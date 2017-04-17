@@ -123,7 +123,7 @@
 	}
 
 	&:focus {
-		outline: 1px solid rgba( $hm-dark-grey, .4 );
+		outline: none;
 	}
 
 }
@@ -135,9 +135,5 @@
 	&:hover,
 	&:focus {
 		text-decoration: underline;
-	}
-
-	&:focus {
-		outline: 1px solid rgba( $hm-dark-grey, .4 );
 	}
 }
