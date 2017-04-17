@@ -77,6 +77,15 @@ ol,
 	margin: $margin-vertical-sm 0;
 }
 
+small,
+.text-sm {
+	@include text-sm;
+}
+
+.text-xs {
+	@include text-xs;
+}
+
 ul,
 ol {
 	list-style-position: outside;
