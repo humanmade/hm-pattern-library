@@ -105,13 +105,9 @@
 	text-decoration: none;
 	transition: color .2s ease-in, background .2s ease-in, border-width .2s ease-in, border-color .2s ease-in;
 
-	&:link {
-		color: $color-link;
-		text-decoration: none;
-	}
-
+	&:link,
 	&:visited {
-		color: darken( $color-link-visited, 10% );
+		color: $color-link;
 		text-decoration: none;
 	}
 
