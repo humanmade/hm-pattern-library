@@ -26,6 +26,11 @@ $colors: "white", "red"; // Note black is the default.
 	white-space: nowrap;
 	overflow: hidden;
 
+	&:hover,
+	&:focus {
+		border: none;
+	}
+
 	&:focus {
 		outline: none;
 	}
