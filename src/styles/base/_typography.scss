@@ -91,6 +91,11 @@ ol {
 	list-style-position: outside;
 	padding: 0;
 	padding: 0 0 0 $gutter-width;
+
+	ul,
+	ol {
+		margin: 0;
+	}
 }
 
 blockquote {
