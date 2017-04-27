@@ -1,11 +1,11 @@
 (function() {
 
-	var searchBars = document.getElementsByClassName( 'SearchBar' );
+	var searchBars = document.getElementsByClassName( 'search-bar' );
 
 	for ( var i = 0; i < searchBars.length; i++ ) {
 
 		var searchBar = searchBars[ i ];
-		var field     = searchBar.getElementsByClassName( 'SearchBar_Field' );
+		var field     = searchBar.getElementsByClassName( 'search-bar__field' );
 
 		if ( field.length < 1 ) {
 			return;
@@ -14,12 +14,12 @@
 		}
 
 		field.addEventListener( "focus", function() {
-			searchBar.classList.add( 'SearchBar-Focused' );
+			searchBar.classList.add( 'search-bar--focused' );
 		} );
 
 		field.addEventListener( "blur", function() {
 			window.setTimeout( function() {
-				searchBar.classList.remove( 'SearchBar-Focused' );
+				searchBar.classList.remove( 'search-bar--focused' );
 			}, 500 )
 		} );
 
