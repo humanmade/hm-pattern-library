@@ -1,4 +1,4 @@
-# Juniper 
+# Juniper
 
 The Human Made Web Style Guide and Pattern Library. [Head over to the site to see it in action!](https://humanmade.github.io/hm-pattern-library/)
 
@@ -28,7 +28,7 @@ The Human Made pattern library generates flat HTML and does not require a web se
 
 #### Workflow.
 
-All local development should be done against master. `dist` which contains the compiled files is ignored from version control and must be created using the `gulp` task. Releases are just the content of `dist` and nothing else. 
+All local development should be done against master. `dist` which contains the compiled files is ignored from version control and must be created using the `gulp` task. Releases are just the content of `dist` and nothing else.
 
 #### Creating a branch
 
@@ -38,7 +38,7 @@ When creating a branch, name your branch `[issue-number]-short-summary`.
 
 #### Submitting a pull request
 
-Before submitting a pull request, you will need to confirm your sass meets our coding standards by running `gulp lint-sass`. 
+Before submitting a pull request, you will need to confirm your sass meets our coding standards by running `gulp lint-sass`.
 
 When you push your branch, you will be able to submit a pull request. Travis CI runs on the repository and will need to pass on all pull requests.
 
@@ -46,21 +46,21 @@ If Travis CI fails, you can push further commits to the branch to fix the build.
 
 #### CSS Naming convention
 
-This repository uses a modified version of the SUIT CSS naming convention. Class names make use of `PascalCase`.
+This project follows the [BEM](http://getbem.com/) CSS naming convention.
 
 #### Components
 
-Sub-components are indicated with an underscore, variants with a hyphen. For example:
+Sub-components are indicated with an `__`, variants with a `--`
 
-* `SomeComponent`
-* `SomeComponent_SubComponent`
-* `SomeComponent-ComponentVariant`
+* `block`
+* `block__child`
+* `block__child--variant`
 
-In the styles/components directory, components should be placed in a file named for the component, `_SomeComponent.scss`.
+In the styles/components directory, components should be placed in a file named for the component, `_component.scss`.
 
 #### Utilities
 
-Utilities are prefixed with `util-`, for example `util-Clearfix`. A utility should be placed in the styles/utilities directory in a file named for the utility, `_Clearfix.scss`.
+Utilities are prefixed with `util-`, for example `util-clearfix`. A utility should be placed in the styles/utilities directory in a file named for the utility, `_clearfix.scss`.
 
 #### Vendor files
 
@@ -71,13 +71,13 @@ Class names in vendor files should not be changed, the files should be placed in
 **1.0.5**
 
 * Labels & Tag cloud styles
-* New alternate variant plus/minus icons. Removes need for 'beige' variations. 
+* New alternate variant plus/minus icons. Removes need for 'beige' variations.
 * New iconSrc helper function.
 * Remove animations from nav to fix overflow hidden bug.
 * New icon helper mixin. Also new lock and comment icons.
 * Fix some bugs in tables
 * Refactor links/buttons to break hard dependency.
- 
+
 **1.0.4**
 
 * Use component colour variables with brand variables as defaults for easier customizing. Props @missjwo
