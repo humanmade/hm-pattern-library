@@ -1,4 +1,4 @@
-.Form_Field,
+.form__field,
 input[type="text"],
 input[type="search"],
 input[type="password"],
@@ -34,21 +34,21 @@ input[type="email"] {
 
 		width: 50%;
 
-		&.Form_Field-Lg {
+		&.form__field--lg {
 			width: 100%;
 		}
 
-		&.Form_Field-Md {
+		&.form__field--md {
 			width: 33%;
 		}
 
-		&.Form_Field-Sm {
+		&.form__field--sm {
 			width: 15%;
 		}
 
 	}
 
-	&.Form_Field-Code {
+	&.form__field--code {
 		font-family: $font-family-code;
 
 		&::placeholder {
@@ -64,16 +64,16 @@ input[type="email"] {
 
 }
 
-.Form_Textarea,
+.form__textarea,
 textarea {
-	@extend .Form_Field;
+	@extend .form__field;
 	width: 100%;
 	clear: both;
 }
 
-.Form_Label,
-.Form label,
-.Form legend {
+.form__label,
+form label,
+form legend {
 	@include font-heading;
 	@include text-sm;
 	display: block;
@@ -87,7 +87,7 @@ fieldset {
 	margin: 0;
 }
 
-.Form_Checkbox_Group {
+.form__checkbox-group {
 
 	label {
 		@include font-body;
@@ -101,8 +101,8 @@ fieldset {
 	}
 }
 
-.Form_Radio_Group {
-	@extend .Form_Checkbox_Group;
+.form__radio-group {
+	@extend .form__checkbox-group;
 	margin-right: $gutter-width;
 	margin-bottom: $margin-vertical-sm / 2;
 	display: inline-block;
