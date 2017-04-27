@@ -1,4 +1,4 @@
-.StyleGuide_SearchContainer {
+.style-guide__search-container {
 	background: $color-primary;
 	width: 100%;
 	clear: both;
@@ -30,19 +30,13 @@
 // Note need for extra specificity to override input[type="text"].
 .search-bar .search-bar__field {
 	border: none;
-	background: $color-primary;
+	background: $color-primary-dark;
 	color: #FFF;
 	float: right;
 	margin: 0;
 	padding-right: 0;
 	width: 100%;
 	height: $margin-vertical-sm * 2;
-	border: 2px solid rgba( 255, 255, 255, 0.75 );
-
-	&:hover,
-	&:focus {
-		border-color: white;
-	}
 
 	&::placeholder {
 		color: rgba( #FFF, .75 );
@@ -52,15 +46,15 @@
 // TODO - remove in JS, replace with 'clear'?
 .search-bar__submit {
 	@extend .btn;
-	background: rgba( $color-primary, .8 );
+	background: rgba( $color-primary-dark, .8 );
 	border: none;
 	position: absolute;
-	top: 2px;
-	right: 2px;
+	top: 0;
+	right: $gutter-width / 2;
 	margin: 0;
 	text-indent: 150%;
 	padding: 0;
-	height: calc( #{ $margin-vertical-sm * 2 } - 4px );
+	height: $margin-vertical-sm * 2;
 	width: $margin-vertical-sm * 2;
 	overflow: hidden;
 	opacity: .75;
@@ -90,15 +84,11 @@
 	top: 100%;
 	left: 0;
 	right: 0;
-	background: $color-primary;
+	background: $color-primary-dark;
 	padding: 0;
 	border-radius: 0 0 4px 4px;
-	border: 2px solid white;
-	border-top: none;
 	color: #FFF;
 	margin: 0;
-	margin-top: -4px;
-	padding-top: 2px;
 	list-style: none;
 	z-index: 50;
 	overflow-x: hidden;
@@ -120,9 +110,10 @@
 	}
 
 	a {
+
 		padding: #{ $margin-vertical-sm / 2 } 0;
 		margin: 0 #{ $gutter-width };
-		border: none;
+		border-top: 1px solid desaturate( $color-primary, 5% );
 		display: block;
 		transition: none;
 
@@ -135,12 +126,7 @@
 			outline: none;
 			transition: none;
 		}
-
 	}
-
-	// &:first-child a {
-		// border-top: none;
-	// }
 }
 
 .search-bar__result__title,
