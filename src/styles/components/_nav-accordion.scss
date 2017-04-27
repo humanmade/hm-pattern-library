@@ -1,21 +1,21 @@
 /**
  * Helper mixin for generating color variations.
  */
-@mixin NavAccordion_Coloured( $bg, $border-color, $text-color: $color-text-default ) {
+@mixin navAccordionColoured( $bg, $border-color, $text-color: $color-text-default ) {
 
 	background: $bg;
 	color: $text-color;
 
-	.NavAccordion_Item {
+	.nav-accordion__item {
 		border-color: $border-color;
 	}
 
-	.NavAccordion_Item > ul:after {
+	.nav-accordion__item > ul:after {
 		border-color: $border-color;
 	}
 
-	.NavAccordion_Item .NavAccordion_Item {
-		.NavAccordion_Anchor:after {
+	.nav-accordion__item .nav-accordion__item {
+		.nav-accordion__anchor:after {
 			border-color: $border-color;
 		}
 	}
@@ -31,7 +31,7 @@
 		$border-color-toggle-hover: lighten( $border-color, 60% );
 	}
 
-	.NavAccordion_Toggle {
+	.nav-accordion__toggle {
 
 		border: none;
 		color: $border-color-toggle;
@@ -50,7 +50,7 @@
 
 }
 
-.NavAccordion {
+.nav-accordion {
 
 	@include font-heading;
 	@include text-sm;
@@ -61,6 +61,14 @@
 	a:link,
 	a:visited {
 		color: inherit;
+		text-decoration: none;
+		border: none;
+	}
+
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+		border: none;
 	}
 
 	ul,
@@ -74,7 +82,7 @@
 
 }
 
-.NavAccordion_Item {
+.nav-accordion__item {
 
 	font-size: inherit;
 	position: relative;
@@ -92,13 +100,13 @@
 
 }
 
-.NavAccordion_Anchor {
+.nav-accordion__anchor {
 	display: inline-block;
 	padding: #{ $margin-vertical-sm / 8 } 0;
 	position: relative;
 }
 
-.NavAccordion_Item > ul:after {
+.nav-accordion__item > ul:after {
 	content: " ";
 	border-left: 1px solid $border-color;
 	top: -.333333333rem;
@@ -107,19 +115,20 @@
 	position: absolute;
 }
 
-.NavAccordion_Item .NavAccordion_Item {
+.nav-accordion__item .nav-accordion__item {
 
+	@include font-body;
 	margin-left: 0;
 	padding-left: $gutter-width;
 	border-left: none;
 	border-bottom: none;
 
-	.NavAccordion_Anchor:after {
+	.nav-accordion__anchor:after {
 		content: " ";
 		width: $gutter-width / 2;
 		border-bottom: 1px solid $border-color;
 		position: absolute;
-		top: 1rem;
+		top: .8rem;
 		left: $gutter-width * -1;
 	}
 
@@ -129,13 +138,13 @@
 
 }
 
-.NavAccordion_Item .NavAccordion_Item .NavAccordion_Item {
+.nav-accordion__item .nav-accordion__item .nav-accordion__item {
 	@include font-body;
 }
 
-.NavAccordion_Toggle {
+.nav-accordion__toggle {
 
-	@extend .Btn-Small;
+	@extend .btn--small;
 	border: none;
 	display: block;
 	position: absolute;
@@ -175,15 +184,15 @@
 
 }
 
-.NavAccordion_Toggle-Open:after {
+.nav-accordion__toggle--open:after {
 	$iconSrc: iconSrc( "minus-alt" );
 	background-image: url( $iconSrc );
 }
 
-.NavAccordion-Red {
-	@include NavAccordion_Coloured( $color-primary, $border-color-primary, $color-nav-accordion-primary-text );
+.nav-accordion--red {
+	@include navAccordionColoured( $color-primary, $border-color-primary, $color-nav-accordion-primary-text );
 
-	.NavAccordion_Toggle {
+	.nav-accordion__toggle {
 
 		&:before {
 			background: rgba( 255, 255, 255, .85 );
@@ -201,18 +210,18 @@
 
 	}
 
-	.NavAccordion_Toggle-Open:after {
+	.nav-accordion__toggle--open:after {
 		$iconSrc: iconSrc( "minus-alt", "white" );
 		background-image: url( $iconSrc );
 	}
 
 }
 
-.NavAccordion-Grey,
-.NavAccordion-Beige {
-	@include NavAccordion_Coloured( $color-nav-accordion-grey-focus-background, $border-color-light, $color-nav-accordion-grey-text );
+.nav-accordion--grey,
+.nav-accordion--beige {
+	@include navAccordionColoured( $color-nav-accordion-grey-focus-background, $border-color-light, $color-nav-accordion-grey-text );
 }
 
-.NavAccordion_Item-Active > .NavAccordion_Anchor {
+.nav-accordion__item--active > .nav-accordion__anchor {
 	text-decoration: underline;
 }
