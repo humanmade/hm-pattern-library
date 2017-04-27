@@ -1,8 +1,8 @@
-.Loading {
+.loading {
 	display: none;
 }
 
-.Loading-Active {
+.loading--active {
 	@include icon( "spinner" );
 	background-size: 17px;
 	animation-name: spin;
@@ -16,12 +16,12 @@
 	top: -1px;
 }
 
-.Loading-White {
+.loading--white {
 	@include icon( "spinner", "white" );
 	background-size: 17px;
 }
 
-.Loading-Red {
+.loading--red {
 	@include icon( "spinner", "red" );
 	background-size: 17px;
 }
