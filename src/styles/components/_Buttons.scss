@@ -1,4 +1,4 @@
-.Btn {
+.btn {
 	@include font-body;
 	@include text-md;
 	border: 1px solid $color-link;
@@ -42,7 +42,7 @@
 	}
 }
 
-.Btn-Secondary {
+.btn--secondary {
 
 	color: $color-accent;
 	border-color: $color-accent;
@@ -59,7 +59,7 @@
 
 }
 
-.Btn-Tertiary {
+.btn--tertiary {
 
 	color: $color-text-default;
 	border-color: $color-text-default;
@@ -76,20 +76,20 @@
 
 }
 
-.Btn-Small {
+.btn--small {
 	@include text-std;
 	border-width: 1px;
 	padding: 0 #{ $gutter-width / 2 };
 }
 
-.Btn-Loading {
+.btn--loading {
 
 	&:after {
 		display: none;
 	}
 
-	.Loading-Active {
-		@extend .Loading-Red;
+	.loading--active {
+		@extend .loading--red;
 		margin-left: $gutter-width;
 	}
 
