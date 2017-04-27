@@ -25,19 +25,19 @@
  * For previewing a list/grid of logos.
  * This is used in the pattern library.
  */
-.HMLogos {
+.hm-logos {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.HMLogo-Container {
+.hm-logo-Container {
 
 	width: auto;
 	&:nth-child( n ) { background-color: white; }
 	&:nth-child( 2n ) { background-color: $hm-beige; }
 	&:nth-child( 3n ) { background-color: $hm-red; }
 
-	.HMLogo {
+	.hm-logo {
 		vertical-align: top;
 	}
 }
@@ -50,9 +50,9 @@
 	&:before {
 		content: " ";
 		display: block;
-		@extend .HMLogo;
-		@extend .HMLogo-Small;
-		@extend .HMLogo-Red;
+		@extend .hm-logo;
+		@extend .hm-logo--small;
+		@extend .hm-logo--red;
 
 		margin: 0 0 $base-line-height / 2;
 
@@ -73,12 +73,12 @@
 	margin-bottom: $margin-vertical-sm;
 }
 
-.NavAccordions {
+.nav-accordions {
 
 	@extend .util-Clearfix;
 	clear: both;
 
-	.NavAccordion {
+	.nav-accordion {
 		padding: $margin-vertical-sm $gutter-width * 2;
 		width: 100%;
 
@@ -96,7 +96,7 @@
 		padding: #{ $margin-vertical-sm / 2 } $gutter-width;
 	}
 
-	.Btn {
+	.btn {
 		margin: 0;
 	}
 }
