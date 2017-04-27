@@ -6,13 +6,13 @@
 }
 
 .search-bar {
-	@extend .util-Clearfix;
+	@extend .util-clearfix;
 	clear: both;
 	position: relative;
 }
 
 .search-bar__container {
-	@extend .util-Clearfix;
+	@extend .util-clearfix;
 	position: relative;
 
 	@media #{ $mq-md-up } {
