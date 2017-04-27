@@ -90,11 +90,15 @@
 	top: 100%;
 	left: 0;
 	right: 0;
-	background: $color-primary-dark;
+	background: $color-primary;
 	padding: 0;
 	border-radius: 0 0 4px 4px;
+	border: 2px solid white;
+	border-top: none;
 	color: #FFF;
 	margin: 0;
+	margin-top: -4px;
+	padding-top: 2px;
 	list-style: none;
 	z-index: 50;
 	overflow-x: hidden;
@@ -116,10 +120,9 @@
 	}
 
 	a {
-
 		padding: #{ $margin-vertical-sm / 2 } 0;
 		margin: 0 #{ $gutter-width };
-		border-top: 1px solid desaturate( $color-primary, 5% );
+		border: none;
 		display: block;
 		transition: none;
 
@@ -132,7 +135,12 @@
 			outline: none;
 			transition: none;
 		}
+
 	}
+
+	// &:first-child a {
+		// border-top: none;
+	// }
 }
 
 .search-bar__result__title,
