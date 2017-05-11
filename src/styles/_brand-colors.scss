@@ -1,5 +1,5 @@
 // Brand Colours.
-$hm-red:         #D94E3A;
+$hm-red:         #D14732;
 $hm-blue:        #7DC9DA;
 $hm-warm-grey:   #504C4C;
 $hm-dark-grey:   #353535;
@@ -8,8 +8,9 @@ $hm-medium-grey: #737373;
 $hm-light-grey:  #f7f7f7;
 $hm-brown:       #4F4641;
 
-$hm-red-accessible: #c9412d;
-
 // Alternate versions of main colors. Used for borders, backgrounds etc.
 $hm-red-light: saturate( lighten( $hm-red, 10% ), 5 );
 $hm-red-dark:  desaturate( darken( $hm-red, 6% ), 8 );
+
+// Deprecated.
+$hm-red-accessible: $hm-red !default;
