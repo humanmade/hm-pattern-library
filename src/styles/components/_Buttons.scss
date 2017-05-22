@@ -3,9 +3,9 @@
 	@include text-md;
 	border: 1px solid $color-link;
 	border-radius: 4px;
-	padding: #{ $gutter-width / 4 } $gutter-width;
-	background: none;
-	color: $color-link;
+	padding: #{ $margin-vertical-sm / 4 } $gutter-width;
+	background: $color-link;
+	color: $color-white;
 	margin-bottom: $margin-vertical-sm / 2;
 	margin-right: $gutter-width / 2;
 	display: inline-block;
@@ -16,6 +16,7 @@
 	box-shadow: none;
 	text-shadow: none;
 	height: auto;
+	transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
 	&:link,
 	&:visited {
@@ -28,6 +29,10 @@
 		color: $color-link;
 		text-decoration: none;
 		outline: none;
+		border: 1px solid $color-link;
+		background: $color-white;
+		color: $color-link;
+		transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out;
 	}
 
 	&[disabled] {
@@ -43,26 +48,27 @@
 }
 
 .Btn-Secondary {
-
-	color: $color-accent;
-	border-color: $color-accent;
+	color: $color-link;
+	border-color: $color-link;
+	background: $color-white;
 
 	&:link,
 	&:visited {
-		color: $color-accent;
+		color: $color-link;
 	}
 
 	&:hover,
 	&:focus {
-		color: $color-accent;
+		color: $color-white;
+		background: $color-link;
+		border: 1px solid $color-link;
 	}
-
 }
 
 .Btn-Tertiary {
-
 	color: $color-text-default;
 	border-color: $color-text-default;
+	background: none;
 
 	&:link,
 	&:visited {
@@ -71,9 +77,10 @@
 
 	&:hover,
 	&:focus {
-		color: $color-text-default;
+		color: $color-white;
+		background: $color-text-default;
+		border: 1px solid $color-text-default;
 	}
-
 }
 
 .Btn-Small {
@@ -89,8 +96,13 @@
 	}
 
 	.Loading-Active {
-		@extend .Loading-Red;
+		@extend .Loading-White;
 		margin-left: $gutter-width;
+		margin-bottom: -1px;
+	}
+
+	&:hover .Loading-Active {
+		@extend .Loading-Red;
 	}
 
 }
