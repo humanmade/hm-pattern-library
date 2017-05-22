@@ -48,9 +48,9 @@ $color-text-dark:    $hm-dark-grey !default;
 $color-text-heading: $hm-dark-grey !default;
 $color-text-pre:     $hm-warm-grey !default;
 
-$color-link:         $hm-red-accessible !default;
-$color-link-hover:   $hm-red-accessible !default;
-$color-link-visited: darken( $hm-red-accessible, 3% ) !default;
+$color-link:         $hm-red !default;
+$color-link-hover:   $hm-red !default;
+$color-link-visited: darken( $hm-red, 3% ) !default;
 
 $color-background-pre: $hm-light-grey !default;
 
