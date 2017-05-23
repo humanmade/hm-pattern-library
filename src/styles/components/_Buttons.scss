@@ -29,7 +29,6 @@
 		color: $color-link;
 		text-decoration: none;
 		outline: none;
-		border: 1px solid $color-link;
 		background: $color-white;
 		color: $color-link;
 		transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -38,6 +37,12 @@
 	&[disabled] {
 		cursor: default;
 		opacity: 0.3;
+
+		&:hover,
+		&:focus {
+			background: $color-link;
+			color: $color-white;
+		}
 	}
 
 	&--block {
@@ -63,6 +68,16 @@
 		background: $color-link;
 		border: 1px solid $color-link;
 	}
+
+	&[disabled] {
+		&:hover,
+		&:focus {
+			background: $color-link;
+			border-color: $color-link;
+			color: $color-white;
+		}
+	}
+
 }
 
 .Btn-Tertiary {
@@ -80,6 +95,33 @@
 		color: $color-white;
 		background: $color-text-default;
 		border: 1px solid $color-text-default;
+	}
+
+	&[disabled] {
+		&:hover,
+		&:focus {
+			background: none;
+			border-color: $color-text-default;
+			color: $color-text-default;
+		}
+	}
+}
+
+.Btn-Inverted {
+	color: $color-white;
+	border-color: $color-white;
+	background: none;
+
+	&:link,
+	&:visited {
+		color: $color-white;
+	}
+
+	&:hover,
+	&:focus {
+		color: $color-link;
+		background: $color-white;
+		border: 1px solid $color-link;
 	}
 }
 
