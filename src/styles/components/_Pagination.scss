@@ -51,8 +51,9 @@
 		@extend .cta;
 		@extend .cta--small;
 		float: none;
+
 		&:after {
-			display: none !important;
+			display: none;
 		}
 	}
 }
