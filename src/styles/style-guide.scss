@@ -68,9 +68,8 @@
 }
 
 .pattern-library-subtitle {
-	@extend h3;
 	margin-top: $margin-vertical-sm * -1;
-	margin-bottom: $margin-vertical-sm;
+	margin-bottom: $margin-vertical-sm * 1;
 }
 
 .NavAccordions {
