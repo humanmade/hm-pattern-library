@@ -6,9 +6,9 @@ const rename = require( 'gulp-rename' );
 // JavaScript concatination and compression.
 gulp.task( 'js', () => {
 	return gulp.src( './src/js/**/*.js' )
-		.pipe( concat( 'app.js' ) )
+		.pipe( concat( 'juniper.js' ) )
 		.pipe( gulp.dest( 'dist/assets/js' ) )
-		.pipe( rename( 'app.min.js' ) )
+		.pipe( rename( 'juniper.min.js' ) )
 		.pipe( uglify() )
 		.pipe( gulp.dest( 'dist/assets/js' ) );
 } );
