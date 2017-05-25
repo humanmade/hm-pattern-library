@@ -21,7 +21,6 @@
 
 	var icons = [
 		'wordpress',
-		'server',
 		'facebook',
 		'twitter',
 		'youtube',
@@ -29,7 +28,8 @@
 		'instagram',
 		'linkedin',
 		'strategy',
-		'bubble',
+		'server',
+		'comment',
 		'pin',
 		'link',
 		'lock',
@@ -37,10 +37,13 @@
 		'minus-alt',
 		'plus',
 		'plus-alt',
+		'close',
 		'search',
 		'spinner',
+		'arrow-left',
 		'arrow-right',
-		'close'
+		'arrow-up',
+		'arrow-down',
 	];
 
 	colors.forEach( function( color ) {
@@ -56,7 +59,10 @@
 			var text = document.createTextNode( icon );
 			i.classList.add( 'icon' );
 			i.classList.add( 'icon--' + icon );
-			i.classList.add( 'icon--' + color.toLowerCase() );
+			if ( color !== 'Default' ) {
+				i.classList.add( 'icon--' + color.toLowerCase() );
+			}
+			i.title = i.classList.toString();
 			i.appendChild( text );
 			li.appendChild( i );
 			container[0].appendChild( li );
