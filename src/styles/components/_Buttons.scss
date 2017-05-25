@@ -3,9 +3,9 @@
 	@include text-md;
 	border: 1px solid $color-link;
 	border-radius: 4px;
-	padding: #{ $gutter-width / 4 } $gutter-width;
-	background: none;
-	color: $color-link;
+	padding: #{ $margin-vertical-sm / 4 } $gutter-width;
+	background: $color-link;
+	color: $color-white;
 	margin-bottom: $margin-vertical-sm / 2;
 	margin-right: $gutter-width / 2;
 	display: inline-block;
@@ -16,10 +16,11 @@
 	box-shadow: none;
 	text-shadow: none;
 	height: auto;
+	transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
 	&:link,
 	&:visited {
-		color: $color-link;
+		color: $color-white;
 		text-decoration: none;
 	}
 
@@ -28,11 +29,20 @@
 		color: $color-link;
 		text-decoration: none;
 		outline: none;
+		background: $color-white;
+		color: $color-link;
+		transition: background 0.2s ease-in-out, border-color 0.2s ease-in-out;
 	}
 
 	&[disabled] {
 		cursor: default;
 		opacity: 0.3;
+
+		&:hover,
+		&:focus {
+			background: $color-link;
+			color: $color-white;
+		}
 	}
 
 	&--block {
@@ -43,26 +53,37 @@
 }
 
 .Btn-Secondary {
-
-	color: $color-accent;
-	border-color: $color-accent;
+	color: $color-link;
+	border-color: $color-link;
+	background: $color-white;
 
 	&:link,
 	&:visited {
-		color: $color-accent;
+		color: $color-link;
 	}
 
 	&:hover,
 	&:focus {
-		color: $color-accent;
+		color: $color-white;
+		background: $color-link;
+		border: 1px solid $color-link;
+	}
+
+	&[disabled] {
+		&:hover,
+		&:focus {
+			background: $color-link;
+			border-color: $color-link;
+			color: $color-white;
+		}
 	}
 
 }
 
 .Btn-Tertiary {
-
 	color: $color-text-default;
 	border-color: $color-text-default;
+	background: none;
 
 	&:link,
 	&:visited {
@@ -71,9 +92,37 @@
 
 	&:hover,
 	&:focus {
-		color: $color-text-default;
+		color: $color-white;
+		background: $color-text-default;
+		border: 1px solid $color-text-default;
 	}
 
+	&[disabled] {
+		&:hover,
+		&:focus {
+			background: none;
+			border-color: $color-text-default;
+			color: $color-text-default;
+		}
+	}
+}
+
+.Btn-Inverted {
+	color: $color-white;
+	border-color: $color-white;
+	background: none;
+
+	&:link,
+	&:visited {
+		color: $color-white;
+	}
+
+	&:hover,
+	&:focus {
+		color: $color-link;
+		background: $color-white;
+		border: 1px solid $color-link;
+	}
 }
 
 .Btn-Small {
@@ -89,8 +138,13 @@
 	}
 
 	.Loading-Active {
+		@extend .Loading-White;
+		margin-left: $gutter-width / 2;
+		margin-bottom: -1px;
+	}
+
+	&:hover .Loading-Active {
 		@extend .Loading-Red;
-		margin-left: $gutter-width;
 	}
 
 }
