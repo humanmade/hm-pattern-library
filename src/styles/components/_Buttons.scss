@@ -139,7 +139,7 @@
 
 	.Loading-Active {
 		@extend .Loading-White;
-		margin-left: $gutter-width;
+		margin-left: $gutter-width / 2;
 		margin-bottom: -1px;
 	}
 
