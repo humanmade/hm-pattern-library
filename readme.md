@@ -1,4 +1,4 @@
-# Juniper 
+# Juniper
 
 The Human Made Web Style Guide and Pattern Library. [Head over to the site to see it in action!](https://humanmade.github.io/hm-pattern-library/)
 
@@ -28,7 +28,7 @@ The Human Made pattern library generates flat HTML and does not require a web se
 
 #### Workflow.
 
-All local development should be done against master. `dist` which contains the compiled files is ignored from version control and must be created using the `gulp` task. Releases are just the content of `dist` and nothing else. 
+All local development should be done against master. `dist` which contains the compiled files is ignored from version control and must be created using the `gulp` task. Releases are just the content of `dist` and nothing else.
 
 #### Creating a branch
 
@@ -38,7 +38,7 @@ When creating a branch, name your branch `[issue-number]-short-summary`.
 
 #### Submitting a pull request
 
-Before submitting a pull request, you will need to confirm your sass meets our coding standards by running `gulp lint-sass`. 
+Before submitting a pull request, you will need to confirm your sass meets our coding standards by running `gulp lint-sass`.
 
 When you push your branch, you will be able to submit a pull request. Travis CI runs on the repository and will need to pass on all pull requests.
 
@@ -68,16 +68,22 @@ Class names in vendor files should not be changed, the files should be placed in
 
 ## Changelog
 
+**2.0**
+
+* Big overhaul for the new HMN.MD design. Version 2.0 breaks backwards compatability with older versions.
+* New: Labels, Pagination.
+* Simplify, removing search and collapsable nav components, and associated JS>
+
 **1.0.5**
 
 * Labels & Tag cloud styles
-* New alternate variant plus/minus icons. Removes need for 'beige' variations. 
+* New alternate variant plus/minus icons. Removes need for 'beige' variations.
 * New iconSrc helper function.
 * Remove animations from nav to fix overflow hidden bug.
 * New icon helper mixin. Also new lock and comment icons.
 * Fix some bugs in tables
 * Refactor links/buttons to break hard dependency.
- 
+
 **1.0.4**
 
 * Use component colour variables with brand variables as defaults for easier customizing. Props @missjwo
