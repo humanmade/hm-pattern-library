@@ -3,7 +3,7 @@
 	@include text-md;
 	border: 1px solid $color-link;
 	border-radius: 4px;
-	padding: #{ $margin-vertical-sm / 4 } $gutter-width;
+	padding: calc( #{ $margin-vertical-sm / 4 } + 1px ) $gutter-width;
 	background: $color-link;
 	color: $color-white;
 	margin-bottom: $margin-vertical-sm / 2;
