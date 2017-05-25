@@ -46,21 +46,21 @@ If Travis CI fails, you can push further commits to the branch to fix the build.
 
 #### CSS Naming convention
 
-This repository uses a modified version of the SUIT CSS naming convention. Class names make use of `PascalCase`.
+This project follows the [BEM](http://getbem.com/) CSS naming convention.
 
 #### Components
 
-Sub-components are indicated with an underscore, variants with a hyphen. For example:
+Sub-components are indicated with an `__`, variants with a `--`
 
-* `SomeComponent`
-* `SomeComponent_SubComponent`
-* `SomeComponent-ComponentVariant`
+* `block`
+* `block__child`
+* `block__child--variant`
 
-In the styles/components directory, components should be placed in a file named for the component, `_SomeComponent.scss`.
+In the styles/components directory, components should be placed in a file named for the component, `_component.scss`.
 
 #### Utilities
 
-Utilities are prefixed with `util-`, for example `util-Clearfix`. A utility should be placed in the styles/utilities directory in a file named for the utility, `_Clearfix.scss`.
+Utilities are prefixed with `util-`, for example `util-clearfix`. A utility should be placed in the styles/utilities directory in a file named for the utility, `_clearfix.scss`.
 
 #### Vendor files
 

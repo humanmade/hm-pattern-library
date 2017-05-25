@@ -1,5 +1,5 @@
-		<div class="Footer">
-			<p><span class="HMLogo HMLogo-Tiny"></span><a href="http://hmn.md">Made by Humans</a></p>
+		<div class="footer">
+			<p><span class="hm-logo hm-logo--tiny"></span><a href="http://hmn.md">Made by Humans</a></p>
 		</div>
 
 	</div>
@@ -11,16 +11,16 @@
 		(function() {
 
 			// Fake some search results for search bar demo.
-			Array.prototype.forEach.call( document.getElementsByClassName( 'SearchBar' ), function( searchBar ) {
+			Array.prototype.forEach.call( document.getElementsByClassName( 'search-bar' ), function( searchBar ) {
 
-				var fields = searchBar.getElementsByClassName( 'SearchBar_Field' );
+				var fields = searchBar.getElementsByClassName( 'search-bar__field' );
 
 				if ( fields.length > 0 ) {
 					fields[0].addEventListener( "keyup", function() {
 						if ( fields[0].value.length > 0 ) {
-							searchBar.classList.add( 'SearchBar-HasResults' );
+							searchBar.classList.add( 'search-bar--has-results' );
 						} else {
-							searchBar.classList.remove( 'SearchBar-HasResults' );
+							searchBar.classList.remove( 'search-bar--has-results' );
 						}
 					} );
 				}

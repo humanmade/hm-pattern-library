@@ -1,5 +1,5 @@
 // Pattern Library Swatches
-.Swatch {
+.swatch {
 
 	float: left;
 	width: 50%;
@@ -16,7 +16,7 @@
 	}
 }
 
-.Swatch_Background {
+.swatch__background {
 
 	height: $margin-vertical-sm;
 	display: block;
@@ -28,14 +28,14 @@
 	}
 }
 
-.Swatch_Description {
+.swatch__description {
 	@include text-sm;
 	display: block;
 	text-align: center;
 	margin: #{ $margin-vertical-sm / 4 } 0 0;
 }
 
-.Swatch-Border {
+.swatch--border {
 	height: auto;
 
 	hr {

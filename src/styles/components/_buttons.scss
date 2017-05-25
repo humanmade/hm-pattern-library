@@ -1,4 +1,4 @@
-.Btn {
+.btn {
 	@include font-body;
 	@include text-md;
 	border: 1px solid $color-link;
@@ -52,7 +52,7 @@
 	}
 }
 
-.Btn-Secondary {
+.btn--secondary {
 	color: $color-link;
 	border-color: $color-link;
 	background: $color-white;
@@ -80,7 +80,7 @@
 
 }
 
-.Btn-Tertiary {
+.btn--tertiary {
 	color: $color-text-default;
 	border-color: $color-text-default;
 	background: none;
@@ -107,7 +107,7 @@
 	}
 }
 
-.Btn-Inverted {
+.btn--inverted {
 	color: $color-white;
 	border-color: $color-white;
 	background: none;
@@ -125,26 +125,26 @@
 	}
 }
 
-.Btn-Small {
+.btn--small {
 	@include text-std;
 	border-width: 1px;
 	padding: 0 #{ $gutter-width / 2 };
 }
 
-.Btn-Loading {
+.btn--loading {
 
 	&:after {
 		display: none;
 	}
 
-	.Loading-Active {
-		@extend .Loading-White;
+	.loading--active {
+		@extend .loading--white;
 		margin-left: $gutter-width / 2;
 		margin-bottom: -1px;
 	}
 
-	&:hover .Loading-Active {
-		@extend .Loading-Red;
+	&:hover .loading--active {
+		@extend .loading--red;
 	}
 
 }

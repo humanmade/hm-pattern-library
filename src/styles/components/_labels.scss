@@ -1,4 +1,4 @@
-.Label {
+.label {
 
 	@include text-sm;
 	border: 1px solid $color-link;
@@ -35,7 +35,7 @@
 
 }
 
-.Label_Count {
+.label__count {
 	display: inline-block;
 	border-radius: 100%;
 	min-width: $base-font-size;
@@ -48,8 +48,8 @@
 	margin-left: 0.1em;
 	margin-right: 0.1em;
 
-	.Label:hover &,
-	.Label:focus & {
+	.label:hover &,
+	.label:focus & {
 		background-color: $color-white;
 		color: $color-primary;
 	}

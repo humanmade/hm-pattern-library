@@ -1,17 +1,17 @@
 /**
- * Pagination.
+ * pagination.
  *
  * Requires markup like:
  *
- * <div class="Pagination">
+ * <div class="pagination">
  * <?php previous_posts_link( 'Previous Page' ); ?>
  * <?php next_posts_link( 'Next Page' ); ?>
  * </div>
 */
 
-.Pagination {
+.pagination {
 
-	@extend .util-Clearfix;
+	@extend .util-clearfix;
 
 	margin: $base-line-height auto;
 	border-top: 1px solid $border-color;
@@ -19,7 +19,7 @@
 	text-align: center;
 
 	a,
-	&-Current {
+	&__item {
 		@extend .cta;
 		@extend .cta--small;
 	}
@@ -33,16 +33,20 @@
 		@extend .cta--arrow;
 		float: right;
 	}
+
+	&:empty {
+		display: none;
+	}
 }
 
 
-.Pagination-Article {
+.pagination--numbers {
 
 	text-align: center;
 
 	> a,
 	> span,
-	.Pagination-Current {
+	&__item {
 		margin: 0 $gutter-width / 2;
 	}
 
@@ -59,5 +63,5 @@
 }
 
 .wp-pagenavi {
-	@extend .Pagination-Article;
+	@extend .pagination--numbers;
 }
