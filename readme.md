@@ -68,6 +68,12 @@ Class names in vendor files should not be changed, the files should be placed in
 
 ## Changelog
 
+**2.0**
+
+* Big overhaul for the new HMN.MD design. Version 2.0 breaks backwards compatability with older versions.
+* New: Labels, Pagination.
+* Simplify, removing search and collapsable nav components, and associated JS>
+
 **1.0.5**
 
 * Labels & Tag cloud styles

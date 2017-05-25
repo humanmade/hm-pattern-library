@@ -6,22 +6,21 @@
 
 <h3 id="style-guide-components-tag-cloud" class="style-guide-title">Default icons (black)</h3>
 
-<ul class="StyleGuide_IconList StyleGuide_IconList-Default"></ul>
+<ul class="pattern-library-icon-list pattern-library-icon-list--default"></ul>
 
 <h3 id="style-guide-components-tag-cloud" class="style-guide-title">Red icons</h3>
 
-<ul class="StyleGuide_IconList StyleGuide_IconList-Red"></ul>
+<ul class="pattern-library-icon-list pattern-library-icon-list--red"></ul>
 
 <h3 id="style-guide-components-tag-cloud" class="style-guide-title">White icons</h3>
 
-<ul class="StyleGuide_IconList StyleGuide_IconList-White"></ul>
+<ul class="pattern-library-icon-list pattern-library-icon-list--white"></ul>
 
 <script>
-	var colors = [ 'Default', 'Red', 'White' ];
+	var colors = [ 'default', 'red', 'white' ];
 
 	var icons = [
 		'wordpress',
-		'server',
 		'facebook',
 		'twitter',
 		'youtube',
@@ -29,7 +28,8 @@
 		'instagram',
 		'linkedin',
 		'strategy',
-		'bubble',
+		'server',
+		'comment',
 		'pin',
 		'link',
 		'lock',
@@ -37,14 +37,17 @@
 		'minus-alt',
 		'plus',
 		'plus-alt',
+		'close',
 		'search',
 		'spinner',
+		'arrow-left',
 		'arrow-right',
-		'close'
+		'arrow-up',
+		'arrow-down',
 	];
 
 	colors.forEach( function( color ) {
-		var container = document.getElementsByClassName( 'StyleGuide_IconList-' + color );
+		var container = document.getElementsByClassName( 'pattern-library-icon-list--' + color );
 
 		if ( container.length < 1 ) {
 			return;
@@ -56,7 +59,10 @@
 			var text = document.createTextNode( icon );
 			i.classList.add( 'icon' );
 			i.classList.add( 'icon--' + icon );
-			i.classList.add( 'icon--' + color.toLowerCase() );
+			if ( color !== 'Default' ) {
+				i.classList.add( 'icon--' + color.toLowerCase() );
+			}
+			i.title = i.classList.toString();
 			i.appendChild( text );
 			li.appendChild( i );
 			container[0].appendChild( li );

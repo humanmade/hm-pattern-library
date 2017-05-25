@@ -4,7 +4,7 @@
  */
 
 @import "style";
-@import "components/Swatch";
+@import "components/swatch";
 
 .container {
 
@@ -25,12 +25,12 @@
  * For previewing a list/grid of logos.
  * This is used in the pattern library.
  */
-.hm-logos {
+.pattern-library-logos {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.hm-logo-Container {
+.pattern-library-logos__container {
 
 	width: auto;
 	&:nth-child( n ) { background-color: white; }
@@ -68,32 +68,18 @@
 }
 
 .pattern-library-subtitle {
-	@extend h3;
 	margin-top: $margin-vertical-sm * -1;
-	margin-bottom: $margin-vertical-sm;
+	margin-bottom: $margin-vertical-sm * 1;
 }
 
-.nav-accordions {
-
-	@extend .util-clearfix;
-	clear: both;
-
-	.nav-accordion {
-		padding: $margin-vertical-sm $gutter-width * 2;
-		width: 100%;
-
-		@media #{ $mq-sm-up } {
-			width: 33.333%;
-			float: left;
-		}
-	}
-}
-
-.StyleGuide_LoadingIndicators {
-
-	.StyleGuide_LoadingIndicator_Container {
+.pattern-library-loading-indicators {
+	&__container {
 		display: inline-block;
 		padding: #{ $margin-vertical-sm / 2 } $gutter-width;
+
+		&:nth-child( 2 ) {
+			color: $color-primary;
+		}
 	}
 
 	.btn {
@@ -101,11 +87,7 @@
 	}
 }
 
-.StyleGide_LoadingIndicator_Red {
-	color: $color-primary;
-}
-
-.StyleGuide_IconList {
+.pattern-library-icon-list {
 	background: $hm-light-grey;
 	list-style: none;
 	margin: 0;
@@ -120,10 +102,9 @@
 		.icon {
 			display: block;
 		}
-
 	}
 
-	&-White {
+	&--white {
 		background: $hm-red;
 	}
 }
