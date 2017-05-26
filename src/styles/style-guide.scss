@@ -3,8 +3,8 @@
  * and you do not need to include this file in your project.
  */
 
-@import "style";
-@import "components/Swatch";
+@import "juniper";
+@import "components/swatch";
 
 .container {
 
@@ -25,19 +25,19 @@
  * For previewing a list/grid of logos.
  * This is used in the pattern library.
  */
-.HMLogos {
+.pattern-library-logos {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.HMLogo-Container {
+.pattern-library-logos__container {
 
 	width: auto;
 	&:nth-child( n ) { background-color: white; }
 	&:nth-child( 2n ) { background-color: $hm-beige; }
-	&:nth-child( 3n ) { background-color: $hm-primary; }
+	&:nth-child( 3n ) { background-color: $hm-red; }
 
-	.HMLogo {
+	.hm-logo {
 		vertical-align: top;
 	}
 }
@@ -50,53 +50,61 @@
 	&:before {
 		content: " ";
 		display: block;
-		@extend .HMLogo;
-		@extend .HMLogo-Small;
-		@extend .HMLogo-Red;
+		@extend .hm-logo;
+		@extend .hm-logo--small;
+		@extend .hm-logo--red;
 
-		margin: 0 0 $base-line-height;
+		margin: 0 0 $base-line-height / 2;
 
 		@media #{ $mq-md-up } {
-			position: absolute;
-			left: -130px;
-			transform: scale( 1.75 );
-			top: 34px;
+			width: $base-line-height * 2.5;
+			height: $base-line-height * 2.5;
+			top: 3px;
 			margin: 0;
+			margin-bottom: $base-line-height;
 		}
 
 	}
 }
 
 .pattern-library-subtitle {
-	@include text-md;
-	margin-top: -1.94375rem;
-	font-style: italic;
+	margin-top: $margin-vertical-sm * -1;
+	margin-bottom: $margin-vertical-sm * 1;
 }
 
-.NavAccordions {
+.pattern-library-loading-indicators {
+	&__container {
+		display: inline-block;
+		padding: #{ $margin-vertical-sm / 2 } $gutter-width;
 
-	@extend .util-Clearfix;
-	clear: both;
-
-	.NavAccordion {
-		padding: $base-line-height / 2 $gutter-width / 2;
-		width: 100%;
-
-		@media #{ $mq-sm-up } {
-			width: 33.333%;
-			float: left;
+		&:nth-child( #{ 2 } ) { // Hack around a bug: https://github.com/sasstools/sass-lint/issues/1049
+			color: $color-primary;
 		}
 	}
+
+	.btn {
+		margin: 0;
+	}
 }
 
-.StyleGuide_LoadingIndicators {
+.pattern-library-icon-list {
+	background: $hm-light-grey;
+	list-style: none;
+	margin: 0;
+	padding: $base-line-height / 4;
 
-	.StyleGuide_LoadingIndicator_Container {
+	li {
 		display: inline-block;
-		padding: #{ $base-line-height / 2 } $gutter-width;
+		padding: $base-line-height / 4;
+		width: $base-line-height * 1.5;
+		height: $base-line-height * 1.5;
+
+		.icon {
+			display: block;
+		}
 	}
 
-	.Btn {
-		margin: 0;
+	&--white {
+		background: $hm-red;
 	}
 }

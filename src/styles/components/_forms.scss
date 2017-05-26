@@ -1,20 +1,20 @@
-.Form_Field,
+.form__field,
 input[type="text"],
 input[type="search"],
 input[type="password"],
 input[type="email"] {
 	@include font-body;
 	@include text-std;
-	border: 1px solid $border-color;
-	padding: #{ $base-line-height / 2 } 1em #{ $base-line-height / 2 };
+	border: 2px solid $border-color;
+	padding: #{ $margin-vertical-sm / 4 } $gutter-width;
 	background: white;
 	box-shadow: none;
 	color: $color-input-text;
-	margin-bottom: $base-line-height / 2;
-	margin-right: $base-line-height / 2;
+	margin-bottom: $margin-vertical-sm;
+	margin-right: $gutter-width / 2;
 	display: block;
 	text-align: left;
-	border-radius: 2px;
+	border-radius: 4px;
 	vertical-align: middle;
 	width: 100%;
 	max-width: 100%;
@@ -34,21 +34,21 @@ input[type="email"] {
 
 		width: 50%;
 
-		&.Form_Field-Lg {
+		&.form__field--lg {
 			width: 100%;
 		}
 
-		&.Form_Field-Md {
+		&.form__field--md {
 			width: 33%;
 		}
 
-		&.Form_Field-Sm {
+		&.form__field--sm {
 			width: 15%;
 		}
 
 	}
 
-	&.Form_Field-Code {
+	&.form__field--code {
 		font-family: $font-family-code;
 
 		&::placeholder {
@@ -64,21 +64,21 @@ input[type="email"] {
 
 }
 
-.Form_Textarea,
+.form__textarea,
 textarea {
-	@extend .Form_Field;
+	@extend .form__field;
 	width: 100%;
 	clear: both;
 }
 
-.Form_Label,
-.Form label,
-.Form legend {
+.form__label,
+form label,
+form legend {
 	@include font-heading;
 	@include text-sm;
 	display: block;
-	margin-top: $base-line-height / 2;
-	margin-bottom: 0;
+	margin-top: $margin-vertical-sm;
+	margin-bottom: $margin-vertical-sm / 4;
 }
 
 fieldset {
@@ -87,7 +87,7 @@ fieldset {
 	margin: 0;
 }
 
-.Form_Checkbox_Group {
+.form__checkbox-group {
 
 	label {
 		@include font-body;
@@ -101,10 +101,10 @@ fieldset {
 	}
 }
 
-.Form_Radio_Group {
-	@extend .Form_Checkbox_Group;
+.form__radio-group {
+	@extend .form__checkbox-group;
 	margin-right: $gutter-width;
-	margin-bottom: $base-line-height / 2;
+	margin-bottom: $margin-vertical-sm / 2;
 	display: inline-block;
 
 }

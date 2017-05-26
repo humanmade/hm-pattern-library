@@ -1,14 +1,13 @@
-.Footer {
+.footer {
 
 	@include font-heading;
 	@include text-sm;
 	color: $color-footer-text;
 	border-top: 1px solid $border-color;
-	padding-top: $base-line-height / 2;
-	margin: #{ $base-line-height * 2 } 0;
+	margin: $margin-vertical-lg 0;
 
-	.HMLogo-Tiny {
-		margin: 0 $base-line-height / 2 0 0;
+	.hm-logo--tiny {
+		margin-left: 0;
 		opacity: 0.6;
 		position: relative;
 		top: -1px;
