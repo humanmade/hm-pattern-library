@@ -44,6 +44,12 @@ When you push your branch, you will be able to submit a pull request. Travis CI 
 
 If Travis CI fails, you can push further commits to the branch to fix the build.
 
+#### Building and committing a new release.
+
+* Run the release bash script. `release.sh`.
+* The optional first param is the branch you wish to deploy to. This defaults to `gh-pages`, but can be set to a dev branch if required. Note it will throw out all your changes in the `dist` directory, so be careful.
+* You still have to manually commit your changes, just to be safe :)
+
 #### CSS Naming convention
 
 This project follows the [BEM](http://getbem.com/) CSS naming convention.

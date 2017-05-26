@@ -21,6 +21,6 @@ gulp.task( 'watch', () => {
 
 // Default task. Do everything.
 gulp.task( 'default', [ 'styles', 'js', 'svg', 'images', 'fileinclude', 'lint' ] );
+gulp.task( 'build', [ 'styles', 'js', 'svg', 'images', 'fileinclude' ] );
 
 // Build task. Should be run before release.
-gulp.task( 'build',   [ 'clean-dist', 'styles', 'js', 'svg', 'images', 'fileinclude' ] );
