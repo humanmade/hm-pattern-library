@@ -133,6 +133,7 @@ pre {
 }
 
 code {
+	@include text-sm;
 	line-height: inherit;
 }
 
