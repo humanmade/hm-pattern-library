@@ -15,7 +15,6 @@ pre[class*="language-"] {
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.5;
 	tab-size: 4;
 	hyphens: none;
 }
@@ -29,7 +28,7 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: #{ $base-line-height / 2 } #{ $gutter-width / 2 };
+	padding: #{ $margin-vertical-sm / 2 } #{ $gutter-width / 2 };
 	overflow: auto;
 }
 
@@ -107,4 +106,3 @@ pre[class*="language-"] {
 .token.entity {
 	cursor: help;
 }
-

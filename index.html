@@ -4,12 +4,12 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Juniper - HM Pattern Library</title>
+	<title>Juniper 2.0 - HM Pattern Library</title>
 	<link rel="stylesheet" href="./assets/styles/style-guide.css" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<script src="https://use.typekit.net/mwe8dvt.js"></script>
+	<script src="https://use.typekit.net/qly7hgx.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 </head>
@@ -28,9 +28,10 @@
 <ul>
 	<li><a href="./pages/base.html">Base styles for typography and standard HTML elements.</a></li>
 	<li><a href="./pages/brand.html">Brand elements such as logos &amp; colour swatches.</a></li>
-	<li><a href="./pages/components.html">Commonly used components (e.g. navigation).</a></li>
+	<li><a href="./pages/components.html">Commonly used components.</a></li>
 	<li><a href="./pages/forms.html">Form and button styles.</a></li>
 	<li><a href="./pages/wordpress.html">WordPress styles.</a></li>
+	<li><a href="./pages/icons.html">Icons.</a></li>
 </ul>
 
 <h2>Usage Instructions</h2>
@@ -47,32 +48,33 @@
 <p>Projects built using Juniper</p>
 
 <ul>
-	<li><a href="http://hb.hmn.md">Employee Handbook.</a></li>
+	<li><a href="https://hmn.md">Human Made Website.</a></li>
+	<li><a href="https://handbook.hmn.md">Employee Handbook (uses V1).</a></li>
 </ul>
 
-		<div class="Footer">
-			<p><span class="HMLogo HMLogo-Tiny"></span><a href="http://hmn.md">Made by Humans</a></p>
+		<div class="footer">
+			<p><span class="hm-logo hm-logo--tiny"></span><a href="http://hmn.md">Made by Humans</a></p>
 		</div>
 
 	</div>
 
-	<script src="./assets/js/app.min.js"></script>
+	<script src="./assets/js/juniper.min.js"></script>
 
 	<script>
 
 		(function() {
 
 			// Fake some search results for search bar demo.
-			Array.prototype.forEach.call( document.getElementsByClassName( 'SearchBar' ), function( searchBar ) {
+			Array.prototype.forEach.call( document.getElementsByClassName( 'search-bar' ), function( searchBar ) {
 
-				var fields = searchBar.getElementsByClassName( 'SearchBar_Field' );
+				var fields = searchBar.getElementsByClassName( 'search-bar__field' );
 
 				if ( fields.length > 0 ) {
 					fields[0].addEventListener( "keyup", function() {
 						if ( fields[0].value.length > 0 ) {
-							searchBar.classList.add( 'SearchBar-HasResults' );
+							searchBar.classList.add( 'search-bar--has-results' );
 						} else {
-							searchBar.classList.remove( 'SearchBar-HasResults' );
+							searchBar.classList.remove( 'search-bar--has-results' );
 						}
 					} );
 				}

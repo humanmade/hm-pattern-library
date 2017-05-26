@@ -1,9 +1,10 @@
 // Pattern Library Swatches
-.Swatch {
+.swatch {
 
 	float: left;
 	width: 50%;
 	display: block;
+	margin-bottom: $margin-vertical-sm;
 
 	@media ( min-width: 600px ) {
 
@@ -15,53 +16,29 @@
 	}
 }
 
-.Swatch_Background {
+.swatch__background {
 
-	height: $base-line-height;
+	height: $margin-vertical-sm;
 	display: block;
 
 	@media ( min-width: 600px ) {
 		display: block;
 		width: auto;
-		height: $base-line-height * 4;
+		height: $margin-vertical-lg;
 	}
 }
 
-.Swatch_Description {
+.swatch__description {
 	@include text-sm;
 	display: block;
 	text-align: center;
-	margin:  #{ $base-line-height * .375 } 0;
+	margin: #{ $margin-vertical-sm / 4 } 0 0;
 }
 
-.Swatch_Background-Primary {
-	background-color: $color-primary;
-}
+.swatch--border {
+	height: auto;
 
-.Swatch_Background-Accent {
-	background-color: $color-accent;
-}
-
-.Swatch_Background-WarmGrey {
-	background-color: $hm-warm-grey;
-}
-
-.Swatch_Background-LightGrey {
-	background-color: $hm-light-grey;
-}
-
-.Swatch_Background-DarkGrey {
-	background-color: $hm-dark-grey;
-}
-
-.Swatch_Background-Beige {
-	background-color: $hm-beige;
-}
-
-.Swatch_Background-MediumGrey {
-	background-color: $hm-medium-grey;
-}
-
-.Swatch_Background-Brown {
-	background-color: $hm-brown;
+	hr {
+		margin: #{ $margin-vertical-sm / 2 } 0;
+	}
 }
