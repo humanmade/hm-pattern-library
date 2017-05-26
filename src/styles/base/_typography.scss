@@ -115,6 +115,7 @@ hr {
 
 code,
 pre {
+	@include text-xs;
 	color: $color-text-pre;
 	background: $color-background-pre;
 	padding: 0px 5px;
@@ -129,6 +130,11 @@ pre {
 	max-width: 100%;
 	overflow: auto;
 	white-space: pre-wrap;
+}
+
+code {
+	@include text-sm;
+	line-height: inherit;
 }
 
 // Override the background from prism.js.
