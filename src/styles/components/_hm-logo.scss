@@ -8,8 +8,13 @@
 	width: 156px;
 	height: 30px;
 	margin: $margin-vertical-sm $gutter-width;
-	display: inline-block;
 	vertical-align: top;
+	opacity: 1.0;
+
+	&:hover,
+	&:focus {
+		opacity: 0.6;
+	}
 }
 
 .hm-logo--red {
