@@ -66,6 +66,14 @@ Utilities are prefixed with `util-`, for example `util-clearfix`. A utility shou
 
 Class names in vendor files should not be changed, the files should be placed in the styles/vendor directory and included as any other file would be included. These files do not need to meet our linting standards.
 
+#### Adding a new Icons
+
+* We need the icon file in SVG format. Ping babi if you need a new one as she can make sure they have consistent height and visual weight.
+* The source svg file must have black fill. The gulp script will generate red and white icons by doing a search/replace for `fill="#000000"`
+* Add the icon to this directory: [`src/images/icons/`](https://github.com/humanmade/hm-pattern-library/tree/master/src/images/icons)
+* Add the icon to the list of icons in the [SCSS file](https://github.com/humanmade/hm-pattern-library/blob/master/src/styles/utilities/_icons.scss#L13).
+* Add the icon to the list of icons in the [icons documentation HTML file](https://github.com/humanmade/hm-pattern-library/blob/master/src/html/pages/icons.html#L21).
+
 ## Changelog
 
 **2.0**
