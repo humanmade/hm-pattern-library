@@ -76,6 +76,10 @@ Class names in vendor files should not be changed, the files should be placed in
 
 ## Changelog
 
+**2.1**
+
+* Mail icon.
+
 **2.0**
 
 * Big overhaul for the new HMN.MD design. Version 2.0 breaks backwards compatability with older versions.
