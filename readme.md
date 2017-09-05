@@ -76,7 +76,7 @@ Class names in vendor files should not be changed, the files should be placed in
 
 ## Changelog
 
-**2.1**
+**2.0.1**
 
 * Mail icon.
 
