@@ -14,3 +14,21 @@ $hm-red-dark:  desaturate( darken( $hm-red, 6% ), 8 );
 
 // Deprecated.
 $hm-red-accessible: $hm-red !default;
+
+/*
+ * CSS Variables
+ * To be used in projects that do not use SASS, for example.
+ */
+
+:root {
+	--hm-red:         $hm-red;
+	--hm-blue:        $hm-blue;
+	--hm-warm-grey:   $hm-warm-grey;
+	--hm-dark-grey:   $hm-dark-grey;
+	--hm-beige:       $hm-beige;
+	--hm-medium-grey: $hm-medium-grey;
+	--hm-light-grey:  $hm-light-grey;
+	--hm-brown:       $hm-brown;
+	--hm-red-light:   $hm-red-light;
+	--hm-red-dark:    $hm-red-dark;
+}
