@@ -25,5 +25,9 @@
     "require-dir": "^0.3.0",
     "sass-lint": "^1.10.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "build": "gulp",
+    "deploy": "npm run build && aws s3 sync ./dist/assets s3://make.hmn.md/pattern-library --acl public-read"
+  }
 }
