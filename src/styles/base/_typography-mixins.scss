@@ -101,9 +101,9 @@
 
 @mixin text-link {
 	color: $color-link;
-	border-bottom: 1px solid lighten( $color-link, 45% );
+	border-bottom: 1px solid $color-link;
 	text-decoration: none;
-	transition: color .2s ease-in, background .2s ease-in, border-width .2s ease-in, border-color .2s ease-in;
+	transition: color .2s ease-in, background .2s ease-in, border-width .2s ease-in;
 
 	&:link,
 	&:visited {
@@ -114,7 +114,7 @@
 	&:hover,
 	&:focus {
 		color: $color-link-hover;
-		transition: color .2s ease-out, background .2s ease-out;
+		transition: color .2s ease-out, background .2s ease-out, border-width .2s ease-out;
 		border-bottom: 2px solid $color-link;
 	}
 
