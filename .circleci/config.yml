@@ -37,6 +37,6 @@ jobs:
       # Run the gh-pages deploy:
       - deploy:
           environment:
-            DEPLOY_BRANCH: gh-pages-test
+            DEPLOY_BRANCH: gh-pages
             SRC_PATH: /dist/
           command: .circleci/deploy.sh
