@@ -28,6 +28,7 @@ jobs:
           key: npm
           paths:
             - ~/.npm
+            - ~/.node-gyp
 
       # Run the default deploy:
       - deploy:
@@ -37,5 +38,5 @@ jobs:
       - deploy:
           environment:
             DEPLOY_BRANCH: gh-pages-test
-            SRC_PATH: /dist
+            SRC_PATH: /dist/
           command: .circleci/deploy.sh
