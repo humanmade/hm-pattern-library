@@ -9,7 +9,7 @@ GIT_EMAIL="${DEPLOY_GIT_EMAIL:-ryan+travis@hmn.md}"
 
 BRANCH="${CIRCLE_BRANCH}"
 SRC_DIR="$PWD"
-SRC_PATH="/"
+SRC_PATH="${SRC_PATH:-/}"
 
 if [[ -z "$BRANCH" ]]; then
 	echo "No branch specified!"
