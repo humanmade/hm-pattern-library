@@ -1,0 +1,68 @@
+<h2 id="style-guide-pagination" class="style-guide-title">Pagination</h2>
+
+<p><strong>Default</strong></p>
+
+<div class="pagination">
+	<a href="#">Previous Page</a>
+	<a href="#">Next Page</a>
+</div>
+
+<p>This is the default, out of the box pagination for archive pages. Add the following code to your theme:</p>
+
+<pre><code class="language-php">&lt;div class="pagination"&gt;
+ 	&lt;?php previous_posts_link( 'Previous Page' ); ?&gt;
+	&lt;?php next_posts_link( 'Next Page' ); ?&gt;
+&lt;/div&gt;</code></pre>
+
+<p><strong>PageNavi Plugin Pagination</strong></p>
+
+<p>The pagenavi plugin is also supported. It is reccommended that you wrap the output in an element with the class <code>Pagination</code> like so:</p>
+
+<pre><code class="language-php">&lt;div class="pagination"&gt;
+	&lt;?php wp_pagenavi(); ?&gt;
+&lt;/div&gt;</code></pre>
+
+<div class="pagination">
+<div class="wp-pagenavi">
+<span class="pages">Page 2 of 16</span>
+<a class="previouspostslink" rel="prev" href="#">«</a>
+<a class="page smaller" title="Page 1" href="#">1</a>
+<span class="current">2</span>
+<a class="page larger" title="Page 3" href="#">3</a>
+<a class="page larger" title="Page 4" href="#">4</a>
+<a class="page larger" title="Page 5" href="#">5</a>
+<span class="extend">...</span>
+<a class="larger page" title="Page 10" href="#">10</a>
+<span class="extend">...</span>
+<a class="nextpostslink" rel="next" href="#">»</a>
+<a class="last" href="#">Last »</a>
+</div>
+</div>
+
+<p><strong>Multi-Page breaks</strong></p>
+
+<p>You can break long posts into multi-part posts with pagination links. Do this by adding <code>&lt;!--nextpage--&gt;</code> to the post content. You will need to have the following code in your single article template file.</p>
+
+<pre><code class="language-php">&lt;div class="pagination pagination--numbers"&gt;
+	&lt;?php
+	wp_link_pages( array(
+		'before' => '' . __( '&lt;span class="pagination__label"&gt;Pages:&lt;/span&gt;' ),
+		'after'  => '',
+	) );
+	?&gt;
+&lt;/div&gt;</code></pre>
+
+<p>In addition you need to add the following code to your theme.</p>
+
+<pre><code class="language-php">&lt;?php add_filter( 'wp_link_pages_link', function( $link, $i ) {
+	global $page;
+	if ( $i === $page ) {
+		$link = '&lt;span class=&quot;pagination__item pagination__item--current&quot;&gt;' . $link . '&lt;/span&gt;';
+	}
+	return $link;
+}, 10, 2 );</code></pre>
+
+<div class="pagination pagination--numbers">
+	<span class="pagination__label">Pages:</span>
+	<a href="#">1</a> <span class="pagination__item pagination__item--current">2</span> <a href="#">3</a> <a href="#">4</a>
+</div>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>sync</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-311.000000, -256.000000)" fill-rule="nonzero" fill="#000000">
+            <g id="sync" transform="translate(311.000000, 256.000000)">
+                <g id="icon" transform="translate(2.000000, 2.000000)">
+                    <path d="M10,0 C7.285,0 4.779,1.089 2.938,2.938 L1,1 L1,7 L7,7 L4.351,4.351 C5.824,2.871 7.828,2 10,2 C14.411,2 18,5.589 18,10 C18,14.411 14.411,18 10,18 C5.589,18 2,14.411 2,10 L0,10 C0,15.515 4.486,20 10,20 C15.514,20 20,15.515 20,10 C20,4.485 15.514,0 10,0 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

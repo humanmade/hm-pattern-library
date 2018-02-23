@@ -1,0 +1,13 @@
+@include( './../parts/header.html', { "css_file": "./../assets/styles/style-guide.css" } )  
+@include( './../parts/back.html' )
+
+<h2>WordPress Styles</h2>
+
+<p>These are styles for things that you get out of the box in WordPress. Some need a little work to get looking nice, but some just work.</p> 
+
+@include( './../components/tag-cloud.html' )
+@include( './../components/wordpress-images.html' )
+@include( './../components/wordpress-galleries.html' )
+@include( './../components/pagination.html' )
+
+@include( './../parts/footer.html', { "js_file": "./../assets/js/juniper.min.js" } )  ;

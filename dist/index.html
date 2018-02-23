@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Juniper 2.0 - HM Pattern Library</title>
+	<link rel="stylesheet" href="./assets/styles/style-guide.css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://use.typekit.net/qly7hgx.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h1 class="pattern-library-title">Juniper.</h1>
+		<p class="pattern-library-subtitle">The Human Made Pattern Library.</p>
+
+<p>Juniper is a content focused web style guide and component library for use on projects under the Human Made brand. It can be used as a reference, or you can include the files in your project and hit the ground running, allowing you to focus on building the exciting stuff.</p>
+
+<h2>Features</h2>
+
+<ul>
+	<li><a href="./pages/base.html">Base styles for typography and standard HTML elements.</a></li>
+	<li><a href="./pages/brand.html">Brand elements such as logos &amp; colour swatches.</a></li>
+	<li><a href="./pages/components.html">Commonly used components.</a></li>
+	<li><a href="./pages/forms.html">Form and button styles.</a></li>
+	<li><a href="./pages/wordpress.html">WordPress styles.</a></li>
+	<li><a href="./pages/icons.html">Icons.</a></li>
+</ul>
+
+<h2>Usage Instructions</h2>
+
+<p>To get started, just download and include the production files in your project. <a href="./pages/instructions.html">See detailed usage&nbsp;instructions</a></p>
+
+<h2>Contributing</h2>
+
+<p>We are always looking to improve the Juniper project. New components will be added and we are keen to improve the codebase over time. We will not be committed to backwards compatability between major releases.</p>
+<p>If you build something with Juniper, and create a component that may be useful to others, we'd love to include it! <a href="https://github.com/humanmade/hm-pattern-library/issues/new">Open an issue on Github</a></p>
+
+<h2>Examples</h2>
+
+<p>Projects built using Juniper</p>
+
+<ul>
+	<li><a href="https://hmn.md">Human Made Website.</a></li>
+	<li><a href="https://handbook.hmn.md">Employee Handbook (uses V1).</a></li>
+</ul>
+
+		<div class="footer">
+			<p><span class="hm-logo hm-logo--tiny"></span><a href="http://hmn.md">Made by Humans</a></p>
+		</div>
+
+	</div>
+
+	<script src="./assets/js/juniper.min.js"></script>
+
+	<script>
+
+		(function() {
+
+			// Fake some search results for search bar demo.
+			Array.prototype.forEach.call( document.getElementsByClassName( 'search-bar' ), function( searchBar ) {
+
+				var fields = searchBar.getElementsByClassName( 'search-bar__field' );
+
+				if ( fields.length > 0 ) {
+					fields[0].addEventListener( "keyup", function() {
+						if ( fields[0].value.length > 0 ) {
+							searchBar.classList.add( 'search-bar--has-results' );
+						} else {
+							searchBar.classList.remove( 'search-bar--has-results' );
+						}
+					} );
+				}
+
+			} );
+
+		} )();
+
+	</script>
+</body>
+
+</html>

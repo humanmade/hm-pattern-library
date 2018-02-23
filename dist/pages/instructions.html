@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Juniper 2.0 - HM Pattern Library</title>
+	<link rel="stylesheet" href="./../assets/styles/style-guide.css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://use.typekit.net/qly7hgx.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h1 class="pattern-library-title">Juniper.</h1>
+		<p class="pattern-library-subtitle">The Human Made Pattern Library.</p>
+<a href="./../index.html"><i class="icon icon--arrow-left icon--red"></i> Back to main page.</a>
+ 
+
+<h2>How to use juniper in your&nbsp;project</h2>
+
+<h3>Include Juniper.</h3>
+<p>Include the production files from the <code><a href="https://github.com/humanmade/hm-pattern-library/tree/gh-pages">gh-pages</a></code> branch. We recommend either downloading the releases or using a submodule.</p>
+
+<h3>Juniper CSS.</h3>
+<p>For simple projects, you can just load the compiled CSS files directly in your page.</p>
+
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;hm-pattern-library/assets/styles/juniper.css&quot; /&gt;</code></pre>
+
+<h3>Juniper SASS.</h3>
+
+<p>For more complex projects, you can include the SCSS files at the top of your SCSS file. You will need to define the project path so that images load correctly. See the example SCSS file below.</p>
+
+<pre><code class="language-scss">// Define image path, relative to your project's main SASS file.
+$hm-images: "./../vendor/hm-pattern-library/assets/images";
+
+// Include the Juniper SASS file.
+@import "./../vendor/hm-pattern-library/assets/sass/juniper";
+
+// Your custom styles here.</code></pre>
+
+<h3>JavaScript.</h3>
+<p>Juniper aims to have minimal JavaScript, and it is completely optional. The small ammount there is should be as lightweight as possible, without any dependencies. You can include the <code>juniper.min.js</code> file in your project for a few nice little extra features (e.g. code syntax highlighting).</p>
+
+<pre><code class="language-html">&lt;script src=&quot;hm-pattern-library/assets/js/juniper.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+<h3>Fonts.</h3>
+<p>The HM Pattern Library uses Proxima Nova for both headings and body. You will need both 300 and 700 weights. These are provided by Typekit and if you wish to use them you will need to add the Typekit JS to your page, and either create a new Kit, or add your domain to the Juniper kit settings.</p>
+
+<h3>Updates.</h3>
+<p>We aim to maintain full compatability between minor releases however major releases may include breaking changes.</p>
+
+<h3>Migrating to V2.</h3>
+<p>Whilst this release broke a lot, unless you have done a lot of customization it shoudln't be too hard to upgrade!</p>
+
+<ul>
+<li>We renamed the JS and SCSS/CSS files <code>juniper.js</code>, <code>juniper.css</code> and <code>juniper.scss</code>.</li>
+<li>Switched from SUIT to BEM, so anything that uses the classes needs to be updated.</li>
+<li>Removed the accordion nav and search bar from the pattern library. If you need these they should be copied into your project.</li>
+</ul>
+
+		<div class="footer">
+			<p><span class="hm-logo hm-logo--tiny"></span><a href="http://hmn.md">Made by Humans</a></p>
+		</div>
+
+	</div>
+
+	<script src="./../assets/js/juniper.min.js"></script>
+
+	<script>
+
+		(function() {
+
+			// Fake some search results for search bar demo.
+			Array.prototype.forEach.call( document.getElementsByClassName( 'search-bar' ), function( searchBar ) {
+
+				var fields = searchBar.getElementsByClassName( 'search-bar__field' );
+
+				if ( fields.length > 0 ) {
+					fields[0].addEventListener( "keyup", function() {
+						if ( fields[0].value.length > 0 ) {
+							searchBar.classList.add( 'search-bar--has-results' );
+						} else {
+							searchBar.classList.remove( 'search-bar--has-results' );
+						}
+					} );
+				}
+
+			} );
+
+		} )();
+
+	</script>
+</body>
+
+</html>
+  ;

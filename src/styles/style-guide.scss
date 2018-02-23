@@ -1,0 +1,110 @@
+/**
+ * This is only used for the documentation pages,
+ * and you do not need to include this file in your project.
+ */
+
+@import "juniper";
+@import "components/swatch";
+
+.container {
+
+	max-width: 40rem;
+	margin: auto;
+
+	@media #{ $mq-md-down } {
+		max-width: calc( 100% - #{ $gutter-width * 4 } );
+	}
+
+	@media #{ $mq-sm-down } {
+		max-width: calc( 100% - #{ $gutter-width * 2 } );
+	}
+
+}
+
+/**
+ * For previewing a list/grid of logos.
+ * This is used in the pattern library.
+ */
+.pattern-library-logos {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.pattern-library-logos__container {
+
+	width: auto;
+	&:nth-child( n ) { background-color: white; }
+	&:nth-child( 2n ) { background-color: $hm-beige; }
+	&:nth-child( 3n ) { background-color: $hm-red; }
+
+	.hm-logo {
+		vertical-align: top;
+	}
+}
+
+.pattern-library-title {
+
+	@extend .text-xxl;
+	position: relative;
+
+	&:before {
+		content: " ";
+		display: block;
+		@extend .hm-logo;
+		@extend .hm-logo--small;
+		@extend .hm-logo--red;
+
+		margin: 0 0 $base-line-height / 2;
+
+		@media #{ $mq-md-up } {
+			width: $base-line-height * 2.5;
+			height: $base-line-height * 2.5;
+			top: 3px;
+			margin: 0;
+			margin-bottom: $base-line-height;
+		}
+
+	}
+}
+
+.pattern-library-subtitle {
+	margin-top: $margin-vertical-sm * -1;
+	margin-bottom: $margin-vertical-sm * 1;
+}
+
+.pattern-library-loading-indicators {
+	&__container {
+		display: inline-block;
+		padding: #{ $margin-vertical-sm / 2 } $gutter-width;
+
+		&:nth-child( #{ 2 } ) { // Hack around a bug: https://github.com/sasstools/sass-lint/issues/1049
+			color: $color-primary;
+		}
+	}
+
+	.btn {
+		margin: 0;
+	}
+}
+
+.pattern-library-icon-list {
+	background: $hm-light-grey;
+	list-style: none;
+	margin: 0;
+	padding: $base-line-height / 4;
+
+	li {
+		display: inline-block;
+		padding: $base-line-height / 4;
+		width: $base-line-height * 1.5;
+		height: $base-line-height * 1.5;
+
+		.icon {
+			display: block;
+		}
+	}
+
+	&--white {
+		background: $hm-red;
+	}
+}

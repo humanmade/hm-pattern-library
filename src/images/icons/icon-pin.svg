@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-216.000000, -256.000000)" fill-rule="nonzero" fill="#000000">
+            <g id="pin" transform="translate(216.000000, 256.000000)">
+                <g id="icon" transform="translate(4.800000, 1.920000)">
+                    <path d="M6.72,9.6 C5.13216,9.6 3.84,8.30784 3.84,6.72 C3.84,5.13216 5.13216,3.84 6.72,3.84 C8.30784,3.84 9.6,5.13216 9.6,6.72 C9.6,8.30784 8.30784,9.6 6.72,9.6 Z M6.72,5.76 C6.19104,5.76 5.76,6.19104 5.76,6.72 C5.76,7.24992 6.19104,7.68 6.72,7.68 C7.24896,7.68 7.68,7.24992 7.68,6.72 C7.68,6.19104 7.24896,5.76 6.72,5.76 Z" id="Shape"></path>
+                    <path d="M6.72,19.84032 C4.45536,16.8192 0,10.49856 0,6.72 C0,3.0144 3.0144,0 6.72,0 C10.4256,0 13.44,3.0144 13.44,6.72 C13.44,10.49856 8.98464,16.82016 6.72,19.84032 Z M6.72,1.92 C4.07328,1.92 1.92,4.07328 1.92,6.72 C1.92,9.20736 4.90272,13.99968 6.72,16.59936 C8.53632,13.99872 11.52,9.20544 11.52,6.72 C11.52,4.07328 9.36672,1.92 6.72,1.92 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>minus</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-407.000000, -206.000000)" fill-rule="nonzero" fill="#000000">
+            <g id="minus" transform="translate(407.000000, 206.000000)">
+                <g id="icon" transform="translate(2.000000, 2.000000)">
+                    <g id="Group">
+                        <path d="M10,20.001 C4.486,20.001 0,15.515 0,10.001 C0,4.487 4.486,0.001 10,0.001 C15.514,0.001 20,4.487 20,10.001 C20,15.515 15.514,20.001 10,20.001 Z M10,2.001 C5.589,2.001 2,5.59 2,10.001 C2,14.412 5.589,18.001 10,18.001 C14.411,18.001 18,14.412 18,10.001 C18,5.59 14.411,2.001 10,2.001 Z" id="Shape"></path>
+                        <rect id="Rectangle-path" x="5" y="9.001" width="10" height="2"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

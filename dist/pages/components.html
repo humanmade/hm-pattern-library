@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Juniper 2.0 - HM Pattern Library</title>
+	<link rel="stylesheet" href="./../assets/styles/style-guide.css" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://use.typekit.net/qly7hgx.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<h1 class="pattern-library-title">Juniper.</h1>
+		<p class="pattern-library-subtitle">The Human Made Pattern Library.</p>
+<a href="./../index.html"><i class="icon icon--arrow-left icon--red"></i> Back to main page.</a>
+ 
+
+<h2>Commonly used components</h2>
+
+<h3 id="style-guide-components-labels" class="style-guide-title">Labels</h3>
+
+<span class="label">Lorem</span>
+<span class="label">Cum ageremus</span>
+<span class="label">Cognoscenda <span class="label__count">4</span></span>
+<span class="label">Sin tantum modo</span>
+<h3 id="style-guide-components-code" class="style-guide-title">Code blocks</h3>
+
+<pre><code class="language-php">&lt;?php
+
+	if ( 'pens' === pencils ) {
+		return false;
+	}</code></pre>
+
+
+<p>This is some inline code demonstrating how to open a php file <code class="language-php">&lt;?php</code></p>
+
+<h3 id="style-guide-components-loading" class="style-guide-title">Loading Indicators</h3>
+
+<div class="pattern-library-loading-indicators">
+
+	<div class="pattern-library-loading-indicators__container"> <!-- Note container is only used for the style guide -->
+		Loading <span class="Loading loading--active"></span>
+	</div>
+
+	<div class="pattern-library-loading-indicators__container"> <!-- Note container is only used for the style guide -->
+		Loading <span class="loading--red loading--active"></span>
+	</div>
+
+	<div class="pattern-library-loading-indicators__container"> <!-- Note container is only used for the style guide -->
+		<button class="btn btn--loading">Loading <span class="Loading loading--active"></span></button>
+	</div>
+</div>
+
+
+		<div class="footer">
+			<p><span class="hm-logo hm-logo--tiny"></span><a href="http://hmn.md">Made by Humans</a></p>
+		</div>
+
+	</div>
+
+	<script src="./../assets/js/juniper.min.js"></script>
+
+	<script>
+
+		(function() {
+
+			// Fake some search results for search bar demo.
+			Array.prototype.forEach.call( document.getElementsByClassName( 'search-bar' ), function( searchBar ) {
+
+				var fields = searchBar.getElementsByClassName( 'search-bar__field' );
+
+				if ( fields.length > 0 ) {
+					fields[0].addEventListener( "keyup", function() {
+						if ( fields[0].value.length > 0 ) {
+							searchBar.classList.add( 'search-bar--has-results' );
+						} else {
+							searchBar.classList.remove( 'search-bar--has-results' );
+						}
+					} );
+				}
+
+			} );
+
+		} )();
+
+	</script>
+</body>
+
+</html>
+  ;

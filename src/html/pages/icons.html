@@ -1,0 +1,75 @@
+@include( './../parts/header.html', { "css_file": "./../assets/styles/style-guide.css" } )  
+@include( './../parts/back.html' ) 
+
+<h2>Icons</h2>
+
+<h3 id="style-guide-components-tag-cloud" class="style-guide-title">Default icons (black)</h3>
+
+<ul class="pattern-library-icon-list pattern-library-icon-list--default"></ul>
+
+<h3 id="style-guide-components-tag-cloud" class="style-guide-title">Red icons</h3>
+
+<ul class="pattern-library-icon-list pattern-library-icon-list--red"></ul>
+
+<h3 id="style-guide-components-tag-cloud" class="style-guide-title">White icons</h3>
+
+<ul class="pattern-library-icon-list pattern-library-icon-list--white"></ul>
+
+<script>
+	var colors = [ 'default', 'red', 'white' ];
+
+	var icons = [
+		'mail',
+		'wordpress',
+		'facebook',
+		'twitter',
+		'youtube',
+		'github',
+		'instagram',
+		'linkedin',
+		'strategy',
+		'server',
+		'comment',
+		'pin',
+		'link',
+		'lock',
+		'minus',
+		'minus-alt',
+		'plus',
+		'plus-alt',
+		'close',
+		'search',
+		'spinner',
+		'arrow-left',
+		'arrow-right',
+		'arrow-up',
+		'arrow-down',
+		'download',
+	];
+
+	colors.forEach( function( color ) {
+		var container = document.getElementsByClassName( 'pattern-library-icon-list--' + color );
+
+		if ( container.length < 1 ) {
+			return;
+		}
+
+		icons.forEach( function( icon ) {
+			var li   = document.createElement( 'li' );
+			var i    = document.createElement( 'i' );
+			var text = document.createTextNode( icon );
+			i.classList.add( 'icon' );
+			i.classList.add( 'icon--' + icon );
+			if ( color !== 'Default' ) {
+				i.classList.add( 'icon--' + color.toLowerCase() );
+			}
+			i.title = i.classList.toString();
+			i.appendChild( text );
+			li.appendChild( i );
+			container[0].appendChild( li );
+		} );
+	} );
+
+</script>
+
+@include( './../parts/footer.html', { "js_file": "./../assets/js/juniper.min.js" } )  ;
