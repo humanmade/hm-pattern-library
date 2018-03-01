@@ -62,6 +62,11 @@
 	line-height: $base-line-height * 1.29;
 }
 
+// 24
+@mixin text-ml {
+	font-size: 1.3333333332rem;
+	line-height: $base-line-height;
+}
 
 // 22
 @mixin text-md {

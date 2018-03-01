@@ -8,6 +8,10 @@
 		@include text-std;
 	}
 
+	&--large {
+		@include text-ml;
+	}
+
 	&--arrow {
 		transition: margin-left 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		margin-right: calc( 1.5rem + #{ $gutter-width / 2 } );
@@ -80,3 +84,5 @@
 		}
 	}
 }
+
+
