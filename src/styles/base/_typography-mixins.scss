@@ -1,8 +1,6 @@
 @mixin font-heading {
 	font-family: $font-family-heading;
 	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 0.01em;
 
 	em,
 	i,
@@ -31,7 +29,11 @@
 	font-family: $font-family-accent;
 	font-weight: 500;
 	text-transform: uppercase;
-	letter-spacing: 0;
+}
+
+@mixin font-caps {
+	text-transform: uppercase;
+	letter-spacing: 0.01em;
 }
 
 // 50px (desktop)
@@ -62,6 +64,11 @@
 	line-height: $base-line-height * 1.29;
 }
 
+// 24
+@mixin text-ml {
+	font-size: 1.3333333332rem;
+	line-height: $base-line-height;
+}
 
 // 22
 @mixin text-md {
@@ -101,9 +108,9 @@
 
 @mixin text-link {
 	color: $color-link;
-	border-bottom: 1px solid lighten( $color-link, 45% );
+	border-bottom: 1px solid $color-link;
 	text-decoration: none;
-	transition: color .2s ease-in, background .2s ease-in, border-width .2s ease-in, border-color .2s ease-in;
+	transition: color .2s ease-in, background .2s ease-in, border-width .2s ease-in;
 
 	&:link,
 	&:visited {
@@ -114,7 +121,7 @@
 	&:hover,
 	&:focus {
 		color: $color-link-hover;
-		transition: color .2s ease-out, background .2s ease-out;
+		transition: color .2s ease-out, background .2s ease-out, border-width .2s ease-out;
 		border-bottom: 2px solid $color-link;
 	}
 

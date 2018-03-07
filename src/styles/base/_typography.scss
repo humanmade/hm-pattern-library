@@ -28,7 +28,7 @@ h1,
 .text-xxl {
 	@include text-xxl;
 	@include font-heading;
-	text-transform: uppercase;
+	@include font-caps;
 	margin: $margin-vertical-sm 0;
 	color: $color-text-heading;
 }
@@ -39,11 +39,6 @@ h2,
 	@include font-heading;
 	margin: $margin-vertical-sm 0;
 	color: $color-text-heading;
-
-
-	@media #{ $mq-sm-down } {
-		text-transform: uppercase;
-	}
 }
 
 h3,

@@ -27,6 +27,7 @@
   },
   "dependencies": {},
   "scripts": {
+    "gulp": "gulp",
     "build": "gulp",
     "deploy": "npm run build && aws s3 sync ./dist/assets s3://make.hmn.md/pattern-library --acl public-read"
   }
