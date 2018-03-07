@@ -25,5 +25,8 @@
     "require-dir": "^0.3.0",
     "sass-lint": "^1.10.2"
   },
-  "dependencies": {}
+  "scripts": {
+    "gulp": "gulp",
+    "build": "gulp build"
+  }
 }
