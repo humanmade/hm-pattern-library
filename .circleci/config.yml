@@ -1,0 +1,42 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:9-stretch
+
+    branches:
+      only:
+        # Whitelist branches to build for.
+        - master
+        - build-test
+    steps:
+      # Checkout repo & subs:
+      - checkout
+      - run: git submodule sync
+      - run: git submodule update --init
+
+      # Get npm cache:
+      - restore_cache:
+          key: npm
+
+      # Build steps:
+      - run: npm install
+      - run: npm run build
+
+      # Make fast:
+      - save_cache:
+          key: npm
+          paths:
+            - ~/.npm
+            - ~/.node-gyp
+
+      # Run the default deploy:
+      - deploy:
+          command: .circleci/deploy.sh
+
+      # Run the gh-pages deploy:
+      - deploy:
+          environment:
+            DEPLOY_BRANCH: gh-pages
+            SRC_PATH: /dist/
+          command: .circleci/deploy.sh
