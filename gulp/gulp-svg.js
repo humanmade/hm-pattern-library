@@ -67,10 +67,9 @@ var logoColors = [
 iconColors.forEach( ( color ) => registerTask( 'icons', color ) );
 logoColors.forEach( ( color ) => registerTask( 'logos', color ) );
 
+const tasks = [ 'svg-min' ]
+	.concat( iconColors.map( color => 'icons-' + color.name ) )
+	.concat( logoColors.map( color => 'logos-' + color.name ) );
+
 // Create a wrapper 'svg' task.
-gulp.task(
-	'svg',
-	[ 'svg-min' ]
-		.concat( iconColors.map( color => 'icons-' + color.name ) )
-		.concat( logoColors.map( color => 'logos-' + color.name ) )
-);
+gulp.task( 'svg', gulp.series( ...tasks ) );
