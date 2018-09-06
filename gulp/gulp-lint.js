@@ -9,4 +9,4 @@ gulp.task( 'lint-sass', () => {
 });
 
 // Wrapper task for all linting tasks.
-gulp.task( 'lint', [ 'lint-sass' ] );
+gulp.task( 'lint', gulp.parallel( 'lint-sass' ) );
