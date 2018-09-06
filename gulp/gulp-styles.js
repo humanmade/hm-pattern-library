@@ -32,4 +32,4 @@ gulp.task( 'sass-copy', () => {
 } );
 
 // Wrapper task for all styles tasks.
-gulp.task( 'styles',  [ 'sass-compile', 'sass-copy' ] );
+gulp.task( 'styles', gulp.series( 'sass-compile', 'sass-copy' ) );
