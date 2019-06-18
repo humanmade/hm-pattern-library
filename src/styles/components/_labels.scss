@@ -40,9 +40,10 @@
 	border-radius: 100%;
 	min-width: $base-font-size;
 	height: $base-font-size;
-	line-height: $base-font-size;
+	line-height: 1 + $base-font-size;
 	font-family: $font-family-code;
 	font-size: .6 * $base-font-size;
+	vertical-align: middle;
 	background: $color-primary;
 	color: $color-white;
 	margin-left: 0.1em;
