@@ -76,6 +76,10 @@ Class names in vendor files should not be changed, the files should be placed in
 
 ## Changelog
 
+**2.0.3**
+
+* Compatability with Node 16 and M1 Macs.
+
 **2.0.2**
 
 * Update npm dev dependencies to fix vulnerabilities
