@@ -85,7 +85,7 @@ ul,
 ol {
 	list-style-position: outside;
 	padding: 0;
-	padding: 0 0 0 $gutter-width;
+	padding: 0 0 0 $gutter-width * 2;
 
 	ul,
 	ol {
