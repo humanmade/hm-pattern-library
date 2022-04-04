@@ -1,6 +1,6 @@
 {
   "name": "hm-pattern-library",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "type": "module",
   "description": "Juniper - Human Made Pattern Library",
   "main": "index.html",
@@ -26,11 +26,15 @@
     "sass": "^1.49.11",
     "sass-lint": "^1.13.1"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
     "gulp": "gulp",
     "build": "gulp build"
   },
-  "browserslist": [
-    "defaults"
-  ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humanmade/hmn-pattern-library.git"
+  }
 }
