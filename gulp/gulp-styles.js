@@ -1,9 +1,12 @@
-const gulp         = require( 'gulp' );
-const sourcemaps   = require( 'gulp-sourcemaps' );
-const postcss      = require( 'gulp-postcss' );
-const autoprefixer = require( 'autoprefixer' );
-const sass         = require( 'gulp-sass' );
-const gulpCopy     = require( 'gulp-copy' );
+import gulp from 'gulp';
+import sourcemaps from 'gulp-sourcemaps';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import gulpCopy from 'gulp-copy';
+
+const sass = gulpSass(dartSass);
 
 // Compile SASS/SCSS to CSS
 gulp.task( 'sass-compile', () => {
@@ -11,7 +14,7 @@ gulp.task( 'sass-compile', () => {
 		.pipe( sourcemaps.init() )
 		.pipe( sass( { outputStyle: 'compressed' } )
 		.on( 'error', sass.logError ) )
-		.pipe( postcss( [ autoprefixer( { browsers: ['last 3 versions'] } ) ] ) )
+		.pipe( postcss( [ autoprefixer() ] ) )
 		.pipe( sourcemaps.write('.') )
 		.pipe( gulp.dest( './dist/assets/styles' ) );
 });

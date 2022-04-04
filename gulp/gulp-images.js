@@ -1,6 +1,6 @@
-const gulp     = require( 'gulp' );
-const newer    = require( 'gulp-newer' );
-const imagemin = require( 'gulp-imagemin' );
+import gulp from 'gulp';
+import newer from 'gulp-newer';
+import imagemin from 'gulp-imagemin';
 
 // Minify images.
 gulp.task( 'images', () => {

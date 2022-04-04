@@ -1,5 +1,5 @@
-const gulp     = require( 'gulp' );
-const sassLint = require( 'gulp-sass-lint' );
+import gulp from 'gulp';
+import sassLint from 'gulp-sass-lint';
 
 gulp.task( 'lint-sass', () => {
 	return gulp.src( './src/styles/**/*.s+(a|c)ss')

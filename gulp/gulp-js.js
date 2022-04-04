@@ -1,7 +1,7 @@
-const gulp   = require( 'gulp' );
-const concat = require( 'gulp-concat' );
-const uglify = require( 'gulp-uglify' );
-const rename = require( 'gulp-rename' );
+import gulp from 'gulp';
+import concat from 'gulp-concat';
+import uglify from 'gulp-uglify';
+import rename from 'gulp-rename';
 
 // JavaScript concatination and compression.
 gulp.task( 'js', () => {

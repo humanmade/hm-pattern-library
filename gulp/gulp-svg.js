@@ -1,8 +1,8 @@
-const gulp     = require( 'gulp' );
-const newer    = require( 'gulp-newer' );
-const imagemin = require( 'gulp-imagemin' );
-const replace  = require( 'gulp-replace' );
-const rename   = require( 'gulp-rename' );
+import gulp from 'gulp';
+import newer from 'gulp-newer';
+import imagemin from 'gulp-imagemin';
+import replace from 'gulp-replace';
+import rename from 'gulp-rename';
 
 var svgMinArgs = {
 	progressive: true,
