@@ -119,7 +119,7 @@ pre {
 }
 
 pre {
-	padding: #{ $margin-vertical-sm / 2 } #{ $gutter-width / 2 };
+	padding: #{ $margin-vertical-sm * 0.5 } #{ $gutter-width * 0.5 };
 	display: block;
 	margin: $margin-vertical-sm 0;
 	max-width: 100%;

@@ -3,11 +3,11 @@
 	@include text-sm;
 	border: 1px solid $color-link;
 	border-radius: 4px;
-	padding: 0 #{ $gutter-width / 2 };
+	padding: 0 #{ $gutter-width * 0.5 };
 	background: $color-white;
 	color: $color-primary;
-	margin-bottom: $margin-vertical-sm / 2;
-	margin-right: $gutter-width / 4;
+	margin-bottom: $margin-vertical-sm * 0.5;
+	margin-right: $gutter-width * 0.25;
 	display: inline-block;
 	text-align: center;
 	cursor: pointer;

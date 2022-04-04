@@ -7,7 +7,7 @@ table {
 th,
 td {
 	@include text-sm;
-	padding: 0.611rem #{ $gutter-width / 2 };
+	padding: 0.611rem #{ $gutter-width * 0.5 };
 	border: none;
 	vertical-align: top;
 }
@@ -34,5 +34,5 @@ th {
 
 table caption {
 	@include text-sm;
-	margin-bottom: $margin-vertical-sm / 2;
+	margin-bottom: $margin-vertical-sm * 0.5;
 }

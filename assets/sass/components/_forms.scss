@@ -6,12 +6,12 @@ input[type="email"] {
 	@include font-body;
 	@include text-std;
 	border: 2px solid $border-color;
-	padding: #{ $margin-vertical-sm / 4 } $gutter-width;
+	padding: #{ $margin-vertical-sm * 0.25 } $gutter-width;
 	background: white;
 	box-shadow: none;
 	color: $color-input-text;
 	margin-bottom: $margin-vertical-sm;
-	margin-right: $gutter-width / 2;
+	margin-right: $gutter-width * 0.5;
 	display: block;
 	text-align: left;
 	border-radius: 4px;
@@ -78,7 +78,7 @@ form legend {
 	@include text-sm;
 	display: block;
 	margin-top: $margin-vertical-sm;
-	margin-bottom: $margin-vertical-sm / 4;
+	margin-bottom: $margin-vertical-sm * 0.25;
 }
 
 fieldset {
@@ -97,14 +97,14 @@ fieldset {
 
 	input[type="radio"],
 	input[type="checkbox"] {
-		margin-right: $gutter-width / 4;
+		margin-right: $gutter-width * 0.25;
 	}
 }
 
 .form__radio-group {
 	@extend .form__checkbox-group;
 	margin-right: $gutter-width;
-	margin-bottom: $margin-vertical-sm / 2;
+	margin-bottom: $margin-vertical-sm * 0.5;
 	display: inline-block;
 
 }
