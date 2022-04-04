@@ -28,7 +28,7 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: #{ $margin-vertical-sm / 2 } #{ $gutter-width / 2 };
+	padding: #{ $margin-vertical-sm * 0.5 } #{ $gutter-width * 0.5 };
 	overflow: auto;
 }
 

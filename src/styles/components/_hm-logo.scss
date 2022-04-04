@@ -61,8 +61,8 @@
 	background-image: url( "#{ $images-path }/logos/logo-tiny-black.svg" );
 	width: $base-font-size;
 	height: $base-font-size;
-	margin-top: ( $base-line-height - 1rem ) / 2;
-	margin-bottom: ( $base-line-height - 1rem ) / 2;
+	margin-top: ( $base-line-height - 1rem ) * 0.5;
+	margin-bottom: ( $base-line-height - 1rem ) * 0.5;
 
 	&.hm-logo--red {
 		background-image: url( "#{ $images-path }/logos/logo-tiny-red.svg" );

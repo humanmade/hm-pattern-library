@@ -14,7 +14,7 @@
 
 	&--arrow {
 		transition: margin-left 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		margin-right: calc( 1.5rem + #{ $gutter-width / 2 } );
+		margin-right: calc( 1.5rem + #{ $gutter-width * 0.5 } );
 
 		&:after {
 			@extend .icon;
@@ -25,7 +25,7 @@
 			left: 100%;
 			display: inline-block;
 			content: " ";
-			margin-left: $gutter-width / 2;
+			margin-left: $gutter-width * 0.5;
 			transition: margin-left 0.2s ease-in-out;
 			background-size: 100%;
 		}
@@ -42,12 +42,12 @@
 		@extend .cta--arrow;
 		transition: margin-right 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		margin-right: 0;
-		margin-left: calc( 1.5rem + #{ $gutter-width / 2 } );
+		margin-left: calc( 1.5rem + #{ $gutter-width * 0.5 } );
 
 		&:after {
 			@extend .icon--arrow-left;
 			margin-left: 0;
-			margin-right: $gutter-width / 2;
+			margin-right: $gutter-width * 0.5;
 			transition: margin-right 0.2s ease-in-out;
 			left: auto;
 			right: 100%;

@@ -1,6 +1,6 @@
-const gulp        = require( 'gulp' );
-const replace     = require( 'gulp-replace' );
-const fileinclude = require( 'gulp-file-include' );
+import gulp from 'gulp';
+import replace from 'gulp-replace';
+import fileinclude from 'gulp-file-include';
 
 // HTML file include
 gulp.task( 'fileinclude', () => {

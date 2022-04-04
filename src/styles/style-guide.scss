@@ -54,7 +54,7 @@
 		@extend .hm-logo--small;
 		@extend .hm-logo--red;
 
-		margin: 0 0 $base-line-height / 2;
+		margin: 0 0 $base-line-height * 0.5;
 
 		@media #{ $mq-md-up } {
 			width: $base-line-height * 2.5;
@@ -75,7 +75,7 @@
 .pattern-library-loading-indicators {
 	&__container {
 		display: inline-block;
-		padding: #{ $margin-vertical-sm / 2 } $gutter-width;
+		padding: #{ $margin-vertical-sm * 0.5 } $gutter-width;
 
 		&:nth-child( #{ 2 } ) { // Hack around a bug: https://github.com/sasstools/sass-lint/issues/1049
 			color: $color-primary;
@@ -91,11 +91,11 @@
 	background: $hm-light-grey;
 	list-style: none;
 	margin: 0;
-	padding: $base-line-height / 4;
+	padding: $base-line-height * 0.25;
 
 	li {
 		display: inline-block;
-		padding: $base-line-height / 4;
+		padding: $base-line-height * 0.25;
 		width: $base-line-height * 1.5;
 		height: $base-line-height * 1.5;
 

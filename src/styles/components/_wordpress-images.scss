@@ -41,7 +41,7 @@
 	@include text-sm;
 	color: $hm-medium-grey;
 	margin-top: 0;
-	padding: #{ $margin-vertical-sm / 4 } 0;
+	padding: #{ $margin-vertical-sm * 0.25 } 0;
 }
 
 .aligncenter > .wp-caption-text {

@@ -1,11 +1,10 @@
-const requireDir   = require('require-dir');
-const gulp         = require( 'gulp' );
-const watch        = require( 'gulp-watch' );
-const del          = require( 'del' );
+import watch from 'gulp-watch';
+import gulp from 'gulp';
+import del from 'del';
 
 // For neatness, most tasks have been split up into separate files
 // Just load them all from ./gulp directory.
-requireDir( './gulp' );
+import './gulp/index.js';
 
 // Task to cleanup the dist directory.
 gulp.task( 'clean-dist', ( cb ) => {
@@ -14,9 +13,9 @@ gulp.task( 'clean-dist', ( cb ) => {
 
 // Watch for changes in HTML/JS/CSS.
 gulp.task( 'watch', () => {
-	gulp.watch( 'src/styles/**/*.scss', ['styles'] );
-	gulp.watch( 'src/js/**/*.js', ['js'] );
-	gulp.watch( 'src/html/**/*.html', ['fileinclude'] );
+	watch( 'src/styles/**/*.scss', ['styles'] );
+	watch( 'src/js/**/*.js', ['js'] );
+	watch( 'src/html/**/*.html', ['fileinclude'] );
 });
 
 // Default task. Do everything.

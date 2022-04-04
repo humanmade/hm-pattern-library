@@ -47,7 +47,7 @@
 	> a,
 	> span,
 	&__item {
-		margin: 0 $gutter-width / 2;
+		margin: 0 $gutter-width * 0.5;
 	}
 
 	a:first-child,
