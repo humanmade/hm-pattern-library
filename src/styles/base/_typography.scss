@@ -111,6 +111,7 @@ hr {
 code,
 pre {
 	@include text-xs;
+	@include font-code;
 	color: $color-text-pre;
 	background: $color-background-pre;
 	padding: 0px 5px;
@@ -119,16 +120,16 @@ pre {
 }
 
 pre {
-	padding: #{ $margin-vertical-sm * 0.5 } #{ $gutter-width * 0.5 };
+	padding: #{ $margin-vertical-sm * 0.5 } #{ $gutter-width };
 	display: block;
 	margin: $margin-vertical-sm 0;
 	max-width: 100%;
 	overflow: auto;
 	white-space: pre-wrap;
+	tab-size: 4;
 }
 
 code {
-	@include text-sm;
 	line-height: inherit;
 }
 
