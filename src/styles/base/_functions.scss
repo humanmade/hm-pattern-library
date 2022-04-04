@@ -5,7 +5,7 @@
 
 @function stripUnit( $number ) {
 	@if type-of( $number ) == "number" and not unitless( $number ) {
-		@return math.div($number,  $number * 0 + 1 );
+		@return math.div( $number,  $number * 0 + 1 );
 	}
 	@return $number;
 }

@@ -3,7 +3,7 @@
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
-	margin: $margin-vertical-sm math.div($gutter-width, -2);
+	margin: $margin-vertical-sm math.div( $gutter-width, -2 );
 
 	@media #{ $mq-sm-up } {
 		margin: $margin-vertical-lg #{ $gutter-width * -1 };
@@ -27,7 +27,7 @@
 
 			@media #{ $mq-sm-up } {
 
-				width: math.div(100%, $i);
+				width: math.div( 100%, $i );
 
 				@for $ii from 1 through $i {
 					&:nth-child( #{ $ii } ) {
