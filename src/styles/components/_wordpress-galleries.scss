@@ -1,7 +1,9 @@
+@use "sass:math";
+
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
-	margin: $margin-vertical-sm $gutter-width / -2;
+	margin: $margin-vertical-sm math.div($gutter-width, -2);
 
 	@media #{ $mq-sm-up } {
 		margin: $margin-vertical-lg #{ $gutter-width * -1 };
@@ -9,8 +11,8 @@
 }
 
 .gallery-item {
-	margin: $margin-vertical-sm / 2 0 0;
-	padding: 0 $gutter-width / 2;
+	margin: $margin-vertical-sm * 0.5 0 0;
+	padding: 0 $gutter-width * 0.5;
 	width: 100%;
 }
 
@@ -25,7 +27,7 @@
 
 			@media #{ $mq-sm-up } {
 
-				width: 100% / $i;
+				width: math.div(100%, $i);
 
 				@for $ii from 1 through $i {
 					&:nth-child( #{ $ii } ) {
