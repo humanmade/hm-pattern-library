@@ -1,10 +1,27 @@
 <h3 id="style-guide-components-code" class="style-guide-title">Code blocks</h3>
 
+<pre><code>{
+	"name": "Tom",
+	"age": "12",
+	"location": "USA",
+}</code></pre>
+
+<p>Add a class like <code>language-php</code> for syntax highlighting powered by <a href="https://prismjs.com/">Prism.js</a>.</p>
+
+<p>Note that Prism forces you to use the correct element for marking up code: <code>&lt;code&gt;</code>. On its own for inline code, or inside a <code>&lt;pre&gt;</code> for blocks of code. See example below.</p>
+
+<pre><code class="language-html">&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;
+	// Sample code...
+&lt;/code&gt;&lt;/pre&gt;</code></pre>
+
+<p>Prism supports HTML, PHP, JS, CSS, SCSS and <a href="https://prismjs.com/#supported-languages">many other languages.</a></p>
+
 <pre><code class="language-php">&lt;?php
+if ( 'pens' === pencils ) {
+	return false;
+}</code></pre>
 
-	if ( 'pens' === pencils ) {
-		return false;
-	}</code></pre>
-
-
-<p>This is some inline code demonstrating how to open a php file <code class="language-php">&lt;?php</code></p>
+<pre><code class="language-css">.my-component {
+	color: #FF0000;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+}</code></pre>
