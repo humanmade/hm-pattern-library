@@ -25,6 +25,10 @@
 	}
 }
 
+@mixin font-code {
+	font-family: $font-family-code;
+}
+
 @mixin font-accent {
 	font-family: $font-family-accent;
 	font-weight: 500;
