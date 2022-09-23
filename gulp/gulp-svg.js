@@ -53,14 +53,14 @@ var registerTask = function( taskId, color ) {
 var iconColors = [
 	{ name: 'black', fill: '#353535' },
 	{ name: 'white', fill: '#FFFFFF' },
-	{ name: 'red',   fill: '#D24632' },
+	{ name: 'red',   fill: '#FF424A' },
 	{ name: 'blue',  fill: '#7DC9DA' },
 ];
 
 var logoColors = [
 	{ name: 'black', fill: '#353535' },
 	{ name: 'white', fill: '#FFFFFF' },
-	{ name: 'red',   fill: '#D24632' },
+	{ name: 'red',   fill: '#FF424A' },
 ];
 
 // Register tasks for each icon color and logo colors.
