@@ -1,12 +1,11 @@
 # Juniper
 
-The Human Made Web Style Guide and Pattern Library. [Head over to the site to see it in action!](https://humanmade.github.io/hm-pattern-library/)
+The Human Made Web Style Guide and Pattern Library. [Head over to humanmade.github.io/hm-pattern-library to see it in action!](https://humanmade.github.io/hm-pattern-library/)
 
 #### Maintained by:
 
 * Matthew Haines-Young, @mattheu
 * Samantha Miller, @sambulance
-* Peter Wilson, @peterwilsoncc
 
 ### Usage Instructions
 
@@ -14,21 +13,25 @@ The Human Made Web Style Guide and Pattern Library. [Head over to the site to se
 
 ### Contributing and Development
 
+PRs merged to the `main` branch will be automatically built using CircleCI. Generated assets will be pushed to a `main-built` branch by the CI deploy task, and the `/dist/` folder from this build will be pushed to the `gh-pages` branch.
+
+The `gh-pages` branch is the release branch for this project. Release tags should only be created on `gh-pages`.
+
 #### Set up
 
 Run these commands to get it running locally
 
-1. `git clone --recursive git@github.com:humanmade/hm-pattern-library.git hm-pattern-library.dev`
-1. `cd hm-pattern-library.dev`
-1. If you do not have gulp installed on your machine, install it globally by running `npm install gulp-cli -g`
-1. `npm install`
-1. The sass and html can be compiled by running the command `gulp`.
+1. `git clone git@github.com:humanmade/hm-pattern-library.git hm-pattern-library`
+1. `cd hm-pattern-library`
+2. `nvm use` to select the project's required node version using [nvm](https://github.com/nvm-sh/nvm)
+4. `npm install`
+5. The sass and html can be compiled by running the command `npm run build`.
 
 The Human Made pattern library generates flat HTML and does not require a web server to be loaded. Once compiled, the HTML can be opened in your browser via the file system. You can simply access the compiled index file directly at `…/dist/index.html`
 
 #### Workflow.
 
-All local development should be done against master. `dist` which contains the compiled files is ignored from version control and must be created using the `gulp` task. Releases are just the content of `dist` and nothing else.
+All local development should be done against the `main` branch. `dist` (which contains the compiled files) is ignored from version control and must be created using the `gulp` task. Releases are just the content of `dist` and nothing else.
 
 #### Creating a branch
 
@@ -70,9 +73,9 @@ Class names in vendor files should not be changed, the files should be placed in
 
 * We need the icon file in SVG format. Ping babi if you need a new one as she can make sure they have consistent height and visual weight.
 * The source svg file must have black fill. The gulp script will generate red and white icons by doing a search/replace for `fill="#000000"`
-* Add the icon to this directory: [`src/images/icons/`](https://github.com/humanmade/hm-pattern-library/tree/master/src/images/icons)
-* Add the icon to the list of icons in the [SCSS file](https://github.com/humanmade/hm-pattern-library/blob/master/src/styles/utilities/_icons.scss#L13).
-* Add the icon to the list of icons in the [icons documentation HTML file](https://github.com/humanmade/hm-pattern-library/blob/master/src/html/pages/icons.html#L21).
+* Add the icon to this directory: [`src/images/icons/`](https://github.com/humanmade/hm-pattern-library/tree/main/src/images/icons)
+* Add the icon to the list of icons in the [SCSS file](https://github.com/humanmade/hm-pattern-library/blob/main/src/styles/utilities/_icons.scss#L13).
+* Add the icon to the list of icons in the [icons documentation HTML file](https://github.com/humanmade/hm-pattern-library/blob/main/src/html/pages/icons.html#L21).
 
 ## Changelog
 
