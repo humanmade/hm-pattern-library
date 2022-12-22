@@ -76,10 +76,6 @@
 	&__container {
 		display: inline-block;
 		padding: #{ $margin-vertical-sm * 0.5 } $gutter-width;
-
-		&:nth-child( #{ 2 } ) { // Hack around a bug: https://github.com/sasstools/sass-lint/issues/1049
-			color: $color-primary;
-		}
 	}
 
 	.btn {
