@@ -23,6 +23,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-watch": "^5.0.1",
+    "postcss": "^8.4.20",
     "sass": "^1.49.11",
     "sass-lint": "^1.13.1"
   },
@@ -36,8 +37,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/humanmade/hmn-pattern-library.git"
-  },
-  "dependencies": {
-    "postcss": "^8.4.20"
   }
 }
