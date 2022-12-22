@@ -5,7 +5,7 @@ jobs:
       - image: cimg/node:12.22
 
     branches:
-      # Whitelist branches to build for.
+      # Allowlist branches to build for.
       only: main
     steps:
       - add_ssh_keys:
