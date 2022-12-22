@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   build:
     docker:
@@ -8,6 +8,10 @@ jobs:
       # Whitelist branches to build for.
       only: main
     steps:
+      - add_ssh_keys:
+          fingerprints:
+          - "4b:f3:aa:3d:17:f4:7d:11:22:d2:bc:da:ad:ef:ac:de"
+
       # Checkout repo & subs:
       - checkout
 
