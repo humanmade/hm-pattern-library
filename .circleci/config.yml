@@ -5,10 +5,8 @@ jobs:
       - image: circleci/node:9-stretch
 
     branches:
-      only:
-        # Whitelist branches to build for.
-        - master
-        - build-test
+      # Whitelist branches to build for.
+      only: main
     steps:
       # Checkout repo & subs:
       - checkout
