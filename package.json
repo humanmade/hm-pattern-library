@@ -36,5 +36,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/humanmade/hmn-pattern-library.git"
+  },
+  "dependencies": {
+    "postcss": "^8.4.20"
   }
 }
