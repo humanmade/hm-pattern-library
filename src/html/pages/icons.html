@@ -3,20 +3,26 @@
 
 <h2>Icons</h2>
 
-<h3 id="style-guide-components-tag-cloud" class="style-guide-title">Default icons (black)</h3>
+<h3 class="style-guide-title">Default icons (black)</h3>
 
 <ul class="pattern-library-icon-list pattern-library-icon-list--default"></ul>
 
-<h3 id="style-guide-components-tag-cloud" class="style-guide-title">Red icons</h3>
+<h3 class="style-guide-title">Red icons</h3>
 
 <ul class="pattern-library-icon-list pattern-library-icon-list--red"></ul>
 
-<h3 id="style-guide-components-tag-cloud" class="style-guide-title">White icons</h3>
+<h3 class="style-guide-title">Blue icons</h3>
+
+<ul class="pattern-library-icon-list pattern-library-icon-list--blue"></ul>
+
+<h3 class="style-guide-title">White icons</h3>
 
 <ul class="pattern-library-icon-list pattern-library-icon-list--white"></ul>
 
+<ul class="pattern-library-icon-list pattern-library-icon-list--white pattern-library-icon-list--blue-bg"></ul>
+
 <script>
-	var colors = [ 'default', 'red', 'white' ];
+	var colors = [ 'default', 'red', 'blue', 'white' ];
 
 	var icons = [
 		'mail',
@@ -49,7 +55,7 @@
 	];
 
 	colors.forEach( function( color ) {
-		var container = document.getElementsByClassName( 'pattern-library-icon-list--' + color );
+		var container = document.querySelectorAll( '.pattern-library-icon-list--' + color );
 
 		if ( container.length < 1 ) {
 			return;
@@ -67,7 +73,10 @@
 			i.title = i.classList.toString();
 			i.appendChild( text );
 			li.appendChild( i );
-			container[0].appendChild( li );
+			console.log( { li } );
+			container.forEach( function( c, idx ) {
+				c.appendChild( idx > 0 ? li.cloneNode( true ) : li );
+			} );
 		} );
 	} );
 

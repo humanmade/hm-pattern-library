@@ -25,3 +25,8 @@
 	@include icon( "spinner", "red" );
 	background-size: auto;
 }
+
+.loading--blue {
+	@include icon( "spinner", "blue" );
+	background-size: auto;
+}
