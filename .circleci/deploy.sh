@@ -51,6 +51,7 @@ git rm -rfq .
 # Sync built files
 echo -e "\nSyncing files..."
 if ! command -v 'rsync'; then
+	sudo apt-get update # New container needs us to update package list first.
 	sudo apt-get install -q -y rsync
 fi
 
