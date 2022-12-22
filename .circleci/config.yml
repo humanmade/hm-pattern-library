@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:9-stretch
+      - image: cimg/node:12.22
 
     branches:
       # Whitelist branches to build for.
