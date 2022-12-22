@@ -79,6 +79,10 @@ Class names in vendor files should not be changed, the files should be placed in
 
 ## Changelog
 
+**3.0.0**
+
+* New HM brand colors. This changes links to blue for accessibility contrast reasons, and will require manual rework if consuming themes expect links to be red.
+
 **2.1.0**
 
 * Updated typography styles

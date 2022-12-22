@@ -1,6 +1,6 @@
 {
   "name": "hm-pattern-library",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "type": "module",
   "description": "Juniper - Human Made Pattern Library",
   "main": "index.html",
