@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>server</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-72.000000, -206.000000)" fill-rule="nonzero" fill="#000000">
+            <g id="server" transform="translate(72.000000, 206.000000)">
+                <path d="M12,2 C7.527,2 3,3.374 3,6 L3,18 C3,20.626 7.527,22 12,22 C16.473,22 21,20.626 21,18 L21,6 C21,3.374 16.473,2 12,2 Z M12,4 C16.547,4 19,5.42 19,6 C19,6.58 16.547,8 12,8 C7.453,8 5,6.58 5,6 C5,5.42 7.453,4 12,4 Z M12,20 C7.453,20 5,18.58 5,18 L5,16.6 C6.736,17.523 9.374,18 12,18 C14.626,18 17.264,17.522 19,16.6 L19,18 C19,18.58 16.547,20 12,20 Z M12,16 C7.453,16 5,14.58 5,14 L5,12.6 C6.736,13.523 9.374,14 12,14 C14.626,14 17.264,13.522 19,12.6 L19,14 C19,14.58 16.547,16 12,16 Z M12,12 C7.453,12 5,10.58 5,10 L5,8.6 C6.736,9.522 9.374,10 12,10 C14.626,10 17.264,9.522 19,8.6 L19,10 C19,10.58 16.547,12 12,12 Z" id="icon"></path>
+            </g>
+        </g>
+    </g>
+</svg>

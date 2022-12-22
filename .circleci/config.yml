@@ -1,0 +1,42 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cimg/node:12.22
+
+    branches:
+      # Whitelist branches to build for.
+      only: main
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+          - "4b:f3:aa:3d:17:f4:7d:11:22:d2:bc:da:ad:ef:ac:de"
+
+      # Checkout repo & subs:
+      - checkout
+
+      # Get npm cache:
+      - restore_cache:
+          key: npm
+
+      # Build steps:
+      - run: npm install
+      - run: npm run build
+
+      # Make fast:
+      - save_cache:
+          key: npm
+          paths:
+            - ~/.npm
+            - ~/.node-gyp
+
+      # Run the default deploy:
+      - deploy:
+          command: .circleci/deploy.sh
+
+      # Run the gh-pages deploy:
+      - deploy:
+          environment:
+            DEPLOY_BRANCH: gh-pages
+            SRC_PATH: /dist/
+          command: .circleci/deploy.sh
