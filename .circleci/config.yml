@@ -10,8 +10,6 @@ jobs:
     steps:
       # Checkout repo & subs:
       - checkout
-      - run: git submodule sync
-      - run: git submodule update --init
 
       # Get npm cache:
       - restore_cache:
