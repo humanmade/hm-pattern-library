@@ -103,4 +103,8 @@
 	&--white {
 		background: $hm-red;
 	}
+
+	&--white.pattern-library-icon-list--blue-bg {
+		background: $hm-vibrant-blue;
+	}
 }
